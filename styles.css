@@ -33,7 +33,7 @@ body{
   color: var(--black);
 }
 
-.breadcrumbs a:hover{
+.breadcrumbs .hoveron:hover{
   font-weight: 500;
 }
 
