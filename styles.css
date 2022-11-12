@@ -52,12 +52,10 @@ nav li a{
 
 nav li .active{
   color: var(--black);
-  text-decoration: line-through;
 }
 
 nav li a:hover{
   color: var(--black);
-  text-decoration: line-through;
 }
 
 .textdiv{
