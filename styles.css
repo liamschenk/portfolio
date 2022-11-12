@@ -13,15 +13,58 @@ html, body{
 }
 
 body{
+ margin: 40px;
+}
 
+nav{
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--black);
+  text-decoration: none;
+}
+
+nav ul{
+
+}
+
+nav li{
+  list-style: none;
+  display: inline;
+}
+
+nav li a{
+  padding: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--gray);
+  text-decoration: none;
+}
+
+nav li .active{
+  color: var(--black);
+  text-decoration: line-through;
+}
+
+nav li a:hover{
+  color: var(--black);
+  text-decoration: line-through;
 }
 
 .textdiv{
-  margin: 40px;
 }
 
 .imageline{
-  width: 100vw;
+  width: 100%;
 }
 
 /* .projectsection{
@@ -36,13 +79,6 @@ body{
   width: 100%;
 } */
 
-.bigtitle{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  font-size: 32px;
-  color: var(--black);
-}
-
 .smalltitle{
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -54,9 +90,8 @@ body{
 .text{
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 48px;
+  font-size: 40px;
   color: var(--black);
-  margin-bottom: 80px;
 }
 
 /* .projecttext{
