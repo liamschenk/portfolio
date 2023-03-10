@@ -1,106 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&display=swap');
 
 :root {
   --white: #FAFAFA;
-  --gray: #777;
-  --black: #333;
+  --black: #333333;
 }
 
-html, body{
+html{
   margin: 0;
-  padding: 0;
   background-color: var(--white);
 }
 
 body{
- margin: 40px;
-}
-
-nav{
-  background-color: var(--white);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav .logo{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  color: var(--black);
-  text-decoration: none;
-}
-
-nav ul{
-
-}
-
-nav li{
-  list-style: none;
-  display: inline;
-}
-
-nav li a{
-  padding: 8px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  text-transform: uppercase;
-  color: var(--gray);
-  text-decoration: none;
-}
-
-nav li .active{
-  color: var(--black);
-}
-
-nav li a:hover{
-  color: var(--black);
+  margin: 0;
 }
 
 .textdiv{
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
-.imageline{
-  width: 100%;
-}
-
-/* .projectsection{
-  position: relative;
-}
-
-.projectsection p{
-
-}
-
-.projectsection img{
-  width: 100%;
-} */
-
-.smalltitle{
-  font-family: 'Roboto', sans-serif;
+.breadcrumbs{
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 400;
   font-size: 16px;
   text-transform: uppercase;
-  color: var(--gray);
+  margin-top: 40px;
 }
 
-.text{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 40px;
+.breadcrumbs a{
+  text-decoration: none;
+  font-weight: 400;
   color: var(--black);
 }
 
-/* .projecttext{
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
+.breadcrumbs a:hover{
+  font-weight: 500;
+}
+
+.title{
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--black);
+}
+
+.smalltitle{
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: var(--gray);
-} */
+  text-transform: uppercase;
+  color: var(--black);
+}
 
-.boldtext{
+.text{
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 200;
+  font-size: 48px;
+  color: var(--black);
+  margin-bottom: 80px;
+}
+
+.bold{
   font-weight: 500;
 }
 
