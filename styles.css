@@ -34,6 +34,7 @@ body{
 }
 
 .breadcrumbshover:hover{
+  font-family: 'Lora', serif;
   font-weight: 500;
 }
 
@@ -88,5 +89,7 @@ body{
 }
 
 .hoveritems:hover{
+  font-family: 'Lora', serif;
+  font-size: 45px;
   font-weight: 500;
 }
