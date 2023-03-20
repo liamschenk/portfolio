@@ -37,22 +37,13 @@ body{
   font-weight: 500;
 }
 
-.imageboxtest{
-  width: 100%;
-  height: 40vh;
-
-  background-image: url(/assets/testbackground.jpg);
-  background-size: cover;
+.imagebox {
+  height: 80vh;
 }
 
-.imageboxuebermich {
-  width: 100%;
-  height: 60vh;
-
-  background-image: url(/assets/uebermich.jpg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+.imagebox img {
+  position: relative;
+  height: 100%;
 }
 
 .title{
