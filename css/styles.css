@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-white: #fff;
+    --primary-black: #000;
+    --secondary-gray: #7e7e7e;
+    --secondary-border-gray: #e7e7e7;
+
+    --font-size-large: 16pt;
+    --font-size-medium: 12pt;
+    --font-size-small: 8pt;
+
+    --line-height-large: 19pt;
+    --line-height-medium: 15pt;
+    --line-height-small: 11pt;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 20px;
+}
+
+/*Header and navigation*/
+
+header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--secondary-border-gray);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+header nav ul {
+    display: inline-flex;
+    gap: 20px;
+    list-style: none;
+    font-size: var(--font-size-medium);
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: var(--primary-black);
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    color: var(--secondary-gray);
+}
+
+/*Hero container*/
+
+main .hero-container {
+    display: table;
+    height: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+main .hero-container p {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: var(--font-size-medium);
+}
+
+main .hero-container p span {
+    color: var(--secondary-gray);
+}
+
+/*Work container*/
+
+main .work-container {
+    margin-bottom: 80px;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+main .work-container .accordion {
+    background-color: var(--primary-white);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-top: 1px solid var(--secondary-border-gray);
+
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+    color: var(--primary-black);
+}
+
+main .work-container .accordion p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+main .work-container .accordion p span {
+    color: var(--secondary-gray);
+    float: right;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+main .work-container .panel {
+    display: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+main .work-container .panel .accordion-column-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+main .work-container .panel .accordion-column-container .column-25{
+    flex: 25%;
+}
+
+main .work-container .panel .accordion-column-container .column-25 p {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+    color: var(--primary-black);
+}
+
+main .work-container .panel .accordion-column-container .column-50 {
+    flex: 50%;
+}
+
+main .work-container .panel .accordion-column-container .column-50 p {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+    color: var(--primary-black);
+}
+
+main .work-container .panel .accordion-column-container .column-50 img {
+    width: 100%;
+}
+
+/*About container*/
+
+main .about-container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 80px;
+}
+
+main .about-container .column-50 {
+    flex: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+main .about-container .column-50 p {
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+    color: var(--primary-black);
+}
+
+/*Experience container*/
+
+main .experience-container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 80px;
+}
+
+main .experience-container .column-50 {
+    flex: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+main .experience-container .column-50 p {
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+    color: var(--primary-black);
+}
+
+main .experience-container .column-50 p span {
+    text-decoration: underline;
+}
+
+main .experience-container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 80px;
+}
+
+/*Now container*/
+
+main .now-container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 80px;
+}
+
+main .now-container .column-50 {
+    flex: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+main .now-container .column-50 p {
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+    color: var(--primary-black);
+}
+
+main .now-container .column-50 p span {
+    text-decoration: underline;
+}
+
+/*Footer*/
+
+footer {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 20px;
+    border-top: 1px solid var(--secondary-border-gray);
+}
+
+footer .column-50 {
+    flex: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+footer .column-50 p {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+    color: var(--secondary-gray);
+}
