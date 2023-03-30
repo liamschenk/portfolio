@@ -37,6 +37,7 @@ header {
 
 header nav {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     margin-left: 20px;
     margin-right: 20px;
@@ -93,6 +94,7 @@ main .work-container .accordion {
     background-color: var(--primary-white);
     padding-top: 20px;
     padding-bottom: 20px;
+    cursor: pointer;
     
     width: 100%;
     text-align: left;
@@ -197,4 +199,52 @@ footer .column-50 p {
     font-size: var(--font-size-small);
     line-height: var(--line-height-small);
     color: var(--secondary-gray);
+}
+
+@media only screen and (max-width: 769px) {
+    main .about-container,
+        main .experience-container,
+        main .now-container {
+        flex-wrap: wrap;
+    }
+    
+    main .about-container .column-50,
+    main .experience-container .column-50,
+    main .now-container .column-50 {
+        flex: 100%;
+    }
+
+    main .about-container .column-50 p, main .experience-container .column-50 p, main .now-container .column-50 p {
+        margin-bottom: 20px;
+    }
+
+    main .work-container .panel .accordion-column-container {
+        flex-wrap: wrap;
+    }
+
+    main .work-container .panel .accordion-column-container .column-25 {
+        flex: 100%;
+    }
+
+    main .work-container .panel .accordion-column-container .column-50 {
+        flex: 100%;
+    }
+}
+
+@media only screen and (max-width: 481px) {
+    header nav {
+        flex-wrap: wrap;
+    }
+
+    header nav ul {
+        flex: 100%;
+    }
+
+    footer {
+        flex-wrap: wrap;
+    }
+
+    footer .column-50 {
+        flex: 100%;
+    }
 }
