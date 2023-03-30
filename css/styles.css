@@ -110,20 +110,42 @@ main .work-container .accordion {
     outline: none;
     transition: 0.4s;
     border-top: 1px solid var(--secondary-border-gray);
+}
 
+main .work-container .accordion .accordion-text-container {
     font-size: var(--font-size-medium);
     line-height: var(--line-height-medium);
     color: var(--primary-black);
 }
 
-main .work-container .accordion p {
+main .work-container .accordion .accordion-text-container .title{
     margin-left: 20px;
     margin-right: 20px;
 }
 
-main .work-container .accordion p span {
-    color: var(--secondary-gray);
+main .work-container .accordion .accordion-text-container .title span{
     float: right;
+    color: var(--secondary-gray);
+}
+
+main .work-container .accordion .accordion-text-container .label:after {
+    content: '\002B';
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-medium);
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+
+    background-color: var(--secondary-border-gray);
+    width: var(--line-height-medium);
+    height: var(--line-height-medium);
+    color: var(--line-height-medium);
+    border-radius: 4px;
+}
+
+main .work-container .accordion.active .accordion-text-container .label:after {
+    content: "\2212";
 }
 
 /* Style the accordion panel. Note: hidden by default */
