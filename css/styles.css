@@ -156,75 +156,25 @@ main .work-container .panel .accordion-column-container .column-50 img {
 
 /*About container*/
 
-main .about-container {
+main .about-container, main .experience-container, main .now-container {
     display: flex;
     flex-wrap: nowrap;
     margin-bottom: 80px;
 }
 
-main .about-container .column-50 {
+main .about-container .column-50, main .experience-container .column-50, main .now-container .column-50 {
     flex: 50%;
     margin-left: 20px;
     margin-right: 20px;
 }
 
-main .about-container .column-50 p {
+main .about-container .column-50 p, main .experience-container .column-50 p, main .now-container .column-50 p {
     font-size: var(--font-size-medium);
     line-height: var(--line-height-medium);
     color: var(--primary-black);
 }
 
-/*Experience container*/
-
-main .experience-container {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-bottom: 80px;
-}
-
-main .experience-container .column-50 {
-    flex: 50%;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-main .experience-container .column-50 p {
-    font-size: var(--font-size-medium);
-    line-height: var(--line-height-medium);
-    color: var(--primary-black);
-}
-
-main .experience-container .column-50 p span {
-    text-decoration: underline;
-}
-
-main .experience-container {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-bottom: 80px;
-}
-
-/*Now container*/
-
-main .now-container {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-bottom: 80px;
-}
-
-main .now-container .column-50 {
-    flex: 50%;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-main .now-container .column-50 p {
-    font-size: var(--font-size-medium);
-    line-height: var(--line-height-medium);
-    color: var(--primary-black);
-}
-
-main .now-container .column-50 p span {
+main .experience-container .column-50 p span, main .now-container .column-50 p span {
     text-decoration: underline;
 }
 
