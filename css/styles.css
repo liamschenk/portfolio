@@ -25,12 +25,19 @@ html {
 }
 
 body {
-    margin: 20px;
+    max-width: 1920px;
+    margin: auto;
+}
+
+header, main, footer {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /*Header and navigation*/
 
 header {
+    padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid var(--secondary-border-gray);
 }
@@ -120,6 +127,7 @@ main .work-container .accordion p span {
 }
 
 /* Style the accordion panel. Note: hidden by default */
+
 main .work-container .panel {
     display: none;
     margin-left: 20px;
@@ -157,7 +165,7 @@ main .work-container .panel .accordion-column-container .column-50 img {
     width: 100%;
 }
 
-/*About container*/
+/*About, Experience and Now container*/
 
 main .about-container, main .experience-container, main .now-container {
     display: flex;
@@ -187,6 +195,7 @@ footer {
     display: flex;
     flex-wrap: nowrap;
     padding-top: 20px;
+    padding-bottom: 20px;
     border-top: 1px solid var(--secondary-border-gray);
 }
 
@@ -203,6 +212,10 @@ footer .column-50 p {
 }
 
 /*Media queries for reesponsivenes*/
+
+@media only screen and (max-width: 1920px) {
+    
+}
 
 @media only screen and (max-width: 769px) {
     main .about-container,
