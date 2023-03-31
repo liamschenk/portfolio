@@ -1,19 +1,17 @@
-var accordion = document.getElementsByClassName("accordion");
+var acc = document.getElementsByClassName("accordion-button");
 var i;
 
-for (i = 0; i < accordion.length; i++) {
-  accordion[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /*Toggle between adding and removing the "active" class*/
     this.classList.toggle("active");
 
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-        
-      panel.style.display = "none";
+    /*Toggle between hiding and showing the active content*/
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
     } else {
-      panel.style.display = "block";
+      content.style.display = "block";
     }
   });
 }

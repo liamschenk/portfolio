@@ -1,5 +1,8 @@
+/*Import Roboto font*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+
+/*Root variables*/
 :root {
     --primary-white: #fff;
     --primary-black: #000;
@@ -15,27 +18,32 @@
     --line-height-small: 11pt;
 }
 
+/*Remove padding and margin from everything*/
 * {
     margin: 0;
     padding: 0;
 }
 
+/*Set Roboto as default font*/
 html {
     font-family: 'Roboto', sans-serif;
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
 }
 
+/*Max width and center body on wide screens*/
 body {
     max-width: 1920px;
     margin: auto;
 }
 
+/*Margin on header, main and footer*/
 header, main, footer {
     margin-left: 20px;
     margin-right: 20px;
 }
 
 /*Header and navigation*/
-
 header {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -54,7 +62,6 @@ header nav ul {
     display: inline-flex;
     gap: 20px;
     list-style: none;
-    font-size: var(--font-size-medium);
 }
 
 header nav ul li {
@@ -71,8 +78,7 @@ header nav ul li a:hover {
     color: var(--secondary-gray);
 }
 
-/*Hero container*/
-
+/*Hero container at top of page*/
 main .hero-container {
     display: table;
     height: 400px;
@@ -83,8 +89,6 @@ main .hero-container {
 main .hero-container p {
     display: table-cell;
     vertical-align: middle;
-    font-size: var(--font-size-medium);
-    line-height: var(--line-height-medium);
 }
 
 main .hero-container p span {
@@ -92,13 +96,12 @@ main .hero-container p span {
 }
 
 /*Work container*/
-
 main .work-container {
     margin-bottom: 80px;
 }
 
-/* Style the buttons that are used to open and close the accordion panel */
-main .work-container .accordion {
+/*Accordion button*/
+main .work-container .accordion-button {
     background-color: var(--primary-white);
     padding-top: 20px;
     padding-bottom: 20px;
@@ -112,23 +115,25 @@ main .work-container .accordion {
     border-top: 1px solid var(--secondary-border-gray);
 }
 
-main .work-container .accordion .accordion-text-container {
+/*Accordion button title container with status label, name and year*/
+main .work-container .accordion-button .accordion-title-container {
     font-size: var(--font-size-medium);
     line-height: var(--line-height-medium);
     color: var(--primary-black);
 }
 
-main .work-container .accordion .accordion-text-container .title{
+main .work-container .accordion-button .accordion-title-container .title{
     margin-left: 20px;
     margin-right: 20px;
 }
 
-main .work-container .accordion .accordion-text-container .title span{
+main .work-container .accordion-button .accordion-title-container .title .year{
     float: right;
     color: var(--secondary-gray);
 }
 
-main .work-container .accordion .accordion-text-container .label:after {
+/*Accordion label with plus or minus icon*/
+main .work-container .accordion-button .accordion-title-container .label:after {
     content: '\002B';
     font-size: var(--font-size-large);
     line-height: var(--line-height-medium);
@@ -144,51 +149,53 @@ main .work-container .accordion .accordion-text-container .label:after {
     border-radius: 4px;
 }
 
-main .work-container .accordion.active .accordion-text-container .label:after {
+main .work-container .accordion-button.active .accordion-title-container .label:after {
     content: "\2212";
 }
 
-/* Style the accordion panel. Note: hidden by default */
-
-main .work-container .panel {
+/* Style the accordion content*/
+main .work-container .accordion-content {
     display: none;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
 
-main .work-container .panel .accordion-column-container {
+/*Accordion column container with flex for layout*/
+main .work-container .accordion-content .accordion-column-container {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
 }
 
-main .work-container .panel .accordion-column-container .column-25{
+/*Accordion column that takes up 25% of width*/
+main .work-container .accordion-content .accordion-column-container .column-25{
     flex: 25%;
 }
 
-main .work-container .panel .accordion-column-container .column-25 p {
+main .work-container .accordion-content .accordion-column-container .column-25 p {
     font-size: var(--font-size-small);
     line-height: var(--line-height-small);
     color: var(--primary-black);
 }
 
-main .work-container .panel .accordion-column-container .column-50 {
+/*Accordion column that takes up 50% of width*/
+main .work-container .accordion-content .accordion-column-container .column-50 {
     flex: 50%;
 }
 
-main .work-container .panel .accordion-column-container .column-50 p {
+main .work-container .accordion-content .accordion-column-container .column-50 p {
     font-size: var(--font-size-small);
     line-height: var(--line-height-small);
     color: var(--primary-black);
 }
 
-main .work-container .panel .accordion-column-container .column-50 img {
+/*Image takes up 100% of 50% width*/
+main .work-container .accordion-content .accordion-column-container .column-50 img {
     width: 100%;
 }
 
 /*About, Experience and Now container*/
-
 main .about-container, main .experience-container, main .now-container {
     display: flex;
     flex-wrap: nowrap;
@@ -201,18 +208,11 @@ main .about-container .column-50, main .experience-container .column-50, main .n
     margin-right: 20px;
 }
 
-main .about-container .column-50 p, main .experience-container .column-50 p, main .now-container .column-50 p {
-    font-size: var(--font-size-medium);
-    line-height: var(--line-height-medium);
-    color: var(--primary-black);
-}
-
 main .experience-container .column-50 p span, main .now-container .column-50 p span {
     text-decoration: underline;
 }
 
 /*Footer*/
-
 footer {
     display: flex;
     flex-wrap: nowrap;
@@ -221,6 +221,7 @@ footer {
     border-top: 1px solid var(--secondary-border-gray);
 }
 
+/*Footer column that takes up 50% of width*/
 footer .column-50 {
     flex: 50%;
     margin-left: 20px;
@@ -233,8 +234,7 @@ footer .column-50 p {
     color: var(--secondary-gray);
 }
 
-/*Media queries for reesponsivenes*/
-
+/*Media queries for responsivenes*/
 @media only screen and (max-width: 1920px) {
     
 }
