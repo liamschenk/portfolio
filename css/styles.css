@@ -240,15 +240,11 @@ footer .column-50 p {
 }
 
 @media only screen and (max-width: 769px) {
-    main .about-container,
-        main .experience-container,
-        main .now-container {
+    main .about-container, main .experience-container, main .now-container {
         flex-wrap: wrap;
     }
     
-    main .about-container .column-50,
-    main .experience-container .column-50,
-    main .now-container .column-50 {
+    main .about-container .column-50, main .experience-container .column-50, main .now-container .column-50 {
         flex: 100%;
     }
 
@@ -256,15 +252,15 @@ footer .column-50 p {
         margin-bottom: 20px;
     }
 
-    main .work-container .panel .accordion-column-container {
+    main .work-container .accordion-content .accordion-column-container {
         flex-wrap: wrap;
     }
 
-    main .work-container .panel .accordion-column-container .column-25 {
+    main .work-container .accordion-content .accordion-column-container .column-25 {
         flex: 100%;
     }
 
-    main .work-container .panel .accordion-column-container .column-50 {
+    main .work-container .accordion-content .accordion-column-container .column-50 {
         flex: 100%;
     }
 }
