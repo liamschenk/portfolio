@@ -108,7 +108,6 @@ main .work-container .accordion-button {
     padding-top: 20px;
     padding-bottom: 20px;
     cursor: pointer;
-    
     width: 100%;
     text-align: left;
     border: none;
@@ -124,11 +123,13 @@ main .work-container .accordion-button .accordion-title-container {
     color: var(--primary-black);
 }
 
+/*Accordion title*/
 main .work-container .accordion-button .accordion-title-container .accordion-title{
     margin-left: 20px;
     margin-right: 20px;
 }
 
+/*Year in accordion button*/
 main .work-container .accordion-button .accordion-title-container .accordion-title .year{
     float: right;
     color: var(--secondary-gray);
@@ -143,7 +144,6 @@ main .work-container .accordion-button .accordion-title-container .accordion-lab
     margin-left: 20px;
     margin-right: 20px;
     float: left;
-
     background-color: var(--secondary-border-gray);
     width: var(--line-height-medium);
     height: var(--line-height-medium);
@@ -155,13 +155,19 @@ main .work-container .accordion-button.active .accordion-title-container .accord
     content: "\2212";
 }
 
-/* Style the accordion content*/
+/* Style the accordion content with max height set to 0 and transition*/
 main .work-container .accordion-content {
     max-height: 0px;
     overflow: hidden;
     margin-left: 20px;
     margin-right: 20px;
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height .2s ease-out;
+}
+
+/*Accordion content class when animated is toggled in js*/
+main .work-container .accordion-content.animated {
+    max-height: 500px;
+    transition: max-height .2s ease-in;
 }
 
 /*Accordion column container with flex for layout*/

@@ -8,10 +8,6 @@ for (i = 0; i < acc.length; i++) {
 
     /*Toggle between hiding and showing the active content*/
     var content = this.nextElementSibling;
-    if (content.style.maxHeight == "1000px") {
-      content.style.maxHeight = "0px";
-    } else {
-      content.style.maxHeight = "1000px";
-    }
+    content.classList.toggle("animated")
   });
 }
