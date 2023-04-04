@@ -9,11 +9,11 @@
     --secondary-gray: #7e7e7e;
     --secondary-border-gray: #e7e7e7;
 
-    --font-size-large: 16pt;
+    --font-size-large: 14pt;
     --font-size-medium: 12pt;
     --font-size-small: 8pt;
 
-    --line-height-large: 19pt;
+    --line-height-large: 17pt;
     --line-height-medium: 15pt;
     --line-height-small: 11pt;
 }
@@ -33,7 +33,7 @@ html {
 
 /*Max width and center body on wide screens*/
 body {
-    max-width: 1920px;
+    max-width: 1440px;
     margin: auto;
 }
 
@@ -81,7 +81,7 @@ header nav ul li a:hover {
 /*Hero container at top of page*/
 main .hero-container {
     display: table;
-    height: 400px;
+    height: 500px;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -89,6 +89,8 @@ main .hero-container {
 main .hero-container p {
     display: table-cell;
     vertical-align: middle;
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-large);
 }
 
 main .hero-container p span {
@@ -122,20 +124,20 @@ main .work-container .accordion-button .accordion-title-container {
     color: var(--primary-black);
 }
 
-main .work-container .accordion-button .accordion-title-container .title{
+main .work-container .accordion-button .accordion-title-container .accordion-title{
     margin-left: 20px;
     margin-right: 20px;
 }
 
-main .work-container .accordion-button .accordion-title-container .title .year{
+main .work-container .accordion-button .accordion-title-container .accordion-title .year{
     float: right;
     color: var(--secondary-gray);
 }
 
 /*Accordion label with plus or minus icon*/
-main .work-container .accordion-button .accordion-title-container .label:after {
+main .work-container .accordion-button .accordion-title-container .accordion-label:after {
     content: '\002B';
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-medium);
     line-height: var(--line-height-medium);
     text-align: center;
     margin-left: 20px;
@@ -145,11 +147,11 @@ main .work-container .accordion-button .accordion-title-container .label:after {
     background-color: var(--secondary-border-gray);
     width: var(--line-height-medium);
     height: var(--line-height-medium);
-    color: var(--line-height-medium);
+    color: var(--secondary-gray);
     border-radius: 4px;
 }
 
-main .work-container .accordion-button.active .accordion-title-container .label:after {
+main .work-container .accordion-button.active .accordion-title-container .accordion-label:after {
     content: "\2212";
 }
 
@@ -159,7 +161,7 @@ main .work-container .accordion-content {
     overflow: hidden;
     margin-left: 20px;
     margin-right: 20px;
-    transition: max-height 0.25s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
 }
 
 /*Accordion column container with flex for layout*/
@@ -210,6 +212,11 @@ main .about-container .column-50, main .experience-container .column-50, main .n
     margin-right: 20px;
 }
 
+main .about-container .container-title, main .experience-container .container-title, main .now-container .container-title{
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-large);
+}
+
 main .experience-container .column-50 p span, main .now-container .column-50 p span {
     text-decoration: underline;
 }
@@ -237,10 +244,6 @@ footer .column-50 p {
 }
 
 /*Media queries for responsivenes*/
-@media only screen and (max-width: 1920px) {
-    
-}
-
 @media only screen and (max-width: 769px) {
     main .about-container, main .experience-container, main .now-container {
         flex-wrap: wrap;
