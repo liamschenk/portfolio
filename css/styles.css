@@ -35,7 +35,21 @@ html {
 body {
     max-width: 1440px;
     margin: auto;
+
+    animation: fadeIn ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
+
+ @keyframes fadeIn {
+     0% {
+         opacity: 0;
+     }
+
+     100% {
+         opacity: 1;
+     }
+ }
 
 /*Margin on header, main and footer*/
 header, main, footer {
