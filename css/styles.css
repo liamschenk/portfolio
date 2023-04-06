@@ -214,6 +214,10 @@ main .work-container .accordion-content .accordion-column-container .column-25 p
     color: var(--primary-black);
 }
 
+main .work-container .accordion-content .accordion-column-container .column-25 .theme {
+    color: var(--secondary-gray);
+}
+
 main .work-container .accordion-content .accordion-column-container .column-25 p a {
     text-decoration: none;
     color: var(--primary-black);
@@ -228,10 +232,12 @@ main .work-container .accordion-content .accordion-column-container .column-50 {
     flex: 50%;
 }
 
-/*Image takes up 100% of 50% width*/
-main .work-container .accordion-content .accordion-column-container .column-50 img {
+/*Work preview takes up 100% of 50% width and has a round border*/
+main .work-container .accordion-content .accordion-column-container .column-50 .work-preview {
     width: 100%;
+    border-radius: 4px;
 }
+
 
 /*About, Experience and Now container*/
 main .about-container,
