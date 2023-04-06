@@ -215,6 +215,7 @@ main .work-container .accordion-content .accordion-column-container .column-25 p
 }
 
 main .work-container .accordion-content .accordion-column-container .column-25 p a {
+    text-decoration: none;
     color: var(--primary-black);
 }
 
