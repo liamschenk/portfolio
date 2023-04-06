@@ -5,9 +5,16 @@
 :root {
     --primary-white: #ffffff;
     --primary-black: #000000;
-    --secondary-gray: #7e7e7e;
+    --primary-gray: #7e7e7e;
+
     --border-gray: #e7e7e7;
     --border-gray-label: #dbdbdb;
+
+    --primary-margin: 20px;
+    --primary-padding: 20px;
+    --primary-margin-large: 80px;
+
+    --margin-hero: 240px;
 
     --font-size-large: 14pt;
     --font-size-medium: 12pt;
@@ -55,14 +62,14 @@ body {
 header,
 main,
 footer {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: var(--primary-margin);
+    margin-right: var(--primary-margin);
 }
 
 /*Header and navigation*/
 header {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: var(--primary-padding);
+    padding-bottom: var(--primary-padding);
     border-bottom: 1px solid var(--border-gray);
 }
 
@@ -70,18 +77,14 @@ header nav {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: var(--primary-margin);
+    margin-right: var(--primary-margin);
 }
 
 header nav ul {
-    display: inline-flex;
-    gap: 20px;
+    display: flex;
+    gap: var(--primary-margin);
     list-style: none;
-}
-
-header nav ul li {
-    display: inline-block;
 }
 
 header nav ul li a {
@@ -90,31 +93,29 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: var(--secondary-gray);
+    color: var(--primary-gray);
 }
 
 /*Hero container at top of page*/
 main .hero-container {
-    display: table;
-    height: 500px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: var(--primary-margin);
+    margin-right: var(--primary-margin);
 }
 
 main .hero-container p {
-    display: table-cell;
-    vertical-align: middle;
+    margin-top: var(--margin-hero);
+    margin-bottom: var(--margin-hero);
     font-size: var(--font-size-large);
     line-height: var(--line-height-large);
 }
 
 main .hero-container p span {
-    color: var(--secondary-gray);
+    color: var(--primary-gray);
 }
 
 /*Work container*/
 main .work-container {
-    margin-bottom: 80px;
+    margin-bottom: var(--primary-margin-large);
 }
 
 /*Accordion button*/
@@ -126,8 +127,8 @@ main .work-container .accordion-button {
     width: 100%;
     outline: none;
     cursor: pointer;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: var(--primary-padding);
+    padding-bottom: var(--primary-padding);
 }
 
 /*Accordion button title container with status label, name and year*/
@@ -139,14 +140,14 @@ main .work-container .accordion-button .accordion-title-container {
 
 /*Accordion title*/
 main .work-container .accordion-button .accordion-title-container .accordion-title {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: var(--primary-margin);
+    margin-right: var(--primary-margin);
 }
 
 /*Year in accordion button*/
 main .work-container .accordion-button .accordion-title-container .accordion-title .year {
+    color: var(--primary-gray);
     float: right;
-    color: var(--secondary-gray);
 }
 
 /*Accordion label with plus or minus icon*/
@@ -155,16 +156,16 @@ main .work-container .accordion-button .accordion-title-container .accordion-lab
     content: "\002B";
     font-size: var(--font-size-medium);
     line-height: var(--line-height-medium);
+    color: var(--secondary-gray);
     text-align: center;
     float: left;
     background-color: var(--border-gray);
     width: var(--line-height-medium);
     height: var(--line-height-medium);
-    color: var(--secondary-gray);
     border: 1px solid var(--border-gray);
     border-radius: 4px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: var(--primary-margin);
+    margin-right: var(--primary-margin);
     transition: border 0.25s ease-in;
 }
 
@@ -183,8 +184,8 @@ main .work-container .accordion-button.active .accordion-title-container .accord
 main .work-container .accordion-content {
     max-height: 0px;
     overflow: hidden;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: var(--primary-margin);
+    margin-right: var(--primary-margin);
     transition: max-height 0.25s ease-in;
 }
 
@@ -198,9 +199,8 @@ main .work-container .accordion-content.animated {
 main .work-container .accordion-content .accordion-column-container {
     display: flex;
     flex-wrap: nowrap;
-    gap: 20px;
-    height: 100%;
-    margin-bottom: 20px;
+    gap: var(--primary-margin);
+    margin-bottom: var(--primary-margin);
 }
 
 /*Accordion column that takes up 25% of width*/
@@ -215,16 +215,16 @@ main .work-container .accordion-content .accordion-column-container .column-25 p
 }
 
 main .work-container .accordion-content .accordion-column-container .column-25 .theme {
-    color: var(--secondary-gray);
+    color: var(--primary-gray);
 }
 
 main .work-container .accordion-content .accordion-column-container .column-25 p a {
-    text-decoration: none;
     color: var(--primary-black);
+    text-decoration: none;
 }
 
 main .work-container .accordion-content .accordion-column-container .column-25 p a:hover {
-    color: var(--secondary-gray);
+    color: var(--primary-gray);
 }
 
 /*Accordion column that takes up 50% of width*/
@@ -245,15 +245,15 @@ main .experience-container,
 main .now-container {
     display: flex;
     flex-wrap: nowrap;
-    margin-bottom: 80px;
+    margin-bottom: var(--primary-margin-large);
 }
 
 main .about-container .column-50,
 main .experience-container .column-50,
 main .now-container .column-50 {
     flex: 50%;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: var(--primary-margin);
+    margin-right: var(--primary-margin);
 }
 
 main .about-container .container-title,
@@ -272,16 +272,16 @@ main .now-container .column-50 p span {
 footer {
     display: flex;
     flex-wrap: nowrap;
-    padding-top: 20px;
-    padding-bottom: 20px;
     border-top: 1px solid var(--border-gray);
+    padding-top: var(--primary-padding);
+    padding-bottom: var(--primary-padding);
 }
 
 /*Footer column that takes up 50% of width*/
 footer .column-50 {
     flex: 50%;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: var(--primary-margin);
+    margin-right: var(--primary-margin);
 }
 
 footer .column-50 p {
@@ -292,7 +292,6 @@ footer .column-50 p {
 
 /*Media queries for responsivenes*/
 @media only screen and (max-width: 769px) {
-
     main .about-container,
     main .experience-container,
     main .now-container {
@@ -308,7 +307,7 @@ footer .column-50 p {
     main .about-container .column-50 p,
     main .experience-container .column-50 p,
     main .now-container .column-50 p {
-        margin-bottom: 20px;
+        margin-bottom: var(--primary-margin);
     }
 
     main .work-container .accordion-content .accordion-column-container {
@@ -325,14 +324,6 @@ footer .column-50 p {
 }
 
 @media only screen and (max-width: 481px) {
-
-    header,
-    main,
-    footer {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
     header nav {
         flex-wrap: wrap;
     }
