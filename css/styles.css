@@ -200,6 +200,7 @@ main .work-container .accordion-content .accordion-column-container {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
+    height: 100%;
     margin-bottom: 20px;
 }
 
