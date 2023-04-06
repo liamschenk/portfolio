@@ -140,7 +140,7 @@ header nav ul {
 
 /*Accordion content class when animated is toggled in js*/
 .content.animated {
-    max-height: 500px;
+    max-height: 1000px;
     transition: max-height 0.25s ease-in;
 }
 
