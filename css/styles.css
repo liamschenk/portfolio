@@ -90,7 +90,6 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    text-decoration: underline;
     color: var(--secondary-gray);
 }
 
@@ -215,15 +214,17 @@ main .work-container .accordion-content .accordion-column-container .column-25 p
     color: var(--primary-black);
 }
 
+main .work-container .accordion-content .accordion-column-container .column-25 p a {
+    color: var(--primary-black);
+}
+
+main .work-container .accordion-content .accordion-column-container .column-25 p a:hover {
+    color: var(--secondary-gray);
+}
+
 /*Accordion column that takes up 50% of width*/
 main .work-container .accordion-content .accordion-column-container .column-50 {
     flex: 50%;
-}
-
-main .work-container .accordion-content .accordion-column-container .column-50 p {
-    font-size: var(--font-size-small);
-    line-height: var(--line-height-small);
-    color: var(--primary-black);
 }
 
 /*Image takes up 100% of 50% width*/
