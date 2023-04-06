@@ -10,8 +10,9 @@
     --border-gray: #e7e7e7;
     --border-gray-label: #dbdbdb;
 
-    --primary-margin: 20px;
     --primary-padding: 20px;
+    --primary-margin-small: 20px;
+    --primary-margin-medium: 40px;
     --primary-margin-large: 80px;
 
     --margin-hero: 240px;
@@ -29,13 +30,6 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-/*Set Roboto as default font*/
-html {
-    font-family: "Roboto", sans-serif;
-    font-size: var(--font-size-medium);
-    line-height: var(--line-height-medium);
 }
 
 /*Max width and center body on wide screens*/
@@ -62,14 +56,12 @@ body {
 header,
 main,
 footer {
-    margin-left: var(--primary-margin);
-    margin-right: var(--primary-margin);
+    margin-left: var(--primary-margin-small);
+    margin-right: var(--primary-margin-small);
 }
 
 /*Header and navigation*/
 header {
-    padding-top: var(--primary-padding);
-    padding-bottom: var(--primary-padding);
     border-bottom: 1px solid var(--border-gray);
 }
 
@@ -77,49 +69,22 @@ header nav {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-left: var(--primary-margin);
-    margin-right: var(--primary-margin);
 }
 
 header nav ul {
     display: flex;
-    gap: var(--primary-margin);
+    gap: var(--primary-margin-small);
     list-style: none;
 }
 
-header nav ul li a {
-    text-decoration: none;
-    color: var(--primary-black);
-}
-
-header nav ul li a:hover {
-    color: var(--primary-gray);
-}
-
 /*Hero container at top of page*/
-main .hero-container {
-    margin-left: var(--primary-margin);
-    margin-right: var(--primary-margin);
-}
-
-main .hero-container p {
+.hero {
     margin-top: var(--margin-hero);
     margin-bottom: var(--margin-hero);
-    font-size: var(--font-size-large);
-    line-height: var(--line-height-large);
-}
-
-main .hero-container p span {
-    color: var(--primary-gray);
-}
-
-/*Work container*/
-main .work-container {
-    margin-bottom: var(--primary-margin-large);
 }
 
 /*Accordion button*/
-main .work-container .accordion-button {
+.accordion-button {
     background-color: var(--primary-white);
     border: none;
     border-top: 1px solid var(--border-gray);
@@ -127,35 +92,19 @@ main .work-container .accordion-button {
     width: 100%;
     outline: none;
     cursor: pointer;
-    padding-top: var(--primary-padding);
-    padding-bottom: var(--primary-padding);
-}
-
-/*Accordion button title container with status label, name and year*/
-main .work-container .accordion-button .accordion-title-container {
-    font-size: var(--font-size-medium);
-    line-height: var(--line-height-medium);
-    color: var(--primary-black);
-}
-
-/*Accordion title*/
-main .work-container .accordion-button .accordion-title-container .accordion-title {
-    margin-left: var(--primary-margin);
-    margin-right: var(--primary-margin);
 }
 
 /*Year in accordion button*/
-main .work-container .accordion-button .accordion-title-container .accordion-title .year {
-    color: var(--primary-gray);
+.accordion-button .year {
     float: right;
 }
 
 /*Accordion label with plus or minus icon*/
-main .work-container .accordion-button .accordion-title-container .accordion-label:after {
+.accordion-button .label:after {
     box-sizing: border-box;
     content: "\002B";
     font-size: var(--font-size-medium);
-    line-height: var(--line-height-medium);
+    line-height: calc(var(--line-height-medium) - 2px);
     color: var(--primary-gray);
     text-align: center;
     float: left;
@@ -164,108 +113,112 @@ main .work-container .accordion-button .accordion-title-container .accordion-lab
     height: var(--line-height-medium);
     border: 1px solid var(--border-gray);
     border-radius: 4px;
-    margin-left: var(--primary-margin);
-    margin-right: var(--primary-margin);
+    margin-right: var(--primary-margin-small);
     transition: border 0.25s ease-in;
 }
 
-main .work-container .accordion-button.active .accordion-title-container .accordion-label:after {
+.accordion-button.active .label:after {
     content: "\2212";
 }
 
 /*Label changes border color on hover and on active accordion*/
-main .work-container .accordion-button:hover .accordion-title-container .accordion-label:after,
-main .work-container .accordion-button.active .accordion-title-container .accordion-label:after {
+.accordion-button:hover .label:after,
+.accordion-button.active .label:after {
     border: 1px solid var(--border-gray-label);
     transition: border 0.25s ease-in;
 }
 
 /* Style the accordion content with max height set to 0 and transition*/
-main .work-container .accordion-content {
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--primary-margin-small);
     max-height: 0px;
     overflow: hidden;
-    margin-left: var(--primary-margin);
-    margin-right: var(--primary-margin);
     transition: max-height 0.25s ease-in;
 }
 
 /*Accordion content class when animated is toggled in js*/
-main .work-container .accordion-content.animated {
+.content.animated {
     max-height: 500px;
     transition: max-height 0.25s ease-in;
 }
 
-/*Accordion column container with flex for layout*/
-main .work-container .accordion-content .accordion-column-container {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: var(--primary-margin);
-    margin-bottom: var(--primary-margin);
-}
-
-/*Accordion column that takes up 25% of width*/
-main .work-container .accordion-content .accordion-column-container .column-25 {
-    flex: 25%;
-}
-
-main .work-container .accordion-content .accordion-column-container .column-25 p {
-    font-size: var(--font-size-small);
-    line-height: var(--line-height-small);
-    color: var(--primary-black);
-}
-
-main .work-container .accordion-content .accordion-column-container .column-25 .theme {
-    color: var(--primary-gray);
-}
-
-main .work-container .accordion-content .accordion-column-container .column-25 p a {
-    color: var(--primary-black);
-    text-decoration: none;
-}
-
-main .work-container .accordion-content .accordion-column-container .column-25 p a:hover {
-    color: var(--primary-gray);
-}
-
-/*Accordion column that takes up 50% of width*/
-main .work-container .accordion-content .accordion-column-container .column-50 {
-    flex: 50%;
-}
-
 /*Work preview takes up 100% of 50% width and has a round border*/
-main .work-container .accordion-content .accordion-column-container .column-50 .work-preview {
+.content .column-50 .preview {
     width: 100%;
     border-radius: 4px;
 }
 
-
 /*About, Experience and Now container*/
-main .about-container,
-main .experience-container,
-main .now-container {
+.container {
     display: flex;
     flex-wrap: nowrap;
+    width: 100%;
+}
+
+.column-50 {
+    flex: 50%;
+}
+
+.column-25 {
+    flex: 25%;
+}
+
+.margin {
+    margin-left: var(--primary-margin-small);
+    margin-right: var(--primary-margin-small);
+}
+
+.margin-bottom-large {
     margin-bottom: var(--primary-margin-large);
 }
 
-main .about-container .column-50,
-main .experience-container .column-50,
-main .now-container .column-50 {
-    flex: 50%;
-    margin-left: var(--primary-margin);
-    margin-right: var(--primary-margin);
+.margin-bottom-medium {
+    margin-bottom: var(--primary-margin-medium);
 }
 
-main .about-container .container-title,
-main .experience-container .container-title,
-main .now-container .container-title {
+.padding {
+    padding-top: var(--primary-padding);
+    padding-bottom: var(--primary-padding);
+}
+
+.large{
+    font-family: "Roboto", sans-serif;
     font-size: var(--font-size-large);
     line-height: var(--line-height-large);
 }
 
-main .experience-container .column-50 p span,
-main .now-container .column-50 p span {
+.medium {
+    font-family: "Roboto", sans-serif;
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+}
+
+.small {
+    font-family: "Roboto", sans-serif;
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+}
+
+.underlined {
     text-decoration: underline;
+}
+
+.not-underlined {
+    text-decoration: none;
+}
+
+.black {
+    color: var(--primary-black);
+}
+
+.gray {
+    color: var(--primary-gray);
+}
+
+.gray-hover:hover {
+    color: var(--primary-gray);
 }
 
 /*Footer*/
@@ -273,70 +226,25 @@ footer {
     display: flex;
     flex-wrap: nowrap;
     border-top: 1px solid var(--border-gray);
-    padding-top: var(--primary-padding);
-    padding-bottom: var(--primary-padding);
-}
-
-/*Footer column that takes up 50% of width*/
-footer .column-50 {
-    flex: 50%;
-    margin-left: var(--primary-margin);
-    margin-right: var(--primary-margin);
-}
-
-footer .column-50 p {
-    font-size: var(--font-size-small);
-    line-height: var(--line-height-small);
-    color: var(--secondary-gray);
 }
 
 /*Media queries for responsivenes*/
 @media only screen and (max-width: 769px) {
-    main .about-container,
-    main .experience-container,
-    main .now-container {
+    .container {
         flex-wrap: wrap;
     }
 
-    main .about-container .column-50,
-    main .experience-container .column-50,
-    main .now-container .column-50 {
-        flex: 100%;
-    }
-
-    main .about-container .column-50 p,
-    main .experience-container .column-50 p,
-    main .now-container .column-50 p {
-        margin-bottom: var(--primary-margin);
-    }
-
-    main .work-container .accordion-content .accordion-column-container {
+    .content {
         flex-wrap: wrap;
     }
 
-    main .work-container .accordion-content .accordion-column-container .column-25 {
-        flex: 100%;
-    }
-
-    main .work-container .accordion-content .accordion-column-container .column-50 {
+    .column-50, .column-25 {
         flex: 100%;
     }
 }
 
 @media only screen and (max-width: 481px) {
-    header nav {
-        flex-wrap: wrap;
-    }
-
-    header nav ul {
-        flex: 100%;
-    }
-
-    footer {
-        flex-wrap: wrap;
-    }
-
-    footer .column-50 {
-        flex: 100%;
+    header nav ul li a {
+        display: none;
     }
 }
