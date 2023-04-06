@@ -156,7 +156,7 @@ main .work-container .accordion-button .accordion-title-container .accordion-lab
     content: "\002B";
     font-size: var(--font-size-medium);
     line-height: var(--line-height-medium);
-    color: var(--secondary-gray);
+    color: var(--primary-gray);
     text-align: center;
     float: left;
     background-color: var(--border-gray);
