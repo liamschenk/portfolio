@@ -135,13 +135,13 @@ header nav ul {
     gap: var(--primary-margin-small);
     max-height: 0px;
     overflow: hidden;
-    transition: max-height 0.25s ease-in;
+    transition: max-height 0.5s ease-in-out;
 }
 
 /*Accordion content class when animated is toggled in js*/
 .content.animated {
     max-height: 1000px;
-    transition: max-height 0.25s ease-in;
+    transition: max-height 0.5s ease-in-out;
 }
 
 /*Work preview takes up 100% of 50% width and has a round border*/
