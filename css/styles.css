@@ -15,7 +15,8 @@
     --primary-margin-medium: 40px;
     --primary-margin-large: 80px;
 
-    --margin-hero: 240px;
+    --margin-hero-large: 240px;
+    --margin-hero-medium: 160px;
 
     --font-size-large: 14pt;
     --font-size-medium: 12pt;
@@ -79,8 +80,8 @@ header nav ul {
 
 /*Hero container at top of page*/
 .hero {
-    margin-top: var(--margin-hero);
-    margin-bottom: var(--margin-hero);
+    margin-top: var(--margin-hero-large);
+    margin-bottom: var(--margin-hero-large);
 }
 
 /*Accordion button*/
@@ -178,6 +179,10 @@ header nav ul {
     margin-bottom: var(--primary-margin-medium);
 }
 
+.margin-bottom-small {
+    margin-bottom: var(--primary-margin-small);
+}
+
 .padding {
     padding-top: var(--primary-padding);
     padding-bottom: var(--primary-padding);
@@ -230,6 +235,11 @@ footer {
 
 /*Media queries for responsivenes*/
 @media only screen and (max-width: 769px) {
+    .hero {
+        margin-top: var(--margin-hero-medium);
+        margin-bottom: var(--margin-hero-medium);
+    }
+
     .container {
         flex-wrap: wrap;
     }
