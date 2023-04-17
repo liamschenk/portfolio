@@ -1,8 +1,7 @@
-/*Import Roboto font*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
 /*Root variables*/
 :root {
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
     --primary-white: #ffffff;
     --primary-black: #000000;
     --primary-gray: #7e7e7e;
@@ -105,7 +104,7 @@ header nav ul {
     box-sizing: border-box;
     content: "\002B";
     font-size: var(--font-size-medium);
-    line-height: calc(var(--line-height-medium) - 2px);
+    line-height: calc(var(--line-height-medium) - 4px);
     color: var(--primary-gray);
     text-align: center;
     float: left;
@@ -189,19 +188,19 @@ header nav ul {
 }
 
 .large{
-    font-family: "Roboto", sans-serif;
+    font-family: var(--system-ui);
     font-size: var(--font-size-large);
     line-height: var(--line-height-large);
 }
 
 .medium {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--system-ui);
     font-size: var(--font-size-medium);
     line-height: var(--line-height-medium);
 }
 
 .small {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--system-ui);
     font-size: var(--font-size-small);
     line-height: var(--line-height-small);
 }
