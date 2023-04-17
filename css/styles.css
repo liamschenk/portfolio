@@ -2,20 +2,21 @@
 :root {
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-    --primary-white: #ffffff;
-    --primary-black: #000000;
-    --primary-gray: #7e7e7e;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #7e7e7e;
 
     --border-gray: #e7e7e7;
     --border-gray-label: #dbdbdb;
 
-    --primary-padding: 20px;
-    --primary-margin-small: 20px;
-    --primary-margin-medium: 40px;
-    --primary-margin-large: 80px;
+    --padding: 20px;
 
     --margin-hero-large: 240px;
     --margin-hero-medium: 160px;
+
+    --margin-small: 20px;
+    --margin-medium: 40px;
+    --margin-large: 80px;
 
     --font-size-large: 13pt;
     --font-size-medium: 12pt;
@@ -37,12 +38,12 @@ body {
     max-width: 1440px;
     margin: auto;
 
-    animation: fadeIn ease 1s;
+    animation: bodyFadeIn ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-@keyframes fadeIn {
+@keyframes bodyFadeIn {
     0% {
         opacity: 0;
     }
@@ -50,14 +51,6 @@ body {
     100% {
         opacity: 1;
     }
-}
-
-/*Margin on header, main and footer*/
-header,
-main,
-footer {
-    margin-left: var(--primary-margin-small);
-    margin-right: var(--primary-margin-small);
 }
 
 /*Header and navigation*/
@@ -73,7 +66,7 @@ header nav {
 
 header nav ul {
     display: flex;
-    gap: var(--primary-margin-small);
+    gap: var(--margin-small);
     list-style: none;
 }
 
@@ -85,7 +78,7 @@ header nav ul {
 
 /*Accordion button*/
 .accordion-button {
-    background-color: var(--primary-white);
+    background-color: var(--white);
     border: none;
     border-top: 1px solid var(--border-gray);
     text-align: left;
@@ -105,7 +98,7 @@ header nav ul {
     content: "\002B";
     font-size: var(--font-size-medium);
     line-height: calc(var(--line-height-medium) - 4px);
-    color: var(--primary-gray);
+    color: var(--gray);
     text-align: center;
     float: left;
     background-color: var(--border-gray);
@@ -113,7 +106,7 @@ header nav ul {
     height: var(--line-height-medium);
     border: 1px solid var(--border-gray);
     border-radius: 4px;
-    margin-right: var(--primary-margin-small);
+    margin-right: var(--margin-small);
     transition: border 0.25s ease-in;
 }
 
@@ -132,7 +125,7 @@ header nav ul {
 .content {
     display: flex;
     flex-wrap: nowrap;
-    gap: var(--primary-margin-small);
+    gap: var(--margin-small);
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
@@ -145,7 +138,7 @@ header nav ul {
 }
 
 /*Work preview takes up 100% of 50% width and has a round border*/
-.content .column-50 .preview {
+.content .preview {
     width: 100%;
     border-radius: 4px;
 }
@@ -166,25 +159,25 @@ header nav ul {
 }
 
 .margin {
-    margin-left: var(--primary-margin-small);
-    margin-right: var(--primary-margin-small);
+    margin-left: var(--margin-small);
+    margin-right: var(--margin-small);
 }
 
 .margin-bottom-large {
-    margin-bottom: var(--primary-margin-large);
+    margin-bottom: var(--margin-large);
 }
 
 .margin-bottom-medium {
-    margin-bottom: var(--primary-margin-medium);
+    margin-bottom: var(--margin-medium);
 }
 
 .margin-bottom-small {
-    margin-bottom: var(--primary-margin-small);
+    margin-bottom: var(--margin-small);
 }
 
 .padding {
-    padding-top: var(--primary-padding);
-    padding-bottom: var(--primary-padding);
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
 }
 
 .large{
@@ -214,15 +207,15 @@ header nav ul {
 }
 
 .black {
-    color: var(--primary-black);
+    color: var(--black);
 }
 
 .gray {
-    color: var(--primary-gray);
+    color: var(--gray);
 }
 
 .gray-hover:hover {
-    color: var(--primary-gray);
+    color: var(--gray);
 }
 
 /*Footer*/
