@@ -18,13 +18,13 @@
     --margin-hero-large: 240px;
     --margin-hero-medium: 160px;
 
-    --font-size-large: 14pt;
+    --font-size-large: 13pt;
     --font-size-medium: 12pt;
     --font-size-small: 8pt;
 
-    --line-height-large: 17pt;
-    --line-height-medium: 15pt;
-    --line-height-small: 11pt;
+    --line-height-large: 18pt;
+    --line-height-medium: 17pt;
+    --line-height-small: 13pt;
 }
 
 /*Remove padding and margin from everything*/
