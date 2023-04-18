@@ -38,12 +38,12 @@ body {
     max-width: 1440px;
     margin: auto;
 
-    animation: bodyFadeIn ease 1s;
+    animation: fadeIn ease 1000ms;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-@keyframes bodyFadeIn {
+@keyframes fadeIn {
     0% {
         opacity: 0;
     }
@@ -85,6 +85,26 @@ header nav ul {
     width: 100%;
     outline: none;
     cursor: pointer;
+    opacity: 0;
+    animation: fadeIn ease 500ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+main .accordion-button:nth-child(1) {
+    animation-delay: 450ms;
+}
+
+main .accordion-button:nth-child(3) {
+    animation-delay: 600ms;
+}
+
+main .accordion-button:nth-child(5) {
+    animation-delay: 750ms;
+}
+
+main .accordion-button:nth-child(7) {
+    animation-delay: 900ms;
 }
 
 /*Year in accordion button*/
