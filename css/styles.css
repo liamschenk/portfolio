@@ -37,6 +37,7 @@
 body {
     max-width: 1440px;
     margin: auto;
+    opacity: 0;
 
     animation: fadeIn ease 1000ms;
     animation-iteration-count: 1;
@@ -44,10 +45,6 @@ body {
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
     100% {
         opacity: 1;
     }
@@ -86,7 +83,7 @@ header nav ul {
     outline: none;
     cursor: pointer;
     opacity: 0;
-    animation: fadeIn ease 500ms;
+    animation: fadeIn ease-in-out 500ms;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
