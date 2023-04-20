@@ -1,269 +1,275 @@
 /*Root variables*/
 :root {
-    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-    --white: #ffffff;
-    --black: #000000;
-    --gray: #7e7e7e;
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #7e7e7e;
 
-    --border-gray: #e7e7e7;
-    --border-gray-label: #dbdbdb;
+  --border-gray: #e7e7e7;
+  --border-gray-label: #dbdbdb;
 
-    --padding: 20px;
+  --padding: 20px;
 
-    --margin-hero-large: 240px;
-    --margin-hero-medium: 160px;
+  --margin-hero-large: 240px;
+  --margin-hero-medium: 160px;
 
-    --margin-small: 20px;
-    --margin-medium: 40px;
-    --margin-large: 80px;
+  --margin-small: 20px;
+  --margin-medium: 40px;
+  --margin-large: 80px;
 
-    --font-size-large: 13pt;
-    --font-size-medium: 12pt;
-    --font-size-small: 8pt;
+  --font-size-large: 13pt;
+  --font-size-medium: 12pt;
+  --font-size-small: 8pt;
 
-    --line-height-large: 18pt;
-    --line-height-medium: 17pt;
-    --line-height-small: 13pt;
+  --line-height-large: 18pt;
+  --line-height-medium: 17pt;
+  --line-height-small: 13pt;
 }
 
 /*Remove padding and margin from everything*/
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*Max width and center body on wide screens*/
 body {
-    max-width: 1440px;
-    margin: auto;
-    opacity: 0;
+  max-width: 1440px;
+  margin: auto;
+  opacity: 0;
 
-    animation: fadeIn ease 1000ms;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  animation: fadeIn ease 1000ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeIn {
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*Header and navigation*/
 header {
-    border-bottom: 1px solid var(--border-gray);
+  border-bottom: 1px solid var(--border-gray);
 }
 
 header nav {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 header nav ul {
-    display: flex;
-    gap: var(--margin-small);
-    list-style: none;
+  display: flex;
+  gap: var(--margin-small);
+  list-style: none;
 }
 
 /*Hero container at top of page*/
 .hero {
-    margin-top: var(--margin-hero-large);
-    margin-bottom: var(--margin-hero-large);
+  margin-top: var(--margin-hero-large);
+  margin-bottom: var(--margin-hero-large);
 }
 
 /*Accordion button*/
 .accordion-button {
-    background-color: var(--white);
-    border: none;
-    border-top: 1px solid var(--border-gray);
-    text-align: left;
-    width: 100%;
-    outline: none;
-    cursor: pointer;
-    opacity: 0;
-    animation: fadeIn ease-in-out 500ms;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  background-color: var(--white);
+  border: none;
+  border-top: 1px solid var(--border-gray);
+  text-align: left;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn ease-in-out 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 main .accordion-button:nth-child(1) {
-    animation-delay: 450ms;
+  animation-delay: 450ms;
 }
 
 main .accordion-button:nth-child(3) {
-    animation-delay: 600ms;
+  animation-delay: 600ms;
 }
 
 main .accordion-button:nth-child(5) {
-    animation-delay: 750ms;
+  animation-delay: 750ms;
 }
 
 main .accordion-button:nth-child(7) {
-    animation-delay: 900ms;
+  animation-delay: 900ms;
+}
+
+main .accordion-button:nth-child(9) {
+  animation-delay: 1050ms;
 }
 
 /*Year in accordion button*/
 .accordion-button .year {
-    float: right;
+  float: right;
 }
 
 /*Accordion label with plus or minus icon*/
 .accordion-button .label:after {
-    box-sizing: border-box;
-    content: "\002B";
-    font-size: var(--font-size-medium);
-    line-height: calc(var(--line-height-medium) - 4px);
-    color: var(--gray);
-    text-align: center;
-    float: left;
-    background-color: var(--border-gray);
-    width: var(--line-height-medium);
-    height: var(--line-height-medium);
-    border: 1px solid var(--border-gray);
-    border-radius: 4px;
-    margin-right: var(--margin-small);
-    transition: border 0.25s ease-in;
+  box-sizing: border-box;
+  content: "\002B";
+  font-size: var(--font-size-medium);
+  line-height: calc(var(--line-height-medium) - 4px);
+  color: var(--gray);
+  text-align: center;
+  float: left;
+  background-color: var(--border-gray);
+  width: var(--line-height-medium);
+  height: var(--line-height-medium);
+  border: 1px solid var(--border-gray);
+  border-radius: 4px;
+  margin-right: var(--margin-small);
+  transition: border 0.25s ease-in;
 }
 
 .accordion-button.active .label:after {
-    content: "\2212";
+  content: "\2212";
 }
 
 /*Label changes border color on hover and on active accordion*/
 .accordion-button:hover .label:after,
 .accordion-button.active .label:after {
-    border: 1px solid var(--border-gray-label);
-    transition: border 0.25s ease-in;
+  border: 1px solid var(--border-gray-label);
+  transition: border 0.25s ease-in;
 }
 
 /* Style the accordion content with max height set to 0 and transition*/
 .content {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: var(--margin-small);
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--margin-small);
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
 }
 
 /*Accordion content class when animated is toggled in js*/
 .content.animated {
-    max-height: 1000px;
-    transition: max-height 0.5s ease-in-out;
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in-out;
 }
 
 /*Work preview takes up 100% of 50% width and has a round border*/
 .content .preview {
-    width: 100%;
-    border-radius: 4px;
+  width: 100%;
+  border-radius: 4px;
 }
 
 /*About, Experience and Now container*/
 .container {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .column-50 {
-    flex: 50%;
+  flex: 50%;
 }
 
 .column-25 {
-    flex: 25%;
+  flex: 25%;
 }
 
 .margin {
-    margin-left: var(--margin-small);
-    margin-right: var(--margin-small);
+  margin-left: var(--margin-small);
+  margin-right: var(--margin-small);
 }
 
 .margin-bottom-large {
-    margin-bottom: var(--margin-large);
+  margin-bottom: var(--margin-large);
 }
 
 .margin-bottom-medium {
-    margin-bottom: var(--margin-medium);
+  margin-bottom: var(--margin-medium);
 }
 
 .margin-bottom-small {
-    margin-bottom: var(--margin-small);
+  margin-bottom: var(--margin-small);
 }
 
 .padding {
-    padding-top: var(--padding);
-    padding-bottom: var(--padding);
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
 }
 
-.large{
-    font-family: var(--system-ui);
-    font-size: var(--font-size-large);
-    line-height: var(--line-height-large);
+.large {
+  font-family: var(--system-ui);
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-large);
 }
 
 .medium {
-    font-family: var(--system-ui);
-    font-size: var(--font-size-medium);
-    line-height: var(--line-height-medium);
+  font-family: var(--system-ui);
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height-medium);
 }
 
 .small {
-    font-family: var(--system-ui);
-    font-size: var(--font-size-small);
-    line-height: var(--line-height-small);
+  font-family: var(--system-ui);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
 }
 
 .underlined {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .not-underlined {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .black {
-    color: var(--black);
+  color: var(--black);
 }
 
 .gray {
-    color: var(--gray);
+  color: var(--gray);
 }
 
 .gray-hover:hover {
-    color: var(--gray);
+  color: var(--gray);
 }
 
 /*Footer*/
 footer {
-    display: flex;
-    flex-wrap: nowrap;
-    border-top: 1px solid var(--border-gray);
+  display: flex;
+  flex-wrap: nowrap;
+  border-top: 1px solid var(--border-gray);
 }
 
 /*Media queries for responsivenes*/
 @media only screen and (max-width: 769px) {
-    .hero {
-        margin-top: var(--margin-hero-medium);
-        margin-bottom: var(--margin-hero-medium);
-    }
+  .hero {
+    margin-top: var(--margin-hero-medium);
+    margin-bottom: var(--margin-hero-medium);
+  }
 
-    .container {
-        flex-wrap: wrap;
-    }
+  .container {
+    flex-wrap: wrap;
+  }
 
-    .content {
-        flex-wrap: wrap;
-    }
+  .content {
+    flex-wrap: wrap;
+  }
 
-    .column-50, .column-25 {
-        flex: 100%;
-    }
+  .column-50,
+  .column-25 {
+    flex: 100%;
+  }
 }
 
 @media only screen and (max-width: 481px) {
-    header nav ul li a {
-        display: none;
-    }
+  header nav ul li a {
+    display: none;
+  }
 }
