@@ -43,6 +43,7 @@ body {
   animation: fadeIn ease 1000ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  animation-delay: 250ms;
 }
 
 @keyframes fadeIn {
@@ -90,23 +91,23 @@ header nav ul {
 }
 
 main .accordion-button:nth-child(1) {
-  animation-delay: 450ms;
+  animation-delay: 700ms;
 }
 
 main .accordion-button:nth-child(3) {
-  animation-delay: 600ms;
+  animation-delay: 850ms;
 }
 
 main .accordion-button:nth-child(5) {
-  animation-delay: 750ms;
+  animation-delay: 1000ms;
 }
 
 main .accordion-button:nth-child(7) {
-  animation-delay: 900ms;
+  animation-delay: 1150ms;
 }
 
 main .accordion-button:nth-child(9) {
-  animation-delay: 1050ms;
+  animation-delay: 1400ms;
 }
 
 /*Year in accordion button*/
