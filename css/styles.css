@@ -186,6 +186,10 @@ main .accordion-button:nth-child(9) {
   margin-right: var(--margin-small);
 }
 
+.margin-top-large {
+  margin-top: var(--margin-large);
+}
+
 .margin-bottom-large {
   margin-bottom: var(--margin-large);
 }
