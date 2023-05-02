@@ -186,6 +186,10 @@ main .accordion-button:nth-child(9) {
   margin-right: var(--margin-small);
 }
 
+.margin-top-large {
+  margin-top: var(--margin-large);
+}
+
 .margin-bottom-large {
   margin-bottom: var(--margin-large);
 }
@@ -244,7 +248,7 @@ main .accordion-button:nth-child(9) {
 /*Footer*/
 footer {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 20px;
   border-top: 1px solid var(--border-gray);
 }
