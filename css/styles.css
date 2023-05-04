@@ -10,6 +10,8 @@
   --border-gray: #e7e7e7;
   --border-gray-label: #dbdbdb;
 
+  --border-radius: 4px;
+
   --padding: 20px;
 
   --margin-hero-large: 240px;
@@ -32,6 +34,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 /*Max width and center body on wide screens*/
@@ -128,7 +131,7 @@ main .accordion-button:nth-child(9) {
   width: var(--line-height-medium);
   height: var(--line-height-medium);
   border: 1px solid var(--border-gray);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   margin-right: var(--margin-small);
   transition: border 0.25s ease-in;
 }
@@ -163,7 +166,7 @@ main .accordion-button:nth-child(9) {
 /*Work preview takes up 100% of 50% width and has a round border*/
 .content .preview {
   width: 100%;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 }
 
 /*About, Experience and Now container*/
