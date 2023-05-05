@@ -120,9 +120,10 @@ main .accordion-button:nth-child(9) {
 }
 
 /*Accordion label with plus or minus*/
-.accordion-button .label:after {
+.accordion-button p:before {
   box-sizing: border-box;
   content: "\002B";
+  color: var(--gray);
   font-size: var(--font-size-medium);
   line-height: calc(var(--line-height-medium) - 4px);
   text-align: center;
@@ -136,14 +137,14 @@ main .accordion-button:nth-child(9) {
   transition: border 0.25s ease-in;
 }
 
-.accordion-button.active .label:after {
+.accordion-button.active p:before {
   content: "\2212";
 }
 
 /*Label border color on hover and active accordion*/
-.accordion-button:hover .label:after,
-.accordion-button.active .label:after {
-  border: 1px solid var(--border-gray-label);
+.accordion-button:hover p:before,
+.accordion-button.active p:before {
+  border-color: var(--border-gray-label);
   transition: border 0.25s ease-in;
 }
 
