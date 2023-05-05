@@ -252,22 +252,19 @@ main .accordion-button:nth-child(9) {
 footer {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: var(--margin-small);
   border-top: 1px solid var(--border-gray);
 }
 
 /*Media queries*/
-@media only screen and (max-width: 769px) {
+@media (width < 769px) {
   .hero {
     margin-top: var(--margin-hero-medium);
     margin-bottom: var(--margin-hero-medium);
   }
 
-  .container {
-    flex-wrap: wrap;
-  }
-
-  .content {
+  .container,
+  .content{
     flex-wrap: wrap;
   }
 
@@ -277,7 +274,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 481px) {
+@media (width < 481px) {
   header nav ul li a {
     display: none;
   }
