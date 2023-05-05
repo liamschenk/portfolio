@@ -3,8 +3,8 @@
   --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-  --white: #ffffff;
-  --black: #000000;
+  --white: #f8f9f8;
+  --black: #222222;
   --gray: #7e7e7e;
 
   --border-gray: #e7e7e7;
@@ -39,6 +39,7 @@
 
 /*Center body on big screens and and load animation*/
 body {
+  background-color: var(--white);
   max-width: 1440px;
   margin: auto;
   opacity: 0;
