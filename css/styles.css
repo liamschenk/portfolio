@@ -30,14 +30,14 @@
   --line-height-small: 13pt;
 }
 
-/*Remove padding and margin from everything*/
+/*Remove padding/margin add smooth scroll*/
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
 }
 
-/*Max width and center body on wide screens*/
+/*Center body on big screens and and load animation*/
 body {
   max-width: 1440px;
   margin: auto;
@@ -72,7 +72,7 @@ header nav ul {
   list-style: none;
 }
 
-/*Hero container at top of page*/
+/*Hero container*/
 .hero {
   margin-top: var(--margin-hero-large);
   margin-bottom: var(--margin-hero-large);
@@ -93,6 +93,7 @@ header nav ul {
   animation-fill-mode: forwards;
 }
 
+/*Accordion button load animation delay*/
 main .accordion-button:nth-child(1) {
   animation-delay: 700ms;
 }
@@ -113,18 +114,17 @@ main .accordion-button:nth-child(9) {
   animation-delay: 1400ms;
 }
 
-/*Year in accordion button*/
+/*Accordion button year*/
 .accordion-button .year {
   float: right;
 }
 
-/*Accordion label with plus or minus icon*/
+/*Accordion label with plus or minus*/
 .accordion-button .label:after {
   box-sizing: border-box;
   content: "\002B";
   font-size: var(--font-size-medium);
   line-height: calc(var(--line-height-medium) - 4px);
-  color: var(--gray);
   text-align: center;
   float: left;
   background-color: var(--border-gray);
@@ -140,14 +140,14 @@ main .accordion-button:nth-child(9) {
   content: "\2212";
 }
 
-/*Label changes border color on hover and on active accordion*/
+/*Label border color on hover and active accordion*/
 .accordion-button:hover .label:after,
 .accordion-button.active .label:after {
   border: 1px solid var(--border-gray-label);
   transition: border 0.25s ease-in;
 }
 
-/* Style the accordion content with max height set to 0 and transition*/
+/* Style accordion content with max height 0 and transition*/
 .content {
   display: flex;
   flex-wrap: nowrap;
@@ -157,19 +157,19 @@ main .accordion-button:nth-child(9) {
   transition: max-height 0.5s ease-in-out;
 }
 
-/*Accordion content class when animated is toggled in js*/
+/*Accordion content class toggled via js*/
 .content.animated {
   max-height: 1000px;
   transition: max-height 0.5s ease-in-out;
 }
 
-/*Work preview takes up 100% of 50% width and has a round border*/
+/*Work preview*/
 .content .preview {
   width: 100%;
   border-radius: var(--border-radius);
 }
 
-/*About, Experience and Now container*/
+/*General classes for styling*/
 .container {
   display: flex;
   flex-wrap: nowrap;
@@ -256,7 +256,7 @@ footer {
   border-top: 1px solid var(--border-gray);
 }
 
-/*Media queries for responsivenes*/
+/*Media queries*/
 @media only screen and (max-width: 769px) {
   .hero {
     margin-top: var(--margin-hero-medium);
