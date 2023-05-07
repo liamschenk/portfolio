@@ -8,6 +8,6 @@ Hallo, hier siehst du den Code für mein <a href="https://liamschenk.ch" target=
 - CSS
 - JavaScript
 
-<h2 align="left">Hosted mit:</h2>
+<h2 align="left">Gehosted mit:</h2>
 
 - Github Pages
