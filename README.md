@@ -1,6 +1,6 @@
 <h1 align="left">Portfolio</h1>
 
-Hallo, hier siehst du den Code für mein <a href="https://liamschenk.ch">Portfolio</a>.
+Hallo, hier siehst du den Code für mein <a href="https://liamschenk.ch" target="_blank">Portfolio</a>.
 
 <h3 align="left">Erstellt mit:</h3>
 
