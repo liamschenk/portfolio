@@ -115,11 +115,6 @@ main .accordion-button:nth-child(9) {
   animation-delay: 1300ms;
 }
 
-main .accordion-button:nth-child(11) {
-  animation-delay: 1450ms;
-}
-
-
 /*Accordion button year*/
 .accordion-button .year {
   float: right;
