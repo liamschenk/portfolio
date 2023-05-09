@@ -1,6 +1,6 @@
 <h1 align="left">Portfolio</h1>
 
-![MacBook-Pro-16-inch](https://user-images.githubusercontent.com/89917505/236849319-cdfeb5a7-c02a-4a24-b33c-b52611bd673c.jpg)
+![MacBook-Pro-16](https://github.com/liamschenk/portfolio/assets/89917505/28c4a538-e843-4c2b-85ac-804ba1dc9c0e)
 
 Hallo, hier siehst du den Code für mein <a href="https://liamschenk.ch" target="_blank">Portfolio</a>.
 
