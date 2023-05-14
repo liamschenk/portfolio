@@ -20,15 +20,15 @@
 
   --margin-small: 20px;
   --margin-medium: 40px;
-  --margin-large: 80px;
+  --margin-large: 96px;
 
-  --font-size-large: 13pt;
+  --font-size-large: 14pt;
   --font-size-medium: 12pt;
-  --font-size-small: 8pt;
+  --font-size-small: 10pt;
 
-  --line-height-large: 18pt;
+  --line-height-large: 19pt;
   --line-height-medium: 17pt;
-  --line-height-small: 13pt;
+  --line-height-small: 15pt;
 }
 
 /*Remove padding/margin add smooth scroll*/
@@ -48,7 +48,7 @@ body {
   animation: fadeIn ease 1000ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  animation-delay: 250ms;
+  animation-delay: 500ms;
 }
 
 @keyframes fadeIn {
@@ -97,23 +97,23 @@ header nav ul {
 
 /*Accordion button load animation delay*/
 main .accordion-button:nth-child(1) {
-  animation-delay: 700ms;
+  animation-delay: 900ms;
 }
 
 main .accordion-button:nth-child(3) {
-  animation-delay: 850ms;
+  animation-delay: 1050ms;
 }
 
 main .accordion-button:nth-child(5) {
-  animation-delay: 1000ms;
+  animation-delay: 1200ms;
 }
 
 main .accordion-button:nth-child(7) {
-  animation-delay: 1150ms;
+  animation-delay: 1350ms;
 }
 
 main .accordion-button:nth-child(9) {
-  animation-delay: 1300ms;
+  animation-delay: 1500ms;
 }
 
 /*Accordion button year*/
