@@ -34,6 +34,9 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -185,16 +188,21 @@ main .accordion-button:nth-child(9) {
   margin-right: var(--margin-small);
 }
 
+.padding {
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+}
+
 .margin-top-hero {
   margin-top: var(--margin-hero-large);
 }
 
-.margin-top-large {
-  margin-top: var(--margin-large);
-}
-
 .margin-bottom-hero {
   margin-bottom: var(--margin-hero-large);
+}
+
+.margin-top-large {
+  margin-top: var(--margin-large);
 }
 
 .margin-bottom-large {
@@ -205,13 +213,8 @@ main .accordion-button:nth-child(9) {
   margin-bottom: var(--margin-medium);
 }
 
-.margin-bottom-small {
-  margin-bottom: var(--margin-small);
-}
-
-.padding {
-  padding-top: var(--padding);
-  padding-bottom: var(--padding);
+.padding-top-small {
+  padding-top: var(--margin-small);
 }
 
 .large {
@@ -259,26 +262,26 @@ main .accordion-button:nth-child(9) {
 /*Footer*/
 footer {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: var(--margin-small);
   border-top: 1px solid var(--border-gray);
 }
 
 /*Media queries*/
 @media (width < 769px) {
-  .hero {
-    margin-top: var(--margin-hero-medium);
-    margin-bottom: var(--margin-hero-medium);
-  }
-
   .container,
-  .content {
+  .content, 
+  footer {
     flex-wrap: wrap;
   }
 
   .column-50,
   .column-25 {
     flex: 100%;
+  }
+
+  .margin-bottom-mobile {
+    margin-bottom: var(--margin-small);
   }
 }
 
