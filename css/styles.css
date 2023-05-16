@@ -186,16 +186,24 @@ main .accordion-button:nth-child(9) {
   margin-right: var(--margin-small);
 }
 
-.margin-top-hero {
+.margin-top-hero-large {
   margin-top: var(--margin-hero-large);
+}
+
+.margin-top-hero-medium {
+  margin-top: var(--margin-hero-medium);
 }
 
 .margin-top-large {
   margin-top: var(--margin-large);
 }
 
-.margin-bottom-hero {
+.margin-bottom-hero-large {
   margin-bottom: var(--margin-hero-large);
+}
+
+.margin-bottom-hero-medium {
+  margin-bottom: var(--margin-hero-medium);
 }
 
 .margin-bottom-large {
@@ -253,8 +261,8 @@ main .accordion-button:nth-child(9) {
   color: var(--gray);
 }
 
-.lightgray-hover:hover {
-  color: var(--lightgray);
+.black-hover:hover {
+  color: var(--black);
 }
 
 /*Footer*/
