@@ -6,7 +6,6 @@
   --white: #fefeff;
   --black: #222222;
   --gray: #7e7e7e;
-  --lightgray: #c3c3c3;
 
   --border-gray: #e7e7e7;
   --border-gray-label: #dbdbdb;
@@ -253,8 +252,8 @@ main .accordion-button:nth-child(9) {
   color: var(--gray);
 }
 
-.lightgray-hover:hover {
-  color: var(--lightgray);
+.black-hover:hover {
+  color: var(--black);
 }
 
 /*Footer*/
