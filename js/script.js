@@ -17,9 +17,9 @@ var toggle = document.getElementById("theme-switch");
 
 var storedTheme =
   localStorage.getItem("theme") ||
-  (window.matchMedia("(prefers-color-scheme: light)").matches
-    ? "light"
-    : "dark");
+  (window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light");
 if (storedTheme)
   document.documentElement.setAttribute("data-theme", storedTheme);
 
@@ -34,7 +34,6 @@ toggle.onclick = function () {
   document.documentElement.setAttribute("data-theme", targetTheme);
   localStorage.setItem("theme", targetTheme);
 };
-
 
 function time() {
   var d = new Date();
