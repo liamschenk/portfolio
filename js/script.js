@@ -15,11 +15,11 @@ for (i = 0; i < acc.length; i++) {
 
 var toggle = document.getElementById("theme-switch");
 
-var storedTheme =
-  localStorage.getItem("theme") ||
-  (window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light");
+var storedTheme = localStorage.getItem("theme");
+if (!storedTheme) {
+  storedTheme = "light";
+}
+
 if (storedTheme)
   document.documentElement.setAttribute("data-theme", storedTheme);
 
