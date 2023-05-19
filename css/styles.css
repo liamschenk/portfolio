@@ -23,6 +23,7 @@
   --line-height-small: 15pt;
 }
 
+/*Light and dark mode*/
 html[data-theme="light"] {
   --primary: #fafafa;
   --secondary: #212121;
@@ -39,8 +40,9 @@ html[data-theme="dark"] {
   --border-label: #414141;
 }
 
-/*Remove padding/margin add smooth scroll*/
+/*Remove padding, margin and add smooth scroll*/
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -49,7 +51,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/*Center body on big screens and and load animation*/
+/*Center body and load animation*/
 body {
   background-color: var(--primary);
   max-width: 1440px;
@@ -85,6 +87,7 @@ header nav ul {
   list-style: none;
 }
 
+/*Theme switch*/
 .theme-switch {
   background-color: var(--primary);
   border: none;
@@ -93,6 +96,7 @@ header nav ul {
   cursor: pointer;
 }
 
+/*Light and dark emoji*/
 html[data-theme="light"] .theme-switch:before {
   content: "\01F31D";
 }
@@ -142,9 +146,8 @@ main .accordion-button:nth-child(9) {
   float: right;
 }
 
-/*Accordion label with plus or minus*/
+/*Accordion label*/
 .accordion-button p:before {
-  box-sizing: border-box;
   content: "\002B";
   color: var(--accent);
   font-size: var(--font-size-medium);
@@ -152,12 +155,12 @@ main .accordion-button:nth-child(9) {
   text-align: center;
   float: left;
   background-color: var(--border);
-  width: var(--line-height-medium);
-  height: var(--line-height-medium);
+  width: calc(var(--line-height-medium) - 2px);
+  height: calc(var(--line-height-medium) - 2px);
   border: 1px solid transparent;
   border-radius: var(--border-radius);
   margin-right: var(--margin-small);
-  transition: border 0.2s ease-in;
+  transition: border 200ms ease-in;
 }
 
 .accordion-button.active p:before {
@@ -168,23 +171,23 @@ main .accordion-button:nth-child(9) {
 .accordion-button:hover p:before,
 .accordion-button.active p:before {
   border-color: var(--border-label);
-  transition: border 0.2s ease-in;
+  transition: border 200ms ease-in;
 }
 
-/* Style accordion content with max height 0 and transition*/
+/* Accordion content*/
 .content {
   display: flex;
   flex-wrap: nowrap;
   gap: var(--margin-small);
   max-height: 0px;
   overflow: hidden;
-  transition: max-height 0.6s ease-in-out;
+  transition: max-height 600ms ease-in-out;
 }
 
 /*Accordion content class toggled via js*/
 .content.animated {
   max-height: 1000px;
-  transition: max-height 0.6s ease-in-out;
+  transition: max-height 600ms ease-in-out;
 }
 
 /*Work preview*/
@@ -194,6 +197,7 @@ main .accordion-button:nth-child(9) {
 }
 
 /*General classes for styling*/
+/*Container and flex classes*/
 .container {
   display: flex;
   flex-wrap: nowrap;
@@ -208,6 +212,7 @@ main .accordion-button:nth-child(9) {
   flex: 25%;
 }
 
+/*Margin and padding classes*/
 .margin {
   margin-left: var(--margin-small);
   margin-right: var(--margin-small);
@@ -242,6 +247,7 @@ main .accordion-button:nth-child(9) {
   padding-top: var(--margin-small);
 }
 
+/*Font sizes*/
 .large {
   font-family: var(--system-ui);
   font-size: var(--font-size-large);
@@ -260,6 +266,7 @@ main .accordion-button:nth-child(9) {
   line-height: var(--line-height-small);
 }
 
+/*Font styling*/
 .underlined {
   text-decoration: underline;
 }
