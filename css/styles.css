@@ -91,19 +91,28 @@ header nav ul {
 /*Theme switch*/
 .theme-switch {
   background-color: var(--primary);
+  width: var(--line-height-medium);
+  height: var(--line-height-medium);
   border: none;
   outline: none;
   text-align: center;
   cursor: pointer;
+  vertical-align: top;
 }
 
 /*Light and dark emoji*/
-html[data-theme="light"] .theme-switch:before {
-  content: "\01F31D";
+html[data-theme="light"] .theme-switch {
+  background: url(../assets/icons/sun.svg);
+  background-size: var(--font-size-medium) var(--font-size-medium);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-html[data-theme="dark"] .theme-switch:before {
-  content: "\01F31A";
+html[data-theme="dark"] .theme-switch {
+  background: url(../assets/icons/moon.svg);
+  background-size: var(--font-size-medium) var(--font-size-medium);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /*Accordion button*/
@@ -243,10 +252,6 @@ main .accordion-button:nth-child(9) {
 
 .margin-bottom-medium {
   margin-bottom: var(--margin-medium);
-}
-
-.padding-top-small {
-  padding-top: var(--margin-small);
 }
 
 /*Font sizes*/
