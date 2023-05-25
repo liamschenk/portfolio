@@ -7,9 +7,6 @@
 
   --padding: 20px;
 
-  --margin-hero-large: 240px;
-  --margin-hero-medium: 160px;
-
   --margin-small: 20px;
   --margin-medium: 40px;
   --margin-large: 96px;
@@ -77,7 +74,6 @@ header {
 
 header nav {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
 }
 
@@ -85,6 +81,12 @@ header nav ul {
   display: flex;
   gap: var(--margin-small);
   list-style: none;
+}
+
+.hero {
+  display: flex;
+  height: 520px;
+  align-items: center;
 }
 
 /*Theme switch*/
@@ -210,7 +212,6 @@ main .accordion-button:nth-child(9) {
 /*Container and flex classes*/
 .container {
   display: flex;
-  flex-wrap: nowrap;
   width: 100%;
 }
 
@@ -231,14 +232,6 @@ main .accordion-button:nth-child(9) {
 .padding {
   padding-top: var(--padding);
   padding-bottom: var(--padding);
-}
-
-.margin-top-hero {
-  margin-top: var(--margin-hero-large);
-}
-
-.margin-bottom-hero {
-  margin-bottom: var(--margin-hero-large);
 }
 
 .margin-top-large {
@@ -296,7 +289,6 @@ main .accordion-button:nth-child(9) {
 /*Footer*/
 footer {
   display: flex;
-  flex-wrap: nowrap;
   gap: var(--margin-small);
   border-top: 1px solid var(--border);
 }
