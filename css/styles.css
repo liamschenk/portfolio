@@ -7,9 +7,11 @@
 
   --padding: 20px;
 
-  --margin-small: 20px;
-  --margin-medium: 40px;
+  --margin-hero: 240px;
   --margin-large: 96px;
+  --margin-medium: 40px;
+  --margin-small: 20px;
+
 
   --font-size-large: 14pt;
   --font-size-medium: 12pt;
@@ -81,12 +83,6 @@ header nav ul {
   display: flex;
   gap: var(--margin-small);
   list-style: none;
-}
-
-.hero {
-  display: flex;
-  height: 520px;
-  align-items: center;
 }
 
 /*Theme switch*/
@@ -232,6 +228,14 @@ main .accordion-button:nth-child(9) {
 .padding {
   padding-top: var(--padding);
   padding-bottom: var(--padding);
+}
+
+.margin-top-hero {
+  margin-top: var(--margin-hero);
+}
+
+.margin-bottom-hero {
+  margin-bottom: var(--margin-hero);
 }
 
 .margin-top-large {
