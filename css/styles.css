@@ -211,11 +211,11 @@ main .accordion-button:nth-child(9) {
   width: 100%;
 }
 
-.column-50 {
+.flex-50 {
   flex: 50%;
 }
 
-.column-25 {
+.flex-25 {
   flex: 25%;
 }
 
@@ -305,8 +305,8 @@ footer {
     flex-wrap: wrap;
   }
 
-  .column-50,
-  .column-25 {
+  .flex-50,
+  .flex-25 {
     flex: 100%;
   }
 
