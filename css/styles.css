@@ -257,6 +257,10 @@ main .accordion-button:nth-child(9) {
   margin-bottom: var(--margin-medium);
 }
 
+.margin-bottom-small {
+  margin-bottom: var(--margin-small);
+}
+
 /*Fonts*/
 .large {
   font-family: var(--system-ui);
@@ -308,10 +312,6 @@ main .accordion-button:nth-child(9) {
   .flex-50,
   .flex-25 {
     flex: 100%;
-  }
-
-  .margin-bottom-mobile {
-    margin-bottom: var(--margin-small);
   }
 }
 
