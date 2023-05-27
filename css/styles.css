@@ -5,20 +5,20 @@
 
   --border-radius: 6px;
 
-  --padding: 20px;
-
   --margin-hero: 240px;
   --margin-large: 96px;
-  --margin-medium: 40px;
-  --margin-small: 20px;
+  --margin-medium: 48px;
+  --margin-small: 24px;
 
-  --font-size-large: 14pt;
-  --font-size-medium: 12pt;
-  --font-size-small: 10pt;
+  --padding: 24px;
 
-  --line-height-large: 19pt;
-  --line-height-medium: 17pt;
-  --line-height-small: 15pt;
+  --font-size-large: 18px;
+  --font-size-medium: 16px;
+  --font-size-small: 14px;
+
+  --line-height-large: 24px;
+  --line-height-medium: 22px;
+  --line-height-small: 20px;
 }
 
 /*Light/dark mode*/
