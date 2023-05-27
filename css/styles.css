@@ -24,14 +24,14 @@
 /*Light/dark mode*/
 html[data-theme="light"] {
   --primary: #fafafa;
-  --secondary: #212121;
+  --secondary: #1a1a1a;
   --accent: #9e9e9e;
   --border: #eeeeee;
   --border-label: #e0e0e0;
 }
 
 html[data-theme="dark"] {
-  --primary: #212121;
+  --primary: #1a1a1a;
   --secondary: #fafafa;
   --accent: #bdbdbd;
   --border: #2e2e2e;
