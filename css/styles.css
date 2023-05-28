@@ -144,12 +144,12 @@ html[data-theme="dark"] .theme-switch {
   content: "\002B";
   color: var(--accent);
   font-size: var(--font-size-medium);
-  line-height: calc(var(--line-height-medium) - 4px);
+  line-height: calc(var(--line-height-medium) - 2pt);
   text-align: center;
   float: left;
   background-color: var(--border);
-  width: calc(var(--line-height-medium) - 2px);
-  height: calc(var(--line-height-medium) - 2px);
+  width: var(--line-height-medium);
+  height: var(--line-height-medium);
   border: 1px solid transparent;
   border-radius: var(--border-radius);
   margin-right: var(--margin-small);
