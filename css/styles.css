@@ -38,7 +38,7 @@ html[data-theme="dark"] {
   --border-label: #414141;
 }
 
-/*Properties for verything*/
+/*Properties for everything*/
 * {
   box-sizing: border-box;
   margin: 0;
