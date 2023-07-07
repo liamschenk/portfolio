@@ -173,14 +173,16 @@ html[data-theme="dark"] .theme-switch {
   flex-wrap: nowrap;
   gap: var(--margin-small);
   max-height: 0px;
+  opacity: 0;
   overflow: hidden;
-  transition: max-height 600ms ease-in-out;
+  transition: max-height 500ms ease, opacity 450ms ease;
 }
 
 /*Accordion content class toggled via js*/
 .content.animated {
   max-height: 1000px;
-  transition: max-height 600ms ease-in-out;
+  opacity: 1;
+  transition: max-height 500ms ease, opacity 450ms ease;
 }
 
 /*Work preview*/
@@ -312,7 +314,7 @@ main .accordion-button:nth-child(9) {
 }
 
 @media (width < 481px) {
-  header nav ul li a {
+  header .navigation a {
     display: none;
   }
 }
