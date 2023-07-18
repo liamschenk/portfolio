@@ -1,6 +1,6 @@
 <h1 align="left">Portfolio</h1>
 
-![portfolio](https://github.com/liamschenk/portfolio/blob/prod/assets/previews/github_preview.jpg)
+![portfolio](https://github.com/liamschenk/portfolio/blob/prod/assets/previews/github.jpg)
 
 Hallo, hier siehst du den Code für mein <a href="https://liamschenk.ch" target="_blank">Portfolio</a>.
 
