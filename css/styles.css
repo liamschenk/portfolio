@@ -128,7 +128,7 @@ html[data-theme="light"] .theme-switch:hover {
   background-position: center;
 }
 
-html[data-theme="dark"] .theme-switch:hover {
+html[data-theme="dark"] .theme-switch:hove {
   background: url(../assets/icons/moon_hover.svg);
   background-size: var(--font-size-medium) var(--font-size-medium);
   background-repeat: no-repeat;
