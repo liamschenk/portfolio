@@ -1,4 +1,4 @@
-var acc = document.getElementsByClassName("accordion-button");
+var acc = document.getElementsByClassName("accordion-button")
 var spantime = document.getElementById("time");
 var i;
 
