@@ -119,6 +119,22 @@ html[data-theme="dark"] .theme-switch {
   background-position: center;
 }
 
+/*Theme switch hover*/
+
+html[data-theme="light"] .theme-switch:hover {
+  background: url(../assets/icons/sun_hover.svg);
+  background-size: var(--font-size-medium) var(--font-size-medium);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+html[data-theme="dark"] .theme-switch:hover {
+  background: url(../assets/icons/moon_hover.svg);
+  background-size: var(--font-size-medium) var(--font-size-medium);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /*Accordion button*/
 .accordion-button {
   background-color: var(--primary);
