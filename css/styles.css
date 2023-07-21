@@ -137,7 +137,7 @@ html[data-theme="dark"] .theme-switch:hover {
 
 /*Accordion button*/
 .accordion-button {
-  background-color: var(--primary);
+  background-color: transparent;
   border: none;
   outline: none;
   text-align: left;
