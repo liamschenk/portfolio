@@ -247,6 +247,16 @@ main .accordion-button:nth-child(11) {
   flex: 25%;
 }
 
+/*News*/
+.news {
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+}
+
+.news div{
+  padding: var(--padding);
+}
+
 /*Margin and padding*/
 .margin {
   margin-left: var(--margin-small);
