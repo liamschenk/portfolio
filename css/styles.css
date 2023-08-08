@@ -344,14 +344,14 @@ main .accordion-button:nth-child(11) {
   .flex-25 {
     flex: 100%;
   }
-  
+
   .margin-bottom-small-mb {
     margin-bottom: var(--margin-small);
   }
 }
 
 @media (width < 481px) {
-  header .navigation a {
+  header .hide-mb a {
     display: none;
   }
 }
