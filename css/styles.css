@@ -232,6 +232,16 @@ main .accordion-button:nth-child(11) {
   animation-delay: 1450ms;
 }
 
+/*News*/
+.news {
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+}
+
+.news div {
+  padding: var(--padding);
+}
+
 /*General classes*/
 /*Container and flex*/
 .container {
@@ -245,16 +255,6 @@ main .accordion-button:nth-child(11) {
 
 .flex-25 {
   flex: 25%;
-}
-
-/*News*/
-.news {
-  border: 1px solid var(--border);
-  border-radius: var(--border-radius);
-}
-
-.news div {
-  padding: var(--padding);
 }
 
 /*Margin and padding*/
