@@ -160,7 +160,7 @@ html[data-theme="dark"] .theme-switch:hover {
   content: "\002B";
   color: var(--accent);
   font-size: var(--font-size-medium);
-  line-height: calc(var(--line-height-medium) - 2pt);
+  line-height: calc(var(--line-height-medium) - 1pt);
   text-align: center;
   float: left;
   background-color: var(--border);
