@@ -11,368 +11,215 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" type="image/x-icon" href="assets/icons/icon.png" />
     <script src="js/script.js" async defer></script>
-    <link rel="preload" href="assets/icons/sun.svg" as="image" />
-    <link rel="preload" href="assets/icons/sun_hover.svg" as="image" />
-    <link rel="preload" href="assets/icons/moon.svg" as="image" />
-    <link rel="preload" href="assets/icons/moon_hover.svg" as="image" />
     <title>Liam Schenk</title>
   </head>
   <body>
     <header class="padding margin">
-      <nav class="margin">
+      <nav>
         <ul class="medium">
           <li>
-            <a class="secondary not-underlined" href="../"
-              ><b>Liam Schenk</b></a
+            <a class="secondary not-underlined" href="../">
+              <span class="logo"></span> <b>Liam Schenk</b></a
             >
           </li>
         </ul>
-        <ul class="medium hide-mb">
+        <ul class="medium">
           <li>
-            <a href="#work" class="secondary not-underlined accent-hover"
-              >Arbeit</a
+            <a
+              href="https://read.cv/liamschenk"
+              target="_blank"
+              class="secondary not-underlined accent-hover"
+              >CV</a
             >
           </li>
           <li>
-            <a href="#about" class="secondary not-underlined accent-hover"
-              >Über</a
+            <a
+              href="mailto:hallo@liamschenk.ch?subject=Portfolio"
+              class="secondary not-underlined accent-hover"
+              >Kontakt</a
             >
-          </li>
-          <li>
-            <a href="#experience" class="secondary not-underlined accent-hover"
-              >Erfahrung</a
-            >
-          </li>
-          <li>
-            <a href="#now" class="secondary not-underlined accent-hover"
-              >Jetzt</a
-            >
-          </li>
-          <li>
-            <button class="theme-switch" id="theme-switch"></button>
           </li>
         </ul>
       </nav>
     </header>
     <main class="margin">
-      <section class="hero margin-top-hero margin-bottom-hero">
-        <p class="large secondary margin">
-          Hallo, ich bin Liam, Mediamatiker im 3. Lehrjahr<br />
-          <span class="accent">Aktuell auf Projektsuche</span>
-        </p>
-      </section>
-      <section class="margin-bottom-large" id="work">
-        <button class="accordion-button padding">
-          <div class="margin">
-            <p class="medium secondary">
-              Merci Fest
-              <span class="year accent">2023</span>
-            </p>
-          </div>
-        </button>
-        <div class="content margin">
-          <div class="flex-25">
-            <p class="small accent">Event | Fotografie</p>
-          </div>
-          <div class="flex-25">
-            <p class="small secondary margin-bottom-small">
-              Für Stefan Binggeli haben wir Fotos des Merci Fests erstellt,
-              einem Event für Mitglieder der Notfallorganisation, EVAK
-              Spezialisten und Betriebssanitätern. Ich habe bei diesem Auftrag
-              die Leitung und die Postproduktion übernommen.
-            </p>
+      <p class="medium secondary margin-bottom-small margin-top-hero">Vergangene Projekte</p>
+      <section class="work-container margin-bottom-hero">
+        <div class="flex-50">
+          <a
+            href="https://swisscom-my.sharepoint.com/:f:/p/liam_schenk/EkOfDc3K9I9Ap94dmg3kVesB8eseSoPCfBsv9MEkRRgI_Q?e=YQZMoe"
+            target="_blank"
+          >
+            <div class="work-preview">
+              <img src="./assets/previews/merci-fest.webp" alt="Merci Fest" />
+            </div>
+          </a>
+          <div class="work-description padding">
             <a
               href="https://swisscom-my.sharepoint.com/:f:/p/liam_schenk/EkOfDc3K9I9Ap94dmg3kVesB8eseSoPCfBsv9MEkRRgI_Q?e=YQZMoe"
-              class="small secondary not-underlined accent-hover"
               target="_blank"
-              >Sharepoint &#8599;</a
+              class="medium secondary accent-hover not-underlined"
+              >Merci Fest &#8599;</a
             >
-          </div>
-          <div class="flex-50 margin-bottom-small">
-            <img
-              src="assets/previews/merci-fest.webp"
-              alt="Merci Fest"
-              class="preview"
-            />
+            <p class="medium accent">2023</p>
           </div>
         </div>
-        <button class="accordion-button padding">
-          <div class="margin">
-            <p class="medium secondary">
-              Design Thinking @ GHR
-              <span class="year accent">2023</span>
-            </p>
-          </div>
-        </button>
-        <div class="content margin">
-          <div class="flex-25">
-            <p class="small accent">Video | Interview</p>
-          </div>
-          <div class="flex-25">
-            <p class="small secondary margin-bottom-small">
-              Mit Klementina haben wir zwei Videos über Design Thinking bei GHR
-              erstellt. Ich habe bei diesem Auftrag die Leitung und die
-              Postproduktion übernommen.
-            </p>
+        <div class="flex-50">
+          <a
+            href="https://swisscom-my.sharepoint.com/:f:/p/liam_schenk/Ev2m8p3BfK9Lj51TDu8k76kBb8fJrREI3_5hYEOjNAz1Ww?e=sk3St2"
+            target="_blank"
+          >
+            <div class="work-preview">
+              <img
+                src="./assets/previews/design-thinking.webp"
+                alt="Design Thinking"
+              />
+            </div>
+          </a>
+          <div class="work-description padding">
             <a
               href="https://swisscom-my.sharepoint.com/:f:/p/liam_schenk/Ev2m8p3BfK9Lj51TDu8k76kBb8fJrREI3_5hYEOjNAz1Ww?e=sk3St2"
-              class="small secondary not-underlined accent-hover"
               target="_blank"
-              >Sharepoint &#8599;</a
+              class="medium secondary accent-hover not-underlined"
+              >Design Thinking @ GHR &#8599;</a
             >
-          </div>
-          <div class="flex-50 margin-bottom-small">
-            <img
-              src="assets/previews/design-thinking.webp"
-              alt="Design Thinking @ GHR"
-              class="preview"
-            />
+            <p class="medium accent">2023</p>
           </div>
         </div>
-        <button class="accordion-button padding">
-          <div class="margin">
-            <p class="medium secondary">
-              LevelUp Fabian Rohr
-              <span class="year accent">2023</span>
-            </p>
-          </div>
-        </button>
-        <div class="content margin">
-          <div class="flex-25">
-            <p class="small accent">Video | Statement</p>
-          </div>
-          <div class="flex-25">
-            <p class="small secondary margin-bottom-small">
-              Mit Fabian Rohr haben wir ein Video erstellt, welches in einem
-              Lernpfad für Führungskräfte der Swisscom eingebunden wurde. Ich
-              habe bei diesem Auftrag die Postproduktion übernommen.
-            </p>
+        <div class="flex-50">
+          <a
+            href="https://swisscom-my.sharepoint.com/:f:/p/liam_schenk/EkHsSUAaRIZMsDdxayg79VcBXW-FPtDF4sEcNinZLNfFbw?e=yfxgK0"
+            target="_blank"
+          >
+            <div class="work-preview">
+              <img src="./assets/previews/levelup.webp" alt="Level Up" />
+            </div>
+          </a>
+          <div class="work-description padding">
             <a
               href="https://swisscom-my.sharepoint.com/:f:/p/liam_schenk/EkHsSUAaRIZMsDdxayg79VcBXW-FPtDF4sEcNinZLNfFbw?e=yfxgK0"
-              class="small secondary not-underlined accent-hover"
               target="_blank"
-              >Sharepoint &#8599;</a
+              class="medium secondary accent-hover not-underlined"
+              >Level Up Fabian Rohr &#8599;</a
             >
-          </div>
-          <div class="flex-50 margin-bottom-small">
-            <img
-              src="assets/previews/levelup.webp"
-              alt="LevelUp Fabian Rohr"
-              class="preview"
-            />
+            <p class="medium accent">2023</p>
           </div>
         </div>
-        <button class="accordion-button padding">
-          <div class="margin">
-            <p class="medium secondary">
-              Brandvideo Farben
-              <span class="year accent">2023</span>
-            </p>
-          </div>
-        </button>
-        <div class="content margin">
-          <div class="flex-25">
-            <p class="small accent">Video | Animation</p>
-          </div>
-          <div class="flex-25">
-            <p class="small secondary margin-bottom-small">
-              Für das Swisscom Brandcenter haben wir ein Video über das Thema
-              Farben erstellt. Ich war bei der Produktion für den Ton zuständig
-              und habe die Illustrationen vorbereitet.
-            </p>
-            <a
-              href="https://swisscom-my.sharepoint.com/:v:/p/liam_schenk/EZ_X47Rkp-hAuue9A3Be2loB4i7Sg5WfWBewqbLtHIrY7Q?e=qwgics"
-              class="small secondary not-underlined accent-hover"
-              target="_blank"
-              >Sharepoint &#8599;</a
-            >
-          </div>
-          <div class="flex-50 margin-bottom-small">
-            <img
-              src="assets/previews/brandvideo.webp"
-              alt="Brandvideo Farben"
-              class="preview"
-            />
-          </div>
-        </div>
-        <button class="accordion-button padding">
-          <div class="margin">
-            <p class="medium secondary">
-              Walk and Talk Serie
-              <span class="year accent">2023</span>
-            </p>
-          </div>
-        </button>
-        <div class="content margin">
-          <div class="flex-25">
-            <p class="small accent">Video | Interview</p>
-          </div>
-          <div class="flex-25">
-            <p class="small secondary margin-bottom-small">
-              Ich habe bei diversen Folgen der Serie Walk and Talk von Swisscom
-              mitgearbeitet. Hier siehst du alle Folgen, bei denen ich beteiligt
-              war.
-            </p>
-            <a
-              href="https://intranet.swisscom.com/home/articles/taayapi1/_entwicklungsbereiche_herausforderungen_"
-              class="small secondary not-underlined accent-hover"
-              target="_blank"
-              >Artikel Oleg &#8599;</a
-            ><br />
-            <a
-              href="https://intranet.swisscom.com/home/articles/taayapi1/_bringe_job_familie_unter_einen_hut_"
-              class="small secondary not-underlined accent-hover"
-              target="_blank"
-              >Artikel Carola &#8599;</a
-            ><br />
+        <div class="flex-50">
+          <a
+            href="https://intranet.swisscom.com/home/articles/taayapi1/_committed_swisscom_zu_diversity_ist_"
+            target="_blank"
+          >
+            <div class="work-preview">
+              <img
+                src="./assets/previews/walk-and-talk-marianne.webp"
+                alt="Walk and Talk Marianne"
+              />
+            </div>
+          </a>
+          <div class="work-description padding">
             <a
               href="https://intranet.swisscom.com/home/articles/taayapi1/_committed_swisscom_zu_diversity_ist_"
-              class="small secondary not-underlined accent-hover"
               target="_blank"
-              >Artikel Marianne &#8599;</a
+              class="medium secondary accent-hover not-underlined"
+              >Walk and Talk Marianne &#8599;</a
             >
-          </div>
-          <div class="flex-50 margin-bottom-small">
-            <img
-              src="assets/previews/walk-and-talk.webp"
-              alt="Walk and Talk Serie"
-              class="preview"
-            />
+            <p class="medium accent">2023</p>
           </div>
         </div>
-        <button class="accordion-button padding">
-          <div class="margin">
-            <p class="medium secondary">
-              Motion Blog Video
-              <span class="year accent">2023</span>
-            </p>
-          </div>
-        </button>
-        <div class="content margin">
-          <div class="flex-25">
-            <p class="small accent">Video | Animation</p>
-          </div>
-          <div class="flex-25">
-            <p class="small secondary margin-bottom-small">
-              Um Motion vorzustellen, haben wir über unser Team ein kurzes Video
-              erstellt und mit einem Blog veröffentlicht. Ich habe dafür eine
-              Animation erstellt und bei der Postproduktion unterstützt.
-            </p>
-            <a
-              href="https://intranet.swisscom.com/home/articles/taaafju1/motion_stellt_sich_vor"
-              class="small secondary not-underlined accent-hover"
-              target="_blank"
-              >Artikel &#8599;</a
-            >
-          </div>
-          <div class="flex-50 margin-bottom-small">
-            <img
-              src="assets/previews/motion-blog.webp"
-              alt="Motion Blog Video"
-              class="preview"
-            />
-          </div>
-        </div>
-      </section>
-      <section class="container padding margin-bottom-large" id="about">
-        <div class="flex-50 margin">
-          <p class="large secondary margin-bottom-small-mb">Über</p>
-        </div>
-        <div class="flex-50 margin">
-          <p class="medium accent">
-            Aktuell arbeite ich bei Motion als Multimediaproducer / Experte und
-            übernehme bei Aufträgen die Führungsrolle. Ich leite diese Aufträge
-            von Anfang bis Ende und plane und organisiere alles. Ich stehe im
-            Kontakt mit dem Auftraggeber und den Lernenden, die am Auftrag
-            arbeiten. In meiner Freizeit spiele ich American Football bei den
-            Bienna Jets und kühle mich im Sommer gerne in der Aare ab. Ich höre
-            sehr gerne Musik und Podcasts. Am Montag und Dienstag bin ich
-            jeweils in der Schule.
-          </p>
-        </div>
-      </section>
-      <section class="container padding margin-bottom-large" id="experience">
-        <div class="flex-50 margin">
-          <p class="large secondary margin-bottom-small-mb">Erfahrung</p>
-        </div>
-        <div class="flex-50 margin">
-          <p class="medium accent">
-            Ich kenne mich mit der Creative Cloud von Adobe aus und benutze
-            Programme wie Premiere Pro, Lightroom, InDesign oder Illustrator in
-            meinem Arbeitsalltag. Durch diverse Aufträge durfte ich auch mein
-            Wissen in After Effects vertiefen und mit dem Plugin Duik Angela
-            beispielsweise auch schon GIF's erstellen.
-            <br /><br />Als Schwerpunktthema bei Motion fokussiere ich mich auf
-            Farben (Color correction / Color grading). Ich vertiefe ich mein
-            Wissen in diesem Bereich und gebe den Lernenden dieses weiter.
-          </p>
-        </div>
-      </section>
-      <section class="container padding margin-bottom-hero" id="now">
-        <div class="flex-50 margin">
-          <p class="large secondary margin-bottom-small-mb">Jetzt</p>
-        </div>
-        <div class="flex-50 margin">
-          <div class="news margin-bottom-small" style="display: none">
-            <div>
-              <p class="medium secondary margin-bottom-small">
-                Offen für Projekte <span class="accent">AKTUELL</span>
-              </p>
-              <p class="medium accent margin-bottom-small">
-                Ich bin aktuell auf der Suche nach einem Projekt ab dem
-                1.2.2024. Schreibe mir gerne, falls du ein Projekt anbietest und
-                ich dein Interesse wecken konnte.
-              </p>
-              <p class="medium secondary">
-                &#8594;
-                <a
-                  href="mailto:hallo@liamschenk.ch?subject=Projekt"
-                  class="secondary underlined accent-hover"
-                  >hallo@liamschenk.ch</a
-                >
-              </p>
+        <div class="flex-50">
+          <a
+            href="https://swisscom-my.sharepoint.com/:v:/p/liam_schenk/EZ_X47Rkp-hAuue9A3Be2loB4i7Sg5WfWBewqbLtHIrY7Q?e=qwgics"
+            target="_blank"
+          >
+            <div class="work-preview">
+              <img
+                src="./assets/previews/brandvideo.webp"
+                alt="Brandvideo Farben"
+              />
             </div>
-          </div>
-          <p class="medium accent">
-            Als Fachexperte bei Motion übernehme ich die Führungsrolle bei
-            verschiedenen Aufträgen. Ich gebe mein Wissen an neue Lernende
-            weiter und gestalte Motion aktiv mit. <br /><br />Falls ich dein
-            Interesse wecken konnte, du ein Projekt oder Fragen hast, freue ich
-            mich über eine E-Mail an
+          </a>
+          <div class="work-description padding">
             <a
-              href="mailto:hallo@liamschenk.ch?subject=Portfolio"
-              class="secondary underlined accent-hover"
-              >hallo@liamschenk.ch</a
-            >. Du findest mich auch auf
-            <a
-              href="https://linkedin.com/in/liam-schenk-45b794253"
-              class="secondary underlined accent-hover"
+              href="https://swisscom-my.sharepoint.com/:v:/p/liam_schenk/EZ_X47Rkp-hAuue9A3Be2loB4i7Sg5WfWBewqbLtHIrY7Q?e=qwgics"
               target="_blank"
-              >LinkedIn</a
-            >.
-          </p>
+              class="medium secondary accent-hover not-underlined"
+              >Brandvideo Farben &#8599;</a
+            >
+            <p class="medium accent">2023</p>
+          </div>
+        </div>
+        <div class="flex-50">
+          <a
+            href="https://intranet.swisscom.com/home/articles/taayapi1/_entwicklungsbereiche_herausforderungen_"
+            target="_blank"
+          >
+            <div class="work-preview">
+              <img
+                src="./assets/previews/walk-and-talk-oleg.webp"
+                alt="Walk and Talk Oleg"
+              />
+            </div>
+          </a>
+          <div class="work-description padding">
+            <a
+              href="https://intranet.swisscom.com/home/articles/taayapi1/_entwicklungsbereiche_herausforderungen_"
+              target="_blank"
+              class="medium secondary accent-hover not-underlined"
+              >Walk and Talk Oleg &#8599;</a
+            >
+            <p class="medium accent">2023</p>
+          </div>
+        </div>
+        <div class="flex-50">
+          <a
+            href="https://intranet.swisscom.com/home/articles/taayapi1/_bringe_job_familie_unter_einen_hut_"
+            target="_blank"
+          >
+            <div class="work-preview">
+              <img
+                src="./assets/previews/walk-and-talk-carola.webp"
+                alt="Walk and Talk Carola"
+              />
+            </div>
+          </a>
+          <div class="work-description padding">
+            <a
+              href="https://intranet.swisscom.com/home/articles/taayapi1/_bringe_job_familie_unter_einen_hut_"
+              target="_blank"
+              class="medium secondary accent-hover not-underlined"
+              >Walk and Talk Carola &#8599;</a
+            >
+            <p class="medium accent">2023</p>
+          </div>
         </div>
       </section>
     </main>
     <footer class="padding margin">
-      <div class="container margin-top-large margin-bottom-large">
-        <div class="flex-50 margin">
-          <p class="small accent margin-bottom-small-mb">
-            © 2023 Liam Schenk,
+      <nav>
+        <ul class="medium">
+          <li>
+            <a
+              class="secondary not-underlined"
+              href="mailto:hallo@liamschenk.ch?subject=Portfolio"
+              ><span class="logo"></span> <b>hallo@liamschenk.ch</b></a
+            >
+          </li>
+        </ul>
+        <ul class="medium">
+          <li>
             <a
               href="https://github.com/liamschenk/portfolio"
               class="secondary not-underlined accent-hover"
               target="_blank"
-              >Github &#8599;</a
+              >Github</a
             >
-          </p>
-        </div>
-        <div class="flex-50 margin">
-          <p class="small accent">
-            Danke fürs Vorbeischauen, gerade ist <span id="time"></span>
-          </p>
-        </div>
-      </div>
+          </li>
+          <li>
+            <p class="secondary"><span id="time"></span></p>
+          </li>
+        </ul>
+      </nav>
     </footer>
   </body>
 </html>
