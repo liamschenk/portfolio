@@ -162,12 +162,12 @@ footer nav ul {
 .work-preview img {
   aspect-ratio: 4 / 3;
   width: 100%;
-  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease;
 }
 
 .work-container div:hover .work-preview img{
-  transform: scale(1.05);
-  transition: transform 500ms ease-in-out;
+  transform: scale(1.025);
+  transition: transform 500ms ease;
 }
 
 .flex-100 {
