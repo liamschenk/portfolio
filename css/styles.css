@@ -67,25 +67,48 @@ body {
   }
 }
 
-/*Logo that changes with Themes*/
-html[data-theme="light"] .logo {
+/*Logo and link arrows that change with Themes*/
+html .logo {
   display: inline-block;
   height: 22px;
   width: 22px;
   vertical-align: top;
-  background-image: url(../assets/icons/icon-black.png);
   background-position: center;
   background-size: contain;
 }
 
+html[data-theme="light"] .logo {
+  background-image: url(../assets/icons/icon-black.png);
+}
+
 html[data-theme="dark"] .logo {
+  background-image: url(../assets/icons/icon-white.png);
+}
+
+html .work-description a span {
   display: inline-block;
   height: 22px;
   width: 22px;
   vertical-align: top;
-  background-image: url(../assets/icons/icon-white.png);
   background-position: center;
   background-size: contain;
+  margin-left: 8px;
+}
+
+html[data-theme="light"] .work-description a span {
+  background-image: url(../assets/icons/arrow-black.svg);
+}
+
+html[data-theme="dark"] .work-description a span {
+  background-image: url(../assets/icons/arrow-white.svg);
+}
+
+html[data-theme="light"] .work-description a:hover span {
+  background-image: url(../assets/icons/arrow-accent-black.svg);
+}
+
+html[data-theme="dark"] .work-description a:hover span {
+  background-image: url(../assets/icons/arrow-accent-white.svg);
 }
 
 /*Header*/
@@ -145,7 +168,7 @@ footer nav ul {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  gap: var(--margin-small);
+  gap: var(--margin-medium);
 }
 
 .work-description {
@@ -168,10 +191,6 @@ footer nav ul {
 .work-container div:hover .work-preview img {
   transform: scale(1.025);
   transition: transform 500ms ease;
-}
-
-.work-container div:hover .work-description a {
-  color: var(--accent);
 }
 
 .flex-100 {
