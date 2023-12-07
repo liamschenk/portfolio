@@ -96,19 +96,19 @@ html .work-description a span {
 }
 
 html[data-theme="light"] .work-description a span {
-  background-image: url(../assets/icons/arrow-black.svg);
+  background-image: url(../assets/icons/arrow-black.png);
 }
 
 html[data-theme="dark"] .work-description a span {
-  background-image: url(../assets/icons/arrow-white.svg);
+  background-image: url(../assets/icons/arrow-white.png);
 }
 
 html[data-theme="light"] .work-description a:hover span {
-  background-image: url(../assets/icons/arrow-accent-black.svg);
+  background-image: url(../assets/icons/arrow-black.gif);
 }
 
 html[data-theme="dark"] .work-description a:hover span {
-  background-image: url(../assets/icons/arrow-accent-white.svg);
+  background-image: url(../assets/icons/arrow-white.gif);
 }
 
 /*Header*/
