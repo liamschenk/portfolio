@@ -75,6 +75,7 @@ html .logo {
   vertical-align: top;
   background-position: center;
   background-size: contain;
+  margin-right: 8px;
 }
 
 html[data-theme="light"] .logo {
@@ -270,5 +271,13 @@ footer nav ul {
   .flex-100,
   .flex-50 {
     flex: 1 1 100%;
+  }
+
+  html[data-theme="light"] .work-description a:hover span {
+    background-image: url(../assets/icons/arrow-black.png);
+  }
+
+  html[data-theme="dark"] .work-description a:hover span {
+    background-image: url(../assets/icons/arrow-white.png);
   }
 }
