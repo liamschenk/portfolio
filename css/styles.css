@@ -281,3 +281,17 @@ footer nav ul {
     background-image: url(../assets/icons/arrow-white.png);
   }
 }
+
+@media (width < 384px) {
+  footer nav {
+    flex-wrap: wrap-reverse;
+  }
+
+  footer nav ul {
+    flex: 100%;
+  }
+
+  footer nav ul:last-child {
+    margin-bottom: var(--margin-small);
+  }
+}
