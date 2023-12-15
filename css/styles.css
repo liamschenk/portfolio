@@ -112,7 +112,7 @@ html[data-theme="dark"] .work-description a:hover span {
   background-image: url(../assets/icons/arrow-white.gif);
 }
 
-/*Header*/
+/*Header, Footer*/
 header {
   position: sticky;
   top: 0;
@@ -121,37 +121,23 @@ header {
   z-index: 99;
 }
 
-header .logo {
-  height: var(--line-height-medium);
-  vertical-align: top;
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-header nav ul {
-  display: flex;
-  gap: var(--margin-small);
-  list-style: none;
-}
-
-/*Footer*/
 footer {
   background-color: var(--primary);
 }
 
+header .logo,
 footer .logo {
   height: var(--line-height-medium);
   vertical-align: top;
 }
 
+header nav,
 footer nav {
   display: flex;
   justify-content: space-between;
 }
 
+header nav ul,
 footer nav ul {
   display: flex;
   gap: var(--margin-small);
@@ -165,7 +151,8 @@ footer nav ul {
   width: 100%;
 }
 
-.work-container {
+.work-container,
+.private-work {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -189,7 +176,8 @@ footer nav ul {
   transition: transform 500ms ease;
 }
 
-.work-container div:hover .work-preview img {
+.work-container div:hover .work-preview img,
+.private-work div:hover .work-preview img {
   transform: scale(1.025);
   transition: transform 500ms ease;
 }
@@ -271,6 +259,11 @@ footer nav ul {
   .flex-100,
   .flex-50 {
     flex: 1 1 100%;
+  }
+
+  .work-container div:hover .work-preview img,
+  .private-work div:hover .work-preview img {
+    transform: none;
   }
 
   html[data-theme="light"] .work-description a:hover span {
