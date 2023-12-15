@@ -134,7 +134,6 @@ footer .logo {
 header nav,
 footer nav {
   display: flex;
-  justify-content: space-between;
 }
 
 header nav ul,
@@ -146,17 +145,43 @@ footer nav ul {
 
 /*General classes*/
 /*Containers and Work properties*/
-.container {
-  display: flex;
-  width: 100%;
-}
-
+.intro-flex,
 .work-container,
 .private-work {
   display: flex;
   width: 100%;
-  flex-wrap: wrap;
   gap: var(--margin-medium);
+}
+
+.work-container,
+.private-work {
+  flex-wrap: wrap;
+}
+
+.intro-container {
+  display: flex;
+  height: calc(100vh - 70px - var(--margin-small));
+}
+
+.intro-flex {
+  align-self: flex-end;
+}
+
+.intro-flex nav {
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.intro-flex nav ul {
+  display: flex;
+  gap: var(--margin-small);
+  list-style: none;
+}
+
+.intro-container img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: var(--border-radius);
 }
 
 .work-description {
@@ -186,8 +211,17 @@ footer nav ul {
   flex: 0 0 100%;
 }
 
+.flex-75 {
+  display: flex;
+  flex: 0 0 calc(75% - var(--margin-small));
+}
+
 .flex-50 {
   flex: 0 0 calc(50% - var(--margin-small));
+}
+
+.flex-25 {
+  flex: 0 0 calc(25% - var(--margin-small));
 }
 
 /*Margin and padding*/
@@ -251,13 +285,19 @@ footer nav ul {
 
 /*Media queries*/
 @media (width < 769px) {
-  .container,
+  .intro-flex,
   footer {
     flex-wrap: wrap;
   }
 
+  .intro-container img {
+    max-width: 240px;
+  }
+
   .flex-100,
-  .flex-50 {
+  .flex-75,
+  .flex-50,
+  .flex-25 {
     flex: 1 1 100%;
   }
 
@@ -276,15 +316,7 @@ footer nav ul {
 }
 
 @media (width < 384px) {
-  footer nav {
-    flex-wrap: wrap-reverse;
-  }
-
-  footer nav ul {
-    flex: 100%;
-  }
-
-  footer nav ul:last-child {
-    margin-bottom: var(--margin-small);
+  .intro-container img {
+    max-width: 100%;
   }
 }
