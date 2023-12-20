@@ -7,3 +7,10 @@ function changeTheme() {
 }
 
 setInterval(changeTheme, 1000);
+
+const vh = Math.max(
+  document.documentElement.clientHeight || 0,
+  window.innerHeight || 0
+);
+
+document.documentElement.style.setProperty("--vh", `${vh}px`);

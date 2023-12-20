@@ -131,15 +131,8 @@ footer .logo {
   vertical-align: top;
 }
 
-header nav,
-footer nav {
-  display: flex;
-}
-
 header nav ul,
 footer nav ul {
-  display: flex;
-  gap: var(--margin-small);
   list-style: none;
 }
 
@@ -160,7 +153,7 @@ footer nav ul {
 
 .intro-container {
   display: flex;
-  height: calc(100vh - 70px - var(--margin-small));
+  height: calc(var(--vh) - 70px - var(--margin-small));
 }
 
 .intro-flex {
@@ -179,8 +172,8 @@ footer nav ul {
 }
 
 .intro-container img {
-  width: 100%;
   max-width: 100%;
+  align-self: flex-end;
   border-radius: var(--border-radius);
 }
 
@@ -221,6 +214,7 @@ footer nav ul {
 }
 
 .flex-25 {
+  display: flex;
   flex: 0 0 calc(25% - var(--margin-small));
 }
 
@@ -291,7 +285,8 @@ footer nav ul {
   }
 
   .intro-container img {
-    max-width: 240px;
+    max-width: 50%;
+    max-height: 75%;
   }
 
   .flex-100,
@@ -318,5 +313,6 @@ footer nav ul {
 @media (width < 384px) {
   .intro-container img {
     max-width: 100%;
+    max-height: 100%;
   }
 }
