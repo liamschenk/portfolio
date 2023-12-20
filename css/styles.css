@@ -284,16 +284,16 @@ footer nav ul {
     flex-wrap: wrap;
   }
 
-  .intro-container img {
-    max-width: 50%;
-    max-height: 75%;
-  }
-
   .flex-100,
   .flex-75,
   .flex-50,
   .flex-25 {
     flex: 1 1 100%;
+  }
+
+  .intro-container img {
+    max-width: 90%;
+    max-height: 75%;
   }
 
   .work-container div:hover .work-preview img,
