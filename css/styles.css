@@ -52,6 +52,22 @@ body {
   background-color: var(--primary);
   max-width: 1440px;
   margin: auto;
+  opacity: 0;
+  animation: fadeIn ease-in-out 1500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 250ms;
+}
+
+/*Keyframes*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
 }
 
 /*Header and Footer*/
