@@ -138,7 +138,9 @@ html[data-theme="dark"] .work-description a:hover span {
 
 .flex-75 {
   display: flex;
-  flex: 0 0 calc(75% - var(--margin-small));
+  flex: 0 0 75%;
+  height: 100%;
+  align-self: flex-end;
 }
 
 .flex-50 {
@@ -147,16 +149,18 @@ html[data-theme="dark"] .work-description a:hover span {
 
 .flex-25 {
   display: flex;
-  flex: 0 0 calc(25% - var(--margin-small));
+  flex: 0 0 25%;
+  height: 100%;
+  align-self: flex-end;
 }
 
 /*Margin and padding*/
-.padding-lr {
+.padding-left-right {
   padding-left: var(--padding);
   padding-right: var(--padding);
 }
 
-.padding-tb {
+.padding-top-bottom {
   padding-top: var(--padding);
   padding-bottom: var(--padding);
 }
@@ -212,25 +216,23 @@ html[data-theme="dark"] .work-description a:hover span {
 /*Intro*/
 .intro {
   height: calc(var(--vh) - 70px - var(--margin-small));
+  gap: 0;
 }
 
-.intro-flex {
-  align-self: flex-end;
-}
-
-.intro-flex nav {
+.intro nav {
   align-self: flex-end;
   margin-left: auto;
 }
 
-.intro-flex nav ul {
+.intro nav ul {
   display: flex;
   gap: var(--margin-small);
   list-style: none;
 }
 
-.intro-flex img {
+.intro img {
   max-width: 100%;
+  max-height: 75%;
   align-self: flex-end;
   border-radius: var(--border-radius);
 }
@@ -261,8 +263,7 @@ html[data-theme="dark"] .work-description a:hover span {
 
 /*Media queries*/
 @media (width < 800px) {
-  .intro,
-  footer {
+  .intro {
     flex-wrap: wrap;
   }
 
@@ -273,9 +274,16 @@ html[data-theme="dark"] .work-description a:hover span {
     flex: 1 1 100%;
   }
 
-  .intro-flex img {
-    max-width: 50%;
-    max-height: 75%;
+  .flex-75 {
+    height: calc(22px + var(--margin-small));
+  }
+
+  .flex-25 {
+    height: calc(100% - 22px - var(--margin-small));
+  }
+
+  .intro img {
+    max-width: 75%;
   }
 
   .flex-container div:hover .work-preview img,
@@ -293,7 +301,7 @@ html[data-theme="dark"] .work-description a:hover span {
 }
 
 @media (width < 400px) {
-  .intro-flex img {
+  .intro img {
     max-width: 100%;
     max-height: 100%;
   }
