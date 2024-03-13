@@ -311,6 +311,10 @@ html[data-theme="dark"] .work-description a:hover span {
     max-width: 75%;
   }
 
+  .transform-scale:hover {
+    transform: none;
+  }
+
   .flex-container div:hover .work-preview img,
   .flex-container div:hover .work-preview img {
     transform: none;
