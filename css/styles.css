@@ -229,6 +229,15 @@ html[data-theme="dark"] .work-description a:hover span {
   color: var(--accent);
 }
 
+.transform-scale {
+  transition: 250ms;
+}
+
+.transform-scale:hover {
+  transform: scale(1.05);
+  transition: 250ms;
+}
+
 /*Intro*/
 .intro {
   height: calc(var(--vh) - 70px - var(--margin-small));
