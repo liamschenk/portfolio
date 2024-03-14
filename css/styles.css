@@ -225,8 +225,13 @@ html[data-theme="dark"] .work-description a:hover span {
   color: var(--accent);
 }
 
+.accent-hover {
+  transition: 250ms;
+}
+
 .accent-hover:hover {
   color: var(--accent);
+  transition: 250ms;
 }
 
 .transform-scale {
