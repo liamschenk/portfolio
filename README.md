@@ -1,6 +1,6 @@
 ## Liam Schenk — Portfolio
 
-![Portfolio](https://github.com/liamschenk/portfolio/blob/main/public/content/media/portfolio-1.png)
+![Portfolio](https://github.com/liamschenk/portfolio/blob/main/public/media/portfolio-1.png)
 
 Willkommen auf meinem Portfolio! Hier findest du den Quellcode meiner persönlichen Website. Mein Ziel war es, mein Portfolio so einfach, flexibel und übersichtlich wie möglich zu gestalten. Alle Inhalte der Seite werden aus der `resume.json` geladen, sodass ich neue Projekte oder Berufserfahrungen problemlos hinzufügen kann.
 
