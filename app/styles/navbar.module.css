@@ -1,0 +1,25 @@
+.header {
+  margin: 0 0 var(--spacing-xl) 0;
+}
+
+.header nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+}
+
+.header nav ul li {
+  cursor: pointer;
+}
+
+.header nav ul li:nth-child(2) {
+  text-align: center;
+}
+
+.header nav ul li:nth-child(3) {
+  text-align: right;
+}
+
+.header nav ul li a.active {
+  text-decoration: underline;
+}

@@ -1,0 +1,167 @@
+{
+  "basics": {
+    "name": "Liam Schenk",
+    "label": "Lernender Mediamatiker",
+    "image": "",
+    "email": "liam.schenk@bluewin.ch",
+    "phone": "",
+    "url": "https://liamschenk.ch",
+    "summary": "Hi, ich bin Liam, lernender Mediamatiker bei Swisscom. Ich interessiere mich sehr für Grafik- und Posterdesign. Ich höre gerne Musik und Podcasts.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "",
+      "region": ""
+    },
+    "profiles": [{
+      "network": "LinkedIn",
+      "username": "liamschenk",
+      "url": "http://www.linkedin.com/in/liamschenk"
+    },
+    {
+      "network": "Are.na",
+      "username": "liam-schenk",
+      "url": "https://www.are.na/liam-schenk"
+    },
+    {
+      "network": "E-Mail",
+      "username": "liam.schenk@bluewin.ch",
+      "url": "mailto:liam.schenk@bluewin.ch"
+    }]
+  },
+  "work": [{
+    "name": "Swisscom",
+    "position": "Lernender Mediamatiker EFZ",
+    "url": "https://swisscom.com",
+    "startDate": "2021",
+    "endDate": "Jetzt",
+    "summary": "In meiner Lehre als Mediamatiker habe ich in verschiedenen Abteilungen von Swisscom mitgearbeitet und dabei Erfahrungen in allen Bereichen von Multimedia gesammelt.",
+    "highlights": [
+      "- Ich habe diverse Multimedia-Projekte geleitet und bei Video- sowie Fotoproduktionen mitgewirkt.",
+      "- Ich habe physische Produkte konzipiert und umgesetzt.",
+      "- Ich habe Erfahrungen im Webdesign gesammelt und mir Kenntnisse in verschiedenen CMS und Website-Builders angeeignet."
+    ]
+  }],
+  "volunteer": [{
+    "organization": "Organization",
+    "position": "Volunteer",
+    "url": "https://organization.com/",
+    "startDate": "2012-01-01",
+    "endDate": "2013-01-01",
+    "summary": "Description…",
+    "highlights": [
+      "Awarded 'Volunteer of the Month'"
+    ]
+  }],
+  "education": [{
+    "institution": "BBZ-CFP Biel-Bienne",
+    "url": "https://bbz-cfp.ch/de",
+    "area": "Lernender Mediamatiker EFZ",
+    "studyType": "Ausbildung",
+    "startDate": "2021",
+    "endDate": "Jetzt",
+    "score": "",
+    "courses": [
+      ""
+    ]
+  }],
+  "awards": [{
+    "title": "",
+    "date": "",
+    "awarder": "",
+    "summary": ""
+  }],
+  "certificates": [{
+    "name": "",
+    "date": "",
+    "issuer": "",
+    "url": ""
+  }],
+  "publications": [{
+    "name": "",
+    "publisher": "",
+    "releaseDate": "",
+    "url": "",
+    "summary": ""
+  }],
+  "skills": [{
+    "name": "",
+    "level": "",
+    "keywords": [
+      ""
+    ]
+  }],
+  "languages": [{
+    "language": "Deutsch",
+    "fluency": "Muttersprache"
+  },
+  {
+    "language": "Englisch",
+    "fluency": "Fliessend"
+  },
+  {
+    "language": "Französisch",
+    "fluency": "Gute Kenntnisse"
+  }],
+  "interests": [{
+    "name": "",
+    "keywords": [
+      ""
+    ]
+  }],
+  "references": [{
+    "name": "",
+    "reference": ""
+  }],
+  "projects": [{
+    "name": "Samsung Galaxy Ring — Flyer",
+    "startDate": "2024",
+    "endDate": "2024",
+    "description": "Für den neuen Samsung Galaxy Ring habe ich einen doppelseitigen Flyer gestaltet, der in allen Swisscom Shops ausliegt. Der Flyer informiert Kunden über das Sizing Kit, das sie vorab nutzen müssen, um die passende Grösse zu finden.",
+    "highlights": [
+      ""
+    ],
+    "url": "https://swisscom.com",
+    "media": [{
+      "type": "image",
+      "url": "/media/galaxy-ring-1.png"
+    },
+    {
+      "type": "image",
+      "url": "/media/galaxy-ring-2.png"
+    }]
+  },
+  {
+    "name": "Glücksmaschine — Animation",
+    "startDate": "2024",
+    "endDate": "2024",
+    "description": "Für den Swisscom Shop Cornavin habe ich eine Animation für die Glücksmaschine und einen Screensaver erstellt. Vor Ort konnten Kunden den QR-Code scannen und tolle Preise gewinnen.",
+    "highlights": [
+      ""
+    ],
+    "url": "https://swisscom.com",
+    "media": [{
+      "type": "video",
+      "url": "/media/gluecksmaschine-1.mp4"
+    },
+    {
+      "type": "image",
+      "url": "/media/gluecksmaschine-2.png"
+    }]
+  },
+  {
+    "name": "Liam Schenk — Portfolio",
+    "startDate": "2025",
+    "endDate": "Laufend",
+    "description": "Dieses Portfolio wurde mit Next.js entwickelt und nutzt eine JSON-Datei zur Verwaltung der Inhalte. Dadurch kann ich Anpassungen schnell, flexibel und unkompliziert vornehmen.",
+    "highlights": [
+      ""
+    ],
+    "url": "https://github.com/liamschenk/portfolio",
+    "media": [{
+      "type": "image",
+      "url": "/media/portfolio-1.png"
+    }]
+  }]
+}

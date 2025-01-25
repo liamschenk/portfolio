@@ -1,0 +1,74 @@
+.projects .accordionHeader {
+  display: grid;
+  grid-template-columns: 6.25% 75% 18.75%;
+  padding: var(--spacing-m) 0;
+  cursor: pointer;
+  border-top: 0.5px solid var(--tertiary);
+}
+
+.projects .accordionHeader p:nth-child(3) {
+  text-align: right;
+}
+
+.projects .accordionContent {
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 0.25s ease-out;
+}
+
+.projects .accordionContent.open {
+  max-height: 1080px;
+  transition: max-height 0.25s ease-in;
+}
+
+.projects .accordionContent p {
+  width: 37.5%;
+  margin: 0 0 var(--spacing-l) 6.25%;
+}
+
+.projects .accordionContent .mediaContainer {
+  display: flex;
+  gap: var(--spacing-m);
+  overflow: visible;
+  cursor: grab;
+}
+
+.projects .mediaContainer:active {
+  cursor: grabbing;
+}
+
+.projects .accordionContent .mediaContainer .mediaItem .projectMedia {
+  height: 400px;
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .projects .accordionHeader {
+    grid-template-columns: 12.5% 68.75% 18.75%;
+  }
+
+  .projects .accordionContent p {
+    width: 87.5%;
+    margin: 0 0 var(--spacing-l) 12.5%;
+  }
+
+  .projects .accordionContent .mediaContainer .mediaItem .projectMedia {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects .accordionHeader {
+    grid-template-columns: 9.375% 71.875% 18.75%;
+  }
+
+  .projects .accordionContent p {
+    width: 62.5%;
+    margin: 0 0 var(--spacing-l) 9.375%;
+  }
+
+  .projects .accordionContent .mediaContainer .mediaItem .projectMedia {
+    height: 300px;
+  }
+}
