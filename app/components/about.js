@@ -13,7 +13,7 @@ const containerVariants = {
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.375 } },
 };
 
 export default function About({ basics, work, education }) {

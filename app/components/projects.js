@@ -14,7 +14,7 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.375 } },
 };
 
 export default function Projects({ projects }) {
@@ -127,7 +127,7 @@ function DraggableMediaContainer({ media }) {
               playsInline
               loop
             >
-              <source src={item.url} type="video/mp4" />
+              <source src={item.url} type="video/webm" />
               Your browser does not support the video tag.
             </video>
           ) : null}

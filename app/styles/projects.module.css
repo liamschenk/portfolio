@@ -23,7 +23,7 @@
 
 .projects .accordionContent p {
   width: 37.5%;
-  margin: 0 0 var(--spacing-l) 6.25%;
+  margin: 0 0 var(--spacing-xl) 6.25%;
 }
 
 .projects .accordionContent .mediaContainer {
