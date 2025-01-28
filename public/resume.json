@@ -127,35 +127,17 @@
     "reference": ""
   }],
   "projects": [{
-    "name": "Glücksmaschine — Animation",
-    "startDate": "2024",
-    "endDate": "2024",
-    "description": "Für den Swisscom Shop Cornavin habe ich eine Animation für die Glücksmaschine und einen Screensaver erstellt. Vor Ort konnten Kunden den QR-Code scannen und tolle Preise gewinnen.",
-    "highlights": [
-      ""
-    ],
-    "url": "https://swisscom.com",
-    "media": [{
-      "type": "video",
-      "url": "/media/gluecksmaschine-1.webm"
-    },
-    {
-      "type": "image",
-      "url": "/media/gluecksmaschine-2.webp"
-    }]
-  },
-  {
-    "name": "Liam Schenk — Portfolio",
+    "name": "Liam Schenk — Information",
     "startDate": "2025",
     "endDate": "Laufend",
-    "description": "Dieses Portfolio wurde mit Next.js erstellt und nutzt eine JSON-Datei zur Inhaltsverwaltung. So kann ich Änderungen jederzeit schnell und unkompliziert umsetzen.",
+    "description": "Ich befinde mich derzeit im letzten Lehrjahr als Mediamatiker bei Swisscom und freue mich auf meinen Abschluss. Viele meiner bisherigen Projekte kann ich leider nicht direkt auf meinem Portfolio zeigen. Bei Fragen oder Interesse kannst du dich aber gerne bei mir melden.",
     "highlights": [
       ""
     ],
-    "url": "https://github.com/liamschenk/portfolio",
+    "url": "https://liamschenk.ch",
     "media": [{
       "type": "image",
-      "url": "/media/portfolio-1.webp"
+      "url": "/media/information-1.webp"
     }]
   }]
 }
