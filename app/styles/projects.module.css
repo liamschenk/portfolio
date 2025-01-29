@@ -12,13 +12,6 @@
 
 .projects .accordionContent {
   overflow: hidden;
-  max-height: 0px;
-  transition: max-height 0.25s ease-out;
-}
-
-.projects .accordionContent.open {
-  max-height: 1080px;
-  transition: max-height 0.25s ease-in;
 }
 
 .projects .accordionContent p {
@@ -28,7 +21,6 @@
 
 .projects .accordionContent .mediaContainer {
   display: flex;
-  gap: var(--spacing-m);
   margin: 0 0 var(--spacing-l) 0;
   overflow: visible;
   cursor: grab;
@@ -51,7 +43,7 @@
   }
 
   .projects .accordionContent p {
-    width: 87.5%;
+    width: 100%;
     margin: 0 0 var(--spacing-l) 12.5%;
   }
 
@@ -66,7 +58,7 @@
   }
 
   .projects .accordionContent p {
-    width: 62.5%;
+    width: 87.5%;
     margin: 0 0 var(--spacing-l) 9.375%;
   }
 

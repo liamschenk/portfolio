@@ -4,12 +4,7 @@ import styles from "../styles/projects.module.css";
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.125,
-    },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.125 } },
 };
 
 const itemVariants = {
@@ -19,10 +14,15 @@ const itemVariants = {
 
 export default function Projects({ projects }) {
   const [openAccordion, setOpenAccordion] = useState(null);
-  const [hoveredAccordion, setHoveredAccordion] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const toggleAccordion = (index) => {
     setOpenAccordion(openAccordion === index ? null : index);
+  };
+
+  const getOpacity = (index) => {
+    if (openAccordion !== null) return openAccordion === index ? 1 : 0.5;
+    return hoveredIndex !== null && hoveredIndex !== index ? 0.5 : 1;
   };
 
   return (
@@ -35,35 +35,37 @@ export default function Projects({ projects }) {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className={`${styles.accordion} ${
-              openAccordion === index
-                ? styles.activeAccordion
-                : hoveredAccordion !== null && hoveredAccordion !== index
-                ? styles.dimmedAccordion
-                : ""
-            }`}
+            className={styles.accordion}
             variants={itemVariants}
+            animate={{ opacity: getOpacity(index) }}
+            transition={{ duration: 0.25 }}
           >
             <div
               className={styles.accordionHeader}
               onClick={() => toggleAccordion(index)}
-              onMouseEnter={() => setHoveredAccordion(index)}
-              onMouseLeave={() => setHoveredAccordion(null)}
+              onMouseEnter={() =>
+                openAccordion === null && setHoveredIndex(index)
+              }
+              onMouseLeave={() =>
+                openAccordion === null && setHoveredIndex(null)
+              }
             >
               <p>{`0${index + 1}`}</p>
               <p>{project.name}</p>
               <p>{project.endDate}</p>
             </div>
-            <div
-              className={`${styles.accordionContent} ${
-                openAccordion === index ? styles.open : ""
-              }`}
+            <motion.div
+              className={styles.accordionContent}
+              animate={{
+                maxHeight: openAccordion === index ? "1080px" : "0px",
+              }}
+              transition={{ duration: 0.25, ease: "easeInOut" }}
             >
               <p>{project.description}</p>
-              {project.media && project.media.length > 0 && (
+              {project.media?.length > 0 && (
                 <DraggableMediaContainer media={project.media} />
               )}
-            </div>
+            </motion.div>
           </motion.div>
         ))}
       </motion.div>
@@ -75,29 +77,17 @@ function DraggableMediaContainer({ media }) {
   const containerRef = useRef(null);
   const [constraints, setConstraints] = useState({ left: 0, right: 0 });
 
-  const calculateConstraints = () => {
-    if (containerRef.current) {
-      const containerWidth = containerRef.current.offsetWidth;
-      const contentWidth = containerRef.current.scrollWidth;
-      const rightConstraint = containerWidth - contentWidth;
-
+  useEffect(() => {
+    const calculateConstraints = () => {
+      if (!containerRef.current) return;
+      const { offsetWidth, scrollWidth } = containerRef.current;
       setConstraints({
-        left: rightConstraint < 0 ? rightConstraint : 0,
+        left: Math.min(0, offsetWidth - scrollWidth),
         right: 0,
       });
-    }
-  };
+    };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      calculateConstraints();
-    }, 250); // Adjust this delay to match the accordion's animation duration
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    // Recalculate constraints on window resize
+    setTimeout(calculateConstraints, 250);
     window.addEventListener("resize", calculateConstraints);
     return () => window.removeEventListener("resize", calculateConstraints);
   }, []);

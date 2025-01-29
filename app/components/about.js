@@ -3,12 +3,7 @@ import styles from "../styles/about.module.css";
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.125, // Controls the delay between sections
-    },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.125 } },
 };
 
 const sectionVariants = {

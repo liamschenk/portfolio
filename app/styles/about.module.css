@@ -27,7 +27,7 @@
 
 @media (max-width: 480px) {
   .about section:first-of-type > p:first-of-type {
-    width: 87.5%;
+    width: 100%;
   }
 
   .about section div {
@@ -35,14 +35,19 @@
     flex-wrap: wrap;
   }
 
-  .about section div p {
+  .about section:nth-of-type(2) div {
+    flex-wrap: nowrap;
+    gap: var(--spacing-xs);
+  }
+
+  .about section:not(:nth-of-type(2)) div p {
     flex: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .about section:first-of-type > p:first-of-type {
-    width: 62.5%;
+    width: 87.5%;
   }
 
   .about section div {
