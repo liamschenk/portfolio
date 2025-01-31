@@ -15,6 +15,7 @@ const itemVariants = {
 export default function Projects({ projects }) {
   const [openAccordion, setOpenAccordion] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const contentRef = useRef(null);
 
   const toggleAccordion = (index) => {
     setOpenAccordion(openAccordion === index ? null : index);
@@ -55,9 +56,14 @@ export default function Projects({ projects }) {
               <p>{project.endDate}</p>
             </div>
             <motion.div
+              ref={contentRef}
               className={styles.accordionContent}
+              initial={{ height: 0 }}
               animate={{
-                maxHeight: openAccordion === index ? "1080px" : "0px",
+                height:
+                  openAccordion === index
+                    ? contentRef.current?.scrollHeight
+                    : 0,
               }}
               transition={{ duration: 0.25, ease: "easeInOut" }}
             >

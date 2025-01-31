@@ -1,7 +1,6 @@
 .about section {
   padding: var(--spacing-m) 0 0 0;
   margin: 0 0 var(--spacing-xl) 0;
-  border-top: 0.5px solid var(--tertiary);
 }
 
 .about section:first-of-type > p:first-of-type {
