@@ -84,7 +84,6 @@ export default function Projects({ projects }) {
 
 function MediaSlider({ media }) {
   const settings = {
-    dots: true,
     infinite: false,
     speed: 250,
     slidesToScroll: 1,
