@@ -127,20 +127,6 @@
     "reference": ""
   }],
   "projects": [{
-    "name": "Liam Schenk — Information",
-    "startDate": "2025",
-    "endDate": "Laufend",
-    "description": "Viele meiner bisherigen Projekte kann ich leider nicht direkt auf meinem Portfolio zeigen. Bei Fragen oder Interesse kannst du dich aber gerne bei mir melden.",
-    "highlights": [
-      ""
-    ],
-    "url": "https://liamschenk.ch",
-    "media": [{
-      "type": "image",
-      "url": "/media/information-1.webp"
-    }]
-  },
-  {
     "name": "Point of Sales — Printprodukte",
     "startDate": "2024",
     "endDate": "Laufend",
