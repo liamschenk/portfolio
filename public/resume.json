@@ -130,7 +130,7 @@
     "name": "Liam Schenk — Information",
     "startDate": "2025",
     "endDate": "Laufend",
-    "description": "Ich befinde mich derzeit im letzten Lehrjahr als Mediamatiker bei Swisscom und freue mich auf meinen Abschluss. Viele meiner bisherigen Projekte kann ich leider nicht direkt auf meinem Portfolio zeigen. Bei Fragen oder Interesse kannst du dich aber gerne bei mir melden.",
+    "description": "Viele meiner bisherigen Projekte kann ich leider nicht direkt auf meinem Portfolio zeigen. Bei Fragen oder Interesse kannst du dich aber gerne bei mir melden.",
     "highlights": [
       ""
     ],
@@ -138,6 +138,54 @@
     "media": [{
       "type": "image",
       "url": "/media/information-1.webp"
+    }]
+  },
+  {
+    "name": "Point of Sales — Printprodukte",
+    "startDate": "2024",
+    "endDate": "Laufend",
+    "description": "Bei POS manage ich den Dekotourprozess im Team und betreue den dazugehörigen Blog für die Swisscom Shops. Zudem gestalte ich gelegentlich Printmedien. Eine Auswahl davon findest du unten.",
+    "highlights": [
+      ""
+    ],
+    "url": "https://swisscom.com",
+    "media": [{
+      "type": "image",
+      "url": "/media/pos-poster-1.webp"
+    },
+    {
+      "type": "image",
+      "url": "/media/pos-poster-2.webp"
+    },
+    {
+      "type": "image",
+      "url": "/media/pos-galaxy-flyer-1.webp"
+    },
+    {
+      "type": "image",
+      "url": "/media/pos-galaxy-flyer-2.webp"
+    },
+    {
+      "type": "image",
+      "url": "/media/pos-galaxy-flyer-3.webp"
+    }]
+  },
+  {
+    "name": "Point of Sales — Glücksmaschine",
+    "startDate": "2024",
+    "endDate": "2024",
+    "description": "Für die Glücksmaschine habe ich eine Animation sowie einen Screensaver erstellt. Kunden konnten im Shop per QR-Code daran teilnehmen und Preise gewinnen.",
+    "highlights": [
+      ""
+    ],
+    "url": "https://swisscom.com",
+    "media": [{
+      "type": "video",
+      "url": "/media/gluecksmaschine-1.webm"
+    },
+    {
+      "type": "image",
+      "url": "/media/gluecksmaschine-2.webp"
     }]
   }]
 }

@@ -1,4 +1,7 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 import styles from "../styles/projects.module.css";
 
@@ -69,7 +72,7 @@ export default function Projects({ projects }) {
             >
               <p>{project.description}</p>
               {project.media?.length > 0 && (
-                <DraggableMediaContainer media={project.media} />
+                <MediaSlider media={project.media} />
               )}
             </motion.div>
           </motion.div>
@@ -79,33 +82,20 @@ export default function Projects({ projects }) {
   );
 }
 
-function DraggableMediaContainer({ media }) {
-  const containerRef = useRef(null);
-  const [constraints, setConstraints] = useState({ left: 0, right: 0 });
-
-  useEffect(() => {
-    const calculateConstraints = () => {
-      if (!containerRef.current) return;
-      const { offsetWidth, scrollWidth } = containerRef.current;
-      setConstraints({
-        left: Math.min(0, offsetWidth - scrollWidth),
-        right: 0,
-      });
-    };
-
-    setTimeout(calculateConstraints, 250);
-    window.addEventListener("resize", calculateConstraints);
-    return () => window.removeEventListener("resize", calculateConstraints);
-  }, []);
+function MediaSlider({ media }) {
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 250,
+    slidesToScroll: 1,
+    variableWidth: true,
+    adaptiveHeight: true,
+    swipeToSlide: true,
+    touchThreshold: 12.5,
+  };
 
   return (
-    <motion.div
-      ref={containerRef}
-      className={styles.mediaContainer}
-      drag="x"
-      dragConstraints={constraints}
-      dragElastic={0.25}
-    >
+    <Slider {...settings} className={styles.mediaContainer}>
       {media.map((item, mediaIndex) => (
         <div key={mediaIndex} className={styles.mediaItem}>
           {item.type === "image" ? (
@@ -124,11 +114,10 @@ function DraggableMediaContainer({ media }) {
               loop
             >
               <source src={item.url} type="video/webm" />
-              Your browser does not support the video tag.
             </video>
           ) : null}
         </div>
       ))}
-    </motion.div>
+    </Slider>
   );
 }
