@@ -15,6 +15,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
+      <head>
+        <meta
+          name="keywords"
+          content="Portfolio, Mediamatiker, Schweiz, Liam Schenk"
+        />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
