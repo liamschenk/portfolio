@@ -20,11 +20,11 @@ export default function About({ basics, work, education }) {
       variants={containerVariants}
     >
       <motion.section variants={sectionVariants}>
-        <h3>Über</h3>
+        <h3>About</h3>
         <p>{basics.summary}</p>
       </motion.section>
       <motion.section variants={sectionVariants}>
-        <h3>Kontakt</h3>
+        <h3>Contact</h3>
         {basics.profiles.map((profile, index) => (
           <div key={index}>
             <p>{profile.network}:</p>
@@ -37,27 +37,27 @@ export default function About({ basics, work, education }) {
         ))}
       </motion.section>
       <motion.section variants={sectionVariants}>
-        <h3>Berufserfahrung</h3>
+        <h3>Work Experience</h3>
         {work.map((work, index) => (
           <div key={index}>
             <p>
               {work.startDate} — {work.endDate}
             </p>
             <p>
-              {work.position} bei {work.name}
+              {work.position} at {work.name}
             </p>
           </div>
         ))}
       </motion.section>
       <motion.section variants={sectionVariants}>
-        <h3>Ausbildung</h3>
+        <h3>Education</h3>
         {education.map((education, index) => (
           <div key={index}>
             <p>
               {education.startDate} — {education.endDate}
             </p>
             <p>
-              {education.area} bei {education.institution}
+              {education.area} at {education.institution}
             </p>
           </div>
         ))}
