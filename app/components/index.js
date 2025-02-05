@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
-import styles from "../styles/projects.module.css";
+import styles from "../styles/index.module.css";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -15,7 +15,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.375 } },
 };
 
-export default function Projects({ projects }) {
+export default function Index({ projects }) {
   const [openAccordion, setOpenAccordion] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const contentRef = useRef(null);

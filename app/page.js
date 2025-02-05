@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/navbar";
 import About from "./components/about";
-import Projects from "./components/projects";
+import Index from "./components/index";
 
 export default function Portfolio() {
-  const [view, setView] = useState("projects");
+  const [view, setView] = useState("index");
   const [resume, setResume] = useState(null);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function Portfolio() {
   return (
     <>
       <Navbar setView={setView} activeView={view} />
-      {view === "projects" && <Projects projects={resume.projects} />}
+      {view === "index" && <Index projects={resume.projects} />}
       {view === "about" && (
         <About
           basics={resume.basics}

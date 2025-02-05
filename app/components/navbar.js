@@ -6,14 +6,14 @@ export default function Navbar({ setView, activeView }) {
       <nav>
         <ul>
           <li>
-            <a onClick={() => setView("projects")}>Liam Schenk</a>
+            <a onClick={() => setView("index")}>Liam Schenk</a>
           </li>
           <li>
             <a
-              onClick={() => setView("projects")}
-              className={activeView === "projects" ? styles.active : ""}
+              onClick={() => setView("index")}
+              className={activeView === "index" ? styles.active : ""}
             >
-              Projekte
+              Index
             </a>
           </li>
           <li>
@@ -21,7 +21,7 @@ export default function Navbar({ setView, activeView }) {
               onClick={() => setView("about")}
               className={activeView === "about" ? styles.active : ""}
             >
-              Über
+              About
             </a>
           </li>
         </ul>

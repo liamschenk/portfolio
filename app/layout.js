@@ -9,7 +9,7 @@ const inter = Inter({
 export const metadata = {
   title: "Liam Schenk — Portfolio",
   description:
-    "Portfolio von Liam Schenk, lernender Mediamatiker bei Swisscom.",
+    "Portfolio of Liam Schenk, a Mediamatics apprentice at Swisscom.",
 };
 
 export default function RootLayout({ children }) {
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta
           name="keywords"
-          content="Portfolio, Mediamatiker, Schweiz, Liam Schenk"
+          content="Portfolio, Mediamatiker, Mediamatics, Schweiz, Switzerland, Liam, Liam Schenk"
         />
       </head>
       <body className={inter.className}>{children}</body>

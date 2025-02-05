@@ -1,14 +1,15 @@
 ## Liam Schenk — Portfolio
 
-Dies ist mein Portfolio-Repository, das den Quellcode meiner persönlichen Website enthält. Alle Inhalte werden zentral aus einer JSON-Datei geladen, sodass ich neue Projekte oder Erfahrungen schnell hinzufügen kann.
+This is my portfolio repository, containing the source code for my personal website. All content is loaded from a central JSON file, making it easy to add new projects or experiences quickly.
 
 ### Features:
-- **Einfache Inhaltserweiterung**: Alles wird aus einer zentralen JSON-Datei geladen.
 
-### Technologien:
-- **Next.js**: Für dynamische Inhalte und schnelle Entwicklung.
-- **GitHub**: Für Versionskontrolle und Speicherung.
-- **Vercel**: Zum Hosten der Website mit automatischen Deployments.
+- **Easy content management**: All data is pulled from a single JSON file.
 
-Danke, dass du dir mein Portfolio anschaust! Feedback ist immer willkommen.
+### Technologies:
 
+- **Next.js** – For dynamic content and fast development.
+- **GitHub** – For version control and storage.
+- **Vercel** – For hosting with automatic deployments.
+
+Thanks for checking out my portfolio! Feedback is always welcome.
