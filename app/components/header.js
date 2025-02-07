@@ -1,6 +1,6 @@
-import styles from "../styles/navbar.module.css";
+import styles from "../styles/header.module.css";
 
-export default function Navbar({ setView, activeView }) {
+export default function Header({ setView, activeView }) {
   return (
     <header className={styles.header}>
       <nav>

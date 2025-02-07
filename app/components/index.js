@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import Slider from "react-slick";
+import Slideshow from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
@@ -30,7 +30,7 @@ export default function Index({ projects }) {
   };
 
   return (
-    <main className={styles.projects}>
+    <main>
       <motion.div
         initial="hidden"
         animate="visible"
@@ -45,7 +45,7 @@ export default function Index({ projects }) {
             transition={{ duration: 0.25 }}
           >
             <div
-              className={styles.accordionHeader}
+              className={styles.accordionTrigger}
               onClick={() => toggleAccordion(index)}
               onMouseEnter={() =>
                 openAccordion === null && setHoveredIndex(index)
@@ -72,7 +72,7 @@ export default function Index({ projects }) {
             >
               <p>{project.description}</p>
               {project.media?.length > 0 && (
-                <MediaSlider media={project.media} />
+                <MediaSlideshow media={project.media} />
               )}
             </motion.div>
           </motion.div>
@@ -82,7 +82,7 @@ export default function Index({ projects }) {
   );
 }
 
-function MediaSlider({ media }) {
+function MediaSlideshow({ media }) {
   const settings = {
     infinite: false,
     speed: 250,
@@ -90,23 +90,23 @@ function MediaSlider({ media }) {
     variableWidth: true,
     adaptiveHeight: true,
     swipeToSlide: true,
-    touchThreshold: 12.5,
+    touchThreshold: 12.25,
   };
 
   return (
-    <Slider {...settings} className={styles.mediaContainer}>
+    <Slideshow {...settings} className={styles.slideshow}>
       {media.map((item, mediaIndex) => (
-        <div key={mediaIndex} className={styles.mediaItem}>
+        <div key={mediaIndex} className={styles.slideshowMedia}>
           {item.type === "image" ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={item.url}
               alt={`Project media ${mediaIndex + 1}`}
-              className={styles.projectMedia}
+              className={styles.slideshowMediaItem}
             />
           ) : item.type === "video" ? (
             <video
-              className={styles.projectMedia}
+              className={styles.slideshowMediaItem}
               autoPlay
               muted
               playsInline
@@ -117,6 +117,6 @@ function MediaSlider({ media }) {
           ) : null}
         </div>
       ))}
-    </Slider>
+    </Slideshow>
   );
 }

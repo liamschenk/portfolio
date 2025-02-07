@@ -1,15 +1,17 @@
+/* Root */
 :root {
   --font-size: 14px;
   --line-height: 16px;
   --font-weight: 400;
 
-  --spacing-xs: 0.25rem;
-  --spacing-s: 0.5rem;
-  --spacing-m: 1rem;
-  --spacing-l: 2rem;
   --spacing-xl: 3rem;
+  --spacing-l: 2rem;
+  --spacing-m: 1rem;
+  --spacing-s: 0.5rem;
+  --spacing-xs: 0.25rem;
 }
 
+/* Theming */
 @media (prefers-color-scheme: light) {
   :root {
     --primary: #ffffff;
@@ -18,7 +20,7 @@
   }
 
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
 }
 
@@ -34,6 +36,8 @@
   }
 }
 
+/* Global */
+/* HTML & Body styles */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -50,12 +54,12 @@ body {
   background: var(--primary);
   color: var(--secondary);
   padding: var(--spacing-m);
-  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h3,
+/* Text styles */
+h1,
 p,
 a {
   font-size: var(--font-size);
@@ -63,8 +67,8 @@ a {
   font-weight: var(--font-weight);
 }
 
-h3 {
-  margin: 0 0 var(--spacing-s) 0;
+h1 {
+  margin-bottom: var(--spacing-s);
 }
 
 a {
@@ -72,14 +76,15 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 480px) {
-  body {
-    padding: var(--spacing-xs);
-  }
-}
-
+/* Breakpoints */
 @media (max-width: 768px) {
   body {
     padding: var(--spacing-s);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: var(--spacing-xs);
   }
 }

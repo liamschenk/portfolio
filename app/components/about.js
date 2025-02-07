@@ -13,55 +13,68 @@ const sectionVariants = {
 
 export default function About({ basics, work, education }) {
   return (
-    <motion.main
-      className={styles.about}
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      <motion.section variants={sectionVariants}>
-        <h3>About</h3>
-        <p>{basics.summary}</p>
-      </motion.section>
-      <motion.section variants={sectionVariants}>
-        <h3>Contact</h3>
-        {basics.profiles.map((profile, index) => (
-          <div key={index}>
-            <p>{profile.network}:</p>
-            <p>
-              <a href={profile.url} target="_blank" rel="noopener noreferrer">
-                {profile.username}
-              </a>
-            </p>
-          </div>
-        ))}
-      </motion.section>
-      <motion.section variants={sectionVariants}>
-        <h3>Work Experience</h3>
-        {work.map((work, index) => (
-          <div key={index}>
-            <p>
-              {work.startDate} — {work.endDate}
-            </p>
-            <p>
-              {work.position} at {work.name}
-            </p>
-          </div>
-        ))}
-      </motion.section>
-      <motion.section variants={sectionVariants}>
-        <h3>Education</h3>
-        {education.map((education, index) => (
-          <div key={index}>
-            <p>
-              {education.startDate} — {education.endDate}
-            </p>
-            <p>
-              {education.area} at {education.institution}
-            </p>
-          </div>
-        ))}
-      </motion.section>
-    </motion.main>
+    <main>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        <motion.section
+          variants={sectionVariants}
+          className={styles.aboutSection}
+        >
+          <h1>About</h1>
+          <p>{basics.summary}</p>
+        </motion.section>
+        <motion.section
+          variants={sectionVariants}
+          className={styles.aboutSection}
+        >
+          <h1>Contact</h1>
+          {basics.profiles.map((profile, index) => (
+            <div key={index} className={styles.infoGrid}>
+              <p>{profile.network}:</p>
+              <p>
+                <a href={profile.url} target="_blank" rel="noopener noreferrer">
+                  {profile.username}
+                </a>
+              </p>
+            </div>
+          ))}
+        </motion.section>
+        <motion.section
+          variants={sectionVariants}
+          className={styles.aboutSection}
+        >
+          <h1>Work Experience</h1>
+          {work.map((work, index) => (
+            <div key={index} className={styles.infoGrid}>
+              <p>
+                {work.startDate} — {work.endDate}
+              </p>
+              <p>
+                {work.position} at {work.name}
+              </p>
+            </div>
+          ))}
+        </motion.section>
+        <motion.section
+          variants={sectionVariants}
+          className={styles.aboutSection}
+        >
+          <h1>Education</h1>
+          {education.map((education, index) => (
+            <div key={index} className={styles.infoGrid}>
+              <p>
+                {education.startDate} — {education.endDate}
+              </p>
+              <p>
+                {education.area} at {education.institution}
+              </p>
+            </div>
+          ))}
+        </motion.section>
+      </motion.div>
+    </main>
   );
 }

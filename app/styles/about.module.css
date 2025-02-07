@@ -1,55 +1,62 @@
-.about section {
-  padding: var(--spacing-m) 0 0 0;
-  margin: 0 0 var(--spacing-xl) 0;
+/* About */
+/* Section & Grid styles */
+.aboutSection {
+  padding-top: calc(
+    var(--spacing-m) + 1px
+  ); /* Include 1px border of index view */
+  margin-bottom: var(--spacing-xl);
 }
 
-.about section:first-of-type > p:first-of-type {
-  width: 37.5%;
-}
-
-.about section div {
+.infoGrid {
   display: grid;
   grid-template-columns: 12.5% 87.5%;
 }
 
-.about section div p {
-  margin: 0 0 var(--spacing-xs) 0;
+/* Basics description */
+.aboutSection:first-of-type > p:first-of-type {
+  width: 37.5%;
 }
 
-.about section div a {
+/* Text styles */
+.infoGrid p {
+  margin-bottom: var(--spacing-xs);
+}
+
+.infoGrid a {
   text-decoration: underline;
 }
 
-.about section div a:hover {
+.infoGrid a:hover {
   text-decoration: none;
 }
 
-@media (max-width: 480px) {
-  .about section:first-of-type > p:first-of-type {
-    width: 100%;
+/* Breakpoints */
+@media (max-width: 768px) {
+  .infoGrid {
+    grid-template-columns: 25% 75%;
   }
 
-  .about section div {
+  .aboutSection:first-of-type > p:first-of-type {
+    width: 87.5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .infoGrid {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .about section:nth-of-type(2) div {
+  .aboutSection:nth-of-type(2) .infoGrid {
     flex-wrap: nowrap;
     gap: var(--spacing-xs);
   }
 
-  .about section:not(:nth-of-type(2)) div p {
+  .aboutSection:not(:nth-of-type(2)) .infoGrid p {
     flex: 100%;
   }
-}
 
-@media (max-width: 768px) {
-  .about section:first-of-type > p:first-of-type {
-    width: 87.5%;
-  }
-
-  .about section div {
-    grid-template-columns: 25% 75%;
+  .aboutSection:first-of-type > p:first-of-type {
+    width: 100%;
   }
 }

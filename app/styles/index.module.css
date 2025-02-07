@@ -1,4 +1,6 @@
-.projects .accordionHeader {
+/* Index */
+/* Accordion trigger */
+.accordionTrigger {
   display: grid;
   grid-template-columns: 6.25% 75% 18.75%;
   padding: var(--spacing-m) 0;
@@ -6,70 +8,74 @@
   border-top: 0.5px solid var(--tertiary);
 }
 
-.projects .accordionHeader p:nth-child(3) {
+.accordionTrigger p:nth-child(3) {
   text-align: right;
 }
 
-.projects .accordionContent {
+/* Accordion content */
+.accordionContent {
   overflow: hidden;
 }
 
-.projects .accordionContent p {
+.accordionContent p {
   width: 37.5%;
   margin: 0 0 var(--spacing-xl) 6.25%;
 }
 
-.projects .accordionContent .mediaContainer {
+/* Slideshow */
+.slideshow {
   width: 100%;
-  margin: 0 0 var(--spacing-l) 0;
+  margin-bottom: var(--spacing-l);
   overflow: visible;
   cursor: grab;
 }
 
-.projects .mediaContainer:active {
+.slideshow:active {
   cursor: grabbing;
 }
 
-.projects .accordionContent .mediaContainer .mediaItem {
+/* Slideshow item */
+.slideshow .slideshowItem {
   display: inline-block;
   width: auto;
   max-width: 100%;
 }
 
-.projects .accordionContent .mediaContainer .mediaItem .projectMedia {
+.slideshow .slideshowMedia .slideshowMediaItem {
   height: 400px;
   width: auto;
-  margin: var(--spacing-m);
+  margin: var(--spacing-m) var(--spacing-m) var(--spacing-m) 0;
   user-select: none;
   pointer-events: none;
 }
 
-@media (max-width: 480px) {
-  .projects .accordionHeader {
-    grid-template-columns: 12.5% 68.75% 18.75%;
-  }
-
-  .projects .accordionContent p {
-    width: 100%;
-    margin: 0 0 var(--spacing-l) 12.5%;
-  }
-
-  .projects .accordionContent .mediaContainer .mediaItem .projectMedia {
-    height: 200px;
-  }
-}
-
+/* Breakpoints */
 @media (max-width: 768px) {
-  .projects .accordionHeader {
+  .accordionTrigger {
     grid-template-columns: 9.375% 71.875% 18.75%;
   }
 
-  .projects .accordionContent p {
-    width: 87.5%;
+  .accordionContent p {
+    width: 75%;
     margin: 0 0 var(--spacing-l) 9.375%;
   }
 
-  .projects .accordionContent .mediaContainer .mediaItem .projectMedia {
+  .slideshow .slideshowMedia .slideshowMediaItem {
     height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordionTrigger {
+    grid-template-columns: 12.5% 68.75% 18.75%;
+  }
+
+  .accordionContent p {
+    width: 87.5%;
+    margin: 0 0 var(--spacing-l) 12.5%;
+  }
+
+  .slideshow .slideshowMedia .slideshowMediaItem {
+    height: 200px;
   }
 }

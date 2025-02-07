@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Navbar from "./components/navbar";
+import Header from "./components/header";
 import About from "./components/about";
 import Index from "./components/index";
 
@@ -22,7 +22,7 @@ export default function Portfolio() {
 
   return (
     <>
-      <Navbar setView={setView} activeView={view} />
+      <Header setView={setView} activeView={view} />
       {view === "index" && <Index projects={resume.projects} />}
       {view === "about" && (
         <About
