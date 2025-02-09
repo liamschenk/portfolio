@@ -18,7 +18,6 @@ const itemVariants = {
 export default function Index({ projects }) {
   const [openAccordion, setOpenAccordion] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const contentRef = useRef(null);
 
   const toggleAccordion = (index) => {
     setOpenAccordion(openAccordion === index ? null : index);
@@ -27,6 +26,18 @@ export default function Index({ projects }) {
   const getOpacity = (index) => {
     if (openAccordion !== null) return openAccordion === index ? 1 : 0.5;
     return hoveredIndex !== null && hoveredIndex !== index ? 0.5 : 1;
+  };
+
+  const handleMouseEnter = (index) => {
+    if (openAccordion === null) {
+      setTimeout(() => setHoveredIndex(index), 25);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (openAccordion === null) {
+      setTimeout(() => setHoveredIndex(null), 25);
+    }
   };
 
   return (
@@ -47,27 +58,17 @@ export default function Index({ projects }) {
             <div
               className={styles.accordionTrigger}
               onClick={() => toggleAccordion(index)}
-              onMouseEnter={() =>
-                openAccordion === null && setHoveredIndex(index)
-              }
-              onMouseLeave={() =>
-                openAccordion === null && setHoveredIndex(null)
-              }
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
             >
               <p>{`0${index + 1}`}</p>
               <p>{project.name}</p>
               <p>{project.endDate}</p>
             </div>
             <motion.div
-              ref={contentRef}
               className={styles.accordionContent}
               initial={{ height: 0 }}
-              animate={{
-                height:
-                  openAccordion === index
-                    ? contentRef.current?.scrollHeight
-                    : 0,
-              }}
+              animate={{ height: openAccordion === index ? "auto" : 0 }}
               transition={{ duration: 0.25, ease: "easeInOut" }}
             >
               <p>{project.description}</p>
@@ -88,7 +89,6 @@ function MediaSlideshow({ media }) {
     speed: 250,
     slidesToScroll: 1,
     variableWidth: true,
-    adaptiveHeight: true,
     swipeToSlide: true,
     touchThreshold: 12.25,
   };
@@ -111,6 +111,7 @@ function MediaSlideshow({ media }) {
               muted
               playsInline
               loop
+              disablePictureInPicture
             >
               <source src={item.url} type="video/webm" />
             </video>
