@@ -1,10 +1,12 @@
 /* About */
 /* Section & Grid styles */
 .aboutSection {
-  padding-top: calc(
-    var(--spacing-m) + 1px
-  ); /* Include 1px border of index view */
-  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-m) 0 var(--spacing-m) 0;
+  margin-bottom: var(--spacing-l);
+}
+
+.aboutSection:not(:last-child) {
+  border-bottom: 1px solid var(--tertiary);
 }
 
 .infoGrid {
@@ -17,11 +19,7 @@
   width: 37.5%;
 }
 
-/* Text styles */
-.infoGrid p {
-  margin-bottom: var(--spacing-xs);
-}
-
+/* Link styles */
 .infoGrid a {
   text-decoration: underline;
 }

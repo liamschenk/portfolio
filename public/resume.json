@@ -143,6 +143,10 @@
     "media": [{
       "type": "video",
       "url": "/media/rirekisho-1.webm"
+    },
+    {
+      "type": "image",
+      "url": "/media/rirekisho-2.webp"
     }]
   },
   {
@@ -160,19 +164,11 @@
     },
     {
       "type": "image",
-      "url": "/media/pos-poster-2.webp"
-    },
-    {
-      "type": "image",
       "url": "/media/pos-galaxy-flyer-1.webp"
     },
     {
       "type": "image",
       "url": "/media/pos-galaxy-flyer-2.webp"
-    },
-    {
-      "type": "image",
-      "url": "/media/pos-galaxy-flyer-3.webp"
     }]
   },
   {

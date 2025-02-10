@@ -19,13 +19,13 @@
 
 .accordionContent p {
   width: 37.5%;
-  margin: 0 0 var(--spacing-xl) 6.25%;
+  margin: 0 0 var(--spacing-l) 6.25%;
 }
 
 /* Slideshow */
 .slideshow {
   width: 100%;
-  margin-bottom: var(--spacing-l);
+  margin-bottom: var(--spacing-m);
   overflow: visible;
   cursor: grab;
 }
@@ -44,7 +44,7 @@
 .slideshow .slideshowMedia .slideshowMediaItem {
   height: 400px;
   width: auto;
-  margin: var(--spacing-m) var(--spacing-m) var(--spacing-m) 0;
+  margin: 0 var(--spacing-s) 0 0;
   user-select: none;
   pointer-events: none;
 }
@@ -57,11 +57,11 @@
 
   .accordionContent p {
     width: 75%;
-    margin: 0 0 var(--spacing-l) 9.375%;
+    margin: 0 0 var(--spacing-m) 9.375%;
   }
 
   .slideshow .slideshowMedia .slideshowMediaItem {
-    height: 300px;
+    height: 320px;
   }
 }
 
@@ -72,10 +72,10 @@
 
   .accordionContent p {
     width: 87.5%;
-    margin: 0 0 var(--spacing-l) 12.5%;
+    margin: 0 0 var(--spacing-m) 12.5%;
   }
 
   .slideshow .slideshowMedia .slideshowMediaItem {
-    height: 200px;
+    height: 240px;
   }
 }
