@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Header from "./components/header";
 import About from "./components/about";
 import Index from "./components/index";
@@ -9,20 +9,26 @@ export default function Portfolio() {
   const [view, setView] = useState("index");
   const [resume, setResume] = useState(null);
 
+  const handleViewChange = useCallback(
+    (newView) => {
+      if (view !== newView) {
+        setView(newView);
+      }
+    },
+    [view]
+  );
+
   useEffect(() => {
-    async function fetchResume() {
-      const res = await fetch("/resume.json");
-      const data = await res.json();
-      setResume(data);
-    }
-    fetchResume();
+    fetch("/resume.json")
+      .then((res) => res.json())
+      .then((data) => setResume(data));
   }, []);
 
   if (!resume) return null;
 
   return (
     <>
-      <Header setView={setView} activeView={view} />
+      <Header setView={handleViewChange} activeView={view} />
       {view === "index" && <Index projects={resume.projects} />}
       {view === "about" && (
         <About

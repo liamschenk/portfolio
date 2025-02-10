@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Liam Schenk",
-    "label": "Mediamatics Apprentice",
+    "label": "Mediamatics Specialist Apprentice",
     "image": "",
     "email": "liam.schenk@bluewin.ch",
     "phone": "",
     "url": "https://liamschenk.ch",
-    "summary": "Hi, I’m Liam, a Mediamatics apprentice at Swisscom. I’m passionate about graphic and poster design, and I love learning new things, especially when it comes to web design. In my free time, you’ll probably find me listening to music or podcasts, picking up inspiration along the way.",
+    "summary": "Hi, I’m Liam, a mediamatics specialist apprentice at Swisscom. I’m passionate about graphic design, and I love learning new things, especially when it comes to web design. In my free time, you’ll probably find me listening to music or podcasts, picking up inspiration along the way.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -37,11 +37,11 @@
   },
   "work": [{
     "name": "Swisscom",
-    "position": "Mediamatician EFZ",
+    "position": "Mediamatics specialist EFZ",
     "url": "https://swisscom.com",
     "startDate": "2021",
     "endDate": "Present",
-    "summary": "During my apprenticeship as a Mediamatics professional, I have worked in various departments at Swisscom and gained experience in all areas of multimedia.",
+    "summary": "During my apprenticeship as a mediamatics specialist, I have worked in various departments at Swisscom and gained experience in all areas of multimedia.",
     "highlights": [
       "I have led various multimedia projects and contributed to video and photo productions.",
       "I have designed and implemented physical products.",
@@ -74,7 +74,7 @@
   "education": [{
     "institution": "BBZ-CFP Biel-Bienne",
     "url": "https://bbz-cfp.ch/de",
-    "area": "Mediamatician EFZ",
+    "area": "Mediamatics specialist EFZ",
     "studyType": "Apprenticeship",
     "startDate": "2021",
     "endDate": "Present",
@@ -132,14 +132,12 @@
     "reference": ""
   }],
   "projects": [{
-    "name": "Rirekisho — Next.js Web Template",
+    "name": "Rirekisho — Next.js Resume Template",
     "startDate": "2025",
     "endDate": "2025",
-    "description": "I created a simple resume template using Next.js, designed for beginners. It uses a resume.json file to display basic info including projects, work, and education — perfect for those starting to build their personal website.",
+    "description": "I created a simple Next.js resume template for beginners, using a resume.json file to display essential information like projects, work experience, and education — perfect for those building their first personal website.",
     "highlights": [
-      "Built with Next.js for fast performance and SEO optimization",
-      "Fully customizable design to fit personal branding",
-      "Responsive design, looks great on both desktop and mobile"
+      ""
     ],
     "url": "https://github.com/liamschenk/rirekisho",
     "media": [{
@@ -148,10 +146,10 @@
     }]
   },
   {
-    "name": "Point of Sales — Print Products",
+    "name": "Point of Sales — Print Media Design",
     "startDate": "2024",
-    "endDate": "Ongoing",
-    "description": "At POS, I manage the decoration tour process in a team and handle the associated blog for the Swisscom shops. Additionally, I occasionally design print media. A selection of this work can be found below.",
+    "endDate": "2025",
+    "description": "At POS, I lead the decoration tour process within a team and manage the corresponding blog for Swisscom shops. In addition, I occasionally designed print media. Below is a selection of my work in this area.",
     "highlights": [
       ""
     ],
@@ -178,10 +176,10 @@
     }]
   },
   {
-    "name": "Point of Sales — Glücksmaschine",
+    "name": "Point of Sales — Glücksmaschine Animation",
     "startDate": "2024",
     "endDate": "2024",
-    "description": "For the Glücksmaschine, I created an animation and a screensaver. Customers could participate in the shop by scanning a QR code and win prizes.",
+    "description": "For the Glücksmaschine, I developed an animation and screensaver. Customers could participate by scanning a QR code in the shop for a chance to win prizes.",
     "highlights": [
       ""
     ],
