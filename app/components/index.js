@@ -23,23 +23,6 @@ export default function Index({ projects }) {
     setOpenAccordion(openAccordion === index ? null : index);
   };
 
-  const getOpacity = (index) => {
-    if (openAccordion !== null) return openAccordion === index ? 1 : 0.5;
-    return hoveredIndex !== null && hoveredIndex !== index ? 0.5 : 1;
-  };
-
-  const handleMouseEnter = (index) => {
-    if (openAccordion === null) {
-      setTimeout(() => setHoveredIndex(index), 25);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (openAccordion === null) {
-      setTimeout(() => setHoveredIndex(null), 25);
-    }
-  };
-
   return (
     <main>
       <motion.div
@@ -52,14 +35,23 @@ export default function Index({ projects }) {
             key={index}
             className={styles.accordion}
             variants={itemVariants}
-            animate={{ opacity: getOpacity(index) }}
-            transition={{ duration: 0.25 }}
+            animate={{
+              opacity:
+                openAccordion === null
+                  ? hoveredIndex === null || hoveredIndex === index
+                    ? 1
+                    : 0.5
+                  : openAccordion === index || hoveredIndex === index
+                  ? 1
+                  : 0.5,
+            }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
           >
             <div
               className={styles.accordionTrigger}
               onClick={() => toggleAccordion(index)}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
               <p>{`0${index + 1}`}</p>
               <p>{project.name}</p>

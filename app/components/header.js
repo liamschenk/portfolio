@@ -14,11 +14,15 @@ export default function Header({ setView, activeView }) {
       <nav>
         <ul>
           <li>
-            <a onClick={() => handleViewChange("index")}>Liam Schenk</a>
+            <a onClick={() => handleViewChange("index")} role="button">
+              Liam Schenk
+            </a>
           </li>
           <li>
             <a
               onClick={() => handleViewChange("index")}
+              role="button"
+              tabIndex={1}
               className={activeView === "index" ? styles.active : ""}
             >
               Index
@@ -27,6 +31,8 @@ export default function Header({ setView, activeView }) {
           <li>
             <a
               onClick={() => handleViewChange("about")}
+              role="button"
+              tabIndex={2}
               className={activeView === "about" ? styles.active : ""}
             >
               About
