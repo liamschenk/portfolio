@@ -22,7 +22,7 @@ export default function Header({ setView, activeView }) {
             <a
               onClick={() => handleViewChange("index")}
               role="button"
-              tabIndex={1}
+              tabIndex={0}
               className={activeView === "index" ? styles.active : ""}
             >
               Index
@@ -32,7 +32,7 @@ export default function Header({ setView, activeView }) {
             <a
               onClick={() => handleViewChange("about")}
               role="button"
-              tabIndex={2}
+              tabIndex={0}
               className={activeView === "about" ? styles.active : ""}
             >
               About
