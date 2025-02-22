@@ -32,7 +32,7 @@ export default function About({ basics, work, education }) {
         >
           <h1>Contact</h1>
           {basics.profiles.map((profile, index) => (
-            <div key={index} className={styles.infoGrid}>
+            <div key={index} className={styles.contactGrid}>
               <p>{profile.network}:</p>
               <p>
                 <a href={profile.url} target="_blank" rel="noopener noreferrer">
@@ -48,7 +48,7 @@ export default function About({ basics, work, education }) {
         >
           <h1>Work Experience</h1>
           {work.map((work, index) => (
-            <div key={index} className={styles.infoGrid}>
+            <div key={index} className={styles.workGrid}>
               <p>
                 {work.startDate} — {work.endDate}
               </p>
@@ -64,7 +64,7 @@ export default function About({ basics, work, education }) {
         >
           <h1>Education</h1>
           {education.map((education, index) => (
-            <div key={index} className={styles.infoGrid}>
+            <div key={index} className={styles.educationGrid}>
               <p>
                 {education.startDate} — {education.endDate}
               </p>

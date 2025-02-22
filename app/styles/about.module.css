@@ -9,9 +9,17 @@
   border-bottom: 1px solid var(--tertiary);
 }
 
-.infoGrid {
+.contactGrid {
   display: grid;
-  grid-template-columns: 12.5% 87.5%;
+  grid-template-columns: 6ch 1fr;
+  gap: var(--spacing-l);
+}
+
+.workGrid,
+.educationGrid {
+  display: grid;
+  grid-template-columns: 12ch 1fr;
+  gap: var(--spacing-l);
 }
 
 /* Basics description */
@@ -20,37 +28,31 @@
 }
 
 /* Link styles */
-.infoGrid a {
+.contactGrid a {
   text-decoration: underline;
 }
 
-.infoGrid a:hover {
+.contactGrid a:hover {
   text-decoration: none;
 }
 
 /* Breakpoints */
 @media (max-width: 768px) {
-  .infoGrid {
-    grid-template-columns: 25% 75%;
-  }
-
   .aboutSection:first-of-type > p:first-of-type {
     width: 87.5%;
   }
 }
 
 @media (max-width: 480px) {
-  .infoGrid {
+  .workGrid,
+  .educationGrid {
     display: flex;
     flex-wrap: wrap;
+    gap: 0;
   }
 
-  .aboutSection:nth-of-type(2) .infoGrid {
-    flex-wrap: nowrap;
-    gap: var(--spacing-xs);
-  }
-
-  .aboutSection:not(:nth-of-type(2)) .infoGrid p {
+  .workGrid p,
+  .educationGrid p {
     flex: 100%;
   }
 

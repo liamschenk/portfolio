@@ -63,7 +63,10 @@ export default function Index({ projects }) {
               animate={{ height: openAccordion === index ? "auto" : 0 }}
               transition={{ duration: 0.25, ease: "easeInOut" }}
             >
-              <p>{project.description}</p>
+              <div className={styles.accordionDescription}>
+                <p>{project.description}</p>
+              </div>
+
               {project.media?.length > 0 && (
                 <MediaSlideshow media={project.media} />
               )}
