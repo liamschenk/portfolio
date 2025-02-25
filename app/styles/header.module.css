@@ -24,6 +24,10 @@
   cursor: pointer;
 }
 
+.header nav ul li a:hover {
+  text-decoration: underline;
+}
+
 .header nav ul li a.active {
   text-decoration: underline;
 }
