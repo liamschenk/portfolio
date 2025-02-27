@@ -132,24 +132,6 @@
     "reference": ""
   }],
   "projects": [{
-    "name": "Rirekisho — Next.js Resume Template",
-    "startDate": "2025",
-    "endDate": "2025",
-    "description": "I created a simple Next.js resume template for beginners, using a resume.json file to display essential information like projects, work experience, and education — perfect for those building their first personal website.",
-    "highlights": [
-      ""
-    ],
-    "url": "https://github.com/liamschenk/rirekisho",
-    "media": [{
-      "type": "video",
-      "url": "/media/rirekisho-1.webm"
-    },
-    {
-      "type": "image",
-      "url": "/media/rirekisho-2.webp"
-    }]
-  },
-  {
     "name": "Point of Sales — Print Media Design",
     "startDate": "2024",
     "endDate": "2025",
