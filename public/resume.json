@@ -1,9 +1,9 @@
 {
   "basics": {
     "name": "Liam Schenk",
-    "label": "Mediamatics Specialist Apprentice",
+    "label": "",
     "image": "",
-    "email": "liam.schenk@bluewin.ch",
+    "email": "",
     "phone": "",
     "url": "https://liamschenk.ch",
     "summary": "Hi, I’m Liam, a mediamatics specialist apprentice at Swisscom. I’m passionate about graphic and web design, with a focus on keeping things simple and well-organized. I love learning new things, and in my free time, you’ll likely find me tinkering with projects or exploring my ever-growing collection of Spotify playlists.",
@@ -43,9 +43,7 @@
     "endDate": "Present",
     "summary": "During my apprenticeship as a mediamatics specialist, I have worked in various departments at Swisscom and gained experience in all areas of multimedia.",
     "highlights": [
-      "I have led various multimedia projects and contributed to video and photo productions.",
-      "I have designed and implemented physical products.",
-      "I have gained experience in web design and acquired knowledge in various CMS and website builders."
+      ""
     ]
   }],
   "volunteer": [{
@@ -56,8 +54,7 @@
     "endDate": "2023",
     "summary": "In August 2023, I assisted with both First Steps at Swisscom, where I introduced new apprentices to the company and provided them with important information and useful tips.",
     "highlights": [
-      "I guided and supported the new apprentices in setting up their IT devices.",
-      "I gave presentations on various topics and shared my knowledge."
+      ""
     ]
   },
   {
@@ -110,16 +107,8 @@
     ]
   }],
   "languages": [{
-    "language": "German",
-    "fluency": "Native"
-  },
-  {
-    "language": "English",
-    "fluency": "Fluent"
-  },
-  {
-    "language": "French",
-    "fluency": "Good Knowledge"
+    "language": "",
+    "fluency": ""
   }],
   "interests": [{
     "name": "",
