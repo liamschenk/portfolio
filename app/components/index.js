@@ -35,41 +35,44 @@ export default function Index({ projects }) {
             key={index}
             className={styles.accordion}
             variants={itemVariants}
-            animate={{
-              opacity:
-                openAccordion === null
-                  ? hoveredIndex === null || hoveredIndex === index
-                    ? 1
-                    : 0.5
-                  : openAccordion === index || hoveredIndex === index
-                  ? 1
-                  : 0.5,
-            }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
           >
-            <div
-              className={styles.accordionTrigger}
-              onClick={() => toggleAccordion(index)}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              <p>{`0${index + 1}`}</p>
-              <p>{project.name}</p>
-              <p>{project.endDate}</p>
-            </div>
             <motion.div
-              className={styles.accordionContent}
-              initial={{ height: 0 }}
-              animate={{ height: openAccordion === index ? "auto" : 0 }}
+              animate={{
+                opacity:
+                  openAccordion === null
+                    ? hoveredIndex === null || hoveredIndex === index
+                      ? 1
+                      : 0.5
+                    : openAccordion === index || hoveredIndex === index
+                    ? 1
+                    : 0.5,
+              }}
               transition={{ duration: 0.25, ease: "easeInOut" }}
             >
-              <div className={styles.accordionDescription}>
-                <p>{project.description}</p>
+              <div
+                className={styles.accordionTrigger}
+                onClick={() => toggleAccordion(index)}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <p>{`0${index + 1}`}</p>
+                <p>{project.name}</p>
+                <p>{project.endDate}</p>
               </div>
+              <motion.div
+                className={styles.accordionContent}
+                initial={{ height: 0 }}
+                animate={{ height: openAccordion === index ? "auto" : 0 }}
+                transition={{ duration: 0.25, ease: "easeInOut" }}
+              >
+                <div className={styles.accordionDescription}>
+                  <p>{project.description}</p>
+                </div>
 
-              {project.media?.length > 0 && (
-                <MediaSlideshow media={project.media} />
-              )}
+                {project.media?.length > 0 && (
+                  <MediaSlideshow media={project.media} />
+                )}
+              </motion.div>
             </motion.div>
           </motion.div>
         ))}

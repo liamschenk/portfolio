@@ -121,7 +121,28 @@
     "reference": ""
   }],
   "projects": [{
-    "name": "Point of Sales — Print Media Design",
+    "name": "Digital Chalkboard Guidelines",
+    "startDate": "2025",
+    "endDate": "2025",
+    "description": "For my IPA at Swisscom, I created a design manual and template for digital chalkboards to ensure consistent visual output and simplify the creation process for future trainees.",
+    "highlights": [
+      ""
+    ],
+    "url": "https://swisscom.com",
+    "media": [{
+      "type": "image",
+      "url": "/media/guidelines-1.webp"
+    },
+    {
+      "type": "image",
+      "url": "/media/guidelines-2.webp"
+    },
+    {
+      "type": "image",
+      "url": "/media/guidelines-3.webp"
+    }]
+  },{
+    "name": "Point of Sales — Print Media",
     "startDate": "2024",
     "endDate": "2025",
     "description": "At POS, I lead the decoration tour process within a team and manage the corresponding blog for Swisscom shops. In addition, I occasionally designed print media. Below is a selection of my work in this area.",
