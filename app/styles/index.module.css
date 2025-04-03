@@ -9,6 +9,10 @@
   border-top: 0.5px solid var(--tertiary);
 }
 
+.accordionTrigger.first {
+  border-top: none;
+}
+
 .accordionTrigger p:nth-child(1) {
   min-width: 2ch;
 }

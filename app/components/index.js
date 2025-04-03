@@ -50,7 +50,9 @@ export default function Index({ projects }) {
               transition={{ duration: 0.25, ease: "easeInOut" }}
             >
               <div
-                className={styles.accordionTrigger}
+                className={`${styles.accordionTrigger} ${
+                  index === 0 ? styles.first : ""
+                }`}
                 onClick={() => toggleAccordion(index)}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
@@ -59,6 +61,7 @@ export default function Index({ projects }) {
                 <p>{project.name}</p>
                 <p>{project.endDate}</p>
               </div>
+
               <motion.div
                 className={styles.accordionContent}
                 initial={{ height: 0 }}
