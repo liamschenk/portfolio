@@ -53,7 +53,7 @@ body {
 body {
   background: var(--primary);
   color: var(--secondary);
-  padding: var(--spacing-m);
+  padding: var(--spacing-m) var(--spacing-l);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -79,12 +79,12 @@ a {
 /* Breakpoints */
 @media (max-width: 768px) {
   body {
-    padding: var(--spacing-s);
+    padding: var(--spacing-s) var(--spacing-m);
   }
 }
 
 @media (max-width: 480px) {
   body {
-    padding: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-s);
   }
 }

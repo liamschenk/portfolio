@@ -65,6 +65,10 @@
   height: 400px;
   width: auto;
   margin: 0 var(--spacing-s) 0 0;
+}
+
+.slideshow .slideshowItem,
+.slideshow .slideshowMedia .slideshowMediaItem {
   user-select: none;
   pointer-events: none;
 }
