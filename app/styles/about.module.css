@@ -6,20 +6,20 @@
   border-top: 0.5px solid var(--tertiary);
 }
 
-.aboutSection.first {
+.aboutSection.noBorder {
   border-top: none;
 }
 
 .contactGrid {
   display: grid;
-  grid-template-columns: 6ch 1fr;
+  grid-template-columns: minmax(6ch, auto) 1fr;
   gap: var(--spacing-l);
 }
 
 .workGrid,
 .educationGrid {
   display: grid;
-  grid-template-columns: 12ch 1fr;
+  grid-template-columns: minmax(12ch, auto) 1fr;
   gap: var(--spacing-l);
 }
 

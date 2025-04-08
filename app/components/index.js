@@ -51,7 +51,7 @@ export default function Index({ projects }) {
             >
               <div
                 className={`${styles.accordionTrigger} ${
-                  index === 0 ? styles.first : ""
+                  index === 0 ? styles.noBorder : ""
                 }`}
                 onClick={() => toggleAccordion(index)}
                 onMouseEnter={() => setHoveredIndex(index)}

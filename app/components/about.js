@@ -20,7 +20,7 @@ export default function About({ basics, work, education }) {
         variants={containerVariants}
       >
         <motion.div variants={sectionVariants}>
-          <section className={`${styles.aboutSection} ${styles.first}`}>
+          <section className={`${styles.aboutSection} ${styles.noBorder}`}>
             <h1>About</h1>
             <p>{basics.summary}</p>
           </section>

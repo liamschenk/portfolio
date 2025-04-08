@@ -9,7 +9,7 @@
   border-top: 0.5px solid var(--tertiary);
 }
 
-.accordionTrigger.first {
+.accordionTrigger.noBorder {
   border-top: none;
 }
 
