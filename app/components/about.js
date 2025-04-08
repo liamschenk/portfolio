@@ -38,7 +38,7 @@ export default function About({ basics, work, education }) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {profile.username}
+                    {profile.username} &#8599;
                   </a>
                 </p>
               </div>
@@ -54,9 +54,15 @@ export default function About({ basics, work, education }) {
                 <p>
                   {item.startDate} — {item.endDate}
                 </p>
-                <p>
-                  {item.position} at {item.name}
-                </p>
+                {item.url ? (
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    {item.position} at {item.name} &#8599;
+                  </a>
+                ) : (
+                  <p>
+                    {item.position} at {item.name}
+                  </p>
+                )}
               </div>
             ))}
           </section>
@@ -70,9 +76,15 @@ export default function About({ basics, work, education }) {
                 <p>
                   {item.startDate} — {item.endDate}
                 </p>
-                <p>
-                  {item.area} at {item.institution}
-                </p>
+                {item.url ? (
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    {item.area} at {item.institution} &#8599;
+                  </a>
+                ) : (
+                  <p>
+                    {item.area} at {item.institution}
+                  </p>
+                )}
               </div>
             ))}
           </section>
