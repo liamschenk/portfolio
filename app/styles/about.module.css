@@ -29,16 +29,12 @@
 }
 
 /* Link styles */
-.contactGrid a,
-.workGrid a,
-.educationGrid a {
-  text-decoration: none;
+.contactGrid a {
+  text-decoration: underline;
 }
 
-.contactGrid a:hover,
-.workGrid a:hover,
-.educationGrid a:hover {
-  text-decoration: underline;
+.contactGrid a:hover {
+  text-decoration: none;
 }
 
 /* Breakpoints */
