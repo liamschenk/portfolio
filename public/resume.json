@@ -121,14 +121,14 @@
     "reference": ""
   }],
   "projects": [{
-    "name": "Digital Chalkboard Guidelines",
+    "name": "Digital Chalkboard Guidelines — Layout",
     "startDate": "2025",
     "endDate": "2025",
     "description": "For my IPA at Swisscom, I created a design manual and template for digital chalkboards to ensure consistent visual output and simplify the creation process for future trainees.",
     "highlights": [
       ""
     ],
-    "url": "https://swisscom.com",
+    "url": "",
     "media": [{
       "type": "image",
       "url": "/media/guidelines-1.webp"
@@ -142,14 +142,14 @@
       "url": "/media/guidelines-3.webp"
     }]
   },{
-    "name": "Point of Sales — Print Media",
+    "name": "Swisscom Shops — Print Media",
     "startDate": "2024",
     "endDate": "2025",
     "description": "At POS, I lead the decoration tour process within a team and manage the corresponding blog for Swisscom shops. In addition, I occasionally designed print media. Below is a selection of my work in this area.",
     "highlights": [
       ""
     ],
-    "url": "https://swisscom.com",
+    "url": "",
     "media": [{
       "type": "image",
       "url": "/media/pos-poster-1.webp"
@@ -164,14 +164,14 @@
     }]
   },
   {
-    "name": "Point of Sales — Animation",
+    "name": "Glücksmaschine — Animation",
     "startDate": "2024",
     "endDate": "2024",
     "description": "For the Glücksmaschine, I developed an animation and screensaver. Customers could participate by scanning a QR code in the shop for a chance to win prizes.",
     "highlights": [
       ""
     ],
-    "url": "https://swisscom.com",
+    "url": "",
     "media": [{
       "type": "video",
       "url": "/media/gluecksmaschine-1.webm"
@@ -179,6 +179,42 @@
     {
       "type": "image",
       "url": "/media/gluecksmaschine-2.webp"
+    }]
+  },
+  {
+    "name": "Design Thinking — Video",
+    "startDate": "2023",
+    "endDate": "2023",
+    "description": "I led and produced a video project on design thinking in HR. From concept to final cut, I coordinated the team, planned the shoot, and ensured a smooth production process.",
+    "highlights": [
+      ""
+    ],
+    "url": "",
+    "media": [{
+      "type": "video",
+      "url": "/media/design-thinking-1.webm"
+    }]
+  },
+  {
+    "name": "Merci Fest — Event Photography",
+    "startDate": "2023",
+    "endDate": "2023",
+    "description": "As project lead alongside two fellow apprentices, I organized and executed the event photography for the Merci Fest. We captured key moments and delivered a complete photo package for internal and external use.",
+    "highlights": [
+      ""
+    ],
+    "url": "",
+    "media": [{
+      "type": "image",
+      "url": "/media/merci-fest-1.webp"
+    },
+    {
+      "type": "image",
+      "url": "/media/merci-fest-2.webp"
+    },
+    {
+      "type": "image",
+      "url": "/media/merci-fest-3.webp"
     }]
   }]
 }
