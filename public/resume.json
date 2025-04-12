@@ -6,7 +6,7 @@
     "email": "",
     "phone": "",
     "url": "https://liamschenk.ch",
-    "summary": "Hi, I’m Liam, a mediamatics specialist apprentice at Swisscom. I’m passionate about graphic and web design, with a focus on keeping things simple and well-organized. I love learning new things, and in my free time, you’ll likely find me tinkering with projects or exploring my ever-growing collection of Spotify playlists.",
+    "summary": "Hi, I’m Liam, a mediamatics apprentice at Swisscom. I’m passionate about graphic and web design, with a focus on keeping things simple and well-organized. I love learning new things, and in my free time, you’ll likely find me tinkering with projects or exploring my ever-growing collection of Spotify playlists.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -20,6 +20,11 @@
       "url": "http://www.linkedin.com/in/liamschenk"
     },
     {
+      "network": "E-Mail",
+      "username": "liam.schenk@bluewin.ch",
+      "url": "mailto:liam.schenk@bluewin.ch"
+    },
+    {
       "network": "Are.na",
       "username": "liam-schenk",
       "url": "https://www.are.na/liam-schenk"
@@ -28,20 +33,15 @@
       "network": "GitHub",
       "username": "liamschenk",
       "url": "https://github.com/liamschenk"
-    },
-    {
-      "network": "E-Mail",
-      "username": "liam.schenk@bluewin.ch",
-      "url": "mailto:liam.schenk@bluewin.ch"
     }]
   },
   "work": [{
     "name": "Swisscom",
-    "position": "Mediamatics specialist EFZ",
+    "position": "Mediamatician EFZ",
     "url": "https://swisscom.com",
     "startDate": "2021",
     "endDate": "Present",
-    "summary": "During my apprenticeship as a mediamatics specialist, I have worked in various departments at Swisscom and gained experience in all areas of multimedia.",
+    "summary": "During my apprenticeship as a mediamatician, I have worked in various departments at Swisscom and gained experience in all areas of multimedia.",
     "highlights": [
       ""
     ]
@@ -71,7 +71,7 @@
   "education": [{
     "institution": "BBZ-CFP Biel-Bienne",
     "url": "https://bbz-cfp.ch/de",
-    "area": "Mediamatics specialist EFZ",
+    "area": "Mediamatician EFZ",
     "studyType": "Apprenticeship",
     "startDate": "2021",
     "endDate": "Present",

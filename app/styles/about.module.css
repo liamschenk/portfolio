@@ -3,11 +3,6 @@
 .aboutSection {
   padding: var(--spacing-m) 0 var(--spacing-m) 0;
   margin-bottom: var(--spacing-l);
-  border-top: 0.5px solid var(--tertiary);
-}
-
-.aboutSection.noBorder {
-  border-top: none;
 }
 
 .contactGrid {
