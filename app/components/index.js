@@ -50,25 +50,25 @@ export default function Index({ projects }) {
               transition={{ duration: 0.25, ease: "easeInOut" }}
             >
               <div
-                className={`${styles.accordionTrigger} ${
-                  index === 0 ? styles.noBorder : ""
+                className={`${styles.trigger} ${
+                  index === 0 ? styles.firstTrigger : ""
                 }`}
                 onClick={() => toggleAccordion(index)}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 <p>{`0${index + 1}`}</p>
-                <p>{project.name}</p>
-                <p>{project.endDate}</p>
+                <p className="secondary">{project.name}</p>
+                <p className="tertiary">{project.endDate}</p>
               </div>
 
               <motion.div
-                className={styles.accordionContent}
+                className={styles.content}
                 initial={{ height: 0 }}
                 animate={{ height: openAccordion === index ? "auto" : 0 }}
                 transition={{ duration: 0.25, ease: "easeInOut" }}
               >
-                <div className={styles.accordionDescription}>
+                <div className={styles.description}>
                   <p>{project.description}</p>
                 </div>
 
@@ -97,17 +97,17 @@ function MediaSlideshow({ media }) {
   return (
     <Slideshow {...settings} className={styles.slideshow}>
       {media.map((item, mediaIndex) => (
-        <div key={mediaIndex} className={styles.slideshowMedia}>
+        <div key={mediaIndex} className={styles.media}>
           {item.type === "image" ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={item.url}
               alt={`Project media ${mediaIndex + 1}`}
-              className={styles.slideshowMediaItem}
+              className={styles.mediaItem}
             />
           ) : item.type === "video" ? (
             <video
-              className={styles.slideshowMediaItem}
+              className={styles.mediaItem}
               autoPlay
               muted
               playsInline

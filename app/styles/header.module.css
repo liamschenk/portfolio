@@ -1,5 +1,4 @@
-/* Header */
-/* Header & nav styles */
+/* Header styling */
 .header {
   margin: 0 0 var(--spacing-xl) 0;
 }
@@ -10,7 +9,7 @@
   list-style: none;
 }
 
-/* Text align */
+/* Text styling */
 .header nav ul li:nth-child(2) {
   text-align: center;
 }
@@ -19,7 +18,6 @@
   text-align: right;
 }
 
-/* Text styling */
 .header nav ul li a {
   cursor: pointer;
 }

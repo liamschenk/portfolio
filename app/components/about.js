@@ -20,18 +20,50 @@ export default function About({ basics, work, education }) {
         variants={containerVariants}
       >
         <motion.div variants={sectionVariants}>
-          <section className={styles.aboutSection}>
-            <h1>About</h1>
+          <section className={styles.section}>
+            <h1>Über</h1>
             <p>{basics.summary}</p>
           </section>
         </motion.div>
 
         <motion.div variants={sectionVariants}>
-          <section className={styles.aboutSection}>
-            <h1>Contact</h1>
+          <section className={styles.section}>
+            <h1>Berufserfahrung</h1>
+            {work.map((item, index) => (
+              <div key={index} className={styles.grid}>
+                <p className="tertiary">
+                  {item.startDate} — {item.endDate}
+                </p>
+                <p className="secondary">
+                  {item.position} bei {item.name}
+                </p>
+              </div>
+            ))}
+          </section>
+        </motion.div>
+
+        <motion.div variants={sectionVariants}>
+          <section className={styles.section}>
+            <h1>Ausbildung</h1>
+            {education.map((item, index) => (
+              <div key={index} className={styles.grid}>
+                <p className="tertiary">
+                  {item.startDate} — {item.endDate}
+                </p>
+                <p className="secondary">
+                  {item.area} am {item.institution}
+                </p>
+              </div>
+            ))}
+          </section>
+        </motion.div>
+
+        <motion.div variants={sectionVariants}>
+          <section className={styles.section}>
+            <h1>Kontakt</h1>
             {basics.profiles.map((profile, index) => (
-              <div key={index} className={styles.contactGrid}>
-                <p>{profile.network}:</p>
+              <div key={index} className={`${styles.grid} ${styles.lastGrid}`}>
+                <p className="tertiary">{profile.network}</p>
                 <p>
                   <a
                     href={profile.url}
@@ -39,39 +71,21 @@ export default function About({ basics, work, education }) {
                     rel="noopener noreferrer"
                   >
                     {profile.username}
-                  </a>
-                </p>
-              </div>
-            ))}
-          </section>
-        </motion.div>
-
-        <motion.div variants={sectionVariants}>
-          <section className={styles.aboutSection}>
-            <h1>Work Experience</h1>
-            {work.map((item, index) => (
-              <div key={index} className={styles.workGrid}>
-                <p>
-                  {item.startDate} — {item.endDate}
-                </p>
-                <p>
-                  {item.position} at {item.name}
-                </p>
-              </div>
-            ))}
-          </section>
-        </motion.div>
-
-        <motion.div variants={sectionVariants}>
-          <section className={styles.aboutSection}>
-            <h1>Education</h1>
-            {education.map((item, index) => (
-              <div key={index} className={styles.educationGrid}>
-                <p>
-                  {item.startDate} — {item.endDate}
-                </p>
-                <p>
-                  {item.area} at {item.institution}
+                  </a>{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="var(--secondary)"
+                    className="size-6"
+                  >
+                    <path
+                      strokeLinecap="butt"
+                      strokeLinejoin="miter"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
                 </p>
               </div>
             ))}

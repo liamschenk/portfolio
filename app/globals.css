@@ -14,9 +14,11 @@
 /* Theming */
 @media (prefers-color-scheme: light) {
   :root {
-    --primary: #ffffff;
-    --secondary: #000000;
-    --tertiary: rgba(25, 25, 25, 0.09375);
+    --primary: rgb(255, 255, 255);
+    --secondary: rgb(0, 0, 0);
+    --tertiary: rgb(77, 77, 77);
+    --quarternary: rgb(128, 128, 128);
+    --quinary: rgba(128, 128, 128, 0.125);
   }
 
   html {
@@ -26,9 +28,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #000000;
-    --secondary: #ffffff;
-    --tertiary: rgba(230, 230, 230, 0.09375);
+    --primary: rgb(0, 0, 0);
+    --secondary: rgb(255, 255, 255);
+    --tertiary: rgb(204, 204, 204);
+    --quarternary: rgb(153, 153, 153);
+    --quinary: rgba(153, 153, 153, 0.125);
   }
 
   html {
@@ -36,8 +40,7 @@
   }
 }
 
-/* Global */
-/* HTML & Body styles */
+/* Default styling */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -58,7 +61,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Text styles */
+/* Text styling */
 h1,
 p,
 a {
@@ -71,8 +74,21 @@ h1 {
   margin-bottom: var(--spacing-s);
 }
 
+/* Text shades */
+p.secondary {
+  color: var(--secondary);
+}
+
+p.tertiary {
+  color: var(--tertiary);
+}
+
+p {
+  color: var(--quarternary);
+}
+
 a {
-  color: inherit;
+  color: var(--secondary);
   text-decoration: none;
 }
 

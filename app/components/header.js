@@ -35,7 +35,7 @@ export default function Header({ setView, activeView }) {
               tabIndex={0}
               className={activeView === "about" ? styles.active : ""}
             >
-              About
+              Über
             </a>
           </li>
         </ul>

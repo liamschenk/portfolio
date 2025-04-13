@@ -1,58 +1,59 @@
-/* About */
-/* Section & Grid styles */
-.aboutSection {
+/* View styling */
+.section {
   padding: var(--spacing-m) 0 var(--spacing-m) 0;
   margin-bottom: var(--spacing-l);
 }
 
-.contactGrid {
-  display: grid;
-  grid-template-columns: minmax(6ch, auto) 1fr;
-  gap: var(--spacing-l);
-}
-
-.workGrid,
-.educationGrid {
+.grid {
   display: grid;
   grid-template-columns: minmax(12ch, auto) 1fr;
   gap: var(--spacing-l);
 }
 
-/* Basics description */
-.aboutSection:first-of-type > p:first-of-type {
+/* Arrow */
+.section svg {
+  height: calc(var(--font-size) - 2px);
+  vertical-align: middle;
+}
+
+/* Text styling */
+.section:first-of-type > p:first-of-type {
   width: 37.5%;
 }
 
-/* Link styles */
-.contactGrid a {
+.grid a {
   text-decoration: underline;
 }
 
-.contactGrid a:hover {
+.grid a:hover {
   text-decoration: none;
 }
 
 /* Breakpoints */
 @media (max-width: 768px) {
-  .aboutSection:first-of-type > p:first-of-type {
+  .section:first-of-type > p:first-of-type {
     width: 87.5%;
   }
 }
 
 @media (max-width: 480px) {
-  .workGrid,
-  .educationGrid {
+  .grid {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
   }
 
-  .workGrid p,
-  .educationGrid p {
+  .grid:not(.lastGrid) p {
     flex: 100%;
   }
 
-  .aboutSection:first-of-type > p:first-of-type {
+  .grid.lastGrid {
+    display: grid;
+    grid-template-columns: minmax(6ch, auto) 1fr;
+    gap: var(--spacing-l);
+  }
+
+  .section:first-of-type > p:first-of-type {
     width: 100%;
   }
 }
