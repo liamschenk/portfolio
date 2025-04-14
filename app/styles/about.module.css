@@ -12,7 +12,7 @@
 
 /* Arrow */
 .section svg {
-  height: calc(var(--font-size) - 2px);
+  height: var(--font-size);
   vertical-align: middle;
 }
 

@@ -6,7 +6,7 @@
     "email": "",
     "phone": "",
     "url": "https://liamschenk.ch",
-    "summary": "Hallo, ich bin Liam, Lernender Mediamatiker bei Swisscom. Ich interessiere mich sehr für Grafik- und Webdesign und mag Dinge gerne simpel und strukturiert. In meiner Freizeit bringe ich mir gerne selbst Neues bei, tüftle an Projekten oder stöbere durch meine verschiedenen Spotify-Playlists.",
+    "summary": "Hi, ich bin Liam. Ich mache meine Ausbildung zum Mediamatiker bei Swisscom und habe eine besondere Begeisterung für Grafik- und Webdesign. Am liebsten klar, minimalistisch und durchdacht. In meiner Freizeit lerne ich gerne Neues, arbeite an eigenen Projekten oder stöbere durch meine Playlists auf Spotify.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -38,32 +38,21 @@
   "work": [{
     "name": "Swisscom",
     "position": "Mediamatiker EFZ",
-    "url": "https://swisscom.com",
+    "url": "",
     "startDate": "2021",
     "endDate": "Jetzt",
-    "summary": "Während meiner Lehre als Mediamatiker habe ich in verschiedenen Abteilungen der Swisscom gearbeitet und Erfahrungen in allen Bereichen der Multimedia gesammelt.",
+    "summary": "",
     "highlights": [
       ""
     ]
   }],
   "volunteer": [{
-    "organization": "Swisscom",
-    "position": "Unterstützung bei den First Steps",
-    "url": "https://www.linkedin.com/posts/swisscom_lehrstart-lehre-ausbildung-activity-7095308145530413057-_mBx?utm_source=share&utm_medium=member_desktop",
-    "startDate": "2023",
-    "endDate": "2023",
-    "summary": "Im August 2023 habe ich bei den First Steps von Swisscom unterstützt. Ich führte neue Lernende ins Unternehmen ein und vermittelte ihnen wichtige Informationen sowie hilfreiche Tipps.",
-    "highlights": [
-      ""
-    ]
-  },
-  {
-    "organization": "Swisscom",
-    "position": "Livestream mit Heinz Frei",
-    "url": "https://www.linkedin.com/posts/pascal-schwendimann-11ba39156_leadership-leader-growthmindset-activity-7129023963367661569-Drzs?utm_source=share&utm_medium=member_desktop",
-    "startDate": "2023",
-    "endDate": "2023",
-    "summary": "Bei Motion konnte ich in Zusammenarbeit mit Pascal Schwendimann ein Interview und einen Livestream mit Heinz Frei organisieren und durchführen. Beides fand im Rahmen der Videoserie Leadership Impulse von Swisscom statt.",
+    "organization": "",
+    "position": "",
+    "url": "",
+    "startDate": "",
+    "endDate": "",
+    "summary": "",
     "highlights": [
       ""
     ]
@@ -72,7 +61,7 @@
     "institution": "BBZ-CFP Biel-Bienne",
     "url": "https://bbz-cfp.ch/de",
     "area": "Mediamatiker EFZ",
-    "studyType": "Ausbildung",
+    "studyType": "",
     "startDate": "2021",
     "endDate": "Jetzt",
     "score": "",

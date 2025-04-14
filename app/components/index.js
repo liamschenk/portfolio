@@ -47,7 +47,7 @@ export default function Index({ projects }) {
                     ? 1
                     : 0.5,
               }}
-              transition={{ duration: 0.25, ease: "easeInOut" }}
+              transition={{ duration: 0.375, ease: "easeInOut" }}
             >
               <div
                 className={`${styles.trigger} ${

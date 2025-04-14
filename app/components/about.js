@@ -71,7 +71,7 @@ export default function About({ basics, work, education }) {
                     rel="noopener noreferrer"
                   >
                     {profile.username}
-                  </a>{" "}
+                  </a>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -79,12 +79,11 @@ export default function About({ basics, work, education }) {
                     strokeWidth={2}
                     stroke="var(--secondary)"
                     className="size-6"
+                    strokeLinecap="butt"
+                    strokeLinejoin="miter"
                   >
-                    <path
-                      strokeLinecap="butt"
-                      strokeLinejoin="miter"
-                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                    />
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
                   </svg>
                 </p>
               </div>
