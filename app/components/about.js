@@ -72,19 +72,6 @@ export default function About({ basics, work, education }) {
                   >
                     {profile.username}
                   </a>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="var(--secondary)"
-                    className="size-6"
-                    strokeLinecap="butt"
-                    strokeLinejoin="miter"
-                  >
-                    <line x1="7" y1="17" x2="17" y2="7" />
-                    <polyline points="7 7 17 7 17 17" />
-                  </svg>
                 </p>
               </div>
             ))}
