@@ -205,5 +205,23 @@
       "type": "image",
       "url": "/media/merci-fest-3.webp"
     }]
+  },
+  {
+    "name": "Walk and Talk — Videos",
+    "startDate": "2023",
+    "endDate": "2023",
+    "description": "Ich übernahm bei mehreren Episoden der Walk and Talk Serie der Swisscom die Projektleitung. Dabei koordinierte ich die Abläufe, produzierte die Videos eigenständig und übernahm den Schnitt.",
+    "highlights": [
+      ""
+    ],
+    "url": "",
+    "media": [{
+      "type": "video",
+      "url": "/media/walk-and-talk-1.webm"
+    },
+    {
+      "type": "video",
+      "url": "/media/walk-and-talk-2.webm"
+    }]
   }]
 }
