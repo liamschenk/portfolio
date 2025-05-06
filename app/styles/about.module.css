@@ -1,10 +1,3 @@
-/* Root */
-:root {
-  --status-green: #56f000;
-  --status-orange: #ffb302;
-  --status-red: #ff3838;
-}
-
 /* View styling */
 .section {
   padding: var(--spacing-m) 0 var(--spacing-m) 0;
