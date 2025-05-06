@@ -23,6 +23,10 @@ export default function About({ basics, work, education }) {
           <section className={styles.section}>
             <h1>Über</h1>
             <p>{basics.summary}</p>
+            <div className={styles.status}>
+              <span></span>
+              <p className="tertiary">Aktuell auf Jobsuche</p>
+            </div>
           </section>
         </motion.div>
 

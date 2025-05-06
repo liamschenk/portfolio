@@ -1,3 +1,10 @@
+/* Root */
+:root {
+  --status-green: #56f000;
+  --status-orange: #ffb302;
+  --status-red: #ff3838;
+}
+
 /* View styling */
 .section {
   padding: var(--spacing-m) 0 var(--spacing-m) 0;
@@ -27,6 +34,51 @@
 
 .grid a:hover {
   text-decoration: none;
+}
+
+/* Status */
+.status {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+  margin-top: var(--spacing-s);
+}
+
+.status span {
+  position: relative;
+  display: inline-block;
+  width: calc(var(--font-size) - 6px);
+  height: calc(var(--font-size) - 6px);
+  background-color: var(--status-green);
+  border-radius: 50%;
+}
+
+/* Animation */
+.status span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--status-green);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 1.5s infinite ease-out;
+  z-index: -1;
+  opacity: 0.75;
+}
+
+/* Keyframes */
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
 }
 
 /* Breakpoints */
