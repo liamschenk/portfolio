@@ -110,6 +110,23 @@
     "reference": ""
   }],
   "projects": [{
+    "name": "Wingo Plakat Mockups — Layout",
+    "startDate": "2025",
+    "endDate": "2025",
+    "description": "Für Wingo habe ich zwei Poster entworfen, die als Grundlage für eine mögliche Werbekampagne dienen. Ziel war es, die Markenidentität zu stärken und gleichzeitig neue Kundinnen und Kunden in Biel anzusprechen.",
+    "highlights": [
+      ""
+    ],
+    "url": "",
+    "media": [{
+      "type": "image",
+      "url": "/media/wingo-poster-1.webp"
+    },
+    {
+      "type": "image",
+      "url": "/media/wingo-poster-2.webp"
+    }]
+  },{
     "name": "Digital Chalkboard Guidelines — Layout",
     "startDate": "2025",
     "endDate": "2025",
