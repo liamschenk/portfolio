@@ -96,6 +96,11 @@ a {
   text-decoration: none;
 }
 
+/* Slick track */
+.slick-track {
+  display: flex !important;
+}
+
 /* Breakpoints */
 @media (max-width: 768px) {
   body {
