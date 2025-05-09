@@ -45,6 +45,11 @@
   pointer-events: none;
 }
 
+/* Slick track */
+:global(.slick-track) {
+  display: flex;
+}
+
 /* Text styling */
 .trigger p:nth-child(3) {
   text-align: right;
