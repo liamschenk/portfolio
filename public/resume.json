@@ -158,15 +158,22 @@
     "url": "",
     "media": [{
       "type": "image",
+      "url": "/media/pos-popup-poster-1.webp"
+    },
+    {
+      "type": "image",
+      "url": "/media/pos-popup-poster-2.webp"
+    },
+    {
+      "type": "image",
+      "url": "/media/pos-flyer-mockup-2.webp"
+    },{
+      "type": "image",
       "url": "/media/pos-poster-1.webp"
     },
     {
       "type": "image",
-      "url": "/media/pos-galaxy-flyer-1.webp"
-    },
-    {
-      "type": "image",
-      "url": "/media/pos-galaxy-flyer-2.webp"
+      "url": "/media/pos-flyer-mockup-1.webp"
     }]
   },
   {

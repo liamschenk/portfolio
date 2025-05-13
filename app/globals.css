@@ -65,6 +65,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Slick track */
+.slick-track {
+  display: flex !important;
+}
+
 /* Text styling */
 h1,
 p,
@@ -94,11 +99,6 @@ p {
 a {
   color: var(--secondary);
   text-decoration: none;
-}
-
-/* Slick track */
-.slick-track {
-  display: flex !important;
 }
 
 /* Breakpoints */
