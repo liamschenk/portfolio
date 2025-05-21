@@ -18,18 +18,15 @@
       "network": "LinkedIn",
       "username": "liamschenk",
       "url": "http://www.linkedin.com/in/liamschenk"
-    },
-    {
+    },{
       "network": "E-Mail",
       "username": "liam.schenk@bluewin.ch",
       "url": "mailto:liam.schenk@bluewin.ch"
-    },
-    {
+    },{
       "network": "Are.na",
       "username": "liam-schenk",
       "url": "https://www.are.na/liam-schenk"
-    },
-    {
+    },{
       "network": "GitHub",
       "username": "liamschenk",
       "url": "https://github.com/liamschenk"
@@ -110,6 +107,19 @@
     "reference": ""
   }],
   "projects": [{
+    "name": "Swisscom Shop Glattzentrum — Animation",
+    "startDate": "2025",
+    "endDate": "2025",
+    "description": "Für den Swisscom Shop im Glattzentrum habe ich eine Animation zum 15-jährigen Bestehen gestaltet. Ziel war es, eine visuelle Umsetzung im Stil der übrigen Massnahmen zu schaffen.",
+    "highlights": [
+      ""
+    ],
+    "url": "",
+    "media": [{
+      "type": "video",
+      "url": "/media/geburtstag-glattzentrum.webm"
+    }]
+  },{
     "name": "Wingo Plakat Mockups — Layout",
     "startDate": "2025",
     "endDate": "2025",
@@ -121,8 +131,7 @@
     "media": [{
       "type": "image",
       "url": "/media/wingo-poster-1.webp"
-    },
-    {
+    },{
       "type": "image",
       "url": "/media/wingo-poster-2.webp"
     }]
@@ -138,12 +147,10 @@
     "media": [{
       "type": "image",
       "url": "/media/guidelines-1.webp"
-    },
-    {
+    },{
       "type": "image",
       "url": "/media/guidelines-2.webp"
-    },
-    {
+    },{
       "type": "image",
       "url": "/media/guidelines-3.webp"
     }]
@@ -159,12 +166,10 @@
     "media": [{
       "type": "image",
       "url": "/media/pos-popup-poster-1.webp"
-    },
-    {
+    },{
       "type": "image",
       "url": "/media/pos-popup-poster-2.webp"
-    },
-    {
+    },{
       "type": "image",
       "url": "/media/pos-flyer-mockup-2.webp"
     },{
@@ -188,8 +193,7 @@
     "media": [{
       "type": "video",
       "url": "/media/gluecksmaschine-1.webm"
-    },
-    {
+    },{
       "type": "image",
       "url": "/media/gluecksmaschine-2.webp"
     }]
@@ -220,12 +224,10 @@
     "media": [{
       "type": "image",
       "url": "/media/merci-fest-1.webp"
-    },
-    {
+    },{
       "type": "image",
       "url": "/media/merci-fest-2.webp"
-    },
-    {
+    },{
       "type": "image",
       "url": "/media/merci-fest-3.webp"
     }]
@@ -242,8 +244,7 @@
     "media": [{
       "type": "video",
       "url": "/media/walk-and-talk-1.webm"
-    },
-    {
+    },{
       "type": "video",
       "url": "/media/walk-and-talk-2.webm"
     }]
