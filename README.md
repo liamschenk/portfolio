@@ -1,3 +1,5 @@
+![Banner](https://raw.githubusercontent.com/liamschenk/portfolio/main/public/media/readme.webp)
+
 ## Liam Schenk — Portfolio
 
 This is my portfolio repository, containing the source code for my personal website. All content is loaded from a central JSON file, making it easy to add new projects or experiences quickly.

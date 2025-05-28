@@ -67,7 +67,7 @@ body {
 
 /* Slick track */
 .slick-track {
-  display: flex !important;
+  display: flex !important; /* Stops slideshow from wrapping on small screens */
 }
 
 /* Text styling */
