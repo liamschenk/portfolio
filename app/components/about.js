@@ -23,10 +23,6 @@ export default function About({ basics, work, education }) {
           <section className={styles.section}>
             <h1>Über</h1>
             <p>{basics.summary}</p>
-            <div className={styles.status}>
-              <span></span>
-              <p className="tertiary">Aktuell auf Jobsuche</p>
-            </div>
           </section>
         </motion.div>
 
@@ -66,7 +62,10 @@ export default function About({ basics, work, education }) {
           <section className={styles.section}>
             <h1>Kontakt</h1>
             {basics.profiles.map((profile, index) => (
-              <div key={index} className={`${styles.grid} ${styles.lastGrid}`}>
+              <div
+                key={index}
+                className={`${styles.grid} ${styles.contactGrid}`}
+              >
                 <p className="tertiary">{profile.network}</p>
                 <p>
                   <a

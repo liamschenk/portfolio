@@ -61,21 +61,21 @@
 
 /* Breakpoints */
 @media (max-width: 768px) {
-  .description p {
-    width: 75%;
-  }
-
   .slideshow .media .mediaItem {
     height: 280px;
+  }
+
+  .description p {
+    width: 75%;
   }
 }
 
 @media (max-width: 480px) {
-  .description p {
-    width: 87.5%;
-  }
-
   .slideshow .media .mediaItem {
     height: 200px;
+  }
+
+  .description p {
+    width: 87.5%;
   }
 }
