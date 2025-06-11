@@ -21,7 +21,7 @@
   display: grid;
   grid-template-columns: minmax(2ch, auto) 1fr;
   gap: var(--spacing-l);
-  margin: 0 0 var(--spacing-l) 0;
+  margin-bottom: var(--spacing-l);
 }
 
 /* Slideshow */
@@ -40,7 +40,7 @@
 .slideshow .media .mediaItem {
   height: 360px;
   width: auto;
-  margin: 0 var(--spacing-s) 0 0;
+  margin-right: var(--spacing-s);
   user-select: none;
   pointer-events: none;
 }

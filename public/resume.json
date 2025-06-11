@@ -17,7 +17,7 @@
     "profiles": [{
       "network": "LinkedIn",
       "username": "liamschenk",
-      "url": "http://www.linkedin.com/in/liamschenk"
+      "url": "https://www.linkedin.com/in/liamschenk"
     },{
       "network": "E-Mail",
       "username": "liam.schenk@bluewin.ch",
@@ -104,7 +104,7 @@
   }],
   "projects": [{
     "name": "Wingo Plakat — Layout",
-    "startDate": "2025",
+    "startDate": "",
     "endDate": "2025",
     "description": "Für Wingo habe ich zwei Poster entworfen, die als Grundlage für eine potenzielle Werbekampagne dienen. Die Umsetzungen sollten die bestehende Markenidentität widerspiegeln und gleichzeitig neue Kundinnen und Kunden in Biel ansprechen.",
     "highlights": [
@@ -120,7 +120,7 @@
     }]
   },{
     "name": "Digital Chalkboard Guidelines — Layout",
-    "startDate": "2025",
+    "startDate": "",
     "endDate": "2025",
     "description": "Für meine Abschlussarbeit bei Swisscom habe ich ein Gestaltungsmanual sowie eine Vorlage für digitale Chalkboards in den Swisscom Shops erstellt. Dabei habe ich Richtlinien definiert und den Prozess für zukünftige Lernende vereinfacht.",
     "highlights": [
@@ -139,7 +139,7 @@
     }]
   },{
     "name": "Swisscom Shops — Printmedien",
-    "startDate": "2024",
+    "startDate": "",
     "endDate": "2025",
     "description": "Im Bereich Point-of-Sales hatte ich die Gelegenheit, gelegentlich Printmedien für die Swisscom Shops zu gestalten. Hier siehst du eine Auswahl meiner Arbeiten in diesem Bereich.",
     "highlights": [
@@ -165,7 +165,7 @@
   },
   {
     "name": "Glücksmaschine — Animation",
-    "startDate": "2024",
+    "startDate": "",
     "endDate": "2024",
     "description": "Für die Glücksmaschine in den Swisscom-Shops habe ich eine Animation und einen Bildschirmschoner erstellt. Beides war in den Shops für die Kundinnen und Kunden sichtbar.",
     "highlights": [
@@ -182,7 +182,7 @@
   },
   {
     "name": "Design Thinking — Video",
-    "startDate": "2023",
+    "startDate": "",
     "endDate": "2023",
     "description": "Ich hatte die Möglichkeit, ein Videoprojekt zum Thema Design Thinking bei Swisscom zu planen und umzusetzen. Vom Konzept bis zum finalen Schnitt koordinierte ich das Team aus Lernenden, plante den Dreh und sorgte für einen reibungslosen Ablauf.",
     "highlights": [
@@ -196,7 +196,7 @@
   },
   {
     "name": "Merci Fest — Eventfotografie",
-    "startDate": "2023",
+    "startDate": "",
     "endDate": "2023",
     "description": "Ich hatte die Gelegenheit, ein kleines Team aus Lernenden zu leiten und gemeinsam mit ihnen das Merci-Event bei Swisscom fotografisch zu begleiten. Wir hielten wichtige Momente fest und lieferten ein vollständiges Fotopaket für interne und externe Zwecke.",
     "highlights": [
@@ -216,7 +216,7 @@
   },
   {
     "name": "Walk and Talk — Videos",
-    "startDate": "2023",
+    "startDate": "",
     "endDate": "2023",
     "description": "Bei mehreren Episoden der Walk and Talk-Serie von Swisscom übernahm ich die Projektleitung. Dabei koordinierte ich die Abläufe, produzierte die Videos eigenständig und führte den Schnitt durch.",
     "highlights": [

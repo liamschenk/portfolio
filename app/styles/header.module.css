@@ -1,6 +1,6 @@
 /* Header styling */
 .header {
-  margin: 0 0 var(--spacing-xl) 0;
+  margin-bottom: var(--spacing-xl);
 }
 
 .header nav ul {

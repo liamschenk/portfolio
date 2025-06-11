@@ -1,6 +1,6 @@
 /* View styling */
 .section {
-  padding: var(--spacing-m) 0 var(--spacing-m) 0;
+  padding: var(--spacing-m) 0;
   margin-bottom: var(--spacing-l);
 }
 
