@@ -3,5 +3,8 @@
     "paths": {
       "@/*": ["./*"]
     }
+  },
+  "meta": {
+    "note": "Update GitHub commit title"
   }
 }
