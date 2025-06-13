@@ -44,9 +44,9 @@
     gap: 0;
   }
 
-  .grid.contactGrid {
+  .grid.mobileGrid {
     display: grid;
-    grid-template-columns: minmax(6ch, auto) 1fr;
+    grid-template-columns: minmax(8ch, auto) 1fr;
     gap: var(--spacing-l);
   }
 
@@ -54,7 +54,7 @@
     width: 100%;
   }
 
-  .grid:not(.contactGrid) p {
+  .grid:not(.mobileGrid) p {
     flex: 100%;
   }
 }

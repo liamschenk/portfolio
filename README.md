@@ -1,4 +1,4 @@
-![Banner](https://raw.githubusercontent.com/liamschenk/portfolio/main/public/media/readme.webp)
+![Screenshot](https://raw.githubusercontent.com/liamschenk/portfolio/main/public/media/github-readme.webp)
 
 ## Liam Schenk — Portfolio
 

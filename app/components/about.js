@@ -64,7 +64,7 @@ export default function About({ basics, work, education }) {
             {basics.profiles.map((profile, index) => (
               <div
                 key={index}
-                className={`${styles.grid} ${styles.contactGrid}`}
+                className={`${styles.grid} ${styles.mobileGrid}`}
               >
                 <p className="tertiary">{profile.network}</p>
                 <p>
@@ -93,7 +93,7 @@ export default function About({ basics, work, education }) {
         <motion.div variants={sectionVariants}>
           <section className={styles.section}>
             <h1>Downloads</h1>
-            <div className={`${styles.grid} ${styles.contactGrid}`}>
+            <div className={`${styles.grid} ${styles.mobileGrid}`}>
               <p className="tertiary">Lebenslauf</p>
               <p>
                 <a
