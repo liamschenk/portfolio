@@ -23,6 +23,13 @@
   text-decoration: none;
 }
 
+/* Arrow */
+.section .arrow {
+  color: var(--secondary);
+  height: var(--font-size);
+  vertical-align: middle;
+}
+
 /* Breakpoints */
 @media (max-width: 768px) {
   .section:first-of-type > p:first-of-type {
