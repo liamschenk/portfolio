@@ -1,32 +1,19 @@
 import { motion } from "framer-motion";
+import { parentVariants, childVariants } from "../utilities/variants";
 import styles from "../styles/about.module.css";
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.125 } },
-};
-
-const sectionVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.375 } },
-};
 
 export default function About({ basics, work, education }) {
   return (
     <main>
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-      >
-        <motion.div variants={sectionVariants}>
+      <motion.div initial="hidden" animate="visible" variants={parentVariants}>
+        <motion.div variants={childVariants}>
           <section className={styles.section}>
             <h1>Über</h1>
             <p>{basics.summary}</p>
           </section>
         </motion.div>
 
-        <motion.div variants={sectionVariants}>
+        <motion.div variants={childVariants}>
           <section className={styles.section}>
             <h1>Berufserfahrung</h1>
             {work.map((item, index) => (
@@ -42,7 +29,7 @@ export default function About({ basics, work, education }) {
           </section>
         </motion.div>
 
-        <motion.div variants={sectionVariants}>
+        <motion.div variants={childVariants}>
           <section className={styles.section}>
             <h1>Ausbildung</h1>
             {education.map((item, index) => (
@@ -58,7 +45,7 @@ export default function About({ basics, work, education }) {
           </section>
         </motion.div>
 
-        <motion.div variants={sectionVariants}>
+        <motion.div variants={childVariants}>
           <section className={styles.section}>
             <h1>Kontakt</h1>
             {basics.profiles.map((profile, index) => (
@@ -90,7 +77,7 @@ export default function About({ basics, work, education }) {
           </section>
         </motion.div>
 
-        <motion.div variants={sectionVariants}>
+        <motion.div variants={childVariants}>
           <section className={styles.section}>
             <h1>Downloads</h1>
             <div className={`${styles.grid} ${styles.mobileGrid}`}>
@@ -101,7 +88,7 @@ export default function About({ basics, work, education }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Lebenslauf (PDF)
+                  Herunterladen
                 </a>
                 <span>
                   {" "}

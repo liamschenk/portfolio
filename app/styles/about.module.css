@@ -1,4 +1,4 @@
-/* View styling */
+/* View */
 .section {
   padding: var(--spacing-m) 0;
   margin-bottom: var(--spacing-l);
@@ -10,7 +10,7 @@
   gap: var(--spacing-l);
 }
 
-/* Text styling */
+/* Text */
 .section:first-of-type > p:first-of-type {
   width: 37.5%;
 }
@@ -50,11 +50,11 @@
     gap: var(--spacing-l);
   }
 
-  .section:first-of-type > p:first-of-type {
-    width: 100%;
-  }
-
   .grid:not(.mobileGrid) p {
     flex: 100%;
+  }
+
+  .section:first-of-type > p:first-of-type {
+    width: 100%;
   }
 }

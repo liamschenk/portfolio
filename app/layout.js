@@ -9,7 +9,7 @@ const inter = Inter({
 export const metadata = {
   title: "Liam Schenk — Portfolio",
   description:
-    "Portfolio von Liam Schenk, lernendem Mediamatiker bei Swisscom.",
+    "Portfolio von Liam Schenk, lernendem Mediamatiker EFZ bei Swisscom.",
 };
 
 export default function RootLayout({ children }) {

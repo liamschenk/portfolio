@@ -1,4 +1,4 @@
-/* View styling */
+/* View */
 .trigger {
   display: grid;
   grid-template-columns: minmax(2ch, auto) 1fr auto;
@@ -45,11 +45,7 @@
   pointer-events: none;
 }
 
-/* Text styling */
-.trigger p:nth-child(3) {
-  text-align: right;
-}
-
+/* Text */
 .content p {
   width: 37.5%;
 }
@@ -57,6 +53,11 @@
 .description p {
   width: 37.5%;
   grid-column: 2;
+}
+
+/* Alignment */
+.trigger p:nth-child(3) {
+  text-align: right;
 }
 
 /* Breakpoints */

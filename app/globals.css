@@ -40,13 +40,14 @@
   }
 }
 
-/* Default styling */
+/* Reset */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+/* Global */
 html,
 body {
   max-width: 100vw;
@@ -61,12 +62,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Slick track */
+/* Slick */
 .slick-track {
   display: flex !important; /* Stops slideshow from wrapping on small screens */
 }
 
-/* Text styling */
+/* Text */
 h1,
 p,
 a {
@@ -79,7 +80,7 @@ h1 {
   margin-bottom: var(--spacing-s);
 }
 
-/* Text shades */
+/* Shading */
 p.secondary {
   color: var(--secondary);
 }
@@ -100,12 +101,12 @@ a {
 /* Breakpoints */
 @media (max-width: 768px) {
   body {
-    padding: var(--spacing-s) var(--spacing-m);
+    padding: var(--spacing-m);
   }
 }
 
 @media (max-width: 480px) {
   body {
-    padding: var(--spacing-xs) var(--spacing-s);
+    padding: var(--spacing-s);
   }
 }
