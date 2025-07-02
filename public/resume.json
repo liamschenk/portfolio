@@ -11,7 +11,7 @@
       },
       {
         "network": "E-Mail",
-        "username": "liam.schenk@bluewin.ch",
+        "username": "liam.schenk",
         "url": "mailto:liam.schenk@bluewin.ch"
       },
       {
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "name": "Chalkboard Guidelines",
+      "name": "Digital Chalkboard Guidelines",
       "description": "Für meine Abschlussarbeit bei Swisscom habe ich ein Gestaltungsmanual sowie eine Vorlage für digitale Chalkboards in den Swisscom Shops erstellt. Dabei habe ich Richtlinien definiert und den Prozess für zukünftige Lernende vereinfacht.",
       "startDate": "",
       "endDate": "2025",
@@ -89,6 +89,10 @@
         {
           "type": "image",
           "url": "/media/guidelines-3.webp"
+        },
+        {
+          "type": "image",
+          "url": "/media/guidelines-4.webp"
         }
       ]
     },
@@ -100,23 +104,15 @@
       "media": [
         {
           "type": "image",
-          "url": "/media/point-of-sales-1.webp"
+          "url": "/media/shop-kommunikation-1.webp"
         },
         {
           "type": "image",
-          "url": "/media/point-of-sales-2.webp"
+          "url": "/media/shop-kommunikation-2.webp"
         },
         {
           "type": "image",
-          "url": "/media/point-of-sales-3.webp"
-        },
-        {
-          "type": "image",
-          "url": "/media/point-of-sales-4.webp"
-        },
-        {
-          "type": "image",
-          "url": "/media/point-of-sales-5.webp"
+          "url": "/media/shop-kommunikation-3.webp"
         }
       ]
     },
