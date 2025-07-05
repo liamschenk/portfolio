@@ -2,17 +2,17 @@
   "basics": {
     "name": "Liam Schenk",
     "url": "https://liamschenk.ch",
-    "summary": "Hallo, ich bin Liam. Ich bin lernender Mediamatiker EFZ bei Swisscom und interessiere mich besonders für Grafikdesign und Videoproduktion. Ich arbeite strukturiert, bin teamorientiert und lerne schnell. In meiner Freizeit höre ich gerne Musik oder Podcasts und lese Bücher.",
+    "summary": "Ich bin Liam, lernender Mediamatiker EFZ bei Swisscom. Im Juli dieses Jahres schliesse ich meine Ausbildung ab. Besonders interessieren mich dabei Grafikdesign und Videoproduktion. Ich arbeite strukturiert, bin teamorientiert und lerne schnell.",
     "profiles": [
-      {
-        "network": "LinkedIn",
-        "username": "liamschenk",
-        "url": "https://www.linkedin.com/in/liamschenk"
-      },
       {
         "network": "E-Mail",
         "username": "liam.schenk",
         "url": "mailto:liam.schenk@bluewin.ch"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "liamschenk",
+        "url": "https://www.linkedin.com/in/liamschenk"
       },
       {
         "network": "GitHub",
@@ -41,143 +41,84 @@
   ],
   "projects": [
     {
-      "name": "Wingo Plakat",
-      "description": "Für Wingo habe ich zwei Poster entworfen, die als Grundlage für eine potenzielle Werbekampagne dienen. Die Umsetzungen sollten die bestehende Markenidentität widerspiegeln und gleichzeitig neue Kundinnen und Kunden in Biel ansprechen.",
+      "name": "Wingo Plakate",
+      "description": "Für Wingo habe ich zwei Poster gestaltet, die als Idee für eine mögliche Werbekampagne gedacht sind. Sie greifen den bestehenden Auftritt der Marke auf und richten sich an potenzielle Kundinnen und Kunden in Biel.",
       "startDate": "",
       "endDate": "2025",
       "media": [
-        {
-          "type": "image",
-          "url": "/media/wingo-plakat-1.webp"
-        },
-        {
-          "type": "image",
-          "url": "/media/wingo-plakat-2.webp"
-        }
+        { "type": "image", "url": "/media/wingo-plakat-1.webp" },
+        { "type": "image", "url": "/media/wingo-plakat-2.webp" }
       ]
     },
     {
       "name": "Jubiläum Glattzentrum",
-      "description": "Für den Swisscom Shop im Glattzentrum habe ich eine Animation gestaltet, die das Jubiläum des Standorts visuell hervorhebt. Die Inszenierung vermittelt zentrale Informationen und wurde so umgesetzt, dass sie die Aufmerksamkeit der Kundinnen und Kunden im Glattzentrum gezielt anspricht.",
+      "description": "Für den Swisscom Shop im Glattzentrum habe ich eine Animation umgesetzt, die das Jubiläum des Standorts sichtbar macht. Ziel war es, die Aufmerksamkeit der Kundschaft im Einkaufszentrum gezielt zu erreichen.",
       "startDate": "",
       "endDate": "2025",
       "media": [
-        {
-          "type": "video",
-          "url": "/media/jubilaeum-glattzentrum-1.webm"
-        },
-        {
-          "type": "image",
-          "url": "/media/jubilaeum-glattzentrum-2.webp"
-        }
+        { "type": "video", "url": "/media/jubilaeum-glattzentrum-1.webm" },
+        { "type": "image", "url": "/media/jubilaeum-glattzentrum-2.webp" }
       ]
     },
     {
       "name": "Digital Chalkboard Guidelines",
-      "description": "Für meine Abschlussarbeit bei Swisscom habe ich ein Gestaltungsmanual sowie eine Vorlage für digitale Chalkboards in den Swisscom Shops erstellt. Dabei habe ich Richtlinien definiert und den Prozess für zukünftige Lernende vereinfacht.",
+      "description": "Im Rahmen meiner Abschlussarbeit bei Swisscom habe ich eine Vorlage für digitale Chalkboards in den Shops erstellt. Dabei entwickelte ich ein einfaches Manual und erleichterte so den Einstieg für zukünftige Lernende.",
       "startDate": "",
       "endDate": "2025",
       "media": [
-        {
-          "type": "image",
-          "url": "/media/guidelines-1.webp"
-        },
-        {
-          "type": "image",
-          "url": "/media/guidelines-2.webp"
-        },
-        {
-          "type": "image",
-          "url": "/media/guidelines-3.webp"
-        },
-        {
-          "type": "image",
-          "url": "/media/guidelines-4.webp"
-        }
+        { "type": "image", "url": "/media/guidelines-1.webp" },
+        { "type": "image", "url": "/media/guidelines-2.webp" },
+        { "type": "image", "url": "/media/guidelines-3.webp" },
+        { "type": "image", "url": "/media/guidelines-4.webp" }
       ]
     },
     {
       "name": "Shop Kommunikation",
-      "description": "Im Bereich Point-of-Sales hatte ich die Gelegenheit, gelegentlich Printmedien für die Swisscom Shops zu gestalten. Dabei ging es vermehrt um die Eröffnung und Schliessung von Shops.",
+      "description": "Im Bereich Point-of-Sales gestaltete ich verschiedene Printprodukte für Swisscom. Der Fokus lag dabei auf der Eröffnung und Schliessung von Shops.",
       "startDate": "",
       "endDate": "2025",
       "media": [
-        {
-          "type": "image",
-          "url": "/media/shop-kommunikation-1.webp"
-        },
-        {
-          "type": "image",
-          "url": "/media/shop-kommunikation-2.webp"
-        },
-        {
-          "type": "image",
-          "url": "/media/shop-kommunikation-3.webp"
-        }
+        { "type": "image", "url": "/media/shop-kommunikation-1.webp" },
+        { "type": "image", "url": "/media/shop-kommunikation-2.webp" },
+        { "type": "image", "url": "/media/shop-kommunikation-3.webp" }
       ]
     },
     {
       "name": "Glücksmaschine Cornavin",
-      "description": "Für die Glücksmaschine in den Swisscom-Shops habe ich eine Animation und einen Bildschirmschoner erstellt. Beides war in den Shops für die Kundinnen und Kunden sichtbar.",
+      "description": "Für die Glücksmaschine in den Swisscom Shops habe ich eine Animation und einen Bildschirmschoner gestaltet. Beide wurden direkt im Shop für Kundinnen und Kunden angezeigt.",
       "startDate": "",
       "endDate": "2024",
       "media": [
-        {
-          "type": "video",
-          "url": "/media/gluecksmaschine-1.webm"
-        },
-        {
-          "type": "image",
-          "url": "/media/gluecksmaschine-2.webp"
-        }
+        { "type": "video", "url": "/media/gluecksmaschine-1.webm" },
+        { "type": "image", "url": "/media/gluecksmaschine-2.webp" }
       ]
     },
     {
       "name": "Design Thinking",
-      "description": "Ich hatte die Möglichkeit, ein Videoprojekt zum Thema Design Thinking bei Swisscom zu planen und umzusetzen. Vom Konzept bis zum finalen Schnitt koordinierte ich das Team aus Lernenden, plante den Dreh und sorgte für einen reibungslosen Ablauf.",
+      "description": "Ich plante und realisierte ein Videoprojekt zum Thema Design Thinking bei Swisscom. Dabei koordinierte ich das Lernendenteam, organisierte den Dreh und übernahm die Nachbearbeitung.",
       "startDate": "",
       "endDate": "2023",
-      "media": [
-        {
-          "type": "video",
-          "url": "/media/design-thinking-1.webm"
-        }
-      ]
+      "media": [{ "type": "video", "url": "/media/design-thinking-1.webm" }]
     },
     {
       "name": "Merci Fest",
-      "description": "Ich hatte die Gelegenheit, ein kleines Team aus Lernenden zu leiten und gemeinsam mit ihnen das Merci-Event bei Swisscom fotografisch zu begleiten. Wir hielten wichtige Momente fest und lieferten ein vollständiges Fotopaket für interne und externe Zwecke.",
+      "description": "Beim Merci-Event von Swisscom leitete ich ein Team aus Lernenden und begleitete gemeinsam mit ihnen die Veranstaltung fotografisch. Wir hielten besondere Momente fest und stellten ein vollständiges Fotopaket zusammen.",
       "startDate": "",
       "endDate": "2023",
       "media": [
-        {
-          "type": "image",
-          "url": "/media/merci-fest-1.webp"
-        },
-        {
-          "type": "image",
-          "url": "/media/merci-fest-2.webp"
-        },
-        {
-          "type": "image",
-          "url": "/media/merci-fest-3.webp"
-        }
+        { "type": "image", "url": "/media/merci-fest-1.webp" },
+        { "type": "image", "url": "/media/merci-fest-2.webp" },
+        { "type": "image", "url": "/media/merci-fest-3.webp" }
       ]
     },
     {
       "name": "Walk and Talk",
-      "description": "Bei mehreren Episoden der Walk and Talk Serie von Swisscom übernahm ich die Projektleitung. Dabei koordinierte ich die Abläufe, produzierte die Videos eigenständig und führte den Schnitt durch.",
+      "description": "Bei mehreren Episoden der Walk and Talk Serie von Swisscom habe ich die Projektleitung übernommen. Ich leitete ein kleines Team von Lernenden, plante den Ablauf, koordinierte die Dreharbeiten und übernahm den Schnitt.",
       "startDate": "",
       "endDate": "2023",
       "media": [
-        {
-          "type": "video",
-          "url": "/media/walk-and-talk-1.webm"
-        },
-        {
-          "type": "video",
-          "url": "/media/walk-and-talk-2.webm"
-        }
+        { "type": "video", "url": "/media/walk-and-talk-1.webm" },
+        { "type": "video", "url": "/media/walk-and-talk-2.webm" }
       ]
     }
   ]
