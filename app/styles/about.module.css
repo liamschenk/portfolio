@@ -10,6 +10,13 @@
   gap: var(--spacing-l);
 }
 
+/* Arrow */
+.arrow {
+  color: var(--secondary);
+  height: var(--font-size);
+  vertical-align: middle;
+}
+
 /* Text */
 .section:first-of-type > p:first-of-type {
   width: 37.5%;
@@ -21,13 +28,6 @@
 
 .grid a:hover {
   text-decoration: none;
-}
-
-/* Arrow */
-.section .arrow {
-  color: var(--secondary);
-  height: var(--font-size);
-  vertical-align: middle;
 }
 
 /* Breakpoints */

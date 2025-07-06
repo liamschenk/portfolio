@@ -18,11 +18,7 @@ export default function Index({ projects }) {
     <main>
       <motion.div initial="hidden" animate="visible" variants={parentVariants}>
         {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            className={styles.accordion}
-            variants={childVariants}
-          >
+          <motion.div key={index} variants={childVariants}>
             <motion.div
               animate={{
                 opacity:
@@ -36,9 +32,9 @@ export default function Index({ projects }) {
               }}
               transition={{ duration: 0.375, ease: "easeInOut" }}
             >
-              <div
-                className={`${styles.trigger} ${
-                  index === 0 ? styles.firstTrigger : ""
+              <section
+                className={`${styles.section} ${
+                  index === 0 ? styles.noBorder : ""
                 }`}
                 onClick={() => toggleAccordion(index)}
                 onMouseEnter={() => setHoveredIndex(index)}
@@ -47,7 +43,7 @@ export default function Index({ projects }) {
                 <p>{`0${index + 1}`}</p>
                 <p className="secondary">{project.name}</p>
                 <p className="tertiary">{project.endDate}</p>
-              </div>
+              </section>
 
               <motion.div
                 className={styles.content}
