@@ -32,6 +32,10 @@
   cursor: grab;
 }
 
+.slideshow *:focus {
+  outline: none;
+}
+
 .slideshow:active {
   cursor: grabbing;
 }

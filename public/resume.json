@@ -61,6 +61,18 @@
       ]
     },
     {
+      "name": "Digitale Chalkboards",
+      "description": "Für die digitalen Chalkboards der Swisscom Shops habe ich unterschiedliche Layouts gestaltet, die auf eInk-Displays an den verschiedenen Standorten zum Einsatz kamen.",
+      "startDate": "",
+      "endDate": "2025",
+      "media": [
+        { "type": "image", "url": "/media/digitale-chalkboards-1.webp" },
+        { "type": "image", "url": "/media/digitale-chalkboards-2.webp" },
+        { "type": "image", "url": "/media/digitale-chalkboards-3.webp" },
+        { "type": "image", "url": "/media/digitale-chalkboards-4.webp" }
+      ]
+    },
+    {
       "name": "Digital Chalkboard Guidelines",
       "description": "Im Rahmen meiner Abschlussarbeit bei Swisscom habe ich eine Vorlage für digitale Chalkboards in den Shops erstellt. Dabei entwickelte ich ein einfaches Manual und erleichterte so den Einstieg für zukünftige Lernende.",
       "startDate": "",
@@ -81,16 +93,6 @@
         { "type": "image", "url": "/media/shop-kommunikation-1.webp" },
         { "type": "image", "url": "/media/shop-kommunikation-2.webp" },
         { "type": "image", "url": "/media/shop-kommunikation-3.webp" }
-      ]
-    },
-    {
-      "name": "Glücksmaschine Cornavin",
-      "description": "Für die Glücksmaschine in den Swisscom Shops habe ich eine Animation und einen Bildschirmschoner gestaltet. Beide wurden direkt im Shop für Kundinnen und Kunden angezeigt.",
-      "startDate": "",
-      "endDate": "2024",
-      "media": [
-        { "type": "video", "url": "/media/gluecksmaschine-1.webm" },
-        { "type": "image", "url": "/media/gluecksmaschine-2.webp" }
       ]
     },
     {
