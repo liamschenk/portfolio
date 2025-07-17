@@ -7,7 +7,7 @@ import Index from "./components/index";
 
 export default function Portfolio() {
   const [view, setView] = useState("index");
-  const [resume, setResume] = useState(null);
+  const [siteData, setSiteData] = useState(null);
 
   const handleViewChange = useCallback(
     (newView) => {
@@ -19,22 +19,22 @@ export default function Portfolio() {
   );
 
   useEffect(() => {
-    fetch("/resume.json")
+    fetch("/siteData.json")
       .then((res) => res.json())
-      .then((data) => setResume(data));
+      .then((siteData) => setSiteData(siteData));
   }, []);
 
-  if (!resume) return null;
+  if (!siteData) return null;
 
   return (
     <>
       <Header setView={handleViewChange} activeView={view} />
-      {view === "index" && <Index projects={resume.projects} />}
+      {view === "index" && <Index projects={siteData.projects} />}
       {view === "about" && (
         <About
-          basics={resume.basics}
-          work={resume.work}
-          education={resume.education}
+          basics={siteData.basics}
+          work={siteData.work}
+          education={siteData.education}
         />
       )}
     </>
