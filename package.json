@@ -1,13 +1,14 @@
 {
   "name": "portfolio",
-  "version": "4.3.8",
+  "version": "4.4.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "postbuild": "next-sitemap",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:css": "stylelint \"**/*.css\" --fix"
   },
   "dependencies": {
     "framer-motion": "^12.0.5",
@@ -21,6 +22,9 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "^15.2.2"
+    "eslint-config-next": "^15.2.2",
+    "stylelint": "^16.22.0",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-order": "^7.0.0"
   }
 }

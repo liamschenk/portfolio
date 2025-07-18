@@ -6,6 +6,13 @@ import { motion } from "framer-motion";
 import { parentVariants, childVariants } from "../utilities/variants";
 import styles from "../styles/index.module.css";
 
+const getOpacity = (index, openAccordion, hoveredIndex) => {
+  if (openAccordion === null) {
+    return hoveredIndex === null || hoveredIndex === index ? 1 : 0.5;
+  }
+  return openAccordion === index || hoveredIndex === index ? 1 : 0.5;
+};
+
 export default function Index({ projects }) {
   const [openAccordion, setOpenAccordion] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -21,20 +28,14 @@ export default function Index({ projects }) {
           <motion.div key={index} variants={childVariants}>
             <motion.div
               animate={{
-                opacity:
-                  openAccordion === null
-                    ? hoveredIndex === null || hoveredIndex === index
-                      ? 1
-                      : 0.5
-                    : openAccordion === index || hoveredIndex === index
-                    ? 1
-                    : 0.5,
+                opacity: getOpacity(index, openAccordion, hoveredIndex),
               }}
               transition={{ duration: 0.375, ease: "easeInOut" }}
             >
-              <section
-                className={`${styles.section} ${
-                  index === 0 ? styles.noBorder : ""
+              <button
+                type="button"
+                className={`${styles.trigger} ${
+                  index === 0 ? styles["no-border"] : ""
                 }`}
                 onClick={() => toggleAccordion(index)}
                 onMouseEnter={() => setHoveredIndex(index)}
@@ -43,7 +44,7 @@ export default function Index({ projects }) {
                 <p>{`0${index + 1}`}</p>
                 <p className="secondary">{project.name}</p>
                 <p className="tertiary">{project.endDate}</p>
-              </section>
+              </button>
 
               <motion.div
                 className={styles.content}
@@ -72,11 +73,11 @@ export default function Index({ projects }) {
                           <img
                             src={item.url}
                             alt={`Project media ${mediaIndex + 1}`}
-                            className={styles.mediaItem}
+                            className={styles["media-item"]}
                           />
                         ) : item.type === "video" ? (
                           <video
-                            className={styles.mediaItem}
+                            className={styles["media-item"]}
                             autoPlay
                             muted
                             playsInline

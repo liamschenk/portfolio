@@ -1,0 +1,9 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "always"
+  },
+  "stylelint.validate": ["css"],
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  }
+}

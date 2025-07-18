@@ -51,7 +51,7 @@ export default function About({ basics, work, education }) {
             {basics.profiles.map((profile, index) => (
               <div
                 key={index}
-                className={`${styles.grid} ${styles.mobileGrid}`}
+                className={`${styles.grid} ${styles["mobile-grid"]}`}
               >
                 <p className="tertiary">{profile.network}</p>
                 <p>
