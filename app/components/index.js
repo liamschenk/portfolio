@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 import { parentVariants, childVariants } from "../utilities/variants";
+import { settings } from "../utilities/slideshow";
 import styles from "../styles/index.module.css";
 
 const getOpacity = (index, openAccordion, hoveredIndex) => {
@@ -57,15 +58,7 @@ export default function Index({ projects }) {
                 </div>
 
                 {project.media?.length > 0 && (
-                  <Slideshow
-                    infinite={false}
-                    speed={250}
-                    slidesToScroll={1}
-                    variableWidth
-                    swipeToSlide
-                    touchThreshold={12.25}
-                    className={styles.slideshow}
-                  >
+                  <Slideshow {...settings} className={styles.slideshow}>
                     {project.media.map((item, mediaIndex) => (
                       <div key={mediaIndex} className={styles.media}>
                         {item.type === "image" ? (

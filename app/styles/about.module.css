@@ -1,13 +1,13 @@
 /* View */
 .section {
-  padding: var(--spacing-m) 0;
   margin-bottom: var(--spacing-l);
+  padding: var(--spacing-m) 0;
 }
 
 .grid {
   display: grid;
-  gap: var(--spacing-l);
   grid-template-columns: minmax(12ch, auto) 1fr;
+  gap: var(--spacing-l);
 }
 
 /* Arrow */
@@ -46,8 +46,8 @@
 
   .grid.mobile-grid {
     display: grid;
-    gap: var(--spacing-l);
     grid-template-columns: minmax(8ch, auto) 1fr;
+    gap: var(--spacing-l);
   }
 
   .grid:not(.mobile-grid) p {
