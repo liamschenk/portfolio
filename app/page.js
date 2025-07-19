@@ -5,6 +5,9 @@ import Header from "./components/header";
 import About from "./components/about";
 import Index from "./components/index";
 
+import { sanity } from "../lib/sanity";
+import { query } from "../lib/queries";
+
 export default function Portfolio() {
   const [view, setView] = useState("index");
   const [siteData, setSiteData] = useState(null);
@@ -19,9 +22,9 @@ export default function Portfolio() {
   );
 
   useEffect(() => {
-    fetch("/siteData.json")
-      .then((res) => res.json())
-      .then((siteData) => setSiteData(siteData));
+    sanity.fetch(query).then((data) => {
+      setSiteData(data);
+    });
   }, []);
 
   if (!siteData) return null;
@@ -33,6 +36,7 @@ export default function Portfolio() {
       {view === "about" && (
         <About
           basics={siteData.basics}
+          profiles={siteData.profiles}
           work={siteData.work}
           education={siteData.education}
         />

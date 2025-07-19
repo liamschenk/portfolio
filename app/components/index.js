@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Slideshow from "react-slick";
+import { urlFor } from "../../lib/imageBuilder";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
@@ -44,7 +45,7 @@ export default function Index({ projects }) {
               >
                 <p>{`0${index + 1}`}</p>
                 <p className="secondary">{project.name}</p>
-                <p className="tertiary">{project.endDate}</p>
+                <p className="tertiary">{project.date}</p>
               </button>
 
               <motion.div
@@ -61,14 +62,14 @@ export default function Index({ projects }) {
                   <Slideshow {...settings} className={styles.slideshow}>
                     {project.media.map((item, mediaIndex) => (
                       <div key={mediaIndex} className={styles.media}>
-                        {item.type === "image" ? (
+                        {item._type === "image" && item.asset?.url ? (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img
-                            src={item.url}
+                            src={item.asset.url}
                             alt={`Project media ${mediaIndex + 1}`}
                             className={styles["media-item"]}
                           />
-                        ) : item.type === "video" ? (
+                        ) : item._type === "file" && item.asset?.url ? (
                           <video
                             className={styles["media-item"]}
                             autoPlay
@@ -77,7 +78,7 @@ export default function Index({ projects }) {
                             loop
                             disablePictureInPicture
                           >
-                            <source src={item.url} type="video/webm" />
+                            <source src={item.asset.url} type="video/webm" />
                           </video>
                         ) : null}
                       </div>

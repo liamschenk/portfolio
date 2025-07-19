@@ -1,17 +1,17 @@
-![Screenshot](https://raw.githubusercontent.com/liamschenk/portfolio/main/public/media/github-readme-1.webp)
-
 ## Liam Schenk — Portfolio
 
-This is my portfolio repository, containing the source code for my personal website. All content is loaded from a central JSON file, making it easy to add new projects or experiences quickly.
+This is the frontend repository for my personal portfolio, available at [liamschenk.ch](https://liamschenk.ch). All content is dynamically sourced from **Sanity CMS**, enabling structured and easily maintainable data management.
 
-### Features:
+### Features
 
-- **Easy content management**: All data is pulled from a single JSON file.
+- **Dynamic content** powered by Sanity CMS
+- **Media support** for images and videos
 
-### Technologies:
+### Technologies
 
-- **Next.js** – For dynamic content and fast development.
-- **GitHub** – For version control and storage.
-- **Vercel** – For hosting with automatic deployments.
+- **Next.js** – Framework for modern web development
+- **Sanity CMS** – Headless content management
+- **GitHub** – Repository and version control
+- **Vercel** – Hosting with continuous deployment
 
-Thanks for checking out my portfolio! Feedback is always welcome.
+> Note: This repo only contains the frontend. Content is managed in a separate repository using Sanity Studio.

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { parentVariants, childVariants } from "../utilities/variants";
 import styles from "../styles/about.module.css";
 
-export default function About({ basics, work, education }) {
+export default function About({ basics, profiles, work, education }) {
   return (
     <main>
       <motion.div initial="hidden" animate="visible" variants={parentVariants}>
@@ -48,7 +48,7 @@ export default function About({ basics, work, education }) {
         <motion.div variants={childVariants}>
           <section className={styles.section}>
             <h1>Kontakt</h1>
-            {basics.profiles.map((profile, index) => (
+            {profiles.map((profile, index) => (
               <div
                 key={index}
                 className={`${styles.grid} ${styles["mobile-grid"]}`}
