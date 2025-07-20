@@ -9,7 +9,6 @@ updates:
       timezone: "Europe/Zurich"
     commit-message:
       prefix: "Update"
-      include: "prefix"
     groups:
       dependencies:
         patterns:
