@@ -1,11 +1,13 @@
 import { useState } from "react";
 import Slideshow from "react-slick";
-import { urlFor } from "../../lib/imageBuilder";
+import { motion } from "framer-motion";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { motion } from "framer-motion";
+
 import { parentVariants, childVariants } from "../utilities/variants";
 import { settings } from "../utilities/slideshow";
+
 import styles from "../styles/index.module.css";
 
 const getOpacity = (index, openAccordion, hoveredIndex) => {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+
 import Header from "./components/header";
 import About from "./components/about";
 import Index from "./components/index";

@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
+
 import { parentVariants, childVariants } from "../utilities/variants";
+
 import styles from "../styles/about.module.css";
 
 export default function About({ basics, profiles, work, education }) {
