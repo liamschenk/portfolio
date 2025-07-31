@@ -21,10 +21,10 @@ export default function About({ basics, profiles, work, education }) {
             {work.map((item, index) => (
               <div key={index} className={styles.grid}>
                 <p className="tertiary">
-                  {item.startDate} — {item.endDate}
+                  {item.startDate} – {item.endDate}
                 </p>
                 <p className="secondary">
-                  {item.position} bei {item.name}
+                  {`${item.position} ${item.preposition || "bei"} ${item.name}`}
                 </p>
               </div>
             ))}
@@ -37,10 +37,12 @@ export default function About({ basics, profiles, work, education }) {
             {education.map((item, index) => (
               <div key={index} className={styles.grid}>
                 <p className="tertiary">
-                  {item.startDate} — {item.endDate}
+                  {item.startDate} – {item.endDate}
                 </p>
                 <p className="secondary">
-                  {item.area} am {item.institution}
+                  {`${item.area} ${item.preposition || "am"} ${
+                    item.institution
+                  }`}
                 </p>
               </div>
             ))}

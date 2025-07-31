@@ -10,6 +10,10 @@
   gap: var(--spacing-l);
 }
 
+.grid p {
+  margin-bottom: var(--spacing-xs);
+}
+
 /* Arrow */
 .arrow {
   height: var(--font-size);

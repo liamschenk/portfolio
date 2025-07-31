@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Liam Schenk — Portfolio",
+  title: "Liam Schenk – Portfolio",
   description:
     "Portfolio von Liam Schenk, gelerntem Mediamatiker EFZ mit Abschluss bei Swisscom.",
 };
