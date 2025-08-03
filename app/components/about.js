@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import { parentVariants, childVariants } from "../utilities/variants";
+import { formatDate } from "../utilities/date";
 
 import styles from "../styles/about.module.css";
 
@@ -19,9 +20,9 @@ export default function About({ basics, profiles, work, education }) {
           <section className={styles.section}>
             <h1>Berufserfahrung</h1>
             {work.map((item, index) => (
-              <div key={index} className={styles.grid}>
+              <div key={index} className={styles.bigGrid}>
                 <p className="tertiary">
-                  {item.startDate} – {item.endDate}
+                  {formatDate(item.startDate, item.endDate, item.ongoing)}
                 </p>
                 <p className="secondary">
                   {`${item.position} ${item.preposition || "bei"} ${item.name}`}
@@ -35,9 +36,9 @@ export default function About({ basics, profiles, work, education }) {
           <section className={styles.section}>
             <h1>Ausbildung</h1>
             {education.map((item, index) => (
-              <div key={index} className={styles.grid}>
+              <div key={index} className={styles.bigGrid}>
                 <p className="tertiary">
-                  {item.startDate} – {item.endDate}
+                  {formatDate(item.startDate, item.endDate, item.ongoing)}
                 </p>
                 <p className="secondary">
                   {`${item.area} ${item.preposition || "am"} ${
@@ -53,10 +54,7 @@ export default function About({ basics, profiles, work, education }) {
           <section className={styles.section}>
             <h1>Kontakt</h1>
             {profiles.map((profile, index) => (
-              <div
-                key={index}
-                className={`${styles.grid} ${styles["mobile-grid"]}`}
-              >
+              <div key={index} className={styles.smallGrid}>
                 <p className="tertiary">{profile.network}</p>
                 <p>
                   <a

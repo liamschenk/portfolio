@@ -4,13 +4,25 @@
   padding: var(--spacing-m) 0;
 }
 
-.grid {
+/* Experience and work grid */
+.bigGrid {
   display: grid;
-  grid-template-columns: minmax(12ch, auto) 1fr;
+  grid-template-columns: minmax(20ch, auto) 1fr;
   gap: var(--spacing-l);
 }
 
-.grid p {
+.bigGrid p {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Contact grid */
+.smallGrid {
+  display: grid;
+  grid-template-columns: minmax(20ch, auto) 1fr;
+  gap: var(--spacing-l);
+}
+
+.smallGrid p {
   margin-bottom: var(--spacing-xs);
 }
 
@@ -26,11 +38,11 @@
   width: 37.5%;
 }
 
-.grid a {
+.bigGrid a, .smallGrid a {
   text-decoration: underline;
 }
 
-.grid a:hover {
+.bigGrid a:hover, .smallGrid a:hover {
   text-decoration: none;
 }
 
@@ -42,19 +54,17 @@
 }
 
 @media (width <= 480px) {
-  .grid {
+  .bigGrid {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
   }
 
-  .grid.mobile-grid {
-    display: grid;
+  .smallGrid {
     grid-template-columns: minmax(8ch, auto) 1fr;
-    gap: var(--spacing-l);
   }
 
-  .grid:not(.mobile-grid) p {
+  .bigGrid p {
     flex: 100%;
   }
 

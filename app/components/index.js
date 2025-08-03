@@ -47,7 +47,13 @@ export default function Index({ projects }) {
               >
                 <p>{`0${index + 1}`}</p>
                 <p className="secondary">{project.name}</p>
-                <p className="tertiary">{project.date}</p>
+                <p className="tertiary">
+                  {project.date
+                    ? new Intl.DateTimeFormat("de-DE", {
+                        year: "numeric",
+                      }).format(new Date(project.date))
+                    : "Unbekannt"}
+                </p>
               </button>
 
               <motion.div
