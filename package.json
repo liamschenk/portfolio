@@ -11,20 +11,20 @@
     "lint:css": "stylelint \"**/*.css\" --fix"
   },
   "dependencies": {
-    "@sanity/client": "^7.8.1",
+    "@sanity/client": "^7.8.2",
     "framer-motion": "^12.23.9",
-    "next": "^15.4.4",
+    "next": "^15.4.6",
     "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-slick": "^0.30.3",
+    "react-slick": "^0.31.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "^15.4.4",
-    "stylelint": "^16.22.0",
+    "eslint-config-next": "^15.4.6",
+    "stylelint": "^16.23.1",
     "stylelint-config-standard": "^39.0.0",
     "stylelint-order": "^7.0.0"
   }
