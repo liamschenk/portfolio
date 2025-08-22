@@ -120,6 +120,12 @@ p {
 a {
   color: var(--secondary);
   text-decoration: none;
+  transition: color 0.125s ease-in-out;
+}
+
+a:hover {
+  color: var(--quarternary);
+  transition: color 0.125s ease-in-out;
 }
 
 /* Breakpoints */
