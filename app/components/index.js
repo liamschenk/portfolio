@@ -1,103 +1,82 @@
-import { useState } from "react";
-import Slideshow from "react-slick";
-import { motion } from "framer-motion";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-import { parentVariants, childVariants } from "../utilities/variants";
-import { settings } from "../utilities/slideshow";
-
 import styles from "../styles/index.module.css";
 
-const getOpacity = (index, openAccordion, hoveredIndex) => {
-  if (openAccordion === null) {
-    return hoveredIndex === null || hoveredIndex === index ? 1 : 0.5;
-  }
-  return openAccordion === index || hoveredIndex === index ? 1 : 0.5;
-};
-
-export default function Index({ projects }) {
-  const [openAccordion, setOpenAccordion] = useState(null);
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
-  const toggleAccordion = (index) => {
-    setOpenAccordion(openAccordion === index ? null : index);
-  };
-
+export default function Index() {
   return (
     <main>
-      <motion.div initial="hidden" animate="visible" variants={parentVariants}>
-        {projects.map((project, index) => (
-          <motion.div key={index} variants={childVariants}>
-            <motion.div
-              animate={{
-                opacity: getOpacity(index, openAccordion, hoveredIndex),
-              }}
-              transition={{ duration: 0.375, ease: "easeInOut" }}
-            >
-              <button
-                type="button"
-                className={`${styles.trigger} ${
-                  index === 0 ? styles["no-border"] : ""
-                }`}
-                onClick={() => toggleAccordion(index)}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                <p>{`0${index + 1}`}</p>
-                <p className="secondary">{project.name}</p>
-                <p className="tertiary">
-                  {project.date
-                    ? new Intl.DateTimeFormat("de-DE", {
-                        year: "numeric",
-                      }).format(new Date(project.date))
-                    : "Unbekannt"}
-                </p>
-              </button>
-
-              <motion.div
-                className={styles.content}
-                initial={{ height: 0 }}
-                animate={{ height: openAccordion === index ? "auto" : 0 }}
-                transition={{ duration: 0.25, ease: "easeInOut" }}
-              >
-                <div className={styles.description}>
-                  <p>{project.description}</p>
-                </div>
-
-                {project.media?.length > 0 && (
-                  <Slideshow {...settings} className={styles.slideshow}>
-                    {project.media.map((item, mediaIndex) => (
-                      <div key={mediaIndex} className={styles.media}>
-                        {item._type === "image" && item.asset?.url ? (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img
-                            src={item.asset.url}
-                            alt={`Project media ${mediaIndex + 1}`}
-                            className={styles["media-item"]}
-                          />
-                        ) : item._type === "file" && item.asset?.url ? (
-                          <video
-                            className={styles["media-item"]}
-                            autoPlay
-                            muted
-                            playsInline
-                            loop
-                            disablePictureInPicture
-                          >
-                            <source src={item.asset.url} type="video/webm" />
-                          </video>
-                        ) : null}
-                      </div>
-                    ))}
-                  </Slideshow>
-                )}
-              </motion.div>
-            </motion.div>
-          </motion.div>
-        ))}
-      </motion.div>
+      <section>
+        <h1>Hallo, ich bin Liam</h1>
+        <p>
+          Ich bin gelernter Mediamatiker EFZ mit Abschluss bei Swisscom. Aktuell
+          arbeite ich beim{" "}
+          <a
+            href="https://www.stv-fsg.ch"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Schweizerischen Turnverband
+          </a>{" "}
+          als Mediamatiker. Mein Fokus liegt vor allem auf Grafikdesign. Ich
+          arbeite strukturiert, teamorientiert und lerne gerne Neues.
+        </p>
+        <div className={styles.links}>
+          <button
+            onClick={() =>
+              (window.location.href = "mailto:liam.schenk@bluewin.ch")
+            }
+          >
+            E-Mail{" "}
+            <span>
+              {" "}
+              <svg viewBox="-10 0 1598 2048" className={styles.arrow}>
+                <path
+                  fill="currentColor"
+                  d="M1338 1442h-166v-298q0 -54 3 -116.5t8 -126.5t11 -123.5t13 -107.5l11 42q-23 35 -47.5 70t-50.5 67t-56 62l-725 726l-118 -118l726 -725q30 -30 62.5 -56t67 -50.5t69.5 -47.5l42 11q-64 9 -147 17t-169 13t-158 5h-298v-166h922v922z"
+                />
+              </svg>
+            </span>
+          </button>
+          <button
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/liamschenk",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          >
+            LinkedIn{" "}
+            <span>
+              {" "}
+              <svg viewBox="-10 0 1598 2048" className={styles.arrow}>
+                <path
+                  fill="currentColor"
+                  d="M1338 1442h-166v-298q0 -54 3 -116.5t8 -126.5t11 -123.5t13 -107.5l11 42q-23 35 -47.5 70t-50.5 67t-56 62l-725 726l-118 -118l726 -725q30 -30 62.5 -56t67 -50.5t69.5 -47.5l42 11q-64 9 -147 17t-169 13t-158 5h-298v-166h922v922z"
+                />
+              </svg>
+            </span>
+          </button>
+          <button
+            onClick={() =>
+              window.open(
+                "https://github.com/liamschenk/portfolio",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          >
+            GitHub{" "}
+            <span>
+              {" "}
+              <svg viewBox="-10 0 1598 2048" className={styles.arrow}>
+                <path
+                  fill="currentColor"
+                  d="M1338 1442h-166v-298q0 -54 3 -116.5t8 -126.5t11 -123.5t13 -107.5l11 42q-23 35 -47.5 70t-50.5 67t-56 62l-725 726l-118 -118l726 -725q30 -30 62.5 -56t67 -50.5t69.5 -47.5l42 11q-64 9 -147 17t-169 13t-158 5h-298v-166h922v922z"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </section>
     </main>
   );
 }

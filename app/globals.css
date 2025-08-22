@@ -1,8 +1,11 @@
 /* Root */
 :root {
-  --font-size: 14px;
-  --line-height: 20px;
+  --font-size-l: 20px;
+  --line-height-l: 26px;
+  --font-size-m: 16px;
+  --line-height-m: 22px;
   --font-weight: 400;
+  --spacing-xxl: 6rem;
   --spacing-xl: 3rem;
   --spacing-l: 1.5rem;
   --spacing-m: 1rem;
@@ -18,6 +21,7 @@
     --tertiary: rgb(77 77 77);
     --quarternary: rgb(128 128 128);
     --quinary: rgb(128 128 128 / 12.5%);
+    --senary: rgb(128 128 128 / 25%);
   }
 
   html {
@@ -31,7 +35,8 @@
     --secondary: rgb(255 255 255);
     --tertiary: rgb(204 204 204);
     --quarternary: rgb(153 153 153);
-    --quinary: rgb(153 153 153 / 12.5%);
+    --quinary: rgb(153 153 153 / 25%);
+    --senary: rgb(153 153 153 / 37.5%);
   }
 
   html {
@@ -54,29 +59,49 @@ body {
 }
 
 body {
-  padding: var(--spacing-m) var(--spacing-l);
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--spacing-xxl) var(--spacing-l);
   background: var(--primary);
   color: var(--secondary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Slick */
-.slick-track {
-  display: flex !important; /* Stops slideshow from wrapping on small screens */
+/* Buttons */
+button{
+  padding: var(--spacing-s) var(--spacing-m);
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background-color: var(--quinary);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-m);
+  line-height: var(--line-height-m);
+   color: var(--secondary);
+  transition: background-color 0.125s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--senary);
+  cursor: pointer;
+  transition: background-color 0.125s ease-in-out;
 }
 
 /* Text */
-h1,
-p,
-a {
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
-  line-height: var(--line-height);
+h1 {
+  margin-bottom: var(--spacing-m);
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-l);
+  line-height: var(--line-height-l);
 }
 
-h1 {
-  margin-bottom: var(--spacing-s);
+
+p,
+a {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-m);
+  line-height: var(--line-height-m);
 }
 
 /* Shading */
@@ -100,12 +125,12 @@ a {
 /* Breakpoints */
 @media (width <= 768px) {
   body {
-    padding: var(--spacing-m);
+      padding: var(--spacing-xl) var(--spacing-l);
   }
 }
 
 @media (width <= 480px) {
   body {
-    padding: var(--spacing-s);
+      padding: var(--spacing-l) var(--spacing-m);
   }
 }

@@ -8,9 +8,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Liam Schenk – Portfolio",
+  title: "Liam Schenk",
   description:
-    "Portfolio von Liam Schenk, gelerntem Mediamatiker EFZ mit Abschluss bei Swisscom.",
+    "Ich bin gelernter Mediamatiker EFZ  und arbeite aktuell beim Schweizerischen Turnverband. Ich arbeite strukturiert, teamorientiert und lerne gerne Neues.",
   keywords:
     "Portfolio, Mediamatiker, Webdesign, Grafikdesign, Multimedia, Swisscom, Schweiz, Liam Schenk, digitale Medien, Ausbildung Mediamatiker",
 };
