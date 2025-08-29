@@ -1,11 +1,30 @@
+import { motion } from "framer-motion";
+
+import { parentVariants, childVariants } from "../utilities/variants";
+
 import styles from "../styles/index.module.css";
+
+function Arrow({ className }) {
+  return (
+    <svg viewBox="-10 0 1598 2048" className={className}>
+      <path
+        fill="currentColor"
+        d="M1338 1442h-166v-298q0 -54 3 -116.5t8 -126.5t11 -123.5t13 -107.5l11 42q-23 35 -47.5 70t-50.5 67t-56 62l-725 726l-118 -118l726 -725q30 -30 62.5 -56t67 -50.5t69.5 -47.5l42 11q-64 9 -147 17t-169 13t-158 5h-298v-166h922v922z"
+      />
+    </svg>
+  );
+}
 
 export default function Index() {
   return (
     <main>
-      <section>
-        <h1>Hallo, ich bin Liam</h1>
-        <p>
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        variants={parentVariants}
+      >
+        <motion.h1 variants={childVariants}>Hallo, ich bin Liam</motion.h1>
+        <motion.p variants={childVariants}>
           Ich bin gelernter Mediamatiker EFZ mit Abschluss bei Swisscom. Aktuell
           arbeite ich beim{" "}
           <a
@@ -17,24 +36,17 @@ export default function Index() {
           </a>{" "}
           als Mediamatiker. Mein Fokus liegt vor allem auf Grafikdesign. Ich
           arbeite strukturiert, teamorientiert und lerne gerne Neues.
-        </p>
-        <div className={styles.links}>
+        </motion.p>
+
+        <motion.div className={styles.buttons} variants={childVariants}>
           <button
             onClick={() =>
               (window.location.href = "mailto:liam.schenk@bluewin.ch")
             }
           >
-            E-Mail{" "}
-            <span>
-              {" "}
-              <svg viewBox="-10 0 1598 2048" className={styles.arrow}>
-                <path
-                  fill="currentColor"
-                  d="M1338 1442h-166v-298q0 -54 3 -116.5t8 -126.5t11 -123.5t13 -107.5l11 42q-23 35 -47.5 70t-50.5 67t-56 62l-725 726l-118 -118l726 -725q30 -30 62.5 -56t67 -50.5t69.5 -47.5l42 11q-64 9 -147 17t-169 13t-158 5h-298v-166h922v922z"
-                />
-              </svg>
-            </span>
+            E-Mail <Arrow className={styles.arrow} />
           </button>
+
           <button
             onClick={() =>
               window.open(
@@ -44,17 +56,9 @@ export default function Index() {
               )
             }
           >
-            LinkedIn{" "}
-            <span>
-              {" "}
-              <svg viewBox="-10 0 1598 2048" className={styles.arrow}>
-                <path
-                  fill="currentColor"
-                  d="M1338 1442h-166v-298q0 -54 3 -116.5t8 -126.5t11 -123.5t13 -107.5l11 42q-23 35 -47.5 70t-50.5 67t-56 62l-725 726l-118 -118l726 -725q30 -30 62.5 -56t67 -50.5t69.5 -47.5l42 11q-64 9 -147 17t-169 13t-158 5h-298v-166h922v922z"
-                />
-              </svg>
-            </span>
+            LinkedIn <Arrow className={styles.arrow} />
           </button>
+
           <button
             onClick={() =>
               window.open(
@@ -64,19 +68,10 @@ export default function Index() {
               )
             }
           >
-            GitHub{" "}
-            <span>
-              {" "}
-              <svg viewBox="-10 0 1598 2048" className={styles.arrow}>
-                <path
-                  fill="currentColor"
-                  d="M1338 1442h-166v-298q0 -54 3 -116.5t8 -126.5t11 -123.5t13 -107.5l11 42q-23 35 -47.5 70t-50.5 67t-56 62l-725 726l-118 -118l726 -725q30 -30 62.5 -56t67 -50.5t69.5 -47.5l42 11q-64 9 -147 17t-169 13t-158 5h-298v-166h922v922z"
-                />
-              </svg>
-            </span>
+            GitHub <Arrow className={styles.arrow} />
           </button>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </main>
   );
 }

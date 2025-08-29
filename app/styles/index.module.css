@@ -1,5 +1,5 @@
-/* Links */
-.links {
+/* Buttons */
+.buttons {
   display: flex;
   gap: var(--spacing-s);
   margin-top: var(--spacing-l);
