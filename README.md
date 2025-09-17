@@ -1,17 +1,16 @@
-## Liam Schenk — Portfolio
+## Liam Schenk — Temporary Page
 
-This is the frontend repository for my personal portfolio, available at [liamschenk.ch](https://liamschenk.ch). All content is dynamically sourced from **Sanity CMS**, enabling structured and easily maintainable data management.
+This is the frontend repository for a **static placeholder page**, currently available at [liamschenk.ch](https://liamschenk.ch). The portfolio is temporarily offline and will be restored in the future.
 
 ### Features
 
-- **Dynamic content** powered by Sanity CMS
-- **Media support** for images and videos
+- **Minimal static content** with a temporary message
+- **Lightweight design** without dynamic data
 
 ### Technologies
 
-- **Next.js** – Framework for modern web development
-- **Sanity CMS** – Headless content management
+- **Next.js** – Framework for static page deployment
 - **GitHub** – Repository and version control
 - **Vercel** – Hosting with continuous deployment
 
-> Note: This repo only contains the frontend. Content is managed in a separate repository using Sanity Studio.
+> Note: The full portfolio exists in a separate branch and can be redeployed when needed.
