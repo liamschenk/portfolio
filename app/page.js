@@ -3,8 +3,8 @@
 import { useState, useEffect, useCallback } from "react";
 
 import Header from "./components/header";
-import About from "./components/about";
-import Index from "./components/index";
+import About from "./pages/about";
+import Index from "./pages/index";
 
 import { sanity } from "../lib/sanity";
 import { query } from "../lib/queries";

@@ -1,74 +1,49 @@
-/* View */
-.section {
-  margin-bottom: var(--spacing-l);
-  padding: var(--spacing-m) 0;
+/* About */
+.summary {
+  width: 37.5%;
 }
 
-/* Experience and work grid */
-.bigGrid {
+.grid-large {
   display: grid;
   grid-template-columns: minmax(20ch, auto) 1fr;
   gap: var(--spacing-l);
 }
 
-.bigGrid p {
-  margin-bottom: var(--spacing-xs);
-}
-
-/* Contact grid */
-.smallGrid {
+.grid-medium {
   display: grid;
   grid-template-columns: minmax(20ch, auto) 1fr;
   gap: var(--spacing-l);
 }
 
-.smallGrid p {
-  margin-bottom: var(--spacing-xs);
-}
-
-/* Arrow */
-.arrow {
+.svg {
   height: var(--font-size);
   color: var(--secondary);
   vertical-align: middle;
 }
 
-/* Text */
-.section:first-of-type > p:first-of-type {
-  width: 37.5%;
-}
-
-.bigGrid a, .smallGrid a {
-  text-decoration: underline;
-}
-
-.bigGrid a:hover, .smallGrid a:hover {
-  text-decoration: none;
-}
-
 /* Breakpoints */
-@media (width <= 768px) {
-  .section:first-of-type > p:first-of-type {
+@media (width <= 720px) {
+  .summary {
     width: 87.5%;
   }
 }
 
 @media (width <= 480px) {
-  .bigGrid {
+  .summary {
+    width: 100%;
+  }
+
+  .grid-large {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
   }
 
-  .smallGrid {
+  .grid-medium {
     grid-template-columns: minmax(8ch, auto) 1fr;
   }
 
-  .bigGrid p {
+  .grid-large p {
     flex: 100%;
-  }
-
-  .section:first-of-type > p:first-of-type {
-    width: 100%;
   }
 }

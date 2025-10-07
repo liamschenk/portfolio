@@ -1,16 +1,10 @@
-export function formatDate(
-  startDate,
-  endDate,
-  ongoing = false,
-  locale = "de-DE"
-) {
+export function formatDate(startDate, endDate, ongoing = false) {
   if (!startDate) return "?";
 
   const format = (dateStr) => {
     const date = new Date(dateStr);
     if (!isFinite(date)) return "?";
 
-    // Always return 3-letter month without trailing dot
     const month = date.toLocaleString("de-DE", { month: "short" }).slice(0, 3);
     const year = date.getFullYear();
     return `${month} ${year}`;

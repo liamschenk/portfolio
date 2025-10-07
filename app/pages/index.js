@@ -38,16 +38,18 @@ export default function Index({ projects }) {
             >
               <button
                 type="button"
-                className={`${styles.trigger} ${
-                  index === 0 ? styles["no-border"] : ""
+                className={`${
+                  styles.button
+                } padding-top-medium padding-bottom-medium border-top  ${
+                  index === 0 ? "border-none" : ""
                 }`}
                 onClick={() => toggleAccordion(index)}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <p>{`0${index + 1}`}</p>
-                <p className="secondary">{project.name}</p>
-                <p className="tertiary">
+                <p className="color-quaternary">{`0${index + 1}`}</p>
+                <p className="color-secondary">{project.name}</p>
+                <p className="color-tertiary text-align-right">
                   {project.date
                     ? new Intl.DateTimeFormat("de-DE", {
                         year: "numeric",
@@ -56,30 +58,35 @@ export default function Index({ projects }) {
                 </p>
               </button>
 
-              <motion.div
+              <motion.section
                 className={styles.content}
                 initial={{ height: 0 }}
                 animate={{ height: openAccordion === index ? "auto" : 0 }}
                 transition={{ duration: 0.25, ease: "easeInOut" }}
               >
                 <div className={styles.description}>
-                  <p>{project.description}</p>
+                  <p className="color-quaternary margin-bottom-large">
+                    {project.description}
+                  </p>
                 </div>
 
                 {project.media?.length > 0 && (
-                  <Slideshow {...settings} className={styles.slideshow}>
+                  <Slideshow
+                    {...settings}
+                    className={`${styles.slideshow} margin-bottom-medium`}
+                  >
                     {project.media.map((item, mediaIndex) => (
-                      <div key={mediaIndex} className={styles.media}>
+                      <div key={mediaIndex}>
                         {item._type === "image" && item.asset?.url ? (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img
                             src={item.asset.url}
                             alt={`Project media ${mediaIndex + 1}`}
-                            className={styles["media-item"]}
+                            className={`${styles.media} margin-right-small`}
                           />
                         ) : item._type === "file" && item.asset?.url ? (
                           <video
-                            className={styles["media-item"]}
+                            className={`${styles.media} margin-right-small`}
                             autoPlay
                             muted
                             playsInline
@@ -93,7 +100,7 @@ export default function Index({ projects }) {
                     ))}
                   </Slideshow>
                 )}
-              </motion.div>
+              </motion.section>
             </motion.div>
           </motion.div>
         ))}
