@@ -26,10 +26,10 @@ export default function About({ basics, profiles, work, education }) {
           <h2 className="margin-bottom-small">Berufserfahrung</h2>
           {work.map((item, index) => (
             <div key={index} className={styles["grid-large"]}>
-              <p className="color-tertiary marign-bottom-extra-small">
+              <p className="color-tertiary margin-bottom-extra-small">
                 {formatDate(item.startDate, item.endDate, item.ongoing)}
               </p>
-              <p className="color-secondary marign-bottom-extra-small">
+              <p className="color-secondary margin-bottom-extra-small">
                 {`${item.position} ${item.preposition || "bei"} ${item.name}`}
               </p>
             </div>

@@ -37,13 +37,13 @@ export default function Index({ projects }) {
               transition={{ duration: 0.375, ease: "easeInOut" }}
             >
               <button
-                type="button"
                 className={`${
                   styles.button
                 } padding-top-medium padding-bottom-medium border-top  ${
                   index === 0 ? "border-none" : ""
                 }`}
                 onClick={() => toggleAccordion(index)}
+                type="button"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
