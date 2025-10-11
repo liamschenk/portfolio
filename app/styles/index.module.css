@@ -12,17 +12,21 @@
   font-size: inherit;
   font-weight: inherit;
   cursor: pointer;
-  text-align: left;
 }
 
 .content {
   overflow: hidden;
 }
 
-.description {
+.section {
   display: grid;
   grid-template-columns: minmax(2ch, auto) 1fr;
   gap: var(--spacing-l);
+}
+
+.description {
+  grid-column: 2;
+  width: 37.5%;
 }
 
 /* Slideshow */
@@ -41,16 +45,11 @@
 }
 
 .media {
-  width: auto;
+  display: inline-block !important;
+  width: auto !important;
   height: 320px;
   pointer-events: none;
   user-select: none;
-}
-
-/* Typography */
-.description p {
-  grid-column: 2;
-  width: 37.5%;
 }
 
 /* Breakpoints */
@@ -59,7 +58,7 @@
     height: 240px;
   }
 
-  .description p {
+  .description {
     width: 75%;
   }
 }
@@ -69,7 +68,7 @@
     height: 200px;
   }
 
-  .description p {
+  .description {
     width: 87.5%;
   }
 }
