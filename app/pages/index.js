@@ -89,7 +89,7 @@ export default function Index({ projects }) {
                   className={`${styles.slideshow} margin-bottom-medium`}
                 >
                   {project.media.map((item, mediaIndex) =>
-                    item._type === "image" && item.asset?.url ? (
+                    item.asset?.url ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
                         key={mediaIndex}
@@ -97,18 +97,6 @@ export default function Index({ projects }) {
                         alt={`Project media ${mediaIndex + 1}`}
                         className={`${styles.media} margin-right-small`}
                       />
-                    ) : item._type === "file" && item.asset?.url ? (
-                      <video
-                        key={mediaIndex}
-                        className={`${styles.media} margin-right-small`}
-                        autoPlay
-                        muted
-                        playsInline
-                        loop
-                        disablePictureInPicture
-                      >
-                        <source src={item.asset.url} type="video/webm" />
-                      </video>
                     ) : null
                   )}
                 </Slideshow>
