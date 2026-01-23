@@ -30,24 +30,26 @@ export default function ProjectSlideshow({ media, className }) {
 
   return (
     <>
-      <Slideshow {...settings} className={className}>
-        {media.map((item, index) =>
-          item.asset?.url ? (
-            <img
-              key={index}
-              src={item.asset.url}
-              alt={`Project media ${index + 1}`}
-              className={styles.media}
-              onClick={() => {
-                if (!isDragging) {
-                  setActiveIndex(index);
-                  setLightboxOpen(true);
-                }
-              }}
-            />
-          ) : null,
-        )}
-      </Slideshow>
+      <div className={styles["slideshow-wrapper"]}>
+        <Slideshow {...settings} className={className}>
+          {media.map((item, index) =>
+            item.asset?.url ? (
+              <img
+                key={index}
+                src={item.asset.url}
+                alt={`Project media ${index + 1}`}
+                className={styles.media}
+                onClick={() => {
+                  if (!isDragging) {
+                    setActiveIndex(index);
+                    setLightboxOpen(true);
+                  }
+                }}
+              />
+            ) : null,
+          )}
+        </Slideshow>
+      </div>
 
       <AnimatePresence>
         {lightboxOpen && (
@@ -69,7 +71,7 @@ export default function ProjectSlideshow({ media, className }) {
             onClick={() => setLightboxOpen(false)}
           >
             <img
-              className={styles.lightboxMedia}
+              className={styles["lightbox-media"]}
               src={media[activeIndex].asset.url}
               alt={`Project media ${activeIndex + 1}`}
             />

@@ -1,22 +1,22 @@
 /* stylelint-disable selector-pseudo-class-no-unknown */
 
 /* Slideshow */
-:global(.slick-list),
-:global(.slick-track) {
+.slideshow-wrapper :global(.slick-list),
+.slideshow-wrapper :global(.slick-track) {
   cursor: grab;
 }
 
-:global(.slick-list:active),
-:global(.slick-track:active) {
+.slideshow-wrapper :global(.slick-list:active),
+.slideshow-wrapper :global(.slick-track:active) {
   cursor: grabbing;
 }
 
 /* Slides */
-:global(.slick-slide) {
+.slideshow-wrapper :global(.slick-slide) {
   margin-right: var(--spacing-s);
 }
 
-:global(.slick-slide:last-child) {
+.slideshow-wrapper :global(.slick-slide:last-child) {
   margin-right: 0;
 }
 
@@ -42,7 +42,7 @@
   cursor: grab;
 }
 
-.lightboxMedia {
+.lightbox-media {
   max-width: 87.5vw;
   max-height: 87.5vh;
   object-fit: contain;
