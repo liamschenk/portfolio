@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "4.9.0",
+  "version": "5.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -19,7 +19,8 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-slick": "^0.31.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "yet-another-react-lightbox": "^3.28.0"
   },
   "devDependencies": {
     "eslint": "^9",

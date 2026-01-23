@@ -7,7 +7,11 @@ export const parentVariants = {
 };
 
 export const childVariants = {
-  hidden: { opacity: 0, y: 16 },
+  hidden: {
+    opacity: 0,
+    y: 16,
+    transition: { duration: 0.375 },
+  },
   visible: {
     opacity: 1,
     y: 0,

@@ -19,6 +19,7 @@
     --tertiary: rgb(77 77 77);
     --quarternary: rgb(128 128 128);
     --quinary: rgb(128 128 128 / 12.5%);
+    --senary: rgb(255 255 255 / 87.5%);
   }
 
   html {
@@ -33,6 +34,7 @@
     --tertiary: rgb(204 204 204);
     --quarternary: rgb(153 153 153);
     --quinary: rgb(153 153 153 / 12.5%);
+     --senary: rgb(0 0 0 / 87.5%);
   }
 
   html {

@@ -29,49 +29,14 @@
   width: 37.5%;
 }
 
-/* Slideshow */
-.slideshow {
-  width: 100%;
-  cursor: grab;
-}
-
-.slideshow *:focus {
-  outline: none;
-}
-
-.slideshow:active {
-  cursor: grabbing;
-}
-
-.media {
-  display: inline-block !important;
-  width: auto !important;
-  height: 320px;
-  padding: var(--spacing-xl);
-  border-radius: var(--border-radius);
-  background-color: var(--quinary);
-  pointer-events: none;
-  user-select: none;
-}
-
 /* Breakpoints */
 @media (width <= 720px) {
-  .media{
-    height: 240px;
-    padding: var(--spacing-l);
-  }
-
   .description {
     width: 75%;
   }
 }
 
 @media (width <= 480px) {
-  .media {
-    height: 200px;
-    padding: var(--spacing-m);
-  }
-
   .description {
     width: 87.5%;
   }

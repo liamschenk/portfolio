@@ -1,9 +1,6 @@
 import { useState } from "react";
-import Slideshow from "react-slick";
+import Slideshow from "../components/slideshow";
 import { motion } from "framer-motion";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 import { parentVariants, childVariants } from "../utilities/variants";
 
@@ -22,15 +19,6 @@ export default function Index({ projects }) {
 
   const toggleAccordion = (index) => {
     setOpenAccordion(openAccordion === index ? null : index);
-  };
-
-  var settings = {
-    infinite: false,
-    speed: 250,
-    slidesToScroll: 1,
-    variableWidth: true,
-    swipeToSlide: true,
-    touchThreshold: 25,
   };
 
   return (
@@ -85,21 +73,9 @@ export default function Index({ projects }) {
 
               {project.media?.length > 0 && (
                 <Slideshow
-                  {...settings}
-                  className={`${styles.slideshow} margin-bottom-medium`}
-                >
-                  {project.media.map((item, mediaIndex) =>
-                    item.asset?.url ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        key={mediaIndex}
-                        src={item.asset.url}
-                        alt={`Project media ${mediaIndex + 1}`}
-                        className={`${styles.media} margin-right-small`}
-                      />
-                    ) : null
-                  )}
-                </Slideshow>
+                  media={project.media}
+                  className="margin-bottom-medium"
+                />
               )}
             </motion.div>
           </motion.section>
