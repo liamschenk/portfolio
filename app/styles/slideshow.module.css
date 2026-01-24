@@ -20,13 +20,20 @@
   margin-right: 0;
 }
 
-.media {
-  display: inline-block !important;
-  width: auto !important;
-  height: 320px;
+.media-wrapper {
   padding: var(--spacing-xl);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-l);
   background-color: var(--quinary);
+  user-select: none;
+}
+
+.media-wrapper:focus {
+  outline: none;
+}
+
+.media {
+  height: 256px;
+  border-radius: var(--border-radius-m);
   user-select: none;
 }
 
@@ -35,11 +42,13 @@
   position: fixed;
   z-index: 999;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: var(--senary);
   inset: 0;
   cursor: grab;
+  user-select: none;
 }
 
 .lightbox-media {
@@ -51,15 +60,21 @@
 
 /* Breakpoints */
 @media (width <= 720px) {
+ .media-wrapper {
+    padding: var(--spacing-l);
+  }
+
   .media{
     height: 240px;
-    padding: var(--spacing-l);
   }
 }
 
 @media (width <= 480px) {
-  .media {
-    height: 200px;
+  .media-wrapper {
     padding: var(--spacing-m);
+  }
+
+  .media {
+    height: 224px;
   }
 }

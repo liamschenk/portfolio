@@ -17,6 +17,7 @@ export default function ProjectSlideshow({ media, className }) {
   if (!media?.length) return null;
 
   const settings = {
+    accessibility: false,
     infinite: false,
     speed: 250,
     slidesToScroll: 1,
@@ -34,18 +35,19 @@ export default function ProjectSlideshow({ media, className }) {
         <Slideshow {...settings} className={className}>
           {media.map((item, index) =>
             item.asset?.url ? (
-              <img
-                key={index}
-                src={item.asset.url}
-                alt={`Project media ${index + 1}`}
-                className={styles.media}
-                onClick={() => {
-                  if (!isDragging) {
-                    setActiveIndex(index);
-                    setLightboxOpen(true);
-                  }
-                }}
-              />
+              <div className={styles["media-wrapper"]} key={index}>
+                <img
+                  src={item.asset.url}
+                  alt={`Project media ${index + 1}`}
+                  className={styles.media}
+                  onClick={() => {
+                    if (!isDragging) {
+                      setActiveIndex(index);
+                      setLightboxOpen(true);
+                    }
+                  }}
+                />
+              </div>
             ) : null,
           )}
         </Slideshow>
@@ -75,6 +77,9 @@ export default function ProjectSlideshow({ media, className }) {
               src={media[activeIndex].asset.url}
               alt={`Project media ${activeIndex + 1}`}
             />
+            <p className="color-quaternary margin-top-large">
+              Klicke irgendwo, um diese Lightbox zu schliessen.
+            </p>
           </motion.div>
         )}
       </AnimatePresence>

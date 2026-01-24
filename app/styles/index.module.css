@@ -18,26 +18,26 @@
   overflow: hidden;
 }
 
-.section {
+.description {
   display: grid;
   grid-template-columns: minmax(2ch, auto) 1fr;
   gap: var(--spacing-l);
 }
 
-.description {
+.description p {
   grid-column: 2;
   width: 37.5%;
 }
 
 /* Breakpoints */
 @media (width <= 720px) {
-  .description {
+  .description p {
     width: 75%;
   }
 }
 
 @media (width <= 480px) {
-  .description {
+  .description p {
     width: 87.5%;
   }
 }

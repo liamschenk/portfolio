@@ -8,7 +8,9 @@
   --spacing-m: 1rem;
   --spacing-s: 0.5rem;
   --spacing-xs: 0.25rem;
-  --border-radius: 4px;
+  --border-radius-l: 8px;
+  --border-radius-m: 4px;
+  --border-radius-s: 2px;
 }
 
 /* Theming */
@@ -173,7 +175,7 @@ a {
 
 /* Margin */
 .margin-top-large {
-  margin-right: var(--spacing-l);
+  margin-top: var(--spacing-l);
 }
 
 .margin-right-large {

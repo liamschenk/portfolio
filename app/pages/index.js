@@ -63,10 +63,8 @@ export default function Index({ projects }) {
               animate={{ height: openAccordion === index ? "auto" : 0 }}
               transition={{ duration: 0.25, ease: "easeInOut" }}
             >
-              <div className={styles.section}>
-                <p
-                  className={`${styles.description} color-quaternary margin-bottom-large`}
-                >
+              <div className={styles.description}>
+                <p className="color-quaternary margin-bottom-large">
                   {project.description}
                 </p>
               </div>
