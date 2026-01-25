@@ -54,6 +54,7 @@
 .lightbox-media {
   max-width: 87.5vw;
   max-height: 87.5vh;
+  border-radius: var(--border-radius-m);
   object-fit: contain;
   user-select: none;
 }
@@ -65,7 +66,7 @@
   }
 
   .media{
-    height: 240px;
+    height: 224px;
   }
 }
 
@@ -75,6 +76,6 @@
   }
 
   .media {
-    height: 224px;
+    height: 192px;
   }
 }
