@@ -21,7 +21,7 @@
 }
 
 .media-wrapper {
-  padding: var(--spacing-xl);
+  padding: var(--spacing-m);
   border-radius: var(--border-radius-l);
   background-color: var(--quinary);
   user-select: none;
