@@ -7,7 +7,7 @@ export default function Header({ setView, activeView }) {
     (view) => {
       if (activeView !== view) setView(view);
     },
-    [activeView, setView]
+    [activeView, setView],
   );
 
   return (

@@ -24,6 +24,7 @@ export default function ProjectSlideshow({ media, className }) {
     variableWidth: true,
     swipeToSlide: true,
     touchThreshold: 25,
+    arrows: false,
 
     beforeChange: () => setIsDragging(true),
     afterChange: () => setIsDragging(false),
@@ -36,6 +37,7 @@ export default function ProjectSlideshow({ media, className }) {
           {media.map((item, index) =>
             item.asset?.url ? (
               <div className={styles["media-wrapper"]} key={index}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={item.asset.url}
                   alt={`Project media ${index + 1}`}
@@ -72,6 +74,7 @@ export default function ProjectSlideshow({ media, className }) {
             exit="hidden"
             onClick={() => setLightboxOpen(false)}
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               className={styles["lightbox-media"]}
               src={media[activeIndex].asset.url}

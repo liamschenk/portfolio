@@ -19,7 +19,7 @@ export default function Portfolio() {
         setView(newView);
       }
     },
-    [view]
+    [view],
   );
 
   useEffect(() => {
