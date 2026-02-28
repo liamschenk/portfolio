@@ -6,19 +6,19 @@ import { parentVariants, childVariants } from "../utilities/variants";
 
 import styles from "../styles/index.module.css";
 
-const getOpacity = (index, openAccordion, hoveredIndex) => {
-  if (openAccordion === null) {
+const getOpacity = (index, openIndex, hoveredIndex) => {
+  if (openIndex === null) {
     return hoveredIndex === null || hoveredIndex === index ? 1 : 0.5;
   }
-  return openAccordion === index || hoveredIndex === index ? 1 : 0.5;
+  return openIndex === index || hoveredIndex === index ? 1 : 0.5;
 };
 
 export default function Index({ projects }) {
-  const [openAccordion, setOpenAccordion] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const toggleAccordion = (index) => {
-    setOpenAccordion(openAccordion === index ? null : index);
+    setOpenIndex((prev) => (prev === index ? null : index));
   };
 
   return (
@@ -29,7 +29,7 @@ export default function Index({ projects }) {
             key={index}
             variants={childVariants}
             animate={{
-              opacity: getOpacity(index, openAccordion, hoveredIndex),
+              opacity: getOpacity(index, openIndex, hoveredIndex),
             }}
             transition={{ duration: 0.375, ease: "easeInOut" }}
           >
@@ -59,8 +59,11 @@ export default function Index({ projects }) {
 
             <motion.div
               className={styles.content}
-              initial={{ height: 0 }}
-              animate={{ height: openAccordion === index ? "auto" : 0 }}
+              initial={{ height: 0, opacity: 0 }}
+              animate={{
+                height: openIndex === index ? "auto" : 0,
+                opacity: openIndex === index ? 1 : 0,
+              }}
               transition={{ duration: 0.25, ease: "easeInOut" }}
             >
               <div className={styles.description}>

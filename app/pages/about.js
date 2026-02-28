@@ -12,10 +12,11 @@ export default function About({ basics, profiles, work, education }) {
       const date = new Date(dateStr);
       if (!isFinite(date)) return "?";
 
-      const month = date
-        .toLocaleString("de-DE", { month: "short" })
-        .slice(0, 3);
+      const month =
+        date.toLocaleString("de-DE", { month: "short" }).replace(/\.$/, "") +
+        ".";
       const year = date.getFullYear();
+
       return `${month} ${year}`;
     };
 
