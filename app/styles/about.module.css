@@ -28,15 +28,15 @@
 }
 
 .available{
-  color: #39FF14;
+  color: var(--septenary);
 }
 
 .partial{
-  color: #FF6F00;
+  color: var(--octonary);
 }
 
 .unavailable{
-  color: #FF073A;
+  color: var(--nonary);
 }
 
 .status-circle {

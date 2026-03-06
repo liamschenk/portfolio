@@ -22,6 +22,9 @@
     --quarternary: rgb(128 128 128);
     --quinary: rgb(128 128 128 / 12.5%);
     --senary: rgb(255 255 255 / 87.5%);
+    --septenary: rgb(52 199 89);
+    --octonary: rgb(255 141 40);
+    --nonary: rgb(255 56 60);
   }
 
   html {
@@ -36,7 +39,10 @@
     --tertiary: rgb(204 204 204);
     --quarternary: rgb(153 153 153);
     --quinary: rgb(153 153 153 / 12.5%);
-     --senary: rgb(0 0 0 / 87.5%);
+    --senary: rgb(0 0 0 / 87.5%);
+    --septenary: rgb(48 209 88);
+    --octonary: rgb(255 146 48);
+    --nonary: rgb(255 66 69);
   }
 
   html {
