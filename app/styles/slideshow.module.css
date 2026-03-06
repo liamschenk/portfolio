@@ -37,28 +37,6 @@
   user-select: none;
 }
 
-/* Lightbox */
-.lightbox {
-  position: fixed;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--senary);
-  inset: 0;
-  cursor: grab;
-  user-select: none;
-}
-
-.lightbox-media {
-  max-width: 87.5vw;
-  max-height: 87.5vh;
-  border-radius: var(--border-radius-m);
-  object-fit: contain;
-  user-select: none;
-}
-
 /* Breakpoints */
 @media (width <= 720px) {
  .media-wrapper {

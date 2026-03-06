@@ -26,6 +26,12 @@ export default function About({ basics, profiles, work, education }) {
     return `${formattedStart} – ${formattedEnd}`;
   }
 
+  const statusText = {
+    available: "Verfügbar für Anfragen",
+    partial: "Teilweise verfügbar",
+    unavailable: "Nicht verfügbar",
+  };
+
   return (
     <main>
       <motion.div initial="hidden" animate="visible" variants={parentVariants}>
@@ -34,9 +40,17 @@ export default function About({ basics, profiles, work, education }) {
           variants={childVariants}
         >
           <h2 className="margin-bottom-small">Über</h2>
-          <p className={`${styles.summary} color-quaternary`}>
+          <p
+            className={`${styles.summary} color-quaternary margin-bottom-medium`}
+          >
             {basics.summary}
           </p>
+          <div className={`${styles.status} ${styles[basics.status]}`}>
+            <span className={styles["status-circle"]}></span>
+            <motion.p className={`${styles["status-text"]} color-quaternary`}>
+              {statusText[basics.status]}
+            </motion.p>
+          </div>
         </motion.section>
 
         <motion.section

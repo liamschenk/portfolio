@@ -63,7 +63,7 @@ body {
 }
 
 body {
-  padding: var(--spacing-m) var(--spacing-l);
+  padding: var(--spacing-l);
   background: var(--primary);
   color: var(--secondary);
   -webkit-font-smoothing: antialiased;
@@ -120,19 +120,23 @@ a {
 }
 
 .underline {
-  text-decoration: underline;
+  text-decoration: underline var(--secondary);
+  transition: text-decoration 0.1875s ease-in-out;
 }
 
 .underline-hover:hover {
-  text-decoration: underline;
+  text-decoration: underline var(--secondary);
+  transition: text-decoration 0.1875s ease-in-out;
 }
 
 .no-underline {
-  text-decoration: none;
+  text-decoration: underline var(--primary);
+  transition: text-decoration 0.1875s ease-in-out;
 }
 
 .no-underline-hover:hover {
-  text-decoration: none;
+  text-decoration: underline var(--primary);
+  transition: text-decoration 0.1875s ease-in-out;
 }
 
 /* Border */
@@ -241,12 +245,12 @@ a {
 /* Breakpoints */
 @media (width <= 720px) {
   body {
-    padding: var(--spacing-m);
+    padding: var(--spacing-m) var(--spacing-l);
   }
 }
 
 @media (width <= 480px) {
   body {
-    padding: var(--spacing-s);
+    padding: var(--spacing-s) var(--spacing-m);
   }
 }
