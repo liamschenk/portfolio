@@ -58,7 +58,7 @@
   border-radius: 50%;
   background: currentcolor;
   transform: translate(-50%, -50%);
-  opacity: 0.5;
+  opacity: 0.75;
   animation: pulse 2.5s infinite ease-in-out;
 }
 
@@ -71,11 +71,11 @@
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(1);
-    opacity: 0.5;
+    opacity: 0.75;
   }
 
   100% {
-    transform: translate(-50%, -50%) scale(2.5);
+    transform: translate(-50%, -50%) scale(2.25);
     opacity: 0;
   }
 }

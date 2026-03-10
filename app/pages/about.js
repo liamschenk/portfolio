@@ -40,17 +40,9 @@ export default function About({ basics, profiles, work, education }) {
           variants={childVariants}
         >
           <h2 className="margin-bottom-small">Über</h2>
-          <p
-            className={`${styles.summary} color-quaternary margin-bottom-medium`}
-          >
+          <p className={`${styles.summary} color-quaternary`}>
             {basics.summary}
           </p>
-          <div className={`${styles.status} ${styles[basics.status]}`}>
-            <span className={styles["status-circle"]}></span>
-            <motion.p className={`${styles["status-text"]} color-quaternary`}>
-              {statusText[basics.status]}
-            </motion.p>
-          </div>
         </motion.section>
 
         <motion.section
@@ -118,6 +110,19 @@ export default function About({ basics, profiles, work, education }) {
               </p>
             </div>
           ))}
+        </motion.section>
+
+        <motion.section
+          className="padding-top-medium padding-bottom-medium margin-bottom-large"
+          variants={childVariants}
+        >
+          <h2 className="margin-bottom-small">Aktuell</h2>
+          <div className={`${styles.status} ${styles[basics.status]}`}>
+            <span className={styles["status-circle"]}></span>
+            <p className={`${styles["status-text"]} color-quaternary`}>
+              {statusText[basics.status]}
+            </p>
+          </div>
         </motion.section>
       </motion.div>
     </main>
