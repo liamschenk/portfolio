@@ -69,6 +69,8 @@ body {
 }
 
 body {
+  max-width: 2560px;
+  margin: 0 auto;
   padding: var(--spacing-l);
   background: var(--primary);
   color: var(--secondary);
@@ -146,20 +148,24 @@ a {
 }
 
 /* Border */
+.border-full {
+  border: 1px solid var(--quinary);
+}
+
 .border-top {
-  border-top: 0.5px solid var(--quinary);
+  border-top: 1px solid var(--quinary);
 }
 
 .border-right {
-  border-right: 0.5px solid var(--quinary);
+  border-right: 1px solid var(--quinary);
 }
 
 .border-bottom {
-  border-bottom: 0.5px solid var(--quinary);
+  border-bottom: 1px solid var(--quinary);
 }
 
 .border-left {
-  border-left: 0.5px solid var(--quinary);
+  border-left: 1px solid var(--quinary);
 }
 
 .border-none {

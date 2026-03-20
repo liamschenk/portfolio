@@ -25,7 +25,10 @@ export default function ProjectSlideshow({ media, className }) {
         <Slideshow {...settings} className={className}>
           {media.map((item, index) =>
             item.asset?.url ? (
-              <div className={styles["media-wrapper"]} key={index}>
+              <div
+                className={`${styles["media-wrapper"]} border-full`}
+                key={index}
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={item.asset.url}
