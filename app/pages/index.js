@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Slideshow from "../components/slideshow";
 import { motion } from "framer-motion";
-
 import { parentVariants, childVariants } from "../utilities/variants";
 
 import styles from "../styles/index.module.css";

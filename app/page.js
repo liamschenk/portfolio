@@ -6,8 +6,8 @@ import Header from "./components/header";
 import About from "./pages/about";
 import Index from "./pages/index";
 
-import { sanity } from "../lib/sanity";
-import { query } from "../lib/queries";
+import { client } from "../sanity/client";
+import { query } from "../sanity/queries";
 
 export default function Portfolio() {
   const [view, setView] = useState("index");
@@ -23,7 +23,7 @@ export default function Portfolio() {
   );
 
   useEffect(() => {
-    sanity.fetch(query).then((data) => {
+    client.fetch(query).then((data) => {
       setSiteData(data);
     });
   }, []);
