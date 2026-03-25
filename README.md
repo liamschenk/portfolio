@@ -4,14 +4,15 @@ This is the frontend repository for my personal portfolio, available at [liamsch
 
 ### Features
 
-- **Dynamic content** powered by Sanity CMS
+- **Dynamic content** powered by Sanity
+- **Integrated content editor** via Sanity Studio
 - **Media support** for images and videos
 
 ### Technologies
 
 - **Next.js** – Framework for modern web development
-- **Sanity CMS** – Headless content management
+- **Sanity** – Headless content management
 - **GitHub** – Repository and version control
 - **Vercel** – Hosting with continuous deployment
 
-> Note: This repo only contains the frontend. Content is managed in a separate repository using Sanity Studio.
+> Note: The Content is managed directly via Sanity Studio, integrated into the frontend deployment.
