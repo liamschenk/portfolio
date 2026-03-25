@@ -10,6 +10,7 @@ export default function StudioPage() {
 
   useEffect(() => {
     document.body.style.padding = "0";
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
