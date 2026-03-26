@@ -1,26 +1,24 @@
 /* stylelint-disable selector-pseudo-class-no-unknown */
 
 /* Slideshow */
-.slideshow-wrapper :global(.slick-list),
-.slideshow-wrapper :global(.slick-track) {
+.slideshow-wrapper :global(.embla) {
+  overflow: hidden;
   cursor: grab;
 }
 
-.slideshow-wrapper :global(.slick-list:active),
-.slideshow-wrapper :global(.slick-track:active) {
+.slideshow-wrapper :global(.embla:active) {
   cursor: grabbing;
 }
 
-/* Slides */
-.slideshow-wrapper :global(.slick-slide) {
-  margin-right: var(--spacing-s);
-}
-
-.slideshow-wrapper :global(.slick-slide:last-child) {
-  margin-right: 0;
+.slideshow-track {
+  display: flex;
+  gap: var(--spacing-s);
+  touch-action: pan-y;
 }
 
 .media-wrapper {
+  flex: 0 0 auto;
+  min-width: 0;
   padding: var(--spacing-m);
   border-radius: var(--border-radius-l);
   background-color: var(--quinary);

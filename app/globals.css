@@ -57,10 +57,6 @@
   box-sizing: border-box;
 }
 
-.slick-track {
-  display: flex !important; /* Stops slideshow from wrapping on small screens */
-}
-
 /* Global */
 html,
 body {

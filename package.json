@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "5.1.8",
+  "version": "5.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -13,16 +13,14 @@
   },
   "dependencies": {
     "@sanity/client": "^7.15.0",
-    "@sanity/vision": "^5.18.0",
+    "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.34.2",
     "next": "^16.1.6",
     "next-sanity": "^12.1.6",
     "next-sitemap": "^4.2.3",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-slick": "^0.31.0",
-    "sanity-plugin-media": "^4.1.1",
-    "slick-carousel": "^1.8.1"
+    "sanity-plugin-media": "^4.1.1"
   },
   "devDependencies": {
     "eslint": "^9.39.2",

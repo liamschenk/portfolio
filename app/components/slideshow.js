@@ -1,28 +1,21 @@
-import Slideshow from "react-slick";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import useEmblaCarousel from "embla-carousel-react";
 
 import styles from "../styles/slideshow.module.css";
 
 export default function ProjectSlideshow({ media, className }) {
+  const [emblaRef] = useEmblaCarousel({
+    loop: false,
+    align: "start",
+    skipSnaps: false,
+    containScroll: false,
+  });
+
   if (!media?.length) return null;
 
-  const settings = {
-    accessibility: false,
-    infinite: false,
-    speed: 250,
-    slidesToScroll: 1,
-    variableWidth: true,
-    swipeToSlide: true,
-    touchThreshold: 25,
-    arrows: false,
-  };
-
   return (
-    <>
-      <div className={styles["slideshow-wrapper"]}>
-        <Slideshow {...settings} className={className}>
+    <div className={styles["slideshow-wrapper"]}>
+      <div ref={emblaRef} className={`embla ${className ?? ""}`}>
+        <div className={styles["slideshow-track"]}>
           {media.map((item, index) =>
             item.asset?.url ? (
               <div
@@ -38,8 +31,8 @@ export default function ProjectSlideshow({ media, className }) {
               </div>
             ) : null,
           )}
-        </Slideshow>
+        </div>
       </div>
-    </>
+    </div>
   );
 }

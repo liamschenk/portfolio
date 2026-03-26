@@ -27,18 +27,6 @@
   gap: var(--spacing-s);
 }
 
-.available{
-  color: var(--septenary);
-}
-
-.partial{
-  color: var(--octonary);
-}
-
-.unavailable{
-  color: var(--nonary);
-}
-
 .status-circle {
   position: relative;
   width: 8px;
@@ -65,6 +53,18 @@
 .status-text {
   color: currentcolor;
   animation: fade 2.5s infinite ease-in-out;
+}
+
+.available{
+  color: var(--septenary);
+}
+
+.partial{
+  color: var(--octonary);
+}
+
+.unavailable{
+  color: var(--nonary);
 }
 
 /* Keyframes */
