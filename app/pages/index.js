@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Slideshow from "../components/slideshow";
 import { motion } from "framer-motion";
+
 import { parentVariants, childVariants } from "../utilities/variants";
 
 import styles from "../styles/index.module.css";
@@ -22,24 +23,22 @@ export default function Index({ projects }) {
 
   return (
     <main>
-      <motion.div initial="hidden" animate="visible" variants={parentVariants}>
+      <motion.div animate="visible" initial="hidden" variants={parentVariants}>
         {projects.map((project, index) => (
           <motion.section
-            key={index}
-            variants={childVariants}
             animate={{
               opacity: getOpacity(index, openIndex, hoveredIndex),
             }}
+            variants={childVariants}
             transition={{ duration: 0.375, ease: "easeInOut" }}
+            key={index}
           >
             <button
               className={`${
                 styles.button
-              } padding-top-medium padding-bottom-medium border-top  ${
-                index === 0 ? "border-none" : ""
-              }`}
-              onClick={() => toggleAccordion(index)}
+              } ${index === 0 ? "border-none" : "border-top"} padding-top-medium padding-bottom-medium border-top`}
               type="button"
+              onClick={() => toggleAccordion(index)}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -58,23 +57,21 @@ export default function Index({ projects }) {
 
             <motion.div
               className={styles.content}
-              initial={{ height: 0, opacity: 0 }}
               animate={{
                 height: openIndex === index ? "auto" : 0,
                 opacity: openIndex === index ? 1 : 0,
               }}
+              initial={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.25, ease: "easeInOut" }}
             >
-              <div className={styles.description}>
-                <p className="color-quaternary margin-bottom-large">
-                  {project.description}
-                </p>
+              <div className={`${styles.description} margin-bottom-large`}>
+                <p className="color-quaternary">{project.description}</p>
               </div>
 
               {project.media?.length > 0 && (
                 <Slideshow
+                  className="margin-bottom-large"
                   media={project.media}
-                  className="margin-bottom-medium"
                 />
               )}
             </motion.div>

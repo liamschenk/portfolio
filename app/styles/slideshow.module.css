@@ -1,22 +1,22 @@
 /* stylelint-disable selector-pseudo-class-no-unknown */
 
 /* Slideshow */
-.slideshow-wrapper :global(.embla) {
+.slideshow :global(.embla) {
   overflow: hidden;
   cursor: grab;
 }
 
-.slideshow-wrapper :global(.embla:active) {
+.slideshow :global(.embla:active) {
   cursor: grabbing;
 }
 
-.slideshow-track {
+.track {
   display: flex;
   gap: var(--spacing-s);
   touch-action: pan-y;
 }
 
-.media-wrapper {
+.slide {
   flex: 0 0 auto;
   min-width: 0;
   padding: var(--spacing-m);
@@ -25,7 +25,7 @@
   user-select: none;
 }
 
-.media-wrapper:focus {
+.slide:focus {
   outline: none;
 }
 
@@ -37,7 +37,7 @@
 
 /* Breakpoints */
 @media (width <= 720px) {
- .media-wrapper {
+ .slide {
     padding: var(--spacing-l);
   }
 
@@ -47,7 +47,7 @@
 }
 
 @media (width <= 480px) {
-  .media-wrapper {
+  .slide {
     padding: var(--spacing-m);
   }
 

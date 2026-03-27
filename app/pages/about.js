@@ -33,7 +33,7 @@ export default function About({ basics, profiles, work, education }) {
 
   return (
     <main>
-      <motion.div initial="hidden" animate="visible" variants={parentVariants}>
+      <motion.div animate="visible" initial="hidden" variants={parentVariants}>
         <motion.section
           className="padding-top-medium padding-bottom-medium margin-bottom-large"
           variants={childVariants}
@@ -50,7 +50,7 @@ export default function About({ basics, profiles, work, education }) {
         >
           <h2 className="margin-bottom-small">Berufserfahrung</h2>
           {work.map((item, index) => (
-            <div key={index} className={styles["grid-large"]}>
+            <div className={styles["grid-large"]} key={index}>
               <p className="color-tertiary margin-bottom-extra-small">
                 {formatDate(item.startDate, item.endDate, item.ongoing)}
               </p>
@@ -67,7 +67,7 @@ export default function About({ basics, profiles, work, education }) {
         >
           <h2 className="margin-bottom-small">Ausbildung</h2>
           {education.map((item, index) => (
-            <div key={index} className={styles["grid-large"]}>
+            <div className={styles["grid-large"]} key={index}>
               <p className="color-tertiary margin-bottom-extra-small">
                 {formatDate(item.startDate, item.endDate, item.ongoing)}
               </p>
@@ -84,7 +84,7 @@ export default function About({ basics, profiles, work, education }) {
         >
           <h2 className="margin-bottom-small">Kontakt</h2>
           {profiles.map((profile, index) => (
-            <div key={index} className={styles["grid-medium"]}>
+            <div className={styles["grid-medium"]} key={index}>
               <p className="color-tertiary margin-bottom-extra-small">
                 {profile.network}
               </p>
@@ -99,7 +99,7 @@ export default function About({ basics, profiles, work, education }) {
                 </a>
                 <span>
                   {" "}
-                  <svg viewBox="-10 0 1598 2048" className={styles.svg}>
+                  <svg className={styles.svg} viewBox="-10 0 1598 2048">
                     <path
                       fill="currentColor"
                       d="M1338 1442h-166v-298q0 -54 3 -116.5t8 -126.5t11 -123.5t13 -107.5l11 42q-23 35 -47.5 70t-50.5 67t-56 62l-725 726l-118 -118l726 -725q30 -30 62.5 -56t67 -50.5t69.5 -47.5l42 11q-64 9 -147 17t-169 13t-158 5h-298v-166h922v922z"

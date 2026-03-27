@@ -14,8 +14,8 @@ const icon = () => (
   >
     {/* eslint-disable-next-line @next/next/no-img-element */}
     <img
-      src="/favicon.ico"
       style={{ width: "100%", height: "100%", objectFit: "contain" }}
+      src="/favicon.ico"
       alt="Icon"
     />
   </div>
@@ -26,6 +26,7 @@ export default defineConfig({
   title: "portfolio",
   projectId: "l5e3bb3j",
   dataset: "production",
+  basePath: "/studio",
   plugins: [structureTool(), media()],
   schema: {
     types: schemas,

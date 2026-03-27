@@ -32,7 +32,7 @@ export default function Portfolio() {
 
   return (
     <>
-      <Header setView={handleViewChange} activeView={view} />
+      <Header activeView={view} setView={handleViewChange} />
       {view === "index" && <Index projects={siteData.projects} />}
       {view === "about" && (
         <About
