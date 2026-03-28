@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import { parentVariants, childVariants } from "../utilities/variants";
+import { monthNames } from "../utilities/locales";
 
 import styles from "../styles/about.module.css";
 
@@ -10,12 +11,7 @@ function formatDate(startDate, endDate, ongoing = false) {
   const format = (dateStr) => {
     const date = new Date(dateStr);
     if (!isFinite(date)) return "?";
-
-    const month =
-      date.toLocaleString("de-DE", { month: "short" }).replace(/\.$/, "") + ".";
-    const year = date.getFullYear();
-
-    return `${month} ${year}`;
+    return `${monthNames[date.getMonth()]}. ${date.getFullYear()}`;
   };
 
   const formattedStart = format(startDate);
