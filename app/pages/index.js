@@ -1,6 +1,7 @@
-import { useState } from "react";
-import Slideshow from "../components/slideshow";
 import { motion } from "framer-motion";
+import { useState } from "react";
+
+import Slideshow from "../components/slideshow";
 
 import { parentVariants, childVariants } from "../utilities/variants";
 
@@ -31,7 +32,7 @@ export default function Index({ projects }) {
             }}
             variants={childVariants}
             transition={{ duration: 0.375, ease: "easeInOut" }}
-            key={index}
+            key={project._id}
           >
             <button
               className={`${
@@ -71,6 +72,7 @@ export default function Index({ projects }) {
               {project.media?.length > 0 && (
                 <Slideshow
                   className="margin-bottom-large"
+                  name={project.name}
                   media={project.media}
                 />
               )}

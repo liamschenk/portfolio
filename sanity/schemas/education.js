@@ -3,7 +3,7 @@ const education = {
   title: "Ausbildung",
   type: "document",
   fields: [
-    { name: "area", title: "Area", type: "string" },
+    { name: "degree", title: "Degree", type: "string" },
     {
       name: "preposition",
       title: "Preposition",

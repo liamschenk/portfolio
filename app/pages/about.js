@@ -1,30 +1,30 @@
 import { motion } from "framer-motion";
+
 import { parentVariants, childVariants } from "../utilities/variants";
 
 import styles from "../styles/about.module.css";
 
+function formatDate(startDate, endDate, ongoing = false) {
+  if (!startDate) return "?";
+
+  const format = (dateStr) => {
+    const date = new Date(dateStr);
+    if (!isFinite(date)) return "?";
+
+    const month =
+      date.toLocaleString("de-DE", { month: "short" }).replace(/\.$/, "") + ".";
+    const year = date.getFullYear();
+
+    return `${month} ${year}`;
+  };
+
+  const formattedStart = format(startDate);
+  const formattedEnd = ongoing ? "Jetzt" : endDate ? format(endDate) : "?";
+
+  return `${formattedStart} – ${formattedEnd}`;
+}
+
 export default function About({ basics, profiles, work, education }) {
-  function formatDate(startDate, endDate, ongoing = false) {
-    if (!startDate) return "?";
-
-    const format = (dateStr) => {
-      const date = new Date(dateStr);
-      if (!isFinite(date)) return "?";
-
-      const month =
-        date.toLocaleString("de-DE", { month: "short" }).replace(/\.$/, "") +
-        ".";
-      const year = date.getFullYear();
-
-      return `${month} ${year}`;
-    };
-
-    const formattedStart = format(startDate);
-    const formattedEnd = ongoing ? "Jetzt" : endDate ? format(endDate) : "?";
-
-    return `${formattedStart} – ${formattedEnd}`;
-  }
-
   const statusText = {
     available: "Verfügbar für Anfragen",
     partial: "Teilweise verfügbar",
@@ -49,8 +49,8 @@ export default function About({ basics, profiles, work, education }) {
           variants={childVariants}
         >
           <h2 className="margin-bottom-small">Berufserfahrung</h2>
-          {work.map((item, index) => (
-            <div className={styles["grid-large"]} key={index}>
+          {work.map((item) => (
+            <div className={styles["grid-large"]} key={item._id}>
               <p className="color-tertiary margin-bottom-extra-small">
                 {formatDate(item.startDate, item.endDate, item.ongoing)}
               </p>
@@ -66,13 +66,13 @@ export default function About({ basics, profiles, work, education }) {
           variants={childVariants}
         >
           <h2 className="margin-bottom-small">Ausbildung</h2>
-          {education.map((item, index) => (
-            <div className={styles["grid-large"]} key={index}>
+          {education.map((item) => (
+            <div className={styles["grid-large"]} key={item._id}>
               <p className="color-tertiary margin-bottom-extra-small">
                 {formatDate(item.startDate, item.endDate, item.ongoing)}
               </p>
               <p className="color-secondary margin-bottom-extra-small">
-                {`${item.area} ${item.preposition || "am"} ${item.institution}`}
+                {`${item.degree} ${item.preposition || "am"} ${item.institution}`}
               </p>
             </div>
           ))}
@@ -83,19 +83,19 @@ export default function About({ basics, profiles, work, education }) {
           variants={childVariants}
         >
           <h2 className="margin-bottom-small">Kontakt</h2>
-          {profiles.map((profile, index) => (
-            <div className={styles["grid-medium"]} key={index}>
+          {profiles.map((item) => (
+            <div className={styles["grid-medium"]} key={item._id}>
               <p className="color-tertiary margin-bottom-extra-small">
-                {profile.network}
+                {item.network}
               </p>
               <p className="color-secondary margin-bottom-extra-small">
                 <a
                   className="underline no-underline-hover"
-                  href={profile.url}
+                  href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {profile.username}
+                  {item.username}
                 </a>
                 <span>
                   {" "}

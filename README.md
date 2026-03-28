@@ -1,6 +1,6 @@
 ## Liam Schenk — Portfolio
 
-This is the frontend repository for my personal portfolio, available at [liamschenk.ch](https://www.liamschenk.ch). All content is dynamically sourced from **Sanity**, enabling structured and easily maintainable data management.
+This is the repository for my personal portfolio, available at [liamschenk.ch](https://www.liamschenk.ch). All content is dynamically sourced from **Sanity**, enabling structured and easily maintainable data management.
 
 ### Features
 
