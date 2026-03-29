@@ -1,8 +1,4 @@
 /* About */
-.summary {
-  width: 37.5%;
-}
-
 .grid-large {
   display: grid;
   grid-template-columns: minmax(20ch, auto) 1fr;
@@ -15,38 +11,44 @@
   gap: var(--spacing-l);
 }
 
-.svg {
-  height: var(--font-size);
-  color: var(--secondary);
-  vertical-align: middle;
+/* Summary */
+.summary {
+  width: 37.5%;
 }
 
+.svg {
+  height: var(--font-size);
+  vertical-align: middle;
+  color: var(--secondary);
+}
+
+/* Status */
 .status{
   display: flex;
-  align-items: center;
   gap: var(--spacing-s);
+  align-items: center;
 }
 
 .status-circle {
   position: relative;
   width: 8px;
   height: 8px;
-  border-radius: 100%;
   background: currentcolor;
+  border-radius: 100%;
 }
 
 .status-circle::after {
-  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   z-index: -1;
   width: 8px;
   height: 8px;
-  border-radius: 50%;
+  content: "";
   background: currentcolor;
-  transform: translate(-50%, -50%);
+  border-radius: 50%;
   opacity: 0.75;
+  transform: translate(-50%, -50%);
   animation: pulse 2.5s infinite ease-in-out;
 }
 
@@ -55,6 +57,7 @@
   animation: fade 2.5s infinite ease-in-out;
 }
 
+/* Availability */
 .available{
   color: var(--septenary);
 }
@@ -70,13 +73,13 @@
 /* Keyframes */
 @keyframes pulse {
   0% {
-    transform: translate(-50%, -50%) scale(1);
     opacity: 0.75;
+    transform: translate(-50%, -50%) scale(1);
   }
 
   100% {
-    transform: translate(-50%, -50%) scale(2.25);
     opacity: 0;
+    transform: translate(-50%, -50%) scale(2.25);
   }
 }
 

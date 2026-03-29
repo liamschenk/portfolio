@@ -16,30 +16,27 @@ export default function Header({ setView, activeView }) {
         <ul>
           <li className="text-align-left">
             <a
-              className={`color-secondary ${activeView === "index" ? "underline" : "underline-hover no-underline"}`}
+              className={`color-secondary ${activeView === "index" ? "underline" : "no-underline underline-hover"}`}
               role="button"
               onClick={() => handleViewChange("index")}
-              tabIndex={0}
             >
               Index
             </a>
           </li>
           <li className="text-align-center">
             <a
-              className="color-secondary underline-hover no-underline"
+              className="color-secondary no-underline underline-hover"
               role="button"
               onClick={() => handleViewChange("index")}
-              tabIndex={0}
             >
               Liam Schenk
             </a>
           </li>
           <li className="text-align-right">
             <a
-              className={`color-secondary ${activeView === "about" ? "underline" : "underline-hover no-underline"}`}
+              className={`color-secondary ${activeView === "about" ? "underline" : "no-underline underline-hover"}`}
               role="button"
               onClick={() => handleViewChange("about")}
-              tabIndex={0}
             >
               Über
             </a>

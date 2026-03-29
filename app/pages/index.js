@@ -15,6 +15,7 @@ const getOpacity = (index, openIndex, hoveredIndex) => {
 };
 
 export default function Index({ projects }) {
+  const [animationDone, setAnimationDone] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -24,7 +25,12 @@ export default function Index({ projects }) {
 
   return (
     <main>
-      <motion.div animate="visible" initial="hidden" variants={parentVariants}>
+      <motion.div
+        animate="visible"
+        initial="hidden"
+        variants={parentVariants}
+        onAnimationComplete={() => setAnimationDone(true)}
+      >
         {projects.map((project, index) => (
           <motion.section
             animate={{
@@ -37,11 +43,11 @@ export default function Index({ projects }) {
             <button
               className={`${
                 styles.button
-              } ${index === 0 ? "border-none" : "border-top"} padding-top-medium padding-bottom-medium border-top`}
+              } padding-top-medium padding-bottom-medium ${index !== 0 && "border-top"}`}
               type="button"
               onClick={() => toggleAccordion(index)}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              onMouseEnter={() => animationDone && setHoveredIndex(index)}
+              onMouseLeave={() => animationDone && setHoveredIndex(null)}
             >
               <p className="color-quaternary text-align-left">{`0${
                 index + 1

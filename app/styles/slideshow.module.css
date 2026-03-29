@@ -1,6 +1,6 @@
-/* stylelint-disable selector-pseudo-class-no-unknown */
-
 /* Slideshow */
+
+/* stylelint-disable selector-pseudo-class-no-unknown */
 .slideshow :global(.embla) {
   overflow: hidden;
   cursor: grab;
@@ -10,6 +10,7 @@
   cursor: grabbing;
 }
 
+/* Track */
 .track {
   display: flex;
   gap: var(--spacing-s);
@@ -20,19 +21,20 @@
   flex: 0 0 auto;
   min-width: 0;
   padding: var(--spacing-m);
-  border-radius: var(--border-radius-l);
-  background-color: var(--quinary);
   user-select: none;
+  background-color: var(--quinary);
+  border-radius: var(--border-radius-l);
 }
 
 .slide:focus {
   outline: none;
 }
 
+/* Media */
 .media {
   height: 448px;
-  border-radius: var(--border-radius-m);
   user-select: none;
+  border-radius: var(--border-radius-m);
 }
 
 /* Breakpoints */

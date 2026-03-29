@@ -1,6 +1,3 @@
-// Generated 2026-03-25T19:12:56.457Z
-// Minified build, append `?min=0` for easier debugging
-
 var ut = [
     "gray",
     "blue",

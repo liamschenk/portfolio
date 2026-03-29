@@ -31,7 +31,7 @@ export default function About({ basics, profiles, work, education }) {
     <main>
       <motion.div animate="visible" initial="hidden" variants={parentVariants}>
         <motion.section
-          className="padding-top-medium padding-bottom-medium margin-bottom-large"
+          className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
           <h2 className="margin-bottom-small">Über</h2>
@@ -41,7 +41,7 @@ export default function About({ basics, profiles, work, education }) {
         </motion.section>
 
         <motion.section
-          className="padding-top-medium padding-bottom-medium margin-bottom-large"
+          className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
           <h2 className="margin-bottom-small">Berufserfahrung</h2>
@@ -58,7 +58,7 @@ export default function About({ basics, profiles, work, education }) {
         </motion.section>
 
         <motion.section
-          className="padding-top-medium padding-bottom-medium margin-bottom-large"
+          className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
           <h2 className="margin-bottom-small">Ausbildung</h2>
@@ -75,7 +75,7 @@ export default function About({ basics, profiles, work, education }) {
         </motion.section>
 
         <motion.section
-          className="padding-top-medium padding-bottom-medium margin-bottom-large"
+          className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
           <h2 className="margin-bottom-small">Kontakt</h2>
@@ -108,7 +108,7 @@ export default function About({ basics, profiles, work, education }) {
         </motion.section>
 
         <motion.section
-          className="padding-top-medium padding-bottom-medium margin-bottom-large"
+          className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
           <h2 className="margin-bottom-small">Aktuell</h2>

@@ -4,16 +4,10 @@
   grid-template-columns: minmax(2ch, auto) 1fr auto;
   gap: var(--spacing-l);
   width: 100%;
-  border-right: 0;
-  border-bottom: 0;
-  border-left: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
   cursor: pointer;
 }
 
+/* Content */
 .content {
   overflow: hidden;
 }

@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /studio
+
+# Host
+Host: https://liamschenk.ch
+
+# Sitemaps
+Sitemap: https://liamschenk.ch/sitemap.xml

@@ -19,7 +19,7 @@ export default function ProjectSlideshow({ name, media, className }) {
           {media.map((item, index) =>
             item.asset?.url ? (
               <div
-                className={`${styles.slide} border-full`}
+                className={`${styles.slide} border-all`}
                 key={item.asset._id}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
