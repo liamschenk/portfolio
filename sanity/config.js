@@ -23,7 +23,7 @@ const icon = () => (
 
 export default defineConfig({
   name: "default",
-  title: "portfolio",
+  title: "Portfolio",
   projectId: "l5e3bb3j",
   dataset: "production",
   basePath: "/studio",
