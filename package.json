@@ -1,12 +1,11 @@
 {
   "name": "portfolio",
-  "version": "5.2.4",
+  "version": "5.2.5",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "postbuild": "next-sitemap",
     "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "lint:css": "stylelint \"**/*.css\" --fix",
     "lint": "npm run lint:js && npm run lint:css"
