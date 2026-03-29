@@ -1,4 +1,4 @@
-# Auto detect text files and perform LF normalization
+# Text files
 * text=auto eol=lf
 
 # JavaScript
