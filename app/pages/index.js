@@ -57,7 +57,7 @@ export default function Index({ projects }) {
               <p className="color-secondary text-align-left">{project.title}</p>
               <p className="color-tertiary text-align-right">
                 {project.date
-                  ? new Date(project.date).getFullYear()
+                  ? new Date(project.date).getUTCFullYear()
                   : "Unbekannt"}
               </p>
             </button>
