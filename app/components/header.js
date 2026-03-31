@@ -1,7 +1,5 @@
 import { useCallback } from "react";
 
-import styles from "../styles/header.module.css";
-
 export default function Header({ setView, activeView }) {
   const handleViewChange = useCallback(
     (view) => {
