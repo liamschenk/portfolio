@@ -3,8 +3,6 @@ import { structureTool } from "sanity/structure";
 import { media } from "sanity-plugin-media";
 import { schemas } from "./schemas";
 
-import { theme } from "./theme";
-
 const icon = () => (
   <div
     style={{
@@ -31,6 +29,5 @@ export default defineConfig({
   schema: {
     types: schemas,
   },
-  theme: theme,
   icon: icon,
 });

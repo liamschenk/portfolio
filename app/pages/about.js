@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 import { parentVariants, childVariants } from "../utilities/variants";
-import { monthNames } from "../utilities/locales";
 
 import styles from "../styles/about.module.css";
 
@@ -11,22 +10,38 @@ function formatDate(startDate, endDate, ongoing = false) {
   const format = (dateStr) => {
     const date = new Date(dateStr);
     if (!isFinite(date)) return "?";
-    return `${monthNames[date.getMonth()]}. ${date.getFullYear()}`;
+
+    const month =
+      date.toLocaleString("de-DE", { month: "short" }).replace(/\.$/, "") + ".";
+    const year = date.getFullYear();
+
+    return `${month} ${year}`;
   };
 
   const formattedStart = format(startDate);
-  const formattedEnd = ongoing ? "Jetzt" : endDate ? format(endDate) : "?";
+  const formattedEnd = ongoing ? "Jetzt" : format(endDate ?? "");
 
   return `${formattedStart} – ${formattedEnd}`;
 }
 
-export default function About({ basics, profiles, work, education }) {
-  const statusText = {
-    available: "Verfügbar für Anfragen",
-    partial: "Teilweise verfügbar",
-    unavailable: "Nicht verfügbar",
-  };
+function linkIcon() {
+  return (
+    <svg className={styles.icon} viewBox="-10 0 1598 2048">
+      <path
+        fill="currentColor"
+        d="M1338 1442h-166v-298q0 -54 3 -116.5t8 -126.5t11 -123.5t13 -107.5l11 42q-23 35 -47.5 70t-50.5 67t-56 62l-725 726l-118 -118l726 -725q30 -30 62.5 -56t67 -50.5t69.5 -47.5l42 11q-64 9 -147 17t-169 13t-158 5h-298v-166h922v922z"
+      />
+    </svg>
+  );
+}
 
+const status = {
+  available: "Verfügbar für Anfragen",
+  partial: "Teilweise verfügbar",
+  unavailable: "Nicht verfügbar",
+};
+
+export default function About({ basics, work, education, profiles }) {
   return (
     <main>
       <motion.div animate="visible" initial="hidden" variants={parentVariants}>
@@ -35,8 +50,8 @@ export default function About({ basics, profiles, work, education }) {
           variants={childVariants}
         >
           <h2 className="margin-bottom-small">Über</h2>
-          <p className={`${styles.summary} color-quaternary`}>
-            {basics.summary}
+          <p className={`${styles.description} color-quaternary`}>
+            {basics.description}
           </p>
         </motion.section>
 
@@ -87,21 +102,13 @@ export default function About({ basics, profiles, work, education }) {
               <p className="color-secondary margin-bottom-extra-small">
                 <a
                   className="underline no-underline-hover"
-                  href={item.url}
+                  href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {item.username}
                 </a>
-                <span>
-                  {" "}
-                  <svg className={styles.svg} viewBox="-10 0 1598 2048">
-                    <path
-                      fill="currentColor"
-                      d="M1338 1442h-166v-298q0 -54 3 -116.5t8 -126.5t11 -123.5t13 -107.5l11 42q-23 35 -47.5 70t-50.5 67t-56 62l-725 726l-118 -118l726 -725q30 -30 62.5 -56t67 -50.5t69.5 -47.5l42 11q-64 9 -147 17t-169 13t-158 5h-298v-166h922v922z"
-                    />
-                  </svg>
-                </span>
+                <span>{linkIcon()}</span>
               </p>
             </div>
           ))}
@@ -115,7 +122,7 @@ export default function About({ basics, profiles, work, education }) {
           <div className={`${styles.status} ${styles[basics.status]}`}>
             <span className={styles["status-circle"]}></span>
             <p className={`${styles["status-text"]} color-quaternary`}>
-              {statusText[basics.status]}
+              {status[basics.status]}
             </p>
           </div>
         </motion.section>

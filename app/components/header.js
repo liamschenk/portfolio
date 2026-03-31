@@ -11,7 +11,7 @@ export default function Header({ setView, activeView }) {
   );
 
   return (
-    <header className={styles.header}>
+    <header className="margin-bottom-extra-large">
       <nav>
         <ul>
           <li className="text-align-left">

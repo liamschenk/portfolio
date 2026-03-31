@@ -11,8 +11,17 @@ export const metadata = {
   title: "Liam Schenk – Portfolio",
   description:
     "Portfolio von Liam Schenk, gelerntem Mediamatiker mit Abschluss bei Swisscom.",
-  keywords:
-    "Portfolio, Mediamatiker, Webdesign, Grafikdesign, Multimedia, Swisscom, Schweiz, Liam Schenk, digitale Medien, Ausbildung Mediamatiker",
+  keywords: [
+    "Portfolio",
+    "Liam Schenk",
+    "Mediamatiker",
+    "Grafikdesign",
+    "Webdesign",
+    "Multimedia",
+    "Schweizerischer Turnverband",
+    "Swisscom",
+    "Schweiz",
+  ],
 };
 
 export default function RootLayout({ children }) {

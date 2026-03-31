@@ -74,6 +74,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+header nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+}
+
 /* Elements */
 button {
   font-family: inherit;
@@ -154,6 +160,14 @@ a {
 }
 
 /* Margin */
+.margin-top-extra-large {
+  margin-top: var(--spacing-xl);
+}
+
+.margin-bottom-extra-large {
+  margin-bottom: var(--spacing-xl);
+}
+
 .margin-top-large {
   margin-top: var(--spacing-l);
 }

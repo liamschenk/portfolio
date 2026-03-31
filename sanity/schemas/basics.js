@@ -4,7 +4,7 @@ const basics = {
   type: "document",
   fields: [
     { name: "name", title: "Name", type: "string" },
-    { name: "summary", title: "Summary", type: "text" },
+    { name: "description", title: "Description", type: "text" },
     {
       name: "status",
       title: "Status",
@@ -25,6 +25,7 @@ const basics = {
         ],
         layout: "dropdown",
       },
+      initialValue: "available",
     },
   ],
 };

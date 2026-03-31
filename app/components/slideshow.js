@@ -2,7 +2,7 @@ import useEmblaCarousel from "embla-carousel-react";
 
 import styles from "../styles/slideshow.module.css";
 
-export default function ProjectSlideshow({ name, media, className }) {
+export default function ProjectSlideshow({ title, media, className }) {
   const [emblaRef] = useEmblaCarousel({
     loop: false,
     align: "start",
@@ -26,7 +26,7 @@ export default function ProjectSlideshow({ name, media, className }) {
                 <img
                   className={styles.media}
                   src={item.asset.url}
-                  alt={`${name} ${index + 1}`}
+                  alt={`${title} ${index + 1}`}
                 />
               </div>
             ) : null,

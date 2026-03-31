@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 import Slideshow from "../components/slideshow";
 
@@ -37,7 +37,9 @@ export default function Index({ projects }) {
               opacity: getOpacity(index, openIndex, hoveredIndex),
             }}
             variants={childVariants}
-            transition={{ duration: 0.375, ease: "easeInOut" }}
+            transition={{
+              opacity: { duration: 0.375, ease: "easeInOut" },
+            }}
             key={project._id}
           >
             <button
@@ -45,19 +47,17 @@ export default function Index({ projects }) {
                 styles.button
               } padding-top-medium padding-bottom-medium ${index !== 0 && "border-top"}`}
               type="button"
-              onClick={() => toggleAccordion(index)}
+              onClick={() => animationDone && toggleAccordion(index)}
               onMouseEnter={() => animationDone && setHoveredIndex(index)}
               onMouseLeave={() => animationDone && setHoveredIndex(null)}
             >
-              <p className="color-quaternary text-align-left">{`0${
-                index + 1
-              }`}</p>
-              <p className="color-secondary text-align-left">{project.name}</p>
+              <p className="color-quaternary text-align-left">
+                {String(index + 1).padStart(2, "0")}
+              </p>
+              <p className="color-secondary text-align-left">{project.title}</p>
               <p className="color-tertiary text-align-right">
                 {project.date
-                  ? new Intl.DateTimeFormat("de-DE", {
-                      year: "numeric",
-                    }).format(new Date(project.date))
+                  ? new Date(project.date).getFullYear()
                   : "Unbekannt"}
               </p>
             </button>
@@ -75,10 +75,10 @@ export default function Index({ projects }) {
                 <p className="color-quaternary">{project.description}</p>
               </div>
 
-              {project.media?.length > 0 && (
+              {project.media.length > 0 && (
                 <Slideshow
                   className="margin-bottom-large"
-                  name={project.name}
+                  title={project.title}
                   media={project.media}
                 />
               )}

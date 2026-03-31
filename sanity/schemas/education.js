@@ -18,7 +18,6 @@ const education = {
       initialValue: "am",
     },
     { name: "institution", title: "Institution", type: "string" },
-    { name: "url", title: "URL", type: "url" },
     { name: "startDate", title: "Start date", type: "datetime" },
     { name: "endDate", title: "End date", type: "datetime" },
     { name: "ongoing", title: "Laufend", type: "boolean", initialValue: false },

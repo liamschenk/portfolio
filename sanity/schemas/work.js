@@ -18,7 +18,6 @@ const work = {
       initialValue: "bei",
     },
     { name: "name", title: "Firm", type: "string" },
-    { name: "url", title: "URL", type: "url" },
     { name: "startDate", title: "Start date", type: "datetime" },
     { name: "endDate", title: "End date", type: "datetime" },
     { name: "ongoing", title: "Laufend", type: "boolean", initialValue: false },

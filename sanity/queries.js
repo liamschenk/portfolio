@@ -5,7 +5,7 @@ export const query = `{
   "profiles": *[_type == "profile"] | order(_createdAt desc),
   "projects": *[_type == "projects"] | order(_createdAt desc) {
     _id,
-    name,
+    title,
     description,
     date,
     media[] {

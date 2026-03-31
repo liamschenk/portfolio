@@ -11,12 +11,12 @@
   gap: var(--spacing-l);
 }
 
-/* Summary */
-.summary {
+/* Description */
+.description {
   width: 37.5%;
 }
 
-.svg {
+.icon {
   height: var(--font-size);
   vertical-align: middle;
   color: var(--secondary);
@@ -90,13 +90,13 @@
 
 /* Breakpoints */
 @media (width <= 720px) {
-  .summary {
+  .description {
     width: 87.5%;
   }
 }
 
 @media (width <= 480px) {
-  .summary {
+  .description {
     width: 100%;
   }
 

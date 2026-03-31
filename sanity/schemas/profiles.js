@@ -5,7 +5,7 @@ const profile = {
   fields: [
     { name: "network", title: "Network", type: "string" },
     { name: "username", title: "Username", type: "string" },
-    { name: "url", title: "URL", type: "string" },
+    { name: "link", title: "Link", type: "string" },
   ],
 };
 
