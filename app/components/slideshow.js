@@ -16,7 +16,7 @@ export default function ProjectSlideshow({ title, media, className }) {
 
   return (
     <div className={`${styles.slideshow} ${className ?? ""}`}>
-      <div className="embla" ref={emblaRef}>
+      <div className="embla" ref={emblaRef} aria-label={`${title} Slideshow`}>
         <div className={styles.track}>
           {media.map((item, index) =>
             item.asset?.url ? (

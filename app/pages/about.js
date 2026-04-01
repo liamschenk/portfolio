@@ -33,7 +33,7 @@ function linkIcon() {
   );
 }
 
-const status = {
+const statusText = {
   available: "Verfügbar für Anfragen",
   partial: "Teilweise verfügbar",
   unavailable: "Nicht verfügbar",
@@ -92,24 +92,33 @@ export default function About({ basics, work, education, profiles }) {
           variants={childVariants}
         >
           <h2 className="margin-bottom-small">Kontakt</h2>
-          {profiles.map((item) => (
-            <div className={styles["grid-medium"]} key={item._id}>
-              <p className="color-tertiary margin-bottom-extra-small">
-                {item.network}
-              </p>
-              <p className="color-secondary margin-bottom-extra-small">
-                <a
-                  className="underline no-underline-hover"
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {item.username}
-                </a>
-                <span>{linkIcon()}</span>
-              </p>
-            </div>
-          ))}
+          {profiles.map((item) => {
+            const isExternal = !item.link.startsWith("mailto:");
+
+            return (
+              <div className={styles["grid-medium"]} key={item._id}>
+                <p className="color-tertiary margin-bottom-extra-small">
+                  {item.network}
+                </p>
+                <p className="color-secondary margin-bottom-extra-small">
+                  <a
+                    className="underline no-underline-hover"
+                    href={item.link}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
+                    aria-label={
+                      isExternal
+                        ? `${item.username} auf ${item.network} (Öffnet in neuem Tab)`
+                        : `${item.username} per E-Mail kontaktieren`
+                    }
+                  >
+                    {item.username}
+                  </a>
+                  {isExternal && <span aria-hidden="true">{linkIcon()}</span>}
+                </p>
+              </div>
+            );
+          })}
         </motion.section>
 
         <motion.section
@@ -118,9 +127,9 @@ export default function About({ basics, work, education, profiles }) {
         >
           <h2 className="margin-bottom-small">Aktuell</h2>
           <div className={`${styles.status} ${styles[basics.status]}`}>
-            <span className={styles["status-circle"]}></span>
+            <span className={styles["status-circle"]} aria-hidden="true"></span>
             <p className={`${styles["status-text"]} color-quaternary`}>
-              {status[basics.status]}
+              {statusText[basics.status]}
             </p>
           </div>
         </motion.section>

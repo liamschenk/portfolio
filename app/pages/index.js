@@ -52,6 +52,8 @@ export default function Index({ projects }) {
               onClick={() => animationDone && toggleAccordion(index)}
               onMouseEnter={() => animationDone && setHoveredIndex(index)}
               onMouseLeave={() => animationDone && setHoveredIndex(null)}
+              aria-expanded={openIndex === index}
+              aria-controls={`project-content-${project._id}`}
             >
               <p className="color-quaternary text-align-left">
                 {String(index + 1).padStart(2, "0")}
@@ -72,6 +74,8 @@ export default function Index({ projects }) {
               }}
               initial={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.25, ease: "easeInOut" }}
+              role="region"
+              aria-labelledby={`project-button-${project._id}`}
             >
               <div className={`${styles.description} margin-bottom-large`}>
                 <p className="color-quaternary">{project.description}</p>
