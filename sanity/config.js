@@ -22,8 +22,8 @@ const icon = () => (
 export default defineConfig({
   name: "default",
   title: "Portfolio",
-  projectId: process.env.SANITY_PROJECT_ID,
-  dataset: process.env.SANITY_DATASET,
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
   basePath: "/studio",
   plugins: [structureTool(), media()],
   schema: {
