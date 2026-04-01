@@ -1,3 +1,5 @@
+"use client";
+
 import useEmblaCarousel from "embla-carousel-react";
 
 import styles from "../styles/slideshow.module.css";
@@ -27,6 +29,7 @@ export default function ProjectSlideshow({ title, media, className }) {
                   className={styles.media}
                   src={item.asset.url}
                   alt={`${title} ${index + 1}`}
+                  draggable="false"
                 />
               </div>
             ) : null,

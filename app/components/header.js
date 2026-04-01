@@ -1,3 +1,5 @@
+"use client";
+
 import { useCallback } from "react";
 
 export default function Header({ setView, activeView }) {
