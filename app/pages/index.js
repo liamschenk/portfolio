@@ -34,7 +34,7 @@ export default function Index({ projects }) {
         onAnimationComplete={() => setAnimationDone(true)}
       >
         {projects.map((project, index) => (
-          <motion.section
+          <motion.div
             animate={{
               opacity: getOpacity(index, openIndex, hoveredIndex),
             }}
@@ -89,7 +89,7 @@ export default function Index({ projects }) {
                 />
               )}
             </motion.div>
-          </motion.section>
+          </motion.div>
         ))}
       </motion.div>
     </main>

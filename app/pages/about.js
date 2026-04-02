@@ -43,7 +43,7 @@ export default function About({ basics, work, education, profiles }) {
   return (
     <main>
       <motion.div animate="visible" initial="hidden" variants={parentVariants}>
-        <motion.section
+        <motion.div
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
@@ -51,9 +51,9 @@ export default function About({ basics, work, education, profiles }) {
           <p className={`${styles.description} color-quaternary`}>
             {basics.description}
           </p>
-        </motion.section>
+        </motion.div>
 
-        <motion.section
+        <motion.div
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
@@ -68,9 +68,9 @@ export default function About({ basics, work, education, profiles }) {
               </p>
             </div>
           ))}
-        </motion.section>
+        </motion.div>
 
-        <motion.section
+        <motion.div
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
@@ -85,9 +85,9 @@ export default function About({ basics, work, education, profiles }) {
               </p>
             </div>
           ))}
-        </motion.section>
+        </motion.div>
 
-        <motion.section
+        <motion.div
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
@@ -119,9 +119,9 @@ export default function About({ basics, work, education, profiles }) {
               </div>
             );
           })}
-        </motion.section>
+        </motion.div>
 
-        <motion.section
+        <motion.div
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
@@ -132,7 +132,7 @@ export default function About({ basics, work, education, profiles }) {
               {statusText[basics.status]}
             </p>
           </div>
-        </motion.section>
+        </motion.div>
       </motion.div>
     </main>
   );

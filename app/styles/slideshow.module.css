@@ -26,6 +26,8 @@
   border-radius: var(--border-radius-l);
 }
 
+
+/* Slide */
 .slide:focus {
   outline: none;
 }

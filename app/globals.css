@@ -1,13 +1,13 @@
 /* Root */
 :root {
-  --font-size: 14px;
-  --line-height: 20px;
-  --font-weight: 400;
   --spacing-xl: 3rem;
   --spacing-l: 1.5rem;
   --spacing-m: 1rem;
   --spacing-s: 0.5rem;
   --spacing-xs: 0.25rem;
+  --font-size: 14px;
+  --font-weight: 400;
+  --line-height: 20px;
   --border-radius-l: 8px;
   --border-radius-m: 4px;
   --border-radius-s: 2px;
@@ -74,13 +74,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Elements */
 header nav ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
 }
 
-/* Elements */
 button {
   font-family: inherit;
   font-size: inherit;

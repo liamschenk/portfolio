@@ -16,6 +16,7 @@
   width: 37.5%;
 }
 
+/* Icon */
 .icon {
   height: var(--font-size);
   margin-left: var(--spacing-xs);
