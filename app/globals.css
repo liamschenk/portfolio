@@ -85,6 +85,7 @@ button {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
+  cursor: pointer;
   background-color: transparent;
   border: none;
 }

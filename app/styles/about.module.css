@@ -1,13 +1,13 @@
 /* About */
 .grid-large {
   display: grid;
-  grid-template-columns: minmax(20ch, auto) 1fr;
+  grid-template-columns: minmax(21ch, auto) 1fr;
   gap: var(--spacing-l);
 }
 
 .grid-medium {
   display: grid;
-  grid-template-columns: minmax(20ch, auto) 1fr;
+  grid-template-columns: minmax(21ch, auto) 1fr;
   gap: var(--spacing-l);
 }
 
@@ -109,7 +109,7 @@
   }
 
   .grid-medium {
-    grid-template-columns: minmax(8ch, auto) 1fr;
+    grid-template-columns: minmax(9ch, auto) 1fr;
   }
 
   .grid-large p {

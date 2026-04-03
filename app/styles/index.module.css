@@ -1,10 +1,10 @@
 /* Index */
-.button {
+.grid {
   display: grid;
   grid-template-columns: minmax(2ch, auto) 1fr auto;
   gap: var(--spacing-l);
   width: 100%;
-  cursor: pointer;
+
 }
 
 /* Content */

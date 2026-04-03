@@ -54,7 +54,7 @@ export default function Index({ projects }) {
           >
             <button
               className={`${
-                styles.button
+                styles.grid
               } padding-top-medium padding-bottom-medium ${index !== 0 && "border-top"}`}
               type="button"
               onClick={() => handleInteraction(() => toggleAccordion(index))}
