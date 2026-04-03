@@ -1,5 +1,5 @@
 /* Error */
-.flex-container {
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,13 +14,13 @@
 
 /* Breakpoints */
 @media (width <= 720px) {
-  .flex-container {
+  .container {
     height: calc(100dvh - var(--spacing-m) * 2);
   }
 }
 
 @media (width <= 480px) {
-  .flex-container {
+  .container {
     height: calc(100dvh - var(--spacing-s) * 2);
   }
 }

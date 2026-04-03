@@ -15,9 +15,11 @@ export default function GlobalError({ error, reset }) {
     <html lang="de">
       <body className={inter.className}>
         <main>
-          <div className={styles["flex-container"]}>
+          <div className={styles.container}>
             <div>
-              <h2>Da hat etwas nicht geklappt.</h2>
+              <p className="color-quaternary">
+                Da hat wohl etwas nicht geklappt.
+              </p>
             </div>
           </div>
         </main>
