@@ -108,11 +108,11 @@
     gap: 0;
   }
 
-  .grid-medium {
-    grid-template-columns: minmax(9ch, auto) 1fr;
-  }
-
   .grid-large p {
     flex: 100%;
+  }
+
+  .grid-medium {
+    grid-template-columns: minmax(9ch, auto) 1fr;
   }
 }

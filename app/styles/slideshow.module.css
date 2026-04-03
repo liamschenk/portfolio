@@ -17,6 +17,7 @@
   touch-action: pan-y;
 }
 
+/* Slide */
 .slide {
   flex: 0 0 auto;
   min-width: 0;
@@ -26,8 +27,6 @@
   border-radius: var(--border-radius-l);
 }
 
-
-/* Slide */
 .slide:focus {
   outline: none;
 }

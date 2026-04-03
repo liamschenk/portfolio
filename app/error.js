@@ -7,7 +7,7 @@ export default function Error({ error, reset }) {
     <main>
       <div className={styles.container}>
         <div className={styles.grid}>
-          <h2 className="margin-bottom-small">500</h2>
+          <h2 className="color-secondary margin-bottom-small">500</h2>
           <p className="color-quaternary">Interner Serverfehler.</p>
         </div>
       </div>

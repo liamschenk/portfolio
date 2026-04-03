@@ -26,6 +26,7 @@ export default function Header({ setView, activeView }) {
               </p>
             </button>
           </li>
+
           <li className="text-align-center">
             <button onClick={() => handleViewChange("index")}>
               <p className="color-secondary no-underline underline-hover">
@@ -33,6 +34,7 @@ export default function Header({ setView, activeView }) {
               </p>
             </button>
           </li>
+
           <li className="text-align-right">
             <button
               onClick={() => handleViewChange("about")}

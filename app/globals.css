@@ -68,7 +68,6 @@ body {
   max-width: 2560px;
   padding: var(--spacing-l);
   margin: 0 auto;
-  color: var(--secondary);
   background: var(--primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

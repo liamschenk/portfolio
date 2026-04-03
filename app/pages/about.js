@@ -22,21 +22,6 @@ function formatDate(startDate, endDate, ongoing = false) {
   return `${formattedStart} – ${formattedEnd}`;
 }
 
-const LinkIcon = () => (
-  <svg className={styles.icon} viewBox="-10 0 1598 2048">
-    <path
-      fill="currentColor"
-      d="M1338 1442h-166v-298q0 -54 3 -116.5t8 -126.5t11 -123.5t13 -107.5l11 42q-23 35 -47.5 70t-50.5 67t-56 62l-725 726l-118 -118l726 -725q30 -30 62.5 -56t67 -50.5t69.5 -47.5l42 11q-64 9 -147 17t-169 13t-158 5h-298v-166h922v922z"
-    />
-  </svg>
-);
-
-const statusText = {
-  available: "Verfügbar für Anfragen",
-  partial: "Teilweise verfügbar",
-  unavailable: "Nicht verfügbar",
-};
-
 export default function About({ basics, work, education, profiles }) {
   return (
     <main>
@@ -45,7 +30,7 @@ export default function About({ basics, work, education, profiles }) {
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
-          <h2 className="margin-bottom-small">Über</h2>
+          <h2 className="color-secondary margin-bottom-small">Über</h2>
           <p className={`${styles.description} color-quaternary`}>
             {basics.description}
           </p>
@@ -55,7 +40,9 @@ export default function About({ basics, work, education, profiles }) {
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
-          <h2 className="margin-bottom-small">Berufserfahrung</h2>
+          <h2 className="color-secondary margin-bottom-small">
+            Berufserfahrung
+          </h2>
           {work.map((item) => (
             <div className={styles["grid-large"]} key={item._id}>
               <p className="color-tertiary margin-bottom-extra-small">
@@ -72,7 +59,7 @@ export default function About({ basics, work, education, profiles }) {
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
-          <h2 className="margin-bottom-small">Ausbildung</h2>
+          <h2 className="color-secondary margin-bottom-small">Ausbildung</h2>
           {education.map((item) => (
             <div className={styles["grid-large"]} key={item._id}>
               <p className="color-tertiary margin-bottom-extra-small">
@@ -89,7 +76,7 @@ export default function About({ basics, work, education, profiles }) {
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
-          <h2 className="margin-bottom-small">Kontakt</h2>
+          <h2 className="color-secondary margin-bottom-small">Kontakt</h2>
           {profiles.map((item) => {
             const isExternal = !item.link.startsWith("mailto:");
 
@@ -112,7 +99,18 @@ export default function About({ basics, work, education, profiles }) {
                   >
                     {item.username}
                   </a>
-                  {isExternal && <LinkIcon aria-hidden="true" />}
+                  {isExternal && (
+                    <svg
+                      className={styles.icon}
+                      viewBox="-10 0 1598 2048"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M1338 1442h-166v-298q0 -54 3 -116.5t8 -126.5t11 -123.5t13 -107.5l11 42q-23 35 -47.5 70t-50.5 67t-56 62l-725 726l-118 -118l726 -725q30 -30 62.5 -56t67 -50.5t69.5 -47.5l42 11q-64 9 -147 17t-169 13t-158 5h-298v-166h922v922z"
+                      />
+                    </svg>
+                  )}
                 </p>
               </div>
             );
@@ -123,11 +121,11 @@ export default function About({ basics, work, education, profiles }) {
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
-          <h2 className="margin-bottom-small">Aktuell</h2>
+          <h2 className="color-secondary margin-bottom-small">Aktuell</h2>
           <div className={`${styles.status} ${styles[basics.status]}`}>
             <span className={styles["status-circle"]} aria-hidden="true"></span>
             <p className={`${styles["status-text"]} color-quaternary`}>
-              {statusText[basics.status]}
+              {basics.statusText}
             </p>
           </div>
         </motion.div>

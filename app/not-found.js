@@ -5,7 +5,7 @@ export default function NotFound({ error, reset }) {
     <main>
       <div className={styles.container}>
         <div className={styles.grid}>
-          <h2 className="margin-bottom-small">404</h2>
+          <h2 className="color-secondary margin-bottom-small">404</h2>
           <p className="color-quaternary">Seite nicht gefunden.</p>
         </div>
       </div>

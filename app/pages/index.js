@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 import Slideshow from "../components/slideshow";
@@ -21,17 +21,9 @@ export default function Index({ projects }) {
   const [openIndex, setOpenIndex] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const handleInteraction = useCallback(
-    (cb) => {
-      if (!animationDone) return;
-      cb();
-    },
-    [animationDone],
-  );
-
-  const toggleAccordion = useCallback((index) => {
+  const toggleAccordion = (index) => {
     setOpenIndex((prev) => (prev === index ? null : index));
-  }, []);
+  };
 
   return (
     <main>
@@ -57,13 +49,9 @@ export default function Index({ projects }) {
                 styles.grid
               } padding-top-medium padding-bottom-medium ${index !== 0 && "border-top"}`}
               type="button"
-              onClick={() => handleInteraction(() => toggleAccordion(index))}
-              onMouseEnter={() =>
-                handleInteraction(() => setHoveredIndex(index))
-              }
-              onMouseLeave={() =>
-                handleInteraction(() => setHoveredIndex(null))
-              }
+              onClick={() => animationDone && toggleAccordion(index)}
+              onMouseEnter={() => animationDone && setHoveredIndex(index)}
+              onMouseLeave={() => animationDone && setHoveredIndex(null)}
               aria-expanded={openIndex === index}
               aria-controls={`project-content-${project._id}`}
             >
