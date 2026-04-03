@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, use, Suspense } from "react";
+import { useState, Suspense, use } from "react";
 
 import Header from "../components/header";
 import Index from "./index";

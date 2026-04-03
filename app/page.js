@@ -1,4 +1,5 @@
 import { client } from "../sanity/client";
+
 import { projectsQuery, aboutQuery } from "../sanity/queries";
 
 import View from "./pages/view";

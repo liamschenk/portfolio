@@ -4,15 +4,13 @@ import useEmblaCarousel from "embla-carousel-react";
 
 import styles from "../styles/slideshow.module.css";
 
-export default function ProjectSlideshow({ title, media, className }) {
+export default function Slideshow({ title, media, className }) {
   const [emblaRef] = useEmblaCarousel({
     loop: false,
     align: "start",
     skipSnaps: false,
     containScroll: false,
   });
-
-  if (!media?.length) return null;
 
   return (
     <div className={`${styles.slideshow} ${className ?? ""}`}>
