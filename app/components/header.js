@@ -1,22 +1,13 @@
 "use client";
 
-import { useCallback } from "react";
-
 export default function Header({ setView, activeView }) {
-  const handleViewChange = useCallback(
-    (view) => {
-      if (activeView !== view) setView(view);
-    },
-    [activeView, setView],
-  );
-
   return (
     <header className="margin-bottom-extra-large">
       <nav>
         <ul>
           <li className="text-align-left">
             <button
-              onClick={() => handleViewChange("index")}
+              onClick={() => setView("index")}
               aria-current={activeView === "index" ? "page" : undefined}
             >
               <p
@@ -28,7 +19,7 @@ export default function Header({ setView, activeView }) {
           </li>
 
           <li className="text-align-center">
-            <button onClick={() => handleViewChange("index")}>
+            <button onClick={() => setView("index")}>
               <p className="color-secondary no-underline underline-hover">
                 Liam Schenk
               </p>
@@ -37,7 +28,7 @@ export default function Header({ setView, activeView }) {
 
           <li className="text-align-right">
             <button
-              onClick={() => handleViewChange("about")}
+              onClick={() => setView("about")}
               aria-current={activeView === "about" ? "page" : undefined}
             >
               <p
