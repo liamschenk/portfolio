@@ -20,11 +20,9 @@ export default function Index({ projects }) {
   const [animationDone, setAnimationDone] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
-  const toggleAccordion = (index, event) => {
-    if (event.nativeEvent.pointerType === "touch") {
-      setHoveredIndex(null);
-    }
+  const toggleAccordion = (index) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
@@ -55,8 +53,15 @@ export default function Index({ projects }) {
               onClick={(event) =>
                 animationDone && toggleAccordion(index, event)
               }
-              onMouseEnter={() => animationDone && setHoveredIndex(index)}
-              onMouseLeave={() => animationDone && setHoveredIndex(null)}
+              onMouseEnter={() => {
+                if (isTouchDevice) return;
+                animationDone && setHoveredIndex(index);
+              }}
+              onMouseLeave={() => {
+                if (isTouchDevice) return;
+                animationDone && setHoveredIndex(null);
+              }}
+              onTouchStart={() => setIsTouchDevice(true)}
               aria-expanded={openIndex === index}
               aria-controls={`project-content-${project._id}`}
             >
