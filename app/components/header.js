@@ -19,11 +19,7 @@ export default function Header({ setView, activeView }) {
           </li>
 
           <li className="text-align-center">
-            <button onClick={() => setView("index")}>
-              <p className="color-secondary no-underline underline-hover">
-                Liam Schenk
-              </p>
-            </button>
+            <p className="color-secondary">Liam Schenk</p>
           </li>
 
           <li className="text-align-right">
