@@ -21,7 +21,10 @@ export default function Index({ projects }) {
   const [openIndex, setOpenIndex] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const toggleAccordion = (index) => {
+  const toggleAccordion = (index, event) => {
+    if (event.nativeEvent.pointerType === "touch") {
+      setHoveredIndex(null);
+    }
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
@@ -49,7 +52,9 @@ export default function Index({ projects }) {
                 styles.grid
               } padding-top-medium padding-bottom-medium ${index !== 0 && "border-top"}`}
               type="button"
-              onClick={() => animationDone && toggleAccordion(index)}
+              onClick={(event) =>
+                animationDone && toggleAccordion(index, event)
+              }
               onMouseEnter={() => animationDone && setHoveredIndex(index)}
               onMouseLeave={() => animationDone && setHoveredIndex(null)}
               aria-expanded={openIndex === index}
