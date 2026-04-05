@@ -50,9 +50,7 @@ export default function Index({ projects }) {
                 styles.grid
               } padding-top-medium padding-bottom-medium ${index !== 0 && "border-top"}`}
               type="button"
-              onClick={(event) =>
-                animationDone && toggleAccordion(index, event)
-              }
+              onClick={() => animationDone && toggleAccordion(index)}
               onMouseEnter={() => {
                 if (isTouchDevice) return;
                 animationDone && setHoveredIndex(index);
