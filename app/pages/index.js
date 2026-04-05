@@ -51,6 +51,7 @@ export default function Index({ projects }) {
               } padding-top-medium padding-bottom-medium ${index !== 0 && "border-top"}`}
               type="button"
               onClick={() => animationDone && toggleAccordion(index)}
+              onTouchStart={() => setIsTouchDevice(true)}
               onMouseEnter={() => {
                 if (isTouchDevice) return;
                 animationDone && setHoveredIndex(index);
@@ -59,7 +60,6 @@ export default function Index({ projects }) {
                 if (isTouchDevice) return;
                 animationDone && setHoveredIndex(null);
               }}
-              onTouchStart={() => setIsTouchDevice(true)}
               aria-expanded={openIndex === index}
               aria-controls={`project-content-${project._id}`}
             >
