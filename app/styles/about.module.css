@@ -61,15 +61,15 @@
 
 /* Availability */
 .available{
-  color: var(--septenary);
+  color: var(--senary);
 }
 
 .partial{
-  color: var(--octonary);
+  color: var(--septenary);
 }
 
 .unavailable{
-  color: var(--nonary);
+  color: var(--octonary);
 }
 
 /* Keyframes */
