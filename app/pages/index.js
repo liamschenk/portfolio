@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import * as m from "motion/react-m";
 
 import Slideshow from "../components/slideshow";
 
@@ -20,7 +20,6 @@ export default function Index({ projects }) {
   const [animationDone, setAnimationDone] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   const toggleAccordion = (index) => {
     setOpenIndex((prev) => (prev === index ? null : index));
@@ -28,14 +27,14 @@ export default function Index({ projects }) {
 
   return (
     <main>
-      <motion.div
+      <m.div
         animate="visible"
         initial="hidden"
         variants={parentVariants}
         onAnimationComplete={() => setAnimationDone(true)}
       >
         {projects.map((project, index) => (
-          <motion.div
+          <m.div
             animate={{
               opacity: getOpacity(index, openIndex, hoveredIndex),
             }}
@@ -49,15 +48,13 @@ export default function Index({ projects }) {
               className={`${
                 styles.grid
               } padding-top-medium padding-bottom-medium ${index !== 0 && "border-top"}`}
+              id={`project-button-${project._id}`}
               type="button"
               onClick={() => animationDone && toggleAccordion(index)}
-              onTouchStart={() => setIsTouchDevice(true)}
               onMouseEnter={() => {
-                if (isTouchDevice) return;
                 animationDone && setHoveredIndex(index);
               }}
               onMouseLeave={() => {
-                if (isTouchDevice) return;
                 animationDone && setHoveredIndex(null);
               }}
               aria-expanded={openIndex === index}
@@ -74,7 +71,7 @@ export default function Index({ projects }) {
               </p>
             </button>
 
-            <motion.div
+            <m.div
               className={styles.content}
               animate={{
                 height: openIndex === index ? "auto" : 0,
@@ -96,10 +93,10 @@ export default function Index({ projects }) {
                   media={project.media}
                 />
               )}
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
         ))}
-      </motion.div>
+      </m.div>
     </main>
   );
 }

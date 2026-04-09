@@ -6,9 +6,7 @@ import styles from "../styles/slideshow.module.css";
 
 export default function Slideshow({ title, media, className }) {
   const [emblaRef] = useEmblaCarousel({
-    loop: false,
     align: "start",
-    skipSnaps: false,
     containScroll: false,
   });
 
