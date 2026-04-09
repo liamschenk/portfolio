@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import * as m from "motion/react-m";
 
 import { parentVariants, childVariants } from "../utilities/variants";
 import { monthNames } from "../utilities/locales";
@@ -8,25 +8,27 @@ import { monthNames } from "../utilities/locales";
 import styles from "../styles/about.module.css";
 
 function formatDate(startDate, endDate, ongoing = false) {
-  if (!startDate) return "?";
+  if (!startDate) return "Unbekannt";
 
   const format = (dateStr) => {
     const date = new Date(dateStr);
-    if (!isFinite(date)) return "?";
     return `${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
   };
 
-  const formattedStart = format(startDate);
-  const formattedEnd = ongoing ? "Jetzt" : format(endDate ?? "");
+  const formattedEnd = ongoing
+    ? "Jetzt"
+    : endDate
+      ? format(endDate)
+      : "Unbekannt";
 
-  return `${formattedStart} – ${formattedEnd}`;
+  return `${format(startDate)} – ${formattedEnd}`;
 }
 
 export default function About({ basics, work, education, profiles }) {
   return (
     <main>
-      <motion.div animate="visible" initial="hidden" variants={parentVariants}>
-        <motion.div
+      <m.div animate="visible" initial="hidden" variants={parentVariants}>
+        <m.div
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
@@ -34,9 +36,9 @@ export default function About({ basics, work, education, profiles }) {
           <p className={`${styles.description} color-quaternary`}>
             {basics.description}
           </p>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
@@ -53,9 +55,9 @@ export default function About({ basics, work, education, profiles }) {
               </p>
             </div>
           ))}
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
@@ -70,9 +72,9 @@ export default function About({ basics, work, education, profiles }) {
               </p>
             </div>
           ))}
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
@@ -115,9 +117,9 @@ export default function About({ basics, work, education, profiles }) {
               </div>
             );
           })}
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           className="margin-bottom-large padding-top-medium padding-bottom-medium"
           variants={childVariants}
         >
@@ -128,8 +130,8 @@ export default function About({ basics, work, education, profiles }) {
               {basics.statusText}
             </p>
           </div>
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
     </main>
   );
 }
