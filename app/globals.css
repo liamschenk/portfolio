@@ -79,9 +79,9 @@ header nav ul {
 }
 
 button {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
   cursor: pointer;
   background-color: transparent;
   border: none;

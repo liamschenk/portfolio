@@ -2,7 +2,7 @@ import { client } from "../sanity/client";
 
 import { projectsQuery, aboutQuery } from "../sanity/queries";
 
-import View from "./pages/view";
+import Router from "./router";
 
 export default async function Portfolio() {
   const { projects } = await client.fetch(
@@ -17,5 +17,5 @@ export default async function Portfolio() {
     { next: { revalidate: 3600 } },
   );
 
-  return <View projects={projects} aboutPromise={aboutPromise} />;
+  return <Router projects={projects} aboutPromise={aboutPromise} />;
 }
