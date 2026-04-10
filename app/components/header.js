@@ -1,37 +1,44 @@
 "use client";
 
-export default function Header({ setView, activeView }) {
+export default function Header({ route, setRoute }) {
   return (
     <header className="margin-bottom-extra-large">
       <nav>
         <ul>
           <li className="text-align-left">
             <button
-              onClick={() => setView("index")}
-              aria-current={activeView === "index" ? "page" : undefined}
+              onClick={() => setRoute("index")}
+              aria-current={route === "index" ? "page" : undefined}
             >
-              <p
-                className={`color-secondary ${activeView === "index" ? "underline" : "no-underline underline-hover"}`}
+              <span
+                className={`color-secondary ${route === "index" ? "underline" : "no-underline underline-hover"}`}
               >
                 Index
-              </p>
+              </span>
             </button>
           </li>
 
           <li className="text-align-center">
-            <p className="color-secondary">Liam Schenk</p>
+            <button
+              onClick={() => setRoute("index")}
+              aria-current={route === "index" ? "page" : undefined}
+            >
+              <span className="color-secondary no-underline underline-hover">
+                Liam Schenk
+              </span>
+            </button>
           </li>
 
           <li className="text-align-right">
             <button
-              onClick={() => setView("about")}
-              aria-current={activeView === "about" ? "page" : undefined}
+              onClick={() => setRoute("about")}
+              aria-current={route === "about" ? "page" : undefined}
             >
-              <p
-                className={`color-secondary ${activeView === "about" ? "underline" : "no-underline underline-hover"}`}
+              <span
+                className={`color-secondary ${route === "about" ? "underline" : "no-underline underline-hover"}`}
               >
                 Über
-              </p>
+              </span>
             </button>
           </li>
         </ul>
