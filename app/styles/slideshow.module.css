@@ -33,7 +33,7 @@
 
 /* Media */
 .media {
-  height: 448px;
+  height: 424px;
   user-select: none;
   border-radius: var(--border-radius-m);
 }
