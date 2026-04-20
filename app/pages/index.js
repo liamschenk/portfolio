@@ -6,6 +6,7 @@ import * as m from "motion/react-m";
 import Slideshow from "../components/slideshow";
 
 import { parentVariants, childVariants } from "../utilities/variants";
+import { formatYear } from "../utilities/dates";
 
 import styles from "../styles/index.module.css";
 
@@ -45,9 +46,13 @@ export default function Index({ projects }) {
             key={project._id}
           >
             <button
-              className={`${
-                styles.grid
-              } padding-top-medium padding-bottom-medium ${index !== 0 && "border-top"}`}
+              className={[
+                styles.grid,
+                "padding-top-medium padding-bottom-medium",
+                index !== 0 && "border-top",
+              ]
+                .filter(Boolean)
+                .join(" ")}
               id={`project-button-${project._id}`}
               type="button"
               onClick={() => animationDone && toggleAccordion(index)}
@@ -65,14 +70,13 @@ export default function Index({ projects }) {
               </p>
               <p className="color-secondary text-align-left">{project.title}</p>
               <p className="color-tertiary text-align-right">
-                {project.date
-                  ? new Date(project.date).getUTCFullYear()
-                  : "Unbekannt"}
+                {formatYear(project.date)}
               </p>
             </button>
 
             <m.div
               className={styles.content}
+              id={`project-content-${project._id}`}
               animate={{
                 height: openIndex === index ? "auto" : 0,
                 opacity: openIndex === index ? 1 : 0,

@@ -3,26 +3,9 @@
 import * as m from "motion/react-m";
 
 import { parentVariants, childVariants } from "../utilities/variants";
-import { monthNames } from "../utilities/locales";
+import { formatDateRange } from "../utilities/dates";
 
 import styles from "../styles/about.module.css";
-
-function formatDate(startDate, endDate, ongoing = false) {
-  if (!startDate) return "Unbekannt";
-
-  const format = (dateStr) => {
-    const date = new Date(dateStr);
-    return `${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
-  };
-
-  const formattedEnd = ongoing
-    ? "Jetzt"
-    : endDate
-      ? format(endDate)
-      : "Unbekannt";
-
-  return `${format(startDate)} – ${formattedEnd}`;
-}
 
 export default function About({ basics, work, education, profiles }) {
   return (
@@ -48,7 +31,7 @@ export default function About({ basics, work, education, profiles }) {
           {work.map((item) => (
             <div className={styles["grid-large"]} key={item._id}>
               <p className="color-tertiary margin-bottom-extra-small">
-                {formatDate(item.startDate, item.endDate, item.ongoing)}
+                {formatDateRange(item.startDate, item.endDate, item.ongoing)}
               </p>
               <p className="color-secondary margin-bottom-extra-small">
                 {`${item.position} ${item.preposition || "bei"} ${item.name}`}
@@ -65,7 +48,7 @@ export default function About({ basics, work, education, profiles }) {
           {education.map((item) => (
             <div className={styles["grid-large"]} key={item._id}>
               <p className="color-tertiary margin-bottom-extra-small">
-                {formatDate(item.startDate, item.endDate, item.ongoing)}
+                {formatDateRange(item.startDate, item.endDate, item.ongoing)}
               </p>
               <p className="color-secondary margin-bottom-extra-small">
                 {`${item.degree} ${item.preposition || "am"} ${item.institution}`}

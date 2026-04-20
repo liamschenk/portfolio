@@ -19,10 +19,7 @@ export default function Header({ route, setRoute }) {
           </li>
 
           <li className="text-align-center">
-            <button
-              onClick={() => setRoute("index")}
-              aria-current={route === "index" ? "page" : undefined}
-            >
+            <button onClick={() => setRoute("index")}>
               <span className="color-secondary no-underline underline-hover">
                 Liam Schenk
               </span>
