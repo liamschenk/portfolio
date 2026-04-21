@@ -33,7 +33,7 @@
 
 /* Media */
 .media {
-  height: 424px;
+  height: 378px;
   user-select: none;
   border-radius: var(--border-radius-m);
 }
@@ -45,7 +45,7 @@
   }
 
   .media{
-    height: 256px;
+    height: 270px;
   }
 }
 
@@ -55,6 +55,6 @@
   }
 
   .media {
-    height: 192px;
+    height: 162px;
   }
 }
