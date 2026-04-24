@@ -6,16 +6,10 @@ import * as m from "motion/react-m";
 import Slideshow from "../components/slideshow";
 
 import { parentVariants, childVariants } from "../utilities/variants";
+import { hoveredOpacity } from "../utilities/accordion";
 import { formatYear } from "../utilities/dates";
 
 import styles from "../styles/index.module.css";
-
-const getOpacity = (index, openIndex, hoveredIndex) => {
-  if (openIndex === null) {
-    return hoveredIndex === null || hoveredIndex === index ? 1 : 0.5;
-  }
-  return openIndex === index || hoveredIndex === index ? 1 : 0.5;
-};
 
 export default function Index({ projects }) {
   const [animationDone, setAnimationDone] = useState(false);
@@ -37,7 +31,7 @@ export default function Index({ projects }) {
         {projects.map((project, index) => (
           <m.div
             animate={{
-              opacity: getOpacity(index, openIndex, hoveredIndex),
+              opacity: hoveredOpacity(index, openIndex, hoveredIndex),
             }}
             variants={childVariants}
             transition={{
