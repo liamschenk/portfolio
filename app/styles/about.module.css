@@ -54,7 +54,7 @@
   animation: pulse 2.5s infinite ease-in-out;
 }
 
-.status-text {
+.status-label {
   color: currentcolor;
   animation: fade 2.5s infinite ease-in-out;
 }

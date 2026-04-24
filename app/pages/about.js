@@ -107,11 +107,9 @@ export default function About({ basics, work, education, profiles }) {
           variants={childVariants}
         >
           <h2 className="color-secondary margin-bottom-small">Aktuell</h2>
-          <div className={`${styles.status} ${styles[basics.status]}`}>
+          <div className={`${styles.status} ${styles[basics.status.value]}`}>
             <span className={styles["status-circle"]} aria-hidden="true"></span>
-            <p className={`${styles["status-text"]} color-quaternary`}>
-              {basics.statusText}
-            </p>
+            <p className={styles["status-label"]}>{basics.status.label}</p>
           </div>
         </m.div>
       </m.div>

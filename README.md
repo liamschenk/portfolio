@@ -10,9 +10,8 @@ The repository for my personal portfolio, available at [liamschenk.ch](https://w
 
 ### Technologies
 
-- **Next.js** – Framework for modern web development
-- **Sanity** – Headless content management
-- **GitHub** – Repository and version control
+- **Next.js** – React framework with server-side rendering
+- **Sanity** – Headless CMS
 - **Vercel** – Hosting with continuous deployment
 
-> Note: The Content is managed directly via Sanity Studio, integrated into the frontend deployment.
+> Note: The content is managed via Sanity Studio, hosted directly on Sanity.
