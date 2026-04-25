@@ -15,6 +15,7 @@ export const monthNames = [
 
 export function formatYear(dateStr) {
   if (!dateStr) return "Unbekannt";
+
   return new Date(dateStr).getUTCFullYear();
 }
 
