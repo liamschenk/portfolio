@@ -4,6 +4,7 @@ import * as m from "motion/react-m";
 
 import { parentVariants, childVariants } from "../utilities/variants";
 import { formatDateRange } from "../utilities/dates";
+import { formatOrphans } from "../utilities/typography";
 
 import styles from "../styles/about.module.css";
 
@@ -17,7 +18,7 @@ export default function About({ basics, work, education, profiles }) {
         >
           <h2 className="color-secondary margin-bottom-small">Über</h2>
           <p className={`${styles.description} color-quaternary`}>
-            {basics.description}
+            {formatOrphans(basics.description)}
           </p>
         </m.div>
 

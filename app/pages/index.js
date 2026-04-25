@@ -8,6 +8,7 @@ import Slideshow from "../components/slideshow";
 import { parentVariants, childVariants } from "../utilities/variants";
 import { hoveredOpacity } from "../utilities/accordion";
 import { formatYear } from "../utilities/dates";
+import { formatOrphans } from "../utilities/typography";
 
 import styles from "../styles/index.module.css";
 
@@ -81,7 +82,9 @@ export default function Index({ projects }) {
               aria-labelledby={`project-button-${project._id}`}
             >
               <div className={`${styles.description} margin-bottom-large`}>
-                <p className="color-quaternary">{project.description}</p>
+                <p className="color-quaternary">
+                  {formatOrphans(project.description)}
+                </p>
               </div>
 
               {project.media.length > 0 && (

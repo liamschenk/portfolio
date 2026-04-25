@@ -20,18 +20,19 @@
 
 .description p {
   grid-column: 2;
-  width: 37.5%;
+  max-width: 37.5%;
+  text-wrap: balance;
 }
 
 /* Breakpoints */
 @media (width <= 720px) {
   .description p {
-    width: 75%;
+    max-width: 75%;
   }
 }
 
 @media (width <= 480px) {
   .description p {
-    width: 87.5%;
+    max-width: 87.5%;
   }
 }

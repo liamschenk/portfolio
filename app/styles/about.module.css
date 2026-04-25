@@ -13,7 +13,8 @@
 
 /* Description */
 .description {
-  width: 37.5%;
+  max-width: 37.5%;
+  text-wrap: balance;
 }
 
 /* Icon */
@@ -93,13 +94,13 @@
 /* Breakpoints */
 @media (width <= 720px) {
   .description {
-    width: 87.5%;
+    max-width: 87.5%;
   }
 }
 
 @media (width <= 480px) {
   .description {
-    width: 100%;
+    max-width: 100%;
   }
 
   .grid-large {
