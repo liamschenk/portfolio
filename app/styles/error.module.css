@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100dvh - var(--spacing-l) * 2);
+  height: calc(100svh - var(--spacing-l) * 2);
 }
 
 .grid {
@@ -15,12 +15,12 @@
 /* Breakpoints */
 @media (width <= 720px) {
   .container {
-    height: calc(100dvh - var(--spacing-m) * 2);
+    height: calc(100svh - var(--spacing-m) * 2);
   }
 }
 
 @media (width <= 480px) {
   .container {
-    height: calc(100dvh - var(--spacing-s) * 2);
+    height: calc(100svh - var(--spacing-s) * 2);
   }
 }

@@ -1,10 +1,21 @@
 /* Index */
 .grid {
   display: grid;
-  grid-template-columns: minmax(2ch, auto) 1fr auto;
+  grid-template-columns: minmax(2ch, auto) auto 1fr auto;
   gap: var(--spacing-l);
   width: 100%;
+}
 
+/* Spacer */
+.spacer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.spacer hr{
+  width: 100%;
+  border: 0.5px solid var(--quinary);
 }
 
 /* Content */
