@@ -8,7 +8,6 @@ import Slideshow from "../components/slideshow";
 import { parentVariants, childVariants } from "../utilities/variants";
 import { hoveredOpacity } from "../utilities/accordion";
 import { formatYear } from "../utilities/dates";
-import { formatOrphans } from "../utilities/typography";
 
 import styles from "../styles/index.module.css";
 
@@ -41,13 +40,7 @@ export default function Index({ projects }) {
             key={project._id}
           >
             <button
-              className={[
-                styles.grid,
-                "padding-top-medium padding-bottom-medium",
-                index !== 0 && "border-top",
-              ]
-                .filter(Boolean)
-                .join(" ")}
+              className={`${styles.grid} padding-top-medium padding-bottom-medium`}
               id={`project-button-${project._id}`}
               type="button"
               onClick={() => animationDone && toggleAccordion(index)}
@@ -64,6 +57,9 @@ export default function Index({ projects }) {
                 {String(index + 1).padStart(2, "0")}
               </p>
               <p className="color-secondary text-align-left">{project.title}</p>
+              <div className={styles.spacer}>
+                <hr />
+              </div>
               <p className="color-tertiary text-align-right">
                 {formatYear(project.date)}
               </p>
@@ -82,9 +78,7 @@ export default function Index({ projects }) {
               aria-labelledby={`project-button-${project._id}`}
             >
               <div className={`${styles.description} margin-bottom-large`}>
-                <p className="color-quaternary">
-                  {formatOrphans(project.description)}
-                </p>
+                <p className="color-quaternary">{project.description}</p>
               </div>
 
               {project.media.length > 0 && (
