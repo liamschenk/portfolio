@@ -59,7 +59,7 @@
 html{
   max-width: 100svw;
   overflow-x: hidden;
-  scrollbar-gutter: stable;
+  scrollbar-gutter: stable both-edges;
 }
 
 body {
