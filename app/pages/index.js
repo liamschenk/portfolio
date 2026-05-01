@@ -3,7 +3,7 @@
 import { useState } from "react";
 import * as m from "motion/react-m";
 
-import Slideshow from "../components/slideshow";
+import Carousel from "../components/carousel";
 
 import { parentVariants, childVariants } from "../utilities/variants";
 import { hoveredOpacity } from "../utilities/accordion";
@@ -40,15 +40,17 @@ export default function Index({ projects }) {
             key={project._id}
           >
             <button
-              className={`${styles.grid} padding-top-medium padding-bottom-medium`}
+              className={`${styles["project-grid"]} padding-top-medium padding-bottom-medium`}
               id={`project-button-${project._id}`}
               type="button"
-              onClick={() => animationDone && toggleAccordion(index)}
+              onClick={() => {
+                if (animationDone) toggleAccordion(index);
+              }}
               onMouseEnter={() => {
-                animationDone && setHoveredIndex(index);
+                if (animationDone) setHoveredIndex(index);
               }}
               onMouseLeave={() => {
-                animationDone && setHoveredIndex(null);
+                if (animationDone) setHoveredIndex(null);
               }}
               aria-expanded={openIndex === index}
               aria-controls={`project-content-${project._id}`}
@@ -57,16 +59,14 @@ export default function Index({ projects }) {
                 {String(index + 1).padStart(2, "0")}
               </p>
               <p className="color-secondary text-align-left">{project.title}</p>
-              <div className={styles.spacer}>
-                <hr />
-              </div>
+              <hr className={styles["project-spacer"]} />
               <p className="color-tertiary text-align-right">
                 {formatYear(project.date)}
               </p>
             </button>
 
             <m.div
-              className={styles.content}
+              className={styles["project-content"]}
               id={`project-content-${project._id}`}
               animate={{
                 height: openIndex === index ? "auto" : 0,
@@ -77,16 +77,18 @@ export default function Index({ projects }) {
               role="region"
               aria-labelledby={`project-button-${project._id}`}
             >
-              <div className={`${styles.description} margin-bottom-large`}>
-                <p className="color-quaternary">{project.description}</p>
+              <div
+                className={`${styles["description-grid"]} margin-bottom-large`}
+              >
+                <p
+                  className={`${styles["project-description"]} color-quaternary`}
+                >
+                  {project.description}
+                </p>
               </div>
 
               {project.media.length > 0 && (
-                <Slideshow
-                  className="margin-bottom-large"
-                  title={project.title}
-                  media={project.media}
-                />
+                <Carousel title={project.title} media={project.media} />
               )}
             </m.div>
           </m.div>

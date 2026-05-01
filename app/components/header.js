@@ -1,42 +1,44 @@
 "use client";
 
+import Link from "next/link";
+
+import styles from "../styles/header.module.css";
+
 export default function Header({ route, setRoute }) {
   return (
-    <header className="margin-bottom-extra-large">
+    <header className={`${styles.navigation} margin-bottom-extra-large`}>
       <nav>
         <ul>
-          <li className="text-align-left">
-            <button
+          <li>
+            <Link
+              className={`color-secondary ${route === "index" ? "underline" : "no-underline underline-hover"}`}
+              href="/"
               onClick={() => setRoute("index")}
               aria-current={route === "index" ? "page" : undefined}
             >
-              <span
-                className={`color-secondary ${route === "index" ? "underline" : "no-underline underline-hover"}`}
-              >
-                Index
-              </span>
-            </button>
+              Index
+            </Link>
           </li>
 
-          <li className="text-align-center">
-            <button onClick={() => setRoute("index")}>
-              <span className="color-secondary no-underline underline-hover">
-                Liam Schenk
-              </span>
-            </button>
+          <li>
+            <Link
+              className="color-secondary no-underline underline-hover"
+              href="/"
+              onClick={() => setRoute("index")}
+            >
+              Liam Schenk
+            </Link>
           </li>
 
-          <li className="text-align-right">
-            <button
+          <li>
+            <Link
+              className={`color-secondary ${route === "about" ? "underline" : "no-underline underline-hover"}`}
+              href="/"
               onClick={() => setRoute("about")}
               aria-current={route === "about" ? "page" : undefined}
             >
-              <span
-                className={`color-secondary ${route === "about" ? "underline" : "no-underline underline-hover"}`}
-              >
-                Über
-              </span>
-            </button>
+              Über
+            </Link>
           </li>
         </ul>
       </nav>

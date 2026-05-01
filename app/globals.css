@@ -19,7 +19,7 @@
     --primary: rgb(255 255 255);
     --secondary: rgb(0 0 0);
     --tertiary: rgb(77 77 77);
-    --quarternary: rgb(128 128 128);
+    --quaternary: rgb(128 128 128);
     --quinary: rgb(128 128 128 / 12.5%);
     --senary: rgb(52 199 89);
     --septenary: rgb(255 141 40);
@@ -36,7 +36,7 @@
     --primary: rgb(0 0 0);
     --secondary: rgb(255 255 255);
     --tertiary: rgb(204 204 204);
-    --quarternary: rgb(153 153 153);
+    --quaternary: rgb(153 153 153);
     --quinary: rgb(153 153 153 / 12.5%);
     --senary: rgb(48 209 88);
     --septenary: rgb(255 146 48);
@@ -56,7 +56,7 @@
 }
 
 /* Global */
-html{
+html {
   max-width: 100svw;
   overflow-x: hidden;
   scrollbar-gutter: stable both-edges;
@@ -73,12 +73,6 @@ body {
 }
 
 /* Elements */
-header nav ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  list-style: none;
-}
-
 button {
   font-size: var(--font-size);
   font-weight: var(--font-weight);
@@ -117,20 +111,7 @@ a {
 }
 
 .color-quaternary {
-  color: var(--quarternary);
-}
-
-/* Alignment */
-.text-align-left {
-  text-align: left;
-}
-
-.text-align-center {
-  text-align: center;
-}
-
-.text-align-right {
-  text-align: right;
+  color: var(--quaternary);
 }
 
 /* Decoration */

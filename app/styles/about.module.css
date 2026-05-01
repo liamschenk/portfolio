@@ -1,32 +1,39 @@
 /* About */
-.grid-large {
-  display: grid;
-  grid-template-columns: minmax(21ch, auto) 1fr;
-  gap: var(--spacing-l);
-}
-
-.grid-medium {
+.experience-grid,
+.contact-grid {
   display: grid;
   grid-template-columns: minmax(21ch, auto) 1fr;
   gap: var(--spacing-l);
 }
 
 /* Description */
-.description {
+.basics-description {
   max-width: 37.5%;
   text-wrap: balance;
 }
 
 /* Icon */
-.icon {
+.external-icon {
   height: var(--font-size);
   margin-left: var(--spacing-xs);
   vertical-align: middle;
-  color: var(--secondary);
+}
+
+/* Availability */
+.available {
+  color: var(--senary);
+}
+
+.partial {
+  color: var(--septenary);
+}
+
+.unavailable {
+  color: var(--octonary);
 }
 
 /* Status */
-.status{
+.status-container {
   display: flex;
   gap: var(--spacing-s);
   align-items: center;
@@ -37,7 +44,7 @@
   width: 7px;
   height: 7px;
   background: currentcolor;
-  border-radius: 100%;
+  border-radius: var(--border-radius-l);
 }
 
 .status-circle::after {
@@ -49,7 +56,7 @@
   height: 7px;
   content: "";
   background: currentcolor;
-  border-radius: 50%;
+  border-radius: var(--border-radius-l);
   opacity: 0.75;
   transform: translate(-50%, -50%);
   animation: pulse 2.5s infinite ease-in-out;
@@ -58,19 +65,6 @@
 .status-label {
   color: currentcolor;
   animation: fade 2.5s infinite ease-in-out;
-}
-
-/* Availability */
-.available{
-  color: var(--senary);
-}
-
-.partial{
-  color: var(--septenary);
-}
-
-.unavailable{
-  color: var(--octonary);
 }
 
 /* Keyframes */
@@ -87,33 +81,34 @@
 }
 
 @keyframes fade {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 /* Breakpoints */
 @media (width <= 720px) {
-  .description {
+  .basics-description {
     max-width: 87.5%;
   }
 }
 
 @media (width <= 480px) {
-  .description {
-    max-width: 100%;
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xs);
   }
 
-  .grid-large {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-  }
-
-  .grid-large p {
-    flex: 100%;
-  }
-
-  .grid-medium {
+  .contact-grid {
     grid-template-columns: minmax(9ch, auto) 1fr;
+  }
+
+  .basics-description {
+    max-width: 100%;
   }
 }

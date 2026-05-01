@@ -2,16 +2,16 @@
 
 import useEmblaCarousel from "embla-carousel-react";
 
-import styles from "../styles/slideshow.module.css";
+import styles from "../styles/carousel.module.css";
 
-export default function Slideshow({ title, media, className }) {
+export default function Carousel({ title, media }) {
   const [emblaRef] = useEmblaCarousel({
     align: "start",
     containScroll: false,
   });
 
   return (
-    <div className={`${styles.slideshow} ${className ?? ""}`}>
+    <div className={`${styles.carousel} margin-bottom-large`}>
       <div className="embla" ref={emblaRef} aria-label={`${title} Slideshow`}>
         <div className={styles.track}>
           {media.map((item, index) =>

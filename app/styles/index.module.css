@@ -1,35 +1,30 @@
 /* Index */
-.grid {
+.project-grid {
   display: grid;
   grid-template-columns: minmax(2ch, auto) auto 1fr auto;
   gap: var(--spacing-l);
-  width: 100%;
-}
-
-/* Spacer */
-.spacer {
-  display: flex;
   align-items: center;
   width: 100%;
 }
 
-.spacer hr{
-  width: 100%;
-  border: 0.5px solid var(--quinary);
-}
-
-/* Content */
-.content {
-  overflow: hidden;
-}
-
-.description {
+/* Grid to align with project title */
+.description-grid {
   display: grid;
   grid-template-columns: minmax(2ch, auto) 1fr;
   gap: var(--spacing-l);
 }
 
-.description p {
+/* Spacer */
+.project-spacer {
+  border: 0.5px solid var(--quinary);
+}
+
+/* Content */
+.project-content {
+  overflow: hidden;
+}
+
+.project-description {
   grid-column: 2;
   max-width: 37.5%;
   text-wrap: balance;
@@ -37,13 +32,13 @@
 
 /* Breakpoints */
 @media (width <= 720px) {
-  .description p {
+  .project-description {
     max-width: 75%;
   }
 }
 
 @media (width <= 480px) {
-  .description p {
+  .project-description {
     max-width: 87.5%;
   }
 }

@@ -1,12 +1,11 @@
-/* Slideshow */
+/* Carousel */
 
 /* stylelint-disable selector-pseudo-class-no-unknown */
-.slideshow :global(.embla) {
-  overflow: hidden;
+.carousel :global(.embla) {
   cursor: grab;
 }
 
-.slideshow :global(.embla:active) {
+.carousel :global(.embla:active) {
   cursor: grabbing;
 }
 
@@ -20,7 +19,6 @@
 /* Slide */
 .slide {
   flex: 0 0 auto;
-  min-width: 0;
   padding: var(--spacing-m);
   user-select: none;
   background-color: var(--quinary);
@@ -40,11 +38,11 @@
 
 /* Breakpoints */
 @media (width <= 720px) {
- .slide {
+  .slide {
     padding: var(--spacing-l);
   }
 
-  .media{
+  .media {
     height: 270px;
   }
 }

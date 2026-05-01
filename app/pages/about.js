@@ -16,7 +16,7 @@ export default function About({ basics, work, education, profiles }) {
           variants={childVariants}
         >
           <h2 className="color-secondary margin-bottom-small">Über</h2>
-          <p className={`${styles.description} color-quaternary`}>
+          <p className={`${styles["basics-description"]} color-quaternary`}>
             {basics.description}
           </p>
         </m.div>
@@ -29,11 +29,14 @@ export default function About({ basics, work, education, profiles }) {
             Berufserfahrung
           </h2>
           {work.map((item) => (
-            <div className={styles["grid-large"]} key={item._id}>
-              <p className="color-tertiary margin-bottom-extra-small">
+            <div
+              className={`${styles["experience-grid"]} margin-bottom-extra-small`}
+              key={item._id}
+            >
+              <p className="color-tertiary">
                 {formatDateRange(item.startDate, item.endDate, item.ongoing)}
               </p>
-              <p className="color-secondary margin-bottom-extra-small">
+              <p className="color-secondary">
                 {`${item.position} ${item.preposition || "bei"} ${item.name}`}
               </p>
             </div>
@@ -46,11 +49,14 @@ export default function About({ basics, work, education, profiles }) {
         >
           <h2 className="color-secondary margin-bottom-small">Ausbildung</h2>
           {education.map((item) => (
-            <div className={styles["grid-large"]} key={item._id}>
-              <p className="color-tertiary margin-bottom-extra-small">
+            <div
+              className={`${styles["experience-grid"]} margin-bottom-extra-small`}
+              key={item._id}
+            >
+              <p className="color-tertiary">
                 {formatDateRange(item.startDate, item.endDate, item.ongoing)}
               </p>
-              <p className="color-secondary margin-bottom-extra-small">
+              <p className="color-secondary">
                 {`${item.degree} ${item.preposition || "am"} ${item.institution}`}
               </p>
             </div>
@@ -66,11 +72,12 @@ export default function About({ basics, work, education, profiles }) {
             const isExternal = !item.link.startsWith("mailto:");
 
             return (
-              <div className={styles["grid-medium"]} key={item._id}>
-                <p className="color-tertiary margin-bottom-extra-small">
-                  {item.network}
-                </p>
-                <p className="color-secondary margin-bottom-extra-small">
+              <div
+                className={`${styles["contact-grid"]} margin-bottom-extra-small`}
+                key={item._id}
+              >
+                <p className="color-tertiary">{item.network}</p>
+                <p className="color-secondary">
                   <a
                     className="underline no-underline-hover"
                     href={item.link}
@@ -86,7 +93,7 @@ export default function About({ basics, work, education, profiles }) {
                   </a>
                   {isExternal && (
                     <svg
-                      className={styles.icon}
+                      className={`${styles["external-icon"]} color-secondary`}
                       viewBox="-10 0 1598 2048"
                       aria-hidden="true"
                     >
@@ -107,7 +114,9 @@ export default function About({ basics, work, education, profiles }) {
           variants={childVariants}
         >
           <h2 className="color-secondary margin-bottom-small">Aktuell</h2>
-          <div className={`${styles.status} ${styles[basics.status.value]}`}>
+          <div
+            className={`${styles["status-container"]} ${styles[basics.status.value]}`}
+          >
             <span className={styles["status-circle"]} aria-hidden="true"></span>
             <p className={styles["status-label"]}>{basics.status.label}</p>
           </div>
