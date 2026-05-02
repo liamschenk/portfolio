@@ -1,6 +1,6 @@
-import { client } from "../sanity/client";
+import { client } from "./sanity/client";
 
-import { projectsQuery, aboutQuery } from "../sanity/queries";
+import { projectsQuery, aboutQuery } from "./sanity/queries";
 
 import Router from "./router";
 

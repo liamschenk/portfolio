@@ -1,23 +1,23 @@
 /* Carousel */
 
 /* stylelint-disable selector-pseudo-class-no-unknown */
-.carousel :global(.embla) {
+.embla-carousel :global(.embla) {
   cursor: grab;
 }
 
-.carousel :global(.embla:active) {
+.embla-carousel :global(.embla:active) {
   cursor: grabbing;
 }
 
 /* Track */
-.track {
+.carousel-track {
   display: flex;
   gap: var(--spacing-s);
   touch-action: pan-y;
 }
 
 /* Slide */
-.slide {
+.carousel-slide {
   flex: 0 0 auto;
   padding: var(--spacing-m);
   user-select: none;
@@ -25,12 +25,12 @@
   border-radius: var(--border-radius-l);
 }
 
-.slide:focus {
+.carousel-slide:focus {
   outline: none;
 }
 
 /* Media */
-.media {
+.slide-media {
   height: 378px;
   user-select: none;
   border-radius: var(--border-radius-m);
@@ -38,21 +38,21 @@
 
 /* Breakpoints */
 @media (width <= 720px) {
-  .slide {
+  .carousel-slide {
     padding: var(--spacing-l);
   }
 
-  .media {
+  .slide-media {
     height: 270px;
   }
 }
 
 @media (width <= 480px) {
-  .slide {
+  .carousel-slide {
     padding: var(--spacing-m);
   }
 
-  .media {
+  .slide-media {
     height: 162px;
   }
 }
