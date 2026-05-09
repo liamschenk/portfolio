@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
 import styles from "../styles/header.module.css";
 
 export default function Header({ route, setRoute }) {
@@ -10,35 +8,44 @@ export default function Header({ route, setRoute }) {
       <nav>
         <ul>
           <li>
-            <Link
+            <a
               className={`color-secondary ${route === "index" ? "underline" : "no-underline underline-hover"}`}
-              href="/"
-              onClick={() => setRoute("index")}
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setRoute("index");
+              }}
               aria-current={route === "index" ? "page" : undefined}
             >
               Index
-            </Link>
+            </a>
           </li>
 
           <li>
-            <Link
+            <a
               className="color-secondary no-underline underline-hover"
-              href="/"
-              onClick={() => setRoute("index")}
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setRoute("index");
+              }}
             >
               Liam Schenk
-            </Link>
+            </a>
           </li>
 
           <li>
-            <Link
+            <a
               className={`color-secondary ${route === "about" ? "underline" : "no-underline underline-hover"}`}
-              href="/"
-              onClick={() => setRoute("about")}
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setRoute("about");
+              }}
               aria-current={route === "about" ? "page" : undefined}
             >
               Über
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>

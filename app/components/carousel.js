@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 "use client";
 
 import useEmblaCarousel from "embla-carousel-react";
@@ -20,7 +22,6 @@ export default function Carousel({ title, media }) {
                 className={`${styles["carousel-slide"]} border-all`}
                 key={item.asset._id}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className={styles["slide-media"]}
                   src={item.asset.url}

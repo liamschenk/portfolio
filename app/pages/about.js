@@ -37,7 +37,7 @@ export default function About({ basics, work, education, profiles }) {
                 {formatDateRange(item.startDate, item.endDate, item.ongoing)}
               </p>
               <p className="color-secondary">
-                {`${item.position} ${item.preposition || "bei"} ${item.name}`}
+                {`${item.position} ${item.preposition || "bei"} ${item.firm}`}
               </p>
             </div>
           ))}
