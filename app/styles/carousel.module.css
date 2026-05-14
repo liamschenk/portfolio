@@ -1,6 +1,6 @@
-/* Carousel */
-
 /* stylelint-disable selector-pseudo-class-no-unknown */
+
+/* Carousel */
 .embla-carousel :global(.embla) {
   cursor: grab;
 }

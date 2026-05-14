@@ -2,7 +2,7 @@
 .experience-grid,
 .contact-grid {
   display: grid;
-  grid-template-columns: minmax(21ch, auto) 1fr;
+  grid-template-columns: minmax(10ch, auto) 1fr;
   gap: var(--spacing-l);
 }
 
@@ -102,10 +102,6 @@
   .experience-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-xs);
-  }
-
-  .contact-grid {
-    grid-template-columns: minmax(9ch, auto) 1fr;
   }
 
   .basics-description {

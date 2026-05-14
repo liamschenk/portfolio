@@ -1,32 +1,17 @@
-const monthNames = [
-  "Jan.",
-  "Feb.",
-  "März",
-  "Apr.",
-  "Mai",
-  "Juni",
-  "Juli",
-  "Aug.",
-  "Sep.",
-  "Okt.",
-  "Nov.",
-  "Dez.",
-];
-
 export function formatYear(dateStr) {
   if (!dateStr) return "Unbekannt";
-
   return new Date(dateStr).getUTCFullYear();
 }
 
-export function formatDateRange(startDate, endDate, ongoing = false) {
+export function formatYearRange(startDate, endDate, ongoing) {
   if (!startDate) return "Unbekannt";
 
-  const format = (d) => {
-    const date = new Date(d);
-    return `${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
-  };
+  const startYear = new Date(startDate).getUTCFullYear();
+  const endYear = ongoing
+    ? "Jetzt"
+    : endDate
+      ? new Date(endDate).getUTCFullYear()
+      : "Unbekannt";
 
-  const end = ongoing ? "Jetzt" : endDate ? format(endDate) : "Unbekannt";
-  return `${format(startDate)} – ${end}`;
+  return `${startYear} – ${endYear}`;
 }

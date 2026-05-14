@@ -3,11 +3,17 @@
 import * as m from "motion/react-m";
 
 import { parentVariants, childVariants } from "../utilities/variants";
-import { formatDateRange } from "../utilities/dates";
+import { formatYearRange } from "../utilities/dates";
 
 import styles from "../styles/about.module.css";
 
 export default function About({ basics, work, education, profiles }) {
+  const statusLabel = {
+    available: "Verfügbar für Anfragen",
+    partial: "Teilweise verfügbar",
+    unavailable: "Nicht verfügbar",
+  };
+
   return (
     <main>
       <m.div animate="visible" initial="hidden" variants={parentVariants}>
@@ -34,7 +40,7 @@ export default function About({ basics, work, education, profiles }) {
               key={item._id}
             >
               <p className="color-tertiary">
-                {formatDateRange(item.startDate, item.endDate, item.ongoing)}
+                {formatYearRange(item.startDate, item.endDate, item.ongoing)}
               </p>
               <p className="color-secondary">
                 {`${item.position} ${item.preposition || "bei"} ${item.firm}`}
@@ -54,7 +60,7 @@ export default function About({ basics, work, education, profiles }) {
               key={item._id}
             >
               <p className="color-tertiary">
-                {formatDateRange(item.startDate, item.endDate, item.ongoing)}
+                {formatYearRange(item.startDate, item.endDate, item.ongoing)}
               </p>
               <p className="color-secondary">
                 {`${item.degree} ${item.preposition || "am"} ${item.institution}`}
@@ -115,10 +121,12 @@ export default function About({ basics, work, education, profiles }) {
         >
           <h2 className="color-secondary margin-bottom-small">Aktuell</h2>
           <div
-            className={`${styles["status-container"]} ${styles[basics.status.value]}`}
+            className={`${styles["status-container"]} ${styles[basics.status]}`}
           >
             <span className={styles["status-circle"]} aria-hidden="true"></span>
-            <p className={styles["status-label"]}>{basics.status.label}</p>
+            <p className={styles["status-label"]}>
+              {statusLabel[basics.status]}
+            </p>
           </div>
         </m.div>
       </m.div>
