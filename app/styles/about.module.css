@@ -13,10 +13,20 @@
 }
 
 /* Icon */
-.external-icon {
+.contact-icon {
   height: var(--font-size);
   margin-left: var(--spacing-xs);
   vertical-align: middle;
+  opacity: 0;
+  transform: translateX(calc(-1 * var(--spacing-xs)));
+  transition:
+    opacity 0.25s ease-in-out,
+    transform 0.25s ease-in-out;
+}
+
+.contact-link:hover + .contact-icon {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Availability */

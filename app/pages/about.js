@@ -85,7 +85,7 @@ export default function About({ basics, work, education, profiles }) {
                 <p className="color-tertiary">{item.network}</p>
                 <p className="color-secondary">
                   <a
-                    className="underline no-underline-hover"
+                    className={`${styles["contact-link"]} underline no-underline-hover`}
                     href={item.link}
                     target={isExternal ? "_blank" : undefined}
                     rel={isExternal ? "noopener noreferrer" : undefined}
@@ -97,18 +97,16 @@ export default function About({ basics, work, education, profiles }) {
                   >
                     {item.username}
                   </a>
-                  {isExternal && (
-                    <svg
-                      className={`${styles["external-icon"]} color-secondary`}
-                      viewBox="-10 0 1598 2048"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M1338 1442h-166v-298q0 -54 3 -116.5t8 -126.5t11 -123.5t13 -107.5l11 42q-23 35 -47.5 70t-50.5 67t-56 62l-725 726l-118 -118l726 -725q30 -30 62.5 -56t67 -50.5t69.5 -47.5l42 11q-64 9 -147 17t-169 13t-158 5h-298v-166h922v922z"
-                      />
-                    </svg>
-                  )}
+                  <svg
+                    className={styles["contact-icon"]}
+                    viewBox="-10 0 1598 2048"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M1338 1442h-166v-298q0 -54 3 -116.5t8 -126.5t11 -123.5t13 -107.5l11 42q-23 35 -47.5 70t-50.5 67t-56 62l-725 726l-118 -118l726 -725q30 -30 62.5 -56t67 -50.5t69.5 -47.5l42 11q-64 9 -147 17t-169 13t-158 5h-298v-166h922v922z"
+                    />
+                  </svg>
                 </p>
               </div>
             );
