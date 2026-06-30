@@ -29,6 +29,7 @@ export default function Header({ route, setRoute }) {
                 e.preventDefault();
                 setRoute("index");
               }}
+              aria-label="Index"
             >
               <svg
                 className={styles["header-icon"]}
