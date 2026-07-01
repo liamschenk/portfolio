@@ -24,10 +24,33 @@ export const metadata = {
   ],
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Liam Schenk",
+  jobTitle: "Mediamatiker",
+  email: "mailto:hello@liamschenk.ch",
+  url: "https://www.liamschenk.ch",
+  alumniOf: {
+    "@type": "Organization",
+    name: "Schweizerischer Turnverband",
+  },
+  sameAs: [
+    "https://github.com/liamschenk",
+    "https://www.linkedin.com/in/liamschenk/",
+  ],
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
