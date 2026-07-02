@@ -8,6 +8,7 @@ const inter = Inter({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://www.liamschenk.ch"),
   title: "Liam Schenk – Portfolio",
   description:
     "Portfolio von Liam Schenk, gelerntem Mediamatiker mit Abschluss bei Swisscom.",
@@ -22,6 +23,16 @@ export const metadata = {
     "Swisscom",
     "Schweiz",
   ],
+  alternates: {
+    canonical: "https://www.liamschenk.ch",
+  },
+  icons: {
+    icon: [
+      { url: "/metadata/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/metadata/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "Liam Schenk – Portfolio",
     description:
@@ -30,9 +41,10 @@ export const metadata = {
     siteName: "Liam Schenk – Portfolio",
     images: [
       {
-        url: "https://www.liamschenk.ch/og.webp",
+        url: "https://www.liamschenk.ch/metadata/og-image.webp",
         width: 1200,
         height: 630,
+        alt: "Liam Schenk Portfolio – Startseite",
       },
     ],
     locale: "de_CH",
@@ -43,7 +55,7 @@ export const metadata = {
     title: "Liam Schenk – Portfolio",
     description:
       "Portfolio von Liam Schenk, gelerntem Mediamatiker mit Abschluss bei Swisscom.",
-    images: ["https://www.liamschenk.ch/og.webp"],
+    images: ["https://www.liamschenk.ch/metadata/og-image.webp"],
   },
 };
 
