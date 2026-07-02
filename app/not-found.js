@@ -1,6 +1,6 @@
 import styles from "./styles/error.module.css";
 
-export default function NotFound({ error, reset }) {
+export default function NotFound({}) {
   return (
     <main>
       <div className={styles["error-container"]}>

@@ -22,6 +22,35 @@ export const metadata = {
     "Swisscom",
     "Schweiz",
   ],
+  openGraph: {
+    title: "Liam Schenk – Portfolio",
+    description:
+      "Portfolio von Liam Schenk, gelerntem Mediamatiker mit Abschluss bei Swisscom.",
+    url: "https://www.liamschenk.ch",
+    siteName: "Liam Schenk – Portfolio",
+    images: [
+      {
+        url: "https://www.liamschenk.ch/og.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "de_CH",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Liam Schenk – Portfolio",
+    description:
+      "Portfolio von Liam Schenk, gelerntem Mediamatiker mit Abschluss bei Swisscom.",
+    images: ["https://www.liamschenk.ch/og.webp"],
+  },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
 };
 
 const personSchema = {

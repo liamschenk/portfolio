@@ -2,7 +2,7 @@
 
 import styles from "./styles/error.module.css";
 
-export default function Error({ error, reset }) {
+export default function Error({}) {
   return (
     <main>
       <div className={styles["error-container"]}>
