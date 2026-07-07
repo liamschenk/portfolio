@@ -113,7 +113,7 @@ a {
 
 /* Decoration */
 .underline {
-  text-decoration: underline var(--secondary);
+  text-decoration: underline var(--quaternary);
   transition: text-decoration 0.1875s ease-in-out;
 }
 
@@ -123,7 +123,7 @@ a {
 }
 
 .underline-hover:hover {
-  text-decoration: underline var(--secondary);
+  text-decoration: underline var(--quaternary);
   transition: text-decoration 0.1875s ease-in-out;
 }
 

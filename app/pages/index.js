@@ -86,7 +86,6 @@ export default function Index({ projects }) {
                   {project.description}
                 </p>
               </div>
-
               {project.media.length > 0 && (
                 <Carousel title={project.title} media={project.media} />
               )}

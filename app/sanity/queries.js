@@ -1,9 +1,6 @@
 export const projectsQuery = `{
   "projects": *[_type == "projects"] | order(_createdAt desc) {
-    _id,
-    title,
-    description,
-    date,
+  ...,
     media[] {
       asset-> {
         _id,
