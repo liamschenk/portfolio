@@ -7,7 +7,7 @@
 }
 
 /* Description */
-.basics-description {
+.bio-description {
   max-width: 37.5%;
   text-wrap: balance;
 }
@@ -103,7 +103,7 @@
 
 /* Breakpoints */
 @media (width <= 720px) {
-  .basics-description {
+  .bio-description {
     max-width: 87.5%;
   }
 }
@@ -114,7 +114,7 @@
     gap: var(--spacing-xs);
   }
 
-  .basics-description {
+  .bio-description {
     max-width: 100%;
   }
 }

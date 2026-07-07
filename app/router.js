@@ -7,7 +7,7 @@ import Header from "./components/header";
 import Index from "./pages/index";
 import About from "./pages/about";
 
-export default function Router({ projects, aboutPromise }) {
+export default function Router({ projects, about }) {
   const [route, setRoute] = useState("index");
 
   return (
@@ -16,15 +16,15 @@ export default function Router({ projects, aboutPromise }) {
       {route === "index" && <Index projects={projects} />}
       {route === "about" && (
         <Suspense fallback={null}>
-          <AboutRoute aboutPromise={aboutPromise} />
+          <AboutRoute about={about} />
         </Suspense>
       )}
     </LazyMotion>
   );
 }
 
-function AboutRoute({ aboutPromise }) {
-  const aboutData = use(aboutPromise);
+function AboutRoute({ about }) {
+  const aboutData = use(about);
 
   return <About {...aboutData} />;
 }

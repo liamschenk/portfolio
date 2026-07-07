@@ -7,7 +7,7 @@ import { formatYearRange } from "../utilities/dates";
 
 import styles from "../styles/about.module.css";
 
-export default function About({ basics, work, education, profiles }) {
+export default function About({ bio, work, education, profiles }) {
   const statusLabel = {
     available: "Verfügbar für Anfragen",
     partial: "Teilweise verfügbar",
@@ -22,8 +22,8 @@ export default function About({ basics, work, education, profiles }) {
           variants={childVariants}
         >
           <h2 className="color-secondary margin-bottom-small">Über</h2>
-          <p className={`${styles["basics-description"]} color-quaternary`}>
-            {basics.description}
+          <p className={`${styles["bio-description"]} color-quaternary`}>
+            {bio.description}
           </p>
         </m.div>
 
@@ -74,28 +74,28 @@ export default function About({ basics, work, education, profiles }) {
           variants={childVariants}
         >
           <h2 className="color-secondary margin-bottom-small">Kontakt</h2>
-          {profiles.map((item) => {
-            const isExternal = !item.link.startsWith("mailto:");
+          {profiles.map((profile) => {
+            const isExternal = !profile.link.startsWith("mailto:");
 
             return (
               <div
                 className={`${styles["contact-grid"]} margin-bottom-extra-small`}
-                key={item._id}
+                key={profile._id}
               >
-                <p className="color-tertiary">{item.network}</p>
+                <p className="color-tertiary">{profile.network}</p>
                 <p className="color-secondary">
                   <a
                     className={`${styles["contact-link"]} underline no-underline-hover`}
-                    href={item.link}
+                    href={profile.link}
                     target={isExternal ? "_blank" : undefined}
                     rel={isExternal ? "noopener noreferrer" : undefined}
                     aria-label={
                       isExternal
-                        ? `${item.username} auf ${item.network} (Öffnet in neuem Tab)`
-                        : `${item.username} per E-Mail kontaktieren`
+                        ? `${profile.username} auf ${profile.network} (Öffnet in neuem Tab)`
+                        : `${profile.username} per E-Mail kontaktieren`
                     }
                   >
-                    {item.username}
+                    {profile.username}
                   </a>
                   <svg
                     className={styles["contact-icon"]}
@@ -119,11 +119,11 @@ export default function About({ basics, work, education, profiles }) {
         >
           <h2 className="color-secondary margin-bottom-small">Aktuell</h2>
           <div
-            className={`${styles["status-container"]} ${styles[basics.status]}`}
+            className={`${styles["status-container"]} ${styles[bio.status]}`}
           >
             <span className={styles["status-circle"]} aria-hidden="true"></span>
             <p className={styles["status-label"]}>
-              {statusLabel[basics.status]}
+              {statusLabel[bio.status]}
             </p>
           </div>
         </m.div>
