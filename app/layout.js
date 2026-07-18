@@ -41,7 +41,7 @@ export const metadata = {
     siteName: "Liam Schenk – Portfolio",
     images: [
       {
-        url: "https://www.liamschenk.ch/metadata/og-image.webp",
+        url: "https://www.liamschenk.ch/metadata/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Liam Schenk Portfolio – Startseite",
@@ -55,7 +55,7 @@ export const metadata = {
     title: "Liam Schenk – Portfolio",
     description:
       "Portfolio von Liam Schenk, gelerntem Mediamatiker mit Abschluss bei Swisscom.",
-    images: ["https://www.liamschenk.ch/metadata/og-image.webp"],
+    images: ["https://www.liamschenk.ch/metadata/og-image.jpg"],
   },
 };
 
