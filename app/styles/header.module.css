@@ -1,15 +1,6 @@
 /* Header */
 .navigation nav ul {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
   list-style: none;
-}
-
-/* Icon */
-.header-icon {
-  height: calc(var(--font-size) * 2);
-  margin-left: var(--spacing-xs);
-  vertical-align: middle;
 }

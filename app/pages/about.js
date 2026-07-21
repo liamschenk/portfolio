@@ -36,7 +36,7 @@ export default function About({ bio, work, education, profiles }) {
           </h2>
           {work.map((item) => (
             <div
-              className={`${styles["experience-grid"]} margin-bottom-extra-small`}
+              className={styles["work-grid"]}
               key={item._id}
             >
               <p className="color-tertiary">
@@ -56,7 +56,7 @@ export default function About({ bio, work, education, profiles }) {
           <h2 className="color-secondary margin-bottom-small">Ausbildung</h2>
           {education.map((item) => (
             <div
-              className={`${styles["experience-grid"]} margin-bottom-extra-small`}
+              className={styles["education-grid"]}
               key={item._id}
             >
               <p className="color-tertiary">
@@ -79,7 +79,7 @@ export default function About({ bio, work, education, profiles }) {
 
             return (
               <div
-                className={`${styles["contact-grid"]} margin-bottom-extra-small`}
+                className={styles["contact-grid"]}
                 key={profile._id}
               >
                 <p className="color-tertiary">{profile.network}</p>

@@ -1,15 +1,23 @@
 /* About */
-.experience-grid,
+.bio-description {
+  max-width: 37.5%;
+  text-wrap: balance;
+}
+
+/* Grids */
+.work-grid,
+.education-grid,
 .contact-grid {
   display: grid;
   grid-template-columns: minmax(10ch, auto) 1fr;
   gap: var(--spacing-l);
+  margin-bottom: var(--spacing-xs);
 }
 
-/* Description */
-.bio-description {
-  max-width: 37.5%;
-  text-wrap: balance;
+.work-grid:last-of-type,
+.education-grid:last-of-type,
+.contact-grid:last-of-type {
+  margin-bottom: 0;
 }
 
 /* Icon */
@@ -109,9 +117,11 @@
 }
 
 @media (width <= 480px) {
-  .experience-grid {
+  .work-grid,
+  .education-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-m);
   }
 
   .bio-description {
