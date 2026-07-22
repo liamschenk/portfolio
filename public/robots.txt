@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://liamschenk.ch
+Host: https://www.liamschenk.ch
 
 # Sitemaps
-Sitemap: https://liamschenk.ch/sitemap.xml
+Sitemap: https://www.liamschenk.ch/sitemap.xml

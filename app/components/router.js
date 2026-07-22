@@ -3,9 +3,9 @@
 import { useState, Suspense, use } from "react";
 import { LazyMotion, domAnimation } from "motion/react";
 
-import Header from "./components/header";
-import Index from "./pages/index";
-import About from "./pages/about";
+import Header from "./header";
+import Index from "../pages/index";
+import About from "../pages/about";
 
 export default function Router({ projects, about }) {
   const [route, setRoute] = useState("index");

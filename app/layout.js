@@ -68,7 +68,7 @@ const personSchema = {
   "@type": "Person",
   name: "Liam Schenk",
   jobTitle: "Mediamatiker",
-  email: "mailto:hello@liamschenk.ch",
+  email: "mailto:hallo@liamschenk.ch",
   url: "https://www.liamschenk.ch",
   alumniOf: {
     "@type": "Organization",

@@ -2,7 +2,7 @@ import { client } from "./sanity/client";
 
 import { projectQuery, aboutQuery } from "./sanity/queries";
 
-import Router from "./router";
+import Router from "./components/router";
 
 export default async function Portfolio() {
   const fetchOptions = { next: { revalidate: 3600 } };
