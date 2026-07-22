@@ -16,14 +16,14 @@
 /* Theming */
 @media (prefers-color-scheme: light) {
   :root {
-    --primary: rgb(255 255 255);
-    --secondary: rgb(0 0 0);
-    --tertiary: rgb(77 77 77);
-    --quaternary: rgb(128 128 128);
-    --quinary: rgb(128 128 128 / 12.5%);
-    --senary: rgb(52 199 89);
-    --septenary: rgb(255 141 40);
-    --octonary: rgb(255 56 60);
+    --primary: rgb(235 235 240);
+    --secondary: rgb(36 36 38);
+    --tertiary: rgb(108 108 112);
+    --quaternary: rgb(142 142 147);
+    --quinary: rgb(142 142 147 / 12.5%);
+    --senary: rgb(0 137 50);
+    --septenary: rgb(197 83 0);
+    --octonary: rgb(233 21 45);
   }
 
   html {
@@ -33,14 +33,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: rgb(0 0 0);
-    --secondary: rgb(255 255 255);
-    --tertiary: rgb(204 204 204);
-    --quaternary: rgb(153 153 153);
-    --quinary: rgb(153 153 153 / 12.5%);
-    --senary: rgb(48 209 88);
-    --septenary: rgb(255 146 48);
-    --octonary: rgb(255 66 69);
+    --primary: rgb(28 28 30);
+    --secondary: rgb(242 242 247);
+    --tertiary: rgb(174 174 178);
+    --quaternary: rgb(124 124 128);
+    --quinary: rgb(124 124 128 / 12.5%);
+    --senary: rgb(74 217 104);
+    --septenary: rgb(255 160 86);
+    --octonary: rgb(255 97 101);
   }
 
   html {

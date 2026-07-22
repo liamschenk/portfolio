@@ -42,7 +42,7 @@ export const metadata = {
         url: "https://www.liamschenk.ch/metadata/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Liam Schenk Portfolio – Startseite",
+        alt: "Portfolio von Liam Schenk, gelerntem Mediamatiker mit Abschluss bei Swisscom.",
       },
     ],
     locale: "de_CH",
@@ -60,7 +60,7 @@ export const metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#ffffff",
+  themeColor: "#ebebf0",
 };
 
 const personSchema = {
