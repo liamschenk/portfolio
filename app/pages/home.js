@@ -45,7 +45,7 @@ export default function Home({ projects, about }) {
                     >
                       <img
                         className={`${styles["listening-media"]} border-full`}
-                        src={listening.cover.asset.url}
+                        src={listening.media.asset.url}
                         alt={`${listening.title} von ${listening.artist}`}
                         draggable="false"
                       />

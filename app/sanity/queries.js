@@ -13,7 +13,7 @@ export const projectQuery = `{
 export const aboutQuery = `{
   "bio": *[_type == "bio"][0]{
     ...,
-    picture{
+    media{
       asset->{
         _id,
         url
@@ -22,7 +22,7 @@ export const aboutQuery = `{
   },
   "listening": *[_type == "listening"][0]{
     ...,
-    cover{
+    media{
       asset->{
         _id,
         url

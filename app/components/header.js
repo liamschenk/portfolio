@@ -14,7 +14,7 @@ export default function Header({ about }) {
       <div>
         <img
           className={`${styles["header-media"]} border-full`}
-          src={bio.picture.asset.url}
+          src={bio.media.asset.url}
           alt={`Portrait von ${bio.name}`}
           draggable="false"
         />
