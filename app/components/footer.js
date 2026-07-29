@@ -7,7 +7,7 @@ export default function Footer({ about }) {
 
   return (
     <section
-      className={`${styles["footer-wrapper"]} margin-top-extra-large padding-right-large padding-left-large border-top`}
+      className={`${styles["footer-wrapper"]} padding-right-large padding-left-large border-top`}
     >
       <div className="padding-top-medium padding-right-large padding-bottom-medium border-right">
         <p className="color-secondary">2026</p>

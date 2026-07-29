@@ -65,7 +65,7 @@ export default function Home({ projects, about }) {
           <p className="color-quaternary">{bio.description}</p>
         </section>
 
-        <section className={styles["projects-wrapper"]}>
+        <section className={`${styles["projects-wrapper"]} margin-bottom-extra-large`}>
           {projects.map((project, index) => (
             <div className={styles["accordion-wrapper"]} key={project._id}>
               <button
