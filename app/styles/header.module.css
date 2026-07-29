@@ -1,6 +1,14 @@
 /* Header */
-.navigation nav ul {
+.header-wrapper {
   display: flex;
-  justify-content: space-between;
-  list-style: none;
+  gap: var(--spacing-l);
+  align-items: center;
+  width: 100%;
+}
+
+.header-media {
+  width: 64px;
+  height: 64px;
+  background-color: var(--quinary);
+  border-radius: 50%;
 }

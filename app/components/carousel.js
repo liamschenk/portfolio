@@ -13,13 +13,17 @@ export default function Carousel({ title, media }) {
   });
 
   return (
-    <div className={`${styles["embla-carousel"]} margin-bottom-large`}>
-      <div className="embla" ref={emblaRef} aria-label={`${title} Slideshow`}>
+    <div className={`${styles["embla-carousel"]} padding-bottom-medium`}>
+      <div
+        className="embla padding-left-large"
+        ref={emblaRef}
+        aria-label={`${title} Slideshow`}
+      >
         <div className={styles["carousel-track"]}>
           {media.map((item, index) =>
             item.asset?.url ? (
               <div
-                className={`${styles["carousel-slide"]} border-all`}
+                className={`${styles["carousel-slide"]} border-full`}
                 key={item.asset._id}
               >
                 <img

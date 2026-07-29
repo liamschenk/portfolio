@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import { LazyMotion, domAnimation } from "motion/react";
 
 import "./globals.css";
 
@@ -88,7 +89,7 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
-        {children}
+        <LazyMotion features={domAnimation}>{children}</LazyMotion>
       </body>
     </html>
   );

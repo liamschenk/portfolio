@@ -11,8 +11,23 @@ export const projectQuery = `{
 }`;
 
 export const aboutQuery = `{
-  "bio": *[_type == "bio"][0],
-  "work": *[_type == "work"] | order(_createdAt desc),
-  "education": *[_type == "education"] | order(_createdAt desc),
-  "profiles": *[_type == "profile"] | order(_createdAt desc)
+  "bio": *[_type == "bio"][0]{
+    ...,
+    picture{
+      asset->{
+        _id,
+        url
+      }
+    }
+  },
+  "listening": *[_type == "listening"][0]{
+    ...,
+    cover{
+      asset->{
+        _id,
+        url
+      }
+    }
+  },
+  "profile": *[_type == "profile" && network == "LinkedIn"][0]
 }`;

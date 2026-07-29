@@ -1,45 +1,28 @@
+/* eslint-disable @next/next/no-img-element */
+
 "use client";
 
 import styles from "../styles/header.module.css";
 
-export default function Header({ route, setRoute }) {
+export default function Header({ about }) {
+  const { bio } = about;
+
   return (
-    <header className={`${styles.navigation} margin-bottom-extra-large`}>
-      <nav>
-        <ul>
-          <li>
-            <a
-              className={`color-secondary ${route === "index" ? "underline" : "no-underline underline-hover"}`}
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                setRoute("index");
-              }}
-              aria-current={route === "index" ? "page" : undefined}
-            >
-              Index
-            </a>
-          </li>
-
-          <li>
-            <p className="color-secondary">Liam Schenk</p>
-          </li>
-
-          <li>
-            <a
-              className={`color-secondary ${route === "about" ? "underline" : "no-underline underline-hover"}`}
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                setRoute("about");
-              }}
-              aria-current={route === "about" ? "page" : undefined}
-            >
-              Über
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <section
+      className={`${styles["header-wrapper"]} padding-top-medium padding-right-large padding-bottom-medium padding-left-large border-bottom`}
+    >
+      <div>
+        <img
+          className={`${styles["header-media"]} border-full`}
+          src={bio.picture.asset.url}
+          alt={`Portrait von ${bio.name}`}
+          draggable="false"
+        />
+      </div>
+      <div>
+        <p className="color-secondary">{bio.name}</p>
+        <p className="color-tertiary">{bio.position}</p>
+      </div>
+    </section>
   );
 }

@@ -1,14 +1,25 @@
 import { client } from "./sanity/client";
-
 import { projectQuery, aboutQuery } from "./sanity/queries";
 
-import Router from "./components/router";
+import Header from "./components/header";
+import Home from "./pages/home";
+import Footer from "./components/footer";
 
-export default async function Portfolio() {
+import styles from "./styles/page.module.css";
+
+export default async function Page() {
   const fetchOptions = { next: { revalidate: 3600 } };
 
-  const { projects } = await client.fetch(projectQuery, {}, fetchOptions);
-  const about = client.fetch(aboutQuery, {}, fetchOptions);
+  const [{ projects }, about] = await Promise.all([
+    client.fetch(projectQuery, {}, fetchOptions),
+    client.fetch(aboutQuery, {}, fetchOptions),
+  ]);
 
-  return <Router projects={projects} about={about} />;
+  return (
+    <div className={styles["page-wrapper"]}>
+      <Header about={about} />
+      <Home projects={projects} about={about} />
+      <Footer about={about} />
+    </div>
+  );
 }

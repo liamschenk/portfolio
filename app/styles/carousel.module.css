@@ -31,7 +31,7 @@
 
 /* Media */
 .slide-media {
-  height: 378px;
+  height: 320px;
   user-select: none;
   border-radius: var(--border-radius-m);
 }
@@ -43,7 +43,7 @@
   }
 
   .slide-media {
-    height: 270px;
+    height: 256px;
   }
 }
 
@@ -53,6 +53,6 @@
   }
 
   .slide-media {
-    height: 162px;
+    height: 160px;
   }
 }
