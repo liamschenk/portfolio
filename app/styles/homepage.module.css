@@ -77,7 +77,7 @@
 .carousel-dots {
   position: absolute;
   right: var(--spacing-m);
-  bottom: var(--spacing-l);
+  bottom: var(--spacing-m);
   left: var(--spacing-m);
   display: flex;
   gap: var(--spacing-s);

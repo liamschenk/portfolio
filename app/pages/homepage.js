@@ -69,11 +69,6 @@ function ProjectCarousel({ name, media }) {
 }
 
 export default function Homepage({ about, projects }) {
-  function formatYear(date) {
-    if (!date) return "Unbekannt";
-    return new Date(date).getUTCFullYear();
-  }
-
   return (
     <main>
       <section
@@ -111,7 +106,7 @@ export default function Homepage({ about, projects }) {
             </div>
             <div className={styles["project-details"]}>
               <h2 className="color-secondary">
-                {project.name} · {formatYear(project.date)}
+                {project.topic} · {project.name}
               </h2>
               <p className="color-quaternary">{project.description}</p>
             </div>
