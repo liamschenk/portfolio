@@ -106,7 +106,7 @@ export default function Homepage({ about, projects }) {
             </div>
             <div className={styles["project-details"]}>
               <h2 className="color-secondary">
-                {project.topic} · {project.name}
+                {project.name} · {project.topic}
               </h2>
               <p className="color-quaternary">{project.description}</p>
             </div>
