@@ -81,8 +81,8 @@ export default function Homepage({ about, projects }) {
       >
         <div>
           <img
-            className={`${styles["about-picture"]} border`}
-            src={about.picture?.asset?.url}
+            className={`${styles["about-portrait"]} border`}
+            src={about.portrait?.asset?.url}
             alt={`Portrait von ${about.name}`}
             draggable="false"
           />

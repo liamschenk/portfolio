@@ -16,7 +16,7 @@ export const sanityQuery = `{
   },
   "about": *[_type == "about"][0]{
     ...,
-    picture{
+    portrait{
       asset->{
         _id,
         url
