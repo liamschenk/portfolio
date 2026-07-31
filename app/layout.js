@@ -61,7 +61,7 @@ export const metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#ebebf0",
+  themeColor: "#f2f2f2",
 };
 
 const personSchema = {
