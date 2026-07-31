@@ -35,7 +35,7 @@ function ProjectCarousel({ name, media }) {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className={`${styles["carousel-wrapper"]} border`}>
+    <div className={styles["carousel-wrapper"]}>
       <div className="embla" ref={emblaRef}>
         <div className={styles["carousel-track"]}>
           {media.map((item, index) =>
@@ -69,43 +69,63 @@ function ProjectCarousel({ name, media }) {
 }
 
 export default function Homepage({ about, projects }) {
+  function getTimespan(projects) {
+    const years = projects
+      .map((project) => project.date)
+      .filter(Boolean)
+      .map((date) => new Date(date).getUTCFullYear());
+
+    if (years.length === 0) return "Unbekannt";
+
+    const earliest = Math.min(...years);
+    const latest = Math.max(...years);
+
+    return earliest === latest ? `${earliest}` : `${earliest} – ${latest}`;
+  }
+
   return (
     <main>
-      <section
-        className={`${styles["about-wrapper"]} margin-top-large margin-bottom-extra-large padding-bottom-medium`}
-      >
-        <div>
+      <section className={`${styles["about-wrapper"]} margin-top-large`}>
+        <div className="padding-bottom-medium">
           <img
-            className={`${styles["about-portrait"]} border`}
+            className={styles["about-portrait"]}
             src={about.portrait?.asset?.url}
             alt={`Portrait von ${about.name}`}
             draggable="false"
           />
         </div>
         <div className={styles["about-details"]}>
-          <h1 className="color-secondary">{about.name}</h1>
+          <h1 className="color-secondary padding-bottom-small">{about.name}</h1>
           <p className="color-quaternary">{about.description}</p>
         </div>
       </section>
 
       <section
-        className={`${styles["projects-wrapper"]} margin-top-extra-large margin-bottom-large`}
+        className={`${styles["timespan-wrapper"]} margin-top-large margin-bottom-large`}
       >
+        <p className="color-tertiary">
+          Ausgewählte Projekte · {getTimespan(projects)}
+        </p>
+      </section>
+
+      <section className={`${styles["projects-wrapper"]} margin-bottom-large`}>
         {projects.map((project) => (
           <div
-            className={`${styles["project-wrapper"]} padding-bottom-medium`}
+            className={`${styles["project-wrapper"]} padding-bottom-large`}
             key={project._id}
           >
-            <div>
+            <div className="padding-bottom-small">
               <img
-                className={`${styles["project-picture"]} border`}
+                className={styles["project-picture"]}
                 src={project.picture?.asset?.url}
                 alt={project.name}
                 draggable="false"
               />
             </div>
-            <div className={styles["project-details"]}>
-              <h2 className="color-secondary">
+            <div
+              className={`${styles["project-details"]} padding-bottom-medium`}
+            >
+              <h2 className="color-secondary padding-bottom-small">
                 {project.name} · {project.topic}
               </h2>
               <p className="color-quaternary">{project.description}</p>

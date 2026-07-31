@@ -4,14 +4,12 @@
 .projects-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-l);
 }
 
 .about-wrapper,
 .project-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-m);
 }
 
 .about-portrait,
@@ -26,7 +24,6 @@
 .project-details {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-s);
 }
 
 /* Carousel */
@@ -77,7 +74,7 @@
 .carousel-dots {
   position: absolute;
   right: var(--spacing-m);
-  bottom: var(--spacing-m);
+  bottom: calc(3 * var(--spacing-s));
   left: var(--spacing-m);
   display: flex;
   gap: var(--spacing-s);
@@ -90,13 +87,13 @@
 .carousel-dot {
   width: 5px;
   height: 5px;
-  background-color: var(--quaternary);
+  background-color: var(--septenary);
   border-radius: 100%;
   transition: background-color 0.25s ease-in-out;
 }
 
 .carousel-dot.active {
-  background-color: var(--tertiary);
+  background-color: var(--octonary);
   transition: background-color 0.25s ease-in-out;
 }
 

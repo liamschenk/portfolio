@@ -16,12 +16,14 @@
 /* Theming */
 @media (prefers-color-scheme: light) {
   :root {
-    --primary: rgb(242 242 242);
-    --secondary: rgb(13 13 13);
-    --tertiary: rgb(64 64 64);
-    --quaternary: rgb(115 115 115);
-    --quinary: rgb(230 230 230);
-    --senary: rgb(217 217 217);
+    --primary: rgb(250 250 250);
+    --secondary: rgb(5 5 5);
+    --tertiary: rgb(46 46 46);
+    --quaternary: rgb(87 87 87);
+    --quinary: rgb(240 240 240);
+    --senary: rgb(230 230 230);
+    --septenary: rgb(199 199 199);
+    --octonary: rgb(168 168 168);
   }
 
   html {
@@ -31,12 +33,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: rgb(13 13 13);
-    --secondary: rgb(240 240 240);
-    --tertiary: rgb(191 191 191);
-    --quaternary: rgb(140 140 140);
-    --quinary: rgb(26 26 26);
-    --senary: rgb(38 38 38);
+    --primary: rgb(26 26 26);
+    --secondary: rgb(230 230 232);
+    --tertiary: rgb(189 189 189);
+    --quaternary: rgb(148 148 148);
+    --quinary: rgb(36 36 36);
+    --senary: rgb(46 46 46);
+    --septenary: rgb(77 77 77);
+    --octonary: rgb(107 107 107);
   }
 
   html {
@@ -109,6 +113,14 @@ a {
 }
 
 /* Padding */
+.padding-top-large {
+  padding-top: var(--spacing-l);
+}
+
+.padding-bottom-large {
+  padding-bottom: var(--spacing-l);
+}
+
 .padding-top-medium {
   padding-top: var(--spacing-m);
 }
@@ -117,7 +129,10 @@ a {
   padding-bottom: var(--spacing-m);
 }
 
-/* Border */
-.border {
-  border: 1px solid var(--senary);
+.padding-top-small {
+  padding-top: var(--spacing-s);
+}
+
+.padding-bottom-small {
+  padding-bottom: var(--spacing-s);
 }
