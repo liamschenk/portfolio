@@ -1,31 +1,5 @@
 /* stylelint-disable selector-pseudo-class-no-unknown */
 
-/* About & Projects */
-.projects-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.about-wrapper,
-.project-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.about-portrait,
-.project-picture {
-  width: 48px;
-  height: 48px;
-  background-color: var(--quinary);
-  border-radius: 100%;
-}
-
-.about-details,
-.project-details {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 /* Carousel */
 .carousel-wrapper :global(.embla) {
   height: 100%;
@@ -40,9 +14,9 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  padding: var(--spacing-m);
+  padding: var(--spacing-medium);
   overflow: hidden;
-  background-color: var(--quinary);
+  background-color: var(--color-background-secondary);
   border-radius: var(--border-radius-l);
 }
 
@@ -65,19 +39,19 @@
 }
 
 .slide-media {
-  max-width: calc(100% - 2 * var(--spacing-m));
-  max-height: calc(100% - 2 * var(--spacing-m));
+  max-width: calc(100% - 2 * var(--spacing-medium));
+  max-height: calc(100% - 2 * var(--spacing-medium));
   user-select: none;
 }
 
 /* Dots */
 .carousel-dots {
   position: absolute;
-  right: var(--spacing-m);
-  bottom: calc(3 * var(--spacing-s));
-  left: var(--spacing-m);
+  right: var(--spacing-medium);
+  bottom: calc(3 * var(--spacing-small));
+  left: var(--spacing-medium);
   display: flex;
-  gap: var(--spacing-s);
+  gap: var(--spacing-small);
   align-items: center;
   justify-content: center;
   opacity: 1;
@@ -87,13 +61,13 @@
 .carousel-dot {
   width: 5px;
   height: 5px;
-  background-color: var(--septenary);
+  background-color: var(--color-dot-inactive);
   border-radius: 100%;
   transition: background-color 0.25s ease-in-out;
 }
 
 .carousel-dot.active {
-  background-color: var(--octonary);
+  background-color: var(--color-dot-active);
   transition: background-color 0.25s ease-in-out;
 }
 

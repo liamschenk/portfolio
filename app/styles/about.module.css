@@ -1,0 +1,17 @@
+/* About */
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-portrait {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-background-secondary);
+  border-radius: 100%;
+}
+
+.about-details {
+  display: flex;
+  flex-wrap: wrap;
+}

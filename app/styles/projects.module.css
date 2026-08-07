@@ -1,0 +1,22 @@
+/* Projects */
+.projects-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-picture {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-background-secondary);
+  border-radius: 100%;
+}
+
+.project-details {
+  display: flex;
+  flex-wrap: wrap;
+}
