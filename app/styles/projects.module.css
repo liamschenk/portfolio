@@ -12,6 +12,7 @@
 .project-picture {
   width: 48px;
   height: 48px;
+  user-select: none;
   background-color: var(--color-background-secondary);
   border-radius: 100%;
 }
