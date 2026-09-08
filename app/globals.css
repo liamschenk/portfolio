@@ -93,16 +93,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-::selection {
-  color: var(--color-text-primary);
-  background: var(--color-background-secondary);
-}
-
-::selection {
-  color: var(--color-text-primary);
-  background: var(--color-background-secondary);
-}
-
 /* Text */
 h1,
 h2,
